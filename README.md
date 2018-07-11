@@ -11,7 +11,7 @@
 **Attention:**
 WIP - Work in Progress
 
-Release in 2018/05...
+Release in 2018/10...
 ***
 
 ### Créditos
