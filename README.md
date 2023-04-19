@@ -11,7 +11,7 @@
 **Attention:**
 WIP - Work in Progress
 
-Release in 2020/01... Agora vai! :)
+Release in 2023! Agora vai! :)
 ***
 
 ### Créditos
