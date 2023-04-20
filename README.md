@@ -2,7 +2,7 @@
 
 ![Logo do projeto Acessibilidade Toolkit](http://acessibilida.de/magoo/img/logo-magoo.png)
 
-![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![a11y ok](https://img.shields.io/badge/a11y-ok-green.svg) ![Accessibility ok](https://img.shields.io/badge/accessibility-ok-green.svg) ![Accessibility ok](https://img.shields.io/badge/ux-ready-red.svg) ![Accessibility ok](https://img.shields.io/badge/design-ready-red.svg)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![Accessibility ok](https://img.shields.io/badge/ux-ready-red.svg) ![Accessibility ok](https://img.shields.io/badge/design-ready-red.svg) ![Tests_ok](https://img.shields.io/badge/tests-ready-red) ![Accessibility ok](https://img.shields.io/badge/accessibility-ok-green.svg) ![a11y ok](https://img.shields.io/badge/a11y-ok-green.svg)
 
 # Magoo Design System
 ## Uma base para te ajudar a construir design systems com foco em acessibilidade!
