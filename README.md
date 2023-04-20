@@ -5,16 +5,20 @@
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![a11y ok](https://img.shields.io/badge/a11y-ok-green.svg) ![Accessibility ok](https://img.shields.io/badge/accessibility-ok-green.svg) ![Accessibility ok](https://img.shields.io/badge/ux-ready-red.svg) ![Accessibility ok](https://img.shields.io/badge/design-ready-red.svg)
 
 # Magoo Design System
-## Uma base para a construção de design systems com foco em acessibilidade!
+## Uma base para te ajudar a construir design systems com foco em acessibilidade!
 
 ***
-**Attention:**
-WIP - Work in Progress
+**Info:**
 
-Release in 2023! Agora vai! :)
+Trabalho em andamento... lançamento da v1 prevista para Junho de 2023!
+
+WIP - Work in Progress... Release in 2023 (In portugueses and english)!
 ***
+
+### Site oficial
+http://magoo.cc
 
 ### Créditos
-Este material está sendo criado, planejado e desenvolvido por [Marcelo Sales](https://www.linkedin.com/in/msales78/), um designer que atua com UX, mas tem a acessibilidade como principal causa e disseminação de conhecimento.
+Este material está sendo criado, planejado e desenvolvido por [Marcelo Sales](http://marcelosales.work), alguém que atua com acessibilidade e design inclusivo e no meio do caminho tenta ajudar algumas pessoas no processo... mas contará também com o apoio de outras pessoas. Este espaço será utilizado pra possibilitar cada vez mais pessoas se envolverem com o projeto também.
 
 ![Este projeto é uma iniciativa acessibilida.de](http://acessibilida.de/img/logo-acessibilidade-iniciativa.png)
