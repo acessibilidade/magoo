@@ -10,9 +10,8 @@
 ***
 **Info:**
 
-Trabalho em andamento... lançamento da v1 prevista para Junho de 2023!
+Trabalho em andamento... lançamento da v1 prevista para Novembro de 2026.
 
-WIP - Work in Progress... Release in 2023 (In portugueses and english)!
 ***
 
 ### Site oficial
