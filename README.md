@@ -1,6 +1,6 @@
 
 
-![Logo do projeto Acessibilidade Toolkit](http://acessibilida.de/magoo/img/logo-magoo.png)
+![Logo do projeto Acessibilidade Toolkit](https://magoo.cc/img/logo-magoo.png)
 
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-blue.svg) ![Accessibility ok](https://img.shields.io/badge/ux-ready-red.svg) ![Accessibility ok](https://img.shields.io/badge/design-ready-red.svg) ![Tests_ok](https://img.shields.io/badge/tests-ready-red) ![Accessibility ok](https://img.shields.io/badge/accessibility-ok-green.svg) ![a11y ok](https://img.shields.io/badge/a11y-ok-green.svg)
 
