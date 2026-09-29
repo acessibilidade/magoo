@@ -55,6 +55,7 @@
     />
     <script src="../../js/main.js" defer=""></script>
     <script src="../../js/analytics.js" defer=""></script>
+    <script src="../../js/translate.js" defer=""></script>
     <meta
       property="og:url"
       content="https://magoo.cc/componentes/elementos-ocultos/tooltip-popover.html"
@@ -79,13 +80,41 @@
       >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
     >
     <header>
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Projeto Magoo">
+          <a
+            href="https://github.com/acessibilidade/magoo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub
+            <span class="material-icons notranslate" translate="no" aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+          ><a
+            href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npm
+            <span class="material-icons notranslate" translate="no" aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+          >
+        </nav>
+        <div class="translation-control">
+          <span id="translation-label" class="sr-only">Traduzir esta página</span>
+          <div id="google_translate_element"></div>
+          <p id="translation-note" class="sr-only">Tradução automática</p>
+          <p class="translation-status" role="status">Carregando tradutor…</p>
+        </div>
+      </div>
       <div class="topbar wrap">
         <a class="brand" href="../../index.html" aria-label="Magoo — início"
           ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
         ><span class="brand-note">faça seus componentes funcionarem corretamente</span
         ><a class="library-link back-link" href="../../index.html"
-          ><span class="material-icons" aria-hidden="true">arrow_back</span>Voltar para
-          página principal</a
+          ><span class="material-icons notranslate" aria-hidden="true" translate="no"
+            >arrow_back</span
+          >Voltar para página principal</a
         >
       </div>
       <div class="component-heading wrap">
@@ -111,11 +140,15 @@
           aria-controls="component-menu"
           hidden=""
         >
-          <span class="material-icons" aria-hidden="true">menu</span>Índice de componentes
+          <span class="material-icons notranslate" aria-hidden="true" translate="no"
+            >menu</span
+          >Índice de componentes
         </button>
         <div class="menu-panel" id="component-menu">
           <button class="menu-close" type="button" hidden="">
-            <span class="material-icons" aria-hidden="true">close</span>Fechar índice
+            <span class="material-icons notranslate" aria-hidden="true" translate="no"
+              >close</span
+            >Fechar índice
           </button>
           <h2 class="menu-title">Índice de componentes</h2>
           <nav aria-label="Componentes">
@@ -166,8 +199,9 @@
               <li>
                 <a href="../elementos-ocultos/tooltip-popover.html" aria-current="page"
                   >Tooltip e Popover<span
-                    class="material-icons active-menu-arrow"
+                    class="material-icons active-menu-arrow notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >arrow_forward</span
                   ></a
                 >
@@ -495,12 +529,6 @@
               Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
               Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
               Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
-              <a
-                href="https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ref 1<span class="sr-only"> (abre em uma nova aba)</span></a
-              >.
             </p>
 
             <h3>
@@ -859,7 +887,8 @@
       Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
         >curso AccessBoost
-        <span class="material-icons" aria-hidden="true">open_in_new</span
+        <span class="material-icons notranslate" aria-hidden="true" translate="no"
+          >open_in_new</span
         ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos
       podem ser customizadas (desde que haja instruções suficientes para que as pessoas
@@ -877,6 +906,17 @@
           <p>
             Explore comportamentos, métodos de interação e critérios de aceite para criar
             experiências mais acessíveis e inclusivas.
+          </p>
+          <p class="footer-license">
+            <a
+              href="https://github.com/acessibilidade/magoo/blob/master/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Licença MIT
+              <span class="material-icons notranslate" translate="no" aria-hidden="true"
+                >open_in_new</span
+              ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+            >
           </p>
         </div>
         <a

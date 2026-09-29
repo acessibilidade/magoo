@@ -50,7 +50,7 @@
     <link rel="manifest" href="img/favicon/site.webmanifest" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
@@ -59,11 +59,60 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <script src="js/main.js" defer></script>
-    <script src="js/analytics.js" defer></script>
+    <script src="js/main.js" defer=""></script>
+    <script src="js/analytics.js" defer=""></script>
+    <script src="js/translate.js" defer=""></script>
   </head>
   <body class="home-page">
     <header>
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Projeto Magoo">
+          <a class="home-section-link" href="#audience-title"
+            >Para quem<span class="sr-only">
+              (link para a seção nesta mesma página)</span
+            ></a
+          ><a class="home-section-link" href="#faq-title"
+            >Sobre<span class="sr-only">
+              (link para a seção nesta mesma página)</span
+            ></a
+          >
+          <a
+            href="https://github.com/acessibilidade/magoo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub
+            <span
+              class="material-icons notranslate"
+              translate="no"
+              aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only">
+              (link externo, abre em uma nova aba)</span
+            ></a
+          ><a
+            href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npm
+            <span
+              class="material-icons notranslate"
+              translate="no"
+              aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only">
+              (link externo, abre em uma nova aba)</span
+            ></a
+          >
+        </nav>
+        <div class="translation-control">
+          <span id="translation-label" class="sr-only"
+            >Traduzir esta página</span
+          >
+          <div id="google_translate_element"></div>
+          <p id="translation-note" class="sr-only">Tradução automática</p>
+          <p class="translation-status" role="status">Carregando tradutor…</p>
+        </div>
+      </div>
       <div class="topbar wrap">
         <div class="brand">
           <img src="img/logo-magoo.svg" alt="Magoo" width="142" height="55" />
@@ -84,7 +133,7 @@
           <label for="componente">Qual componente você quer explorar?</label>
           <div class="picker-row">
             <div class="select-control">
-              <select id="componente" name="componente" required>
+              <select id="componente" name="componente" required="">
                 <option value="">Selecione um componente</option>
                 <optgroup label="Estrutura">
                   <option value="componentes/estrutura/titulos.html">
@@ -167,13 +216,19 @@
                     Switch
                   </option>
                 </optgroup></select
-              ><span class="material-icons select-arrow" aria-hidden="true"
+              ><span
+                class="material-icons select-arrow notranslate"
+                aria-hidden="true"
+                translate="no"
                 >expand_more</span
               >
             </div>
             <button type="submit">
               Explorar
-              <span class="material-icons" aria-hidden="true"
+              <span
+                class="material-icons notranslate"
+                aria-hidden="true"
+                translate="no"
                 >arrow_forward</span
               >
             </button>
@@ -192,17 +247,28 @@
       </section>
       <section id="biblioteca" class="catalog wrap">
         <div class="section-heading">
-          <div><h2>Explore a biblioteca</h2></div>
+          <div>
+            <h2>Explore a biblioteca</h2>
+            <p class="library-introduction">
+              A interação dos componentes tem impacto direto na acessibilidade.
+              Compreenda melhor o design de interação, os métodos de interagir,
+              os pontos de atenção e como construir critérios de aceite
+              adequados ao desenvolvimento mais assertivo de componentes.
+            </p>
+          </div>
         </div>
         <div class="categories">
           <section class="category">
-            <span class="material-icons category-icon" aria-hidden="true"
+            <span
+              class="material-icons category-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >view_quilt</span
             >
             <h3>Estrutura</h3>
             <ul>
               <li class="upcoming">
-                Flexbox & Grid<small>Em desenvolvimento</small>
+                Flexbox &amp; Grid<small>Em desenvolvimento</small>
               </li>
               <li class="upcoming">
                 Header, Footer e Regiões<small>Em desenvolvimento</small>
@@ -210,22 +276,29 @@
               <li>
                 <a href="componentes/estrutura/titulos.html"
                   >Títulos (Cabeçalhos)<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/estrutura/tabelas.html"
-                  >Tabelas<span class="material-icons" aria-hidden="true"
+                  >Tabelas<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/estrutura/listas.html"
-                  >Listas<span class="material-icons" aria-hidden="true"
+                  >Listas<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -234,21 +307,30 @@
             </ul>
           </section>
           <section class="category">
-            <span class="material-icons category-icon" aria-hidden="true"
+            <span
+              class="material-icons category-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >chat_bubble_outline</span
             >
             <h3>Mensagens</h3>
             <ul>
               <li>
                 <a href="componentes/mensagens/alertas.html"
-                  >Alertas<span class="material-icons" aria-hidden="true"
+                  >Alertas<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/mensagens/dialogs.html"
-                  >Dialogs<span class="material-icons" aria-hidden="true"
+                  >Dialogs<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -258,7 +340,10 @@
               </li>
               <li>
                 <a href="componentes/mensagens/toasts.html"
-                  >Toasts<span class="material-icons" aria-hidden="true"
+                  >Toasts<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -266,49 +351,70 @@
             </ul>
           </section>
           <section class="category">
-            <span class="material-icons category-icon" aria-hidden="true"
+            <span
+              class="material-icons category-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >near_me</span
             >
             <h3>Navegação</h3>
             <ul>
               <li>
                 <a href="componentes/navegacao/breadcrumb.html"
-                  >Breadcrumb<span class="material-icons" aria-hidden="true"
+                  >Breadcrumb<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/navegacao/menu.html"
-                  >Menu<span class="material-icons" aria-hidden="true"
+                  >Menu<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/navegacao/links.html"
-                  >Links<span class="material-icons" aria-hidden="true"
+                  >Links<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/navegacao/paginacao.html"
-                  >Paginação<span class="material-icons" aria-hidden="true"
+                  >Paginação<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/navegacao/carrossel.html"
-                  >Carrossel<span class="material-icons" aria-hidden="true"
+                  >Carrossel<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/navegacao/drag-drop.html"
-                  >Drag'n'Drop<span class="material-icons" aria-hidden="true"
+                  >Drag'n'Drop<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -316,14 +422,20 @@
             </ul>
           </section>
           <section class="category">
-            <span class="material-icons category-icon" aria-hidden="true"
+            <span
+              class="material-icons category-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >layers</span
             >
             <h3>Elementos ocultos</h3>
             <ul>
               <li>
                 <a href="componentes/elementos-ocultos/accordion.html"
-                  >Accordion<span class="material-icons" aria-hidden="true"
+                  >Accordion<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -332,15 +444,19 @@
                 <a
                   href="componentes/elementos-ocultos/detalhes-mais-informacoes.html"
                   >Detalhes e Mais informações<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/elementos-ocultos/abas.html"
-                  >Abas<span class="material-icons" aria-hidden="true"
+                  >Abas<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -348,15 +464,19 @@
               <li>
                 <a href="componentes/elementos-ocultos/tooltip-popover.html"
                   >Tooltip e Popover<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/elementos-ocultos/modal.html"
-                  >Modal<span class="material-icons" aria-hidden="true"
+                  >Modal<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -364,28 +484,40 @@
             </ul>
           </section>
           <section class="category">
-            <span class="material-icons category-icon" aria-hidden="true"
+            <span
+              class="material-icons category-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >tune</span
             >
             <h3>Formulários</h3>
             <ul>
               <li>
                 <a href="componentes/formularios/botao.html"
-                  >Botão<span class="material-icons" aria-hidden="true"
+                  >Botão<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/formularios/checkbox.html"
-                  >Checkbox<span class="material-icons" aria-hidden="true"
+                  >Checkbox<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/formularios/radio-button.html"
-                  >Radio Button<span class="material-icons" aria-hidden="true"
+                  >Radio Button<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -393,21 +525,30 @@
               <li class="upcoming">Inputs<small>Em desenvolvimento</small></li>
               <li>
                 <a href="componentes/formularios/select.html"
-                  >Select (Combo)<span class="material-icons" aria-hidden="true"
+                  >Select (Combo)<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/formularios/slider.html"
-                  >Slider<span class="material-icons" aria-hidden="true"
+                  >Slider<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
               </li>
               <li>
                 <a href="componentes/formularios/switch.html"
-                  >Switch<span class="material-icons" aria-hidden="true"
+                  >Switch<span
+                    class="material-icons notranslate"
+                    aria-hidden="true"
+                    translate="no"
                     >north_east</span
                   ></a
                 >
@@ -415,13 +556,16 @@
             </ul>
           </section>
         </div>
-        <p class="material-version">Versão do material: 1.0.0</p>
+        <p class="material-version">Versão do material: 1.0.1</p>
       </section>
       <section class="audience wrap" aria-labelledby="audience-title">
-        <h2 id="audience-title">Para quem é o Magoo?</h2>
+        <h2 id="audience-title" tabindex="-1">Para quem é o Magoo?</h2>
         <div class="audience-grid">
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >palette</span
             >
             <h3>UI designers</h3>
@@ -431,7 +575,10 @@
             </p>
           </article>
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >psychology</span
             >
             <h3>UX designers</h3>
@@ -442,7 +589,10 @@
             </p>
           </article>
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >design_services</span
             >
             <h3>Product Designers</h3>
@@ -452,7 +602,10 @@
             </p>
           </article>
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >assignment</span
             >
             <h3>Product Owners</h3>
@@ -463,7 +616,10 @@
             </p>
           </article>
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >fact_check</span
             >
             <h3>Analistas de Testes</h3>
@@ -473,7 +629,10 @@
             </p>
           </article>
           <article class="audience-card">
-            <span class="material-icons audience-icon" aria-hidden="true"
+            <span
+              class="material-icons audience-icon notranslate"
+              aria-hidden="true"
+              translate="no"
               >code</span
             >
             <h3>Desenvolvedores</h3>
@@ -484,95 +643,285 @@
           </article>
         </div>
       </section>
-      <section class="closing wrap">
-        <p class="eyebrow">DESIGN DE INTERAÇÃO EM PRIMEIRO LUGAR</p>
-        <h2>
-          A interação dos componentes tem impacto direto na acessibilidade
-        </h2>
-        <p>
-          Compreenda melhor o design de interação, os métodos de interagir, os
-          pontos de atenção e como construir critérios de aceite adequados ao
-          desenvolvimento mais assertivo de componentes.
-        </p>
-      </section>
 
-      <section
-        class="project-context wrap"
-        aria-labelledby="implementation-title"
-      >
+      <section class="project-context wrap" aria-labelledby="how-to-title">
+        <h2 id="how-to-title">Como usar?</h2>
         <article class="context-card">
-          <h2 id="implementation-title">
+          <h3 id="implementation-title">
             Instruções para incluir este documento como referência em seu design
             system
-          </h2>
-          <ol>
-            <li>
-              <strong>Registre a referência.</strong> Na documentação de cada
-              componente, inclua o link da página correspondente no Magoo, o
-              nome do autor, a versão consultada e a data de consulta. Use a URL
-              pública do material, evitando endereços de prévia local.
-            </li>
-            <li>
-              <strong>Mapeie os comportamentos.</strong> Relacione as
-              orientações às variantes, aos estados e às ações do seu
-              componente. Documente a operação por teclado, o gerenciamento de
-              foco e os retornos esperados para cada interação.
-            </li>
-            <li>
-              <strong>Adapte ao seu contexto.</strong> Use o comportamento como
-              referência para sua implementação, independentemente do framework.
-              Aplique os tokens e estilos do seu sistema e registre diferenças
-              de comportamento, justificativas e instruções de uso.
-            </li>
-            <li>
-              <strong>Defina critérios verificáveis.</strong> Transforme os
-              cenários em critérios de aceite no formato Dado, Quando e Então.
-              Vincule esses critérios aos testes e ao componente documentado,
-              por exemplo, no Storybook ou em uma página de documentação.
-            </li>
-            <li>
-              <strong>Valide e acompanhe as revisões.</strong> Teste a
-              implementação com teclado, leitores de tela, toque e ampliação.
-              Registre resultados e reavalie as adaptações quando a referência
-              ou o componente mudar. A referência, por si só, não comprova a
-              acessibilidade da implementação.
-            </li>
-          </ol>
-          <p class="reference-example">
-            <strong>Modelo de atribuição:</strong> Referência de interação:
-            Magoo — [nome do componente], de Marcelo Sales. Versão consultada:
-            1.0.0. URL: [link da página]. Consulta: [data]. Adaptações:
-            [descrição das diferenças].
+          </h3>
+          <p>
+            Escolha seu perfil para consultar as orientações. A configuração do
+            MCP apresentada depois das abas pode ser usada por qualquer pessoa
+            com um assistente compatível.
           </p>
+          <div class="usage-tabs">
+            <div
+              class="nav nav-tabs"
+              role="tablist"
+              aria-label="Orientações por perfil"
+            >
+              <button
+                type="button"
+                class="nav-link"
+                role="tab"
+                id="usage-tab-dev"
+                aria-controls="usage-panel-dev"
+                aria-selected="true"
+              >
+                Para desenvolvedores</button
+              ><button
+                type="button"
+                class="nav-link"
+                role="tab"
+                id="usage-tab-design"
+                aria-controls="usage-panel-design"
+                aria-selected="false"
+              >
+                Para designers</button
+              ><button
+                type="button"
+                class="nav-link"
+                role="tab"
+                id="usage-tab-tests"
+                aria-controls="usage-panel-tests"
+                aria-selected="false"
+              >
+                Para equipe de testes</button
+              ><button
+                type="button"
+                class="nav-link"
+                role="tab"
+                id="usage-tab-product"
+                aria-controls="usage-panel-product"
+                aria-selected="false"
+              >
+                Para equipe de produto
+              </button>
+            </div>
+            <section
+              class="usage-panel"
+              id="usage-panel-dev"
+              role="tabpanel"
+              aria-labelledby="usage-tab-dev"
+              tabindex="0"
+            >
+              <h4>Da referência à implementação</h4>
+              <ol>
+                <li>
+                  <strong>Registre a referência.</strong> Na documentação de
+                  cada componente, inclua o link da página correspondente no
+                  Magoo, o nome do autor, a versão consultada e a data de
+                  consulta. Use a URL pública do material, evitando endereços de
+                  prévia local.
+                </li>
+                <li>
+                  <strong>Mapeie os comportamentos.</strong> Relacione as
+                  orientações às variantes, aos estados e às ações do seu
+                  componente. Documente a operação por teclado, o gerenciamento
+                  de foco e os retornos esperados para cada interação.
+                </li>
+                <li>
+                  <strong>Adapte ao seu contexto.</strong> Use o comportamento
+                  como referência para sua implementação, independentemente do
+                  framework. Aplique os tokens e estilos do seu sistema e
+                  registre diferenças de comportamento, justificativas e
+                  instruções de uso.
+                </li>
+                <li>
+                  <strong>Defina critérios verificáveis.</strong> Transforme os
+                  cenários em critérios de aceite no formato Dado, Quando e
+                  Então. Vincule esses critérios aos testes e ao componente
+                  documentado, por exemplo, no Storybook ou em uma página de
+                  documentação.
+                </li>
+                <li>
+                  <strong>Valide e acompanhe as revisões.</strong> Teste a
+                  implementação com teclado, leitores de tela, toque e
+                  ampliação. Registre resultados e reavalie as adaptações quando
+                  a referência ou o componente mudar. A referência, por si só,
+                  não comprova a acessibilidade da implementação.
+                </li>
+              </ol>
+              <p>
+                Com o MCP configurado abaixo, consulte
+                <code>get_component</code> para recuperar as orientações e
+                <code>get_acceptance_criteria</code> para obter os cenários de
+                aceite. O pacote fornece documentação; os componentes devem ser
+                implementados no seu projeto.
+              </p>
+            </section>
+            <section
+              class="usage-panel"
+              id="usage-panel-design"
+              role="tabpanel"
+              aria-labelledby="usage-tab-design"
+              tabindex="0"
+            >
+              <h4>Documente as decisões no Figma</h4>
+              <ol>
+                <li>
+                  <strong>Escolha o componente no Magoo.</strong> Leia o design
+                  de interação, os métodos de interação e os pontos de atenção
+                  antes de desenhar os estados.
+                </li>
+                <li>
+                  <strong>Crie uma página de orientações no Figma.</strong>
+                  Registre os comportamentos esperados, estados, foco, operação
+                  por teclado e adaptações feitas no projeto.
+                </li>
+                <li>
+                  <strong>Inclua a referência.</strong> Informe o link do
+                  componente, a versão consultada e a data na documentação do
+                  seu design system.
+                </li>
+                <li>
+                  <strong>Use um assistente, se desejar.</strong> Configure o
+                  MCP local conforme as instruções abaixo e leve as orientações
+                  obtidas para o Figma. Para o assistente também ler seu arquivo
+                  de design, é necessária uma integração separada com o Figma.
+                </li>
+              </ol>
+              <p>
+                <strong>Instrução sugerida:</strong> “Antes de propor ou revisar
+                os comportamentos deste componente, consulte o MCP Magoo.
+                Considere teclado, foco, estados e critérios de aceite. Informe
+                a versão e diferencie as orientações da biblioteca das
+                adaptações do projeto. Se não conseguir consultar o Magoo,
+                informe essa limitação.”
+              </p>
+              <p>
+                <strong>Conexão direta no Figma:</strong> conectores
+                personalizados do agente do Figma e do Figma Make exigem um
+                servidor MCP remoto por URL. O Magoo atual usa npx/STDIO local e
+                ainda não oferece esse endereço. Registrar uma instrução no
+                arquivo não ativa uma conexão automaticamente.
+              </p>
+            </section>
+            <section
+              class="usage-panel"
+              id="usage-panel-tests"
+              role="tabpanel"
+              aria-labelledby="usage-tab-tests"
+              tabindex="0"
+            >
+              <h4>Transforme orientações em verificações</h4>
+              <ol>
+                <li>
+                  <strong>Consulte os cenários Gherkin.</strong> Identifique as
+                  condições iniciais, as ações e os resultados esperados de cada
+                  componente.
+                </li>
+                <li>
+                  <strong>Adapte os casos ao produto.</strong> Cubra estados,
+                  erros, navegação por teclado, foco, leitores de tela, toque e
+                  ampliação.
+                </li>
+                <li>
+                  <strong>Registre evidências.</strong> Associe cada resultado à
+                  versão do componente, ao ambiente testado e ao critério de
+                  aceite.
+                </li>
+                <li>
+                  <strong>Revise com a equipe.</strong> Documente divergências e
+                  repita os testes após correções ou mudanças de comportamento.
+                </li>
+              </ol>
+              <p>
+                <strong>Exemplo de pedido ao assistente conectado:</strong>
+                “Consulte os critérios de aceite de Modal no MCP Magoo. Organize
+                uma lista de testes manuais, mantendo a versão e separando os
+                cenários originais dos casos adicionais sugeridos.”
+              </p>
+              <p>
+                Consultar o MCP não executa testes nem comprova a acessibilidade
+                da implementação.
+              </p>
+            </section>
+            <section
+              class="usage-panel"
+              id="usage-panel-product"
+              role="tabpanel"
+              aria-labelledby="usage-tab-product"
+              tabindex="0"
+            >
+              <h4>Alinhe escopo e critérios de aceite</h4>
+              <ol>
+                <li>
+                  <strong>Identifique os componentes da entrega.</strong> Use o
+                  catálogo para discutir o comportamento esperado com design,
+                  desenvolvimento e testes.
+                </li>
+                <li>
+                  <strong>Inclua critérios nas tarefas.</strong> Registre as
+                  interações e os resultados verificáveis antes de iniciar a
+                  implementação.
+                </li>
+                <li>
+                  <strong>Documente as decisões.</strong> Explique adaptações de
+                  comportamento e as instruções necessárias para que as pessoas
+                  compreendam essas mudanças.
+                </li>
+                <li>
+                  <strong>Acompanhe a validação.</strong> Vincule a entrega às
+                  evidências de testes e à versão da referência utilizada.
+                </li>
+              </ol>
+              <p>
+                <strong>Exemplo de pedido ao assistente conectado:</strong>
+                “Consulte o componente Select no Magoo e ajude a redigir
+                critérios de aceite para esta entrega. Diferencie conteúdo da
+                biblioteca e recomendações específicas para o produto.”
+              </p>
+            </section>
+          </div>
 
           <div class="mcp-guide">
-            <h3>Consulte o Magoo no seu assistente de IA</h3>
+            <h3>Como usar o Magoo com sua IA</h3>
             <p>
-              O MCP conecta seu assistente à biblioteca para consultar
-              comportamentos, critérios de aceite e referências. O pacote
-              <strong>@acessibilidade/magoo-mcp</strong> já está disponível no
-              npm, na versão <strong>1.0.0</strong>.
+              Você pode pedir à sua IA que consulte o Magoo antes de sugerir
+              como um componente deve funcionar. Para isso, é preciso conectar a
+              biblioteca uma única vez. Essa conexão é chamada de
+              <strong>MCP</strong>.
+            </p>
+            <p>
+              <strong>Prefere não configurar nada?</strong> Consulte os
+              componentes aqui no site e copie o trecho que deseja discutir com
+              sua IA.
             </p>
             <ol>
               <li>
-                <strong>Prepare o computador.</strong> Instale o Node.js 20.19
-                ou superior, que inclui o npm e o comando npx.
+                <strong>Prepare o computador.</strong> Você precisa ter o
+                Node.js 20.19 ou superior instalado. Ele permite que a conexão
+                funcione no seu computador. Se ainda não tiver, baixe o
+                instalador em
+                <a
+                  href="https://nodejs.org/pt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >nodejs.org<span
+                    class="material-icons notranslate"
+                    translate="no"
+                    aria-hidden="true"
+                    >open_in_new</span
+                  ><span class="sr-only">
+                    (link externo, abre em uma nova aba)</span
+                  ></a
+                >
+                e siga as instruções de instalação.
               </li>
               <li>
-                <strong>Adicione um servidor MCP no seu assistente.</strong>
-                Escolha uma conexão local do tipo STDIO e preencha os campos
-                abaixo. O aplicativo precisa oferecer suporte a servidores MCP
-                locais.
+                <strong>Abra as configurações da sua IA.</strong> Procure a
+                opção de adicionar um servidor MCP. Nem todo aplicativo aceita
+                essa conexão: ele precisa permitir preencher um comando para
+                executar no computador. Se pedir apenas uma URL, essa opção não
+                funciona com a versão atual do Magoo.
               </li>
               <li>
-                <strong>Salve e conecte.</strong> Se necessário, reinicie o
-                aplicativo para carregar a configuração. Na primeira conexão, o
-                npx baixa o pacote do npm; não é preciso clonar o repositório
-                nem criar uma conta no npm.
-              </li>
-              <li>
-                <strong>Faça uma consulta.</strong> Peça ao assistente para usar
-                o Magoo e informar a versão e as referências utilizadas.
+                <strong>Copie os dados abaixo.</strong> Preencha cada campo com
+                o valor indicado. Não é preciso entender os comandos nem criar
+                uma conta no npm.
               </li>
             </ol>
             <dl class="mcp-settings">
@@ -591,40 +940,29 @@
               <div>
                 <dt>Argumentos</dt>
                 <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.0.0</code>
+                  <code>-y @acessibilidade/magoo-mcp@1.0.1</code>
                   <p>
                     Se o aplicativo pedir argumentos separados, adicione
                     <code>-y</code> e
-                    <code>@acessibilidade/magoo-mcp@1.0.0</code> como dois
+                    <code>@acessibilidade/magoo-mcp@1.0.1</code> como dois
                     itens.
                   </p>
                 </dd>
               </div>
             </dl>
             <p>
-              <strong>Exemplo de pedido:</strong> “Use o MCP Magoo para
-              consultar o componente Modal, listar seus comportamentos por
-              teclado e recuperar os critérios de aceite. Informe a versão
-              consultada.”
+              <strong>Salve e comece a conversar.</strong> Se o Magoo não
+              aparecer entre as conexões, feche e abra o aplicativo. Na primeira
+              vez, ele precisará de internet para baixar a biblioteca.
             </p>
             <p>
-              O servidor é somente de leitura: consulta a biblioteca, sem
-              alterar seu projeto ou seus arquivos de design. Essa configuração
-              usa a versão 1.0.0; futuras atualizações devem ser adotadas de
-              forma deliberada.
+              <strong>Experimente este pedido:</strong> “Consulte o Magoo e me
+              explique como um modal deve funcionar com o teclado. Informe a
+              versão da biblioteca utilizada.”
             </p>
             <p>
-              <a
-                href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ver pacote no npm
-                <span class="material-icons" aria-hidden="true"
-                  >open_in_new</span
-                ><span class="sr-only">
-                  (conteúdo externo, abre em uma nova aba)</span
-                ></a
-              >
+              O Magoo fornece orientações para a IA consultar. Ele não altera
+              automaticamente seu projeto ou arquivo de design.
             </p>
           </div>
         </article>
@@ -632,7 +970,7 @@
       <section class="faq wrap" aria-labelledby="faq-title">
         <div>
           <p class="eyebrow">PERGUNTAS FREQUENTES</p>
-          <h2 id="faq-title">Sobre o Magoo e como usar.</h2>
+          <h2 id="faq-title" tabindex="-1">Sobre o Magoo</h2>
         </div>
         <dl class="faq-list">
           <div class="faq-item">
@@ -646,8 +984,9 @@
                   aria-controls="faq-answer-1"
                 >
                   Por que este material foi desenvolvido?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -682,8 +1021,9 @@
                   aria-controls="faq-answer-2"
                 >
                   Preciso instalar algo para usar o Magoo?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -709,8 +1049,9 @@
                   aria-controls="faq-answer-3"
                 >
                   O pacote instala componentes prontos no meu projeto?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -737,8 +1078,9 @@
                   aria-controls="faq-answer-4"
                 >
                   Como designers podem usar o MCP?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -765,8 +1107,9 @@
                   aria-controls="faq-answer-5"
                 >
                   Posso adaptar o material e usá-lo em projetos comerciais?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -793,8 +1136,9 @@
                   aria-controls="faq-answer-6"
                 >
                   Seguir o Magoo garante que meu componente seja acessível?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -821,8 +1165,9 @@
                   aria-controls="faq-answer-7"
                 >
                   Como manter a referência atualizada no meu design system?<span
-                    class="material-icons"
+                    class="material-icons notranslate"
                     aria-hidden="true"
+                    translate="no"
                     >remove</span
                   >
                 </button>
@@ -832,8 +1177,36 @@
               <p>
                 Registre o componente, a URL, a versão consultada e a data. Ao
                 adotar uma nova versão, revise as diferenças e os testes do seu
-                sistema. A configuração MCP apresentada fixa a versão 1.0.0 e
+                sistema. A configuração MCP apresentada fixa a versão 1.0.1 e
                 não troca automaticamente para uma versão futura.
+              </p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button
+                  class="faq-trigger"
+                  id="faq-trigger-8"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-8"
+                >
+                  Não entendo de códigos, mas gostaria de ajudar com sugestões,
+                  como faço?<span
+                    class="material-icons notranslate"
+                    translate="no"
+                    aria-hidden="true"
+                    >remove</span
+                  >
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-8" aria-labelledby="faq-trigger-8">
+              <p>
+                Envie dicas, sugestões, melhorias para o e-mail
+                oi@tudoeacessibilidade.com.br informando no assunto o projeto
+                Magoo.
               </p>
             </dd>
           </div>
@@ -852,6 +1225,22 @@
           <p>
             Explore comportamentos, métodos de interação e critérios de aceite
             para criar experiências mais acessíveis e inclusivas.
+          </p>
+          <p class="footer-license">
+            <a
+              href="https://github.com/acessibilidade/magoo/blob/master/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Licença MIT
+              <span
+                class="material-icons notranslate"
+                translate="no"
+                aria-hidden="true"
+                >open_in_new</span
+              ><span class="sr-only">
+                (link externo, abre em uma nova aba)</span
+              ></a
+            >
           </p>
         </div>
         <a

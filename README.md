@@ -6,18 +6,18 @@
 
 Biblioteca de comportamentos de interação de componentes, de Marcelo Sales.
 
-O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. O conteúdo continua na versão **1.0.0**: a migração altera seu formato de distribuição, sem afirmar uma nova revisão técnica das orientações.
+O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.0.1** remove os links genéricos “Ref 1” de 22 componentes, preservando as demais orientações e referências.
 
 ## Instalação pelo npm
 
-O pacote **@acessibilidade/magoo-mcp 1.0.0** está publicado e permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
+O pacote **@acessibilidade/magoo-mcp 1.0.1** está publicado e permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
 
 Nas configurações de servidores MCP do seu assistente, adicione:
 
 - **Nome:** `magoo`
 - **Tipo:** STDIO (local)
 - **Comando:** `npx`
-- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.0.0`
+- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.0.1`
 
 Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o formato `mcpServers`, use:
 
@@ -26,13 +26,13 @@ Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o form
   "mcpServers": {
     "magoo": {
       "command": "npx",
-      "args": ["-y", "@acessibilidade/magoo-mcp@1.0.0"]
+      "args": ["-y", "@acessibilidade/magoo-mcp@1.0.1"]
     }
   }
 }
 ```
 
-O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.0.0; atualizar o GitHub não atualiza automaticamente o pacote instalado.
+O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.0.1; atualizar o GitHub não atualiza automaticamente o pacote instalado.
 
 Experimente: **“Use o MCP Magoo para consultar o componente Modal e explicar seus comportamentos por teclado. Informe a versão consultada.”**
 

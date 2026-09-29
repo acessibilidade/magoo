@@ -56,6 +56,7 @@
     />
     <script src="/js/analytics.js" defer=""></script>
 
+    <script src="/js/translate.js" defer=""></script>
     <meta property="og:url" content="https://magoo.cc/404.html" />
     <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
     <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
@@ -70,15 +71,58 @@
     <link rel="canonical" href="https://magoo.cc/404.html" />
   </head>
   <body class="error-page">
+    <header class="error-header wrap">
+      <div class="header-actions utility-bar">
+        <nav aria-label="Projeto Magoo">
+          <a
+            href="https://github.com/acessibilidade/magoo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub
+            <span class="material-icons notranslate" translate="no" aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+          ><a
+            href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp"
+            target="_blank"
+            rel="noopener noreferrer"
+            >npm
+            <span class="material-icons notranslate" translate="no" aria-hidden="true"
+              >open_in_new</span
+            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+          >
+        </nav>
+        <div class="translation-control">
+          <span id="translation-label" class="sr-only">Traduzir esta página</span>
+          <div id="google_translate_element"></div>
+          <p id="translation-note" class="sr-only">Tradução automática</p>
+          <p class="translation-status" role="status">Carregando tradutor…</p>
+        </div>
+      </div>
+    </header>
     <main class="error-content">
       <a class="error-brand" href="/" aria-label="Magoo — página principal"
         ><img src="/img/logo-magoo.svg" alt="Magoo" width="320" height="124"
       /></a>
       <h1>Página não encontrada!</h1>
       <p>
-        Algum componente está perdido por aí, mas não está aqui.<br>
+        Algum componente está perdido por aí, mas não está aqui.
         <a href="/">Volte para a página principal do Magoo.</a>
       </p>
     </main>
+
+    <footer class="error-footer">
+      <p class="footer-license">
+        <a
+          href="https://github.com/acessibilidade/magoo/blob/master/LICENSE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Licença MIT
+          <span class="material-icons notranslate" translate="no" aria-hidden="true"
+            >open_in_new</span
+          ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
+        >
+      </p>
+    </footer>
   </body>
 </html>

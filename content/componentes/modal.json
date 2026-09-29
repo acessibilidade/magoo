@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.0",
+  "contentVersion": "1.0.1",
   "id": "modal",
   "name": "Modal",
   "category": "elementos-ocultos",
@@ -1154,38 +1154,8 @@
               "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
             },
             {
-              "type": "element",
-              "id": "modal.acceptance-criteria.3",
-              "tag": "a",
-              "attributes": {
-                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/",
-                "target": "_blank",
-                "rel": "noopener noreferrer"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Ref 1"
-                },
-                {
-                  "type": "element",
-                  "id": "modal.acceptance-criteria.4",
-                  "tag": "span",
-                  "attributes": {
-                    "class": "sr-only"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": " (abre em uma nova aba)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "type": "text",
-              "value": ".\n            "
+              "value": "\n            "
             }
           ]
         },

@@ -8,12 +8,15 @@ if (picker)
   });
 const compact = window.matchMedia("(max-width: 1000px)");
 for (const tablist of document.querySelectorAll('[role="tablist"]')) {
-  tablist.setAttribute("aria-label", "Documentação do componente");
+  if (!tablist.hasAttribute("aria-label"))
+    tablist.setAttribute("aria-label", "Documentação do componente");
   const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
   let selected = 0;
   const entries = tabs.map((tab, index) => {
     const panel = document.getElementById(tab.getAttribute("aria-controls"));
-    const heading = document.createElement("h2");
+    const heading = document.createElement(
+      tablist.closest(".usage-tabs") ? "h4" : "h2",
+    );
     heading.className = "accordion-heading";
     const button = document.createElement("button");
     button.type = "button";
@@ -227,3 +230,32 @@ for (const trigger of document.querySelectorAll(".faq-trigger")) {
     icon.textContent = expanded ? "remove" : "add";
   });
 }
+
+// Focus the destination heading so screen readers announce the selected section.
+function focusHomeSection() {
+  if (!document.body.classList.contains("home-page")) return;
+  const id = window.location.hash.slice(1);
+  if (!["audience-title", "faq-title"].includes(id)) return;
+  const heading = document.getElementById(id);
+  if (!heading) return;
+  heading.focus({ preventScroll: true });
+  heading.scrollIntoView({ block: "start" });
+}
+for (const link of document.querySelectorAll(".home-section-link")) {
+  link.addEventListener("click", (event) => {
+    if (
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    event.preventDefault();
+    if (window.location.hash !== link.hash)
+      history.pushState(null, "", link.hash);
+    focusHomeSection();
+  });
+}
+window.addEventListener("hashchange", focusHomeSection);
+focusHomeSection();

@@ -1352,3 +1352,178 @@ small,
 .error-content p a {
   font-weight: 700;
 }
+
+.topbar {
+  flex-wrap: wrap;
+  padding-block: 24px;
+}
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-left: auto;
+}
+.header-actions nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.header-actions a,
+.footer-license a {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.header-actions .material-icons,
+.footer-license .material-icons {
+  font-size: 1.1rem;
+  vertical-align: middle;
+}
+.translation-control {
+  max-width: 100%;
+  font-size: 1.1rem;
+}
+.translation-control > span {
+  font-weight: 700;
+}
+.translation-control p {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.translation-control select {
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+}
+.translation-control .goog-te-gadget {
+  font-family: inherit;
+}
+.footer-license {
+  margin-top: 20px;
+}
+.error-page {
+  grid-template-rows: auto 1fr auto;
+  gap: 40px;
+}
+.error-header {
+  width: 100%;
+}
+.error-footer {
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .header-actions {
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+}
+
+/* Ações em uma faixa independente, acima da marca. */
+.utility-bar {
+  padding-block: 16px;
+  align-items: flex-start;
+}
+.utility-bar nav {
+  padding-top: 10px;
+}
+.home-page .topbar {
+  padding-block: 32px 0;
+}
+.translation-select-wrap {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+.translation-control .goog-te-combo {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0 0 4px;
+  min-height: 44px;
+  padding: 10px 42px 10px 12px;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.translation-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-55%);
+  pointer-events: none;
+  color: var(--green);
+  font-size: 1.5rem;
+}
+.translation-control .goog-te-combo:hover {
+  background: #eef3e2;
+}
+.translation-control .goog-te-gadget {
+  color: var(--ink);
+}
+@media (max-width: 700px) {
+  .utility-bar {
+    margin-inline: auto;
+    justify-content: flex-end;
+    width: min(1280px, calc(100% - 40px));
+  }
+}
+
+.home-page h2 {
+  font-size: 1.925rem;
+  letter-spacing: -0.8px;
+  margin: 10px 0;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.library-introduction {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin: 16px 0 0;
+}
+
+.context-card > h3 {
+  margin: 0 0 24px;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--green);
+}
+
+.usage-tabs {
+  min-width: 0;
+  margin-block: 24px;
+}
+.usage-tabs .nav-tabs > .nav-link {
+  margin-bottom: -2px;
+}
+.usage-panel {
+  padding: 24px 8px;
+}
+.usage-panel[hidden] {
+  display: none;
+}
+.usage-panel h4 {
+  font-size: 1.3rem;
+  margin: 0 0 16px;
+  color: var(--green);
+}
+.usage-panel code {
+  overflow-wrap: anywhere;
+}
+.usage-tabs .accordion-heading {
+  margin: 0;
+}
