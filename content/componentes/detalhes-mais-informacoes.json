@@ -1,0 +1,2527 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "id": "detalhes-mais-informacoes",
+  "name": "Detalhes e Mais informações",
+  "category": "elementos-ocultos",
+  "summary": "Oferece informações complementares sem interromper o caminho principal de leitura.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/elementos-ocultos/detalhes-mais-informacoes.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://www.accessboost.com.br/aulas/v1/exemplo-doc/exemplo-detalhes-mais-informacoes.html",
+    "note": "Conteúdo migrado sem nova revisão normativa. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Questionamentos que devem ser feitos ao se projetar componentes\n              interativos do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Detalhes e Mais informações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Dependendo do contexto de\n              construção de seus respectivos componentes, é possível que haja\n              mais questionamentos, bem como alguns dos apresentados aqui não\n              ser necessários. A avaliação precisa ser feita caso a caso.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.8",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir é possível perceber visualmente que existe\n                conteúdo oculto ou complementar disponível?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O texto do acionador deixa claro o que será revelado, por\n                exemplo \"ler mais\", \"ver detalhes\" ou \"mais informações\"?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível identificar visualmente se o conteúdo está aberto ou\n                fechado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.12",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.13",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.14",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao passar o mouse no acionador?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar no acionador, o conteúdo complementar é exibido ou\n                ocultado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A mudança de estado não desloca a pessoa para uma posição\n                inesperada da tela?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.18",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O acionador possui área tocável confortável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao tocar no acionador, o conteúdo complementar é exibido ou\n                ocultado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Em telas menores, o conteúdo expandido permanece próximo do\n                acionador e fácil de perceber?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.23",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.24",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.25",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há foco visível no acionador?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível acionar o componente com "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-design.28",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-design.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SPACE"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " quando ele for implementado como botão?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o conteúdo está fechado, seus componentes internos não\n                entram na ordem de foco?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o conteúdo é aberto, seus componentes internos ficam\n                disponíveis na ordem natural de navegação?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.32",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-design.33",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O acionador é anunciado com nome acessível claro?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O estado aberto ou fechado é anunciado corretamente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-design.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo revelado fica disponível na sequência de leitura de\n                forma previsível?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Possíveis métodos de interação em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Detalhes e Mais informações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Apenas os principais métodos\n              estão listados aqui. Componentes customizados devem ter estudos\n              aprofundados.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.8",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.9",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Clicar no acionador abre ou fecha o conteúdo complementar.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O estado visual do acionador deve mudar junto com o conteúdo\n                exibido.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O texto, ícone ou indicador visual deve continuar compreensível\n                nos estados aberto e fechado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.13",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.14",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.15",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.17",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " move o foco para o acionador."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.19",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.20",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SPACE"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " alterna o estado quando\n                o acionador é um botão ou "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.21",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "summary"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após a abertura, a navegação continua para o conteúdo revelado\n                conforme a ordem do documento.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.23",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado (ou gestos) + leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.interaction-methods.24",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O acionador deve expor nome, papel e estado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando usado, "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-expanded"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " deve refletir o estado\n                aberto ou fechado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O elemento nativo "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "details"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " com\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.30",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "summary"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " pode ser usado quando seu comportamento\n                atender ao contexto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.3",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 1"
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.4",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.5",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Cenário: Considerando que estou em uma página que contém detalhes\n              e mais informações\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.6",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.7",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.9",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para o\n                acionador de mais informações\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O foco que VEJO é fortemente indicado visualmente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.12",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.13",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o conteúdo complementar é exibido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando aciono novamente o mesmo controle"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o conteúdo complementar é ocultado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.17",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.18",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e movo o foco para o acionador\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.20",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.21",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome do acionador."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.22",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o componente pode ser acionado."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.23",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO se o conteúdo está aberto ou fechado."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando aciono o componente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o conteúdo complementar ficou disponível ou\n                foi ocultado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.26",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.acceptance-criteria.27",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e\n                deslizo o dedo para focar no acionador, acontece o seguinte:\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.acceptance-criteria.29",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.30",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome do acionador."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.31",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o componente pode ser acionado."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.acceptance-criteria.32",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO se o conteúdo está aberto ou fechado."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando eu toco duas vezes para ativar o componente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.acceptance-criteria.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o conteúdo complementar ficou disponível ou\n                foi ocultado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.considerations.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de Atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.considerations.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Pontos de atenção para se preocupar em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.considerations.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Detalhes e Mais informações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.considerations.4",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.considerations.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Este componente representa conteúdo complementar oculto que é\n                revelado por uma ação, como \"ler mais\", \"ver detalhes\" ou \"mais\n                informações\".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.considerations.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Não esconda informações essenciais sem indicar claramente que há\n                mais conteúdo disponível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.considerations.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Se o conteúdo revelado for longo ou composto por várias seções,\n                accordion pode ser um padrão mais adequado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.considerations.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Se a ação leva para outra página ou outro local, o comportamento\n                é de link, não de disclosure.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Detalhes e Mais informações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.7",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.8",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.9",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.10",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.11",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.13",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C APG: Disclosure Pattern\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.14",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.15",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.18",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "MDN Web Docs: The Details disclosure element\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.19",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.20",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.21",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.23",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "MDN Web Docs: The Summary disclosure element\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.24",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.25",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.27",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.references.28",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.30",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/summary-box/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "US.gov - Summary box\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.31",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.32",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.33",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.35",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/content-switcher/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Content switcher\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.36",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.37",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.38",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.references.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.references.40",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/components/collapse/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Collapse\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.41",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.42",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "detalhes-mais-informacoes.references.43",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    }
+  ]
+}

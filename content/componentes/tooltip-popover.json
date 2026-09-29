@@ -1,0 +1,3679 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "id": "tooltip-popover",
+  "name": "Tooltip e Popover",
+  "category": "elementos-ocultos",
+  "summary": "Apresentam informações adicionais associadas a um elemento da interface.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/elementos-ocultos/tooltip-popover.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://www.accessboost.com.br/aulas/v1/exemplo-doc/exemplo-tooltip-popover.html",
+    "note": "Conteúdo migrado sem nova revisão normativa. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Questionamentos que devem ser feitos ao se projetar componentes\n              interativos do tipo "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tooltip"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.4",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Popover"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.6",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.7",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Dependendo do contexto de\n              construção de seus respectivos componentes, é possível que haja\n              mais questionamentos, bem como alguns dos apresentados aqui não\n              ser necessários. A avaliação precisa ser feita caso a caso.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.8",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.9",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente que o componente é interativo?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.11",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.12",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.13",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Há feedback visual ao passar o mouse no componente acionável?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao clicar no componente acionável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo adicional do componente não é acionado ao passar o\n                mouse, mas sim apenas após o clique?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo adicional aberto após o acionamento do componente se\n                sobrepõe a algum outro conteúdo relevante na tela?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O fechamento do conteúdo adicional ocorre após clique em\n                qualquer região fora do conteúdo aberto?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo adicional aberto possui controle de fechamento e\n                permite o fechamento por mouse ao clicar no item respectivo de\n                fechamento?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.20",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.21",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao acionar o componente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo adicional aberto após o acionamento do componente se\n                sobrepõe a algum outro conteúdo relevante na tela?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O fechamento do conteúdo adicional ocorre após toque em qualquer\n                região fora do conteúdo aberto?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo adicional aberto possui controle de fechamento e\n                permite o fechamento por toque ao clicar no item respectivo de\n                fechamento?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.26",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.27",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao focar no componente acionável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível interagir com o componente acionável através da tecla\n                \"enter\" ou \"barra de espaço\"?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao ser acionado por teclado o componente exibe o conteúdo sem\n                sobrepor outros conteúdos relevantes?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O conteúdo aberto possui controle de fechamento que permite o\n                seu acionamento por teclado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível realizar o fechamento do conteúdo adicional com a\n                tecla \"esc\"?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.34",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-design.35",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar no componente é possível ouvir de que se trata de um\n                botão (e não um link)?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.37",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar no componente é possível ouvir claramente qual é o\n                conteúdo adicional que será aberto?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.38",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após a abertura do conteúdo adicional é possível ouvir o\n                conteúdo diretamente?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-design.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Com o conteúdo adicional aberto é possível utilizar o teclado\n                para localizar o controle de fechamento e ao localizar é\n                possível perceber de que se trata do fechamento do conteúdo\n                adicional?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Possíveis métodos de interação em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tooltip"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.4",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Popover"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.6",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.7",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Apenas os principais métodos\n              estão listados aqui. Componentes customizados devem ter estudos\n              aprofundados.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.8",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.9",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.10",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao passar o mouse, o componente deve retornar feedback visual\n                confirmando possibilidade de interação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar com o botão do mouse, o componente deve retornar\n                feedback visual confirmando o clique.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar com o botão do mouse, o conteúdo deve ser aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar com o botão do mouse fora do componente, o conteúdo\n                que estiver aberto e for referente a ele, deve ser fechado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Caso haja controle de fechamento no componente (exemplo: botão\n                fechar), ele deve ser fechado após clique com o mouse.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.16",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.17",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.18",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar com teclado, o componente deve retornar feedback visual\n                com foco visível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Deve ser possível acionar o componente que abre o conteúdo\n                adicional com a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.21",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.22",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "BARRA DE ESPAÇO"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após a abertura do conteúdo adicional, existindo controle de\n                fechamento do conteúdo aberto, ao se pressionar a tecla\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.24",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", deve ser possível ir direto para este\n                controle.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O fechamento do conteúdo adicional deve ocorre quando o controle\n                de fechamento for pressionado (quando este existir) ou quando as\n                teclas "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.26",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "BARRA DE ESPAÇO"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " forem\n                pressionadas enquanto o foco estiver no componente responsável\n                pela abertura do conteúdo adicional.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Pressionar a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.interaction-methods.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ESC"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " também ocasiona o fechamento\n                do conteúdo adicional, caso ele esteja aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.30",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado (ou gestos) + leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.interaction-methods.31",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar no componente que abre o conteúdo adicional é possível\n                identificar de que se trata de um botão.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar no componente que abre o conteúdo adicional é possível\n                ouvir qual é o conteúdo que será aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após a abertura do conteúdo adicional é possível ouvir o\n                conteúdo que foi aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Caso exista um controle de fechamento (no caso do conteúdo\n                adicional estar aberto) deve ser possível ao pressionar a tecla\n                \"tab\", ouvir que o controle é um botão e que ele é responsável\n                pelo fechamento do conteúdo adicional.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.interaction-methods.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Com o conteúdo adicional aberto, caso a tecla \"esc\" seja\n                pressionada, deve ser possível identificar que o conteúdo\n                adicional não está mais aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.3",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 1"
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.4",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.5",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Cenário: Considerando que estou em uma página que contém Tooltip\n              ou Popover\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.6",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.7",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.9",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para o\n                componente que abre conteúdo adicional\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O foco que VEJO é fortemente indicado visualmente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.12",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.13",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para acionar o componente\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o conteúdo adicional é exibido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.16",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou aciono o controle\n                de fechamento\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o conteúdo adicional é fechado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para o componente\n                que abre conteúdo adicional\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.21",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.22",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome do componente."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.23",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que o componente é identificado como botão quando sua\n                    função é abrir ou fechar conteúdo.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.24",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO qual conteúdo adicional será aberto ou qual é a\n                    finalidade do componente.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando ativo o componente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO o conteúdo adicional ou consigo chegar até ele pela ordem\n                de navegação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                E, quando fecho o conteúdo adicional, OUÇO ou percebo que ele\n                não está mais aberto.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.28",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.acceptance-criteria.29",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e\n                deslizo o dedo para focar no componente que abre conteúdo\n                adicional, acontece o seguinte:\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.acceptance-criteria.31",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.32",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome do componente."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.33",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que o componente é identificado como botão quando sua\n                    função é abrir ou fechar conteúdo.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.acceptance-criteria.34",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO qual conteúdo adicional será aberto ou qual é a\n                    finalidade do componente.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando eu toco duas vezes para ativar o componente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.acceptance-criteria.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO o conteúdo adicional ou consigo chegar até ele pela ordem\n                de navegação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.considerations.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de Atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.considerations.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Pontos de atenção para se preocupar em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tooltip"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.4",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Popover"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.considerations.5",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ainda\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.considerations.7",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://github.com/w3c/aria-practices/issues/128",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "não existe um consenso\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.considerations.8",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.considerations.9",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.considerations.10",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                de métodos de interação para este componente funcionar\n                adequadamente. As construções em diferentes locais não trazem\n                consistência nem de funcionamento e nem de nomenclatura (há\n                variações de nomes em diferentes bibliotecas). Neste caso, as\n                interações indicadas neste material se baseiam em modelos\n                mentais relacionados a componentes similares.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A utilização de tooltip ou componentes similares é comumente\n                interpretado como um indício de \"design ruim\", justamente devido\n                a sua complexidade de interpretação das interações. Caso seja\n                realmente necessário dar algum tipo de dica, considere a\n                utilização de \"modal\" ou componentes expansores como\n                \"accordion\".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Em telas menores (responsividade), a atenção ao seu uso deve ser\n                redobrada. Evite sempre que possível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.considerations.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Interações com eventos do mouse do tipo \"mouseover\" ou\n                \"mouseout\" não são recomendados, principalmente para conteúdos\n                que exibam mais de uma linha de informação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tooltip"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.4",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Popover"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.6",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.7",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.8",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.9",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.10",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.11",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.12",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.14",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://developer.apple.com/design/human-interface-guidelines/components/presentation/popovers",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Apple - Human Interface Guidelines - Popovers\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.15",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.17",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.19",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://m3.material.io/components/tooltips/overview",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google - Material Design - Tooltips\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.20",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.21",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.22",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.24",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C APG - Tooltips\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.25",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.27",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.28",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tooltip-popover.references.29",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.31",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://cauldron.dequelabs.com/components/Tooltip",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Deque Cauldron: Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.32",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.33",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.34",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.36",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://ebay.gitbook.io/mindpatterns/disclosure/tooltip",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "eBay MIND Patterns: Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.37",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.38",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.39",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.40",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.41",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://ebay.gitbook.io/mindpatterns/disclosure/infotip",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "eBay MIND Patterns: Infotip Button\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.42",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.43",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.44",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.45",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.46",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/tooltip/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "US.gov - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.47",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.48",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.49",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.50",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.51",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://build.washingtonpost.com/components/tooltip",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Washington Post - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.52",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.53",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.54",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.55",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.56",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://build.washingtonpost.com/components/popover",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Washington Post - Popover\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.57",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.58",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.59",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.60",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.61",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.lightningdesignsystem.com/components/tooltips/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Salesforce Lightning - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.62",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.63",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.64",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.65",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.66",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.lightningdesignsystem.com/components/popovers/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Salesforce Lightning - Popover\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.67",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.68",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.69",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.70",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.71",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/tooltip/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.72",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.73",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.74",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.75",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.76",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/popover/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Popover\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.77",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.78",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.79",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.80",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.81",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://spectrum.adobe.com/page/tooltip/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Adobe Spectrum - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.82",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.83",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.84",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.85",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.86",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://primer.style/design/guides/accessibility/tooltip-alternatives",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Github Primer - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.87",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.88",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.89",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.90",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.91",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/components/tooltips/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Tooltip\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.92",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.93",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.94",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tooltip-popover.references.95",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.references.96",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/components/popovers/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Popover\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.97",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.98",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tooltip-popover.references.99",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    }
+  ]
+}

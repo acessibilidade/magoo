@@ -1,0 +1,45 @@
+{
+  "name": "@acessibilidade/magoo-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "build": "node js/build/site.js",
+    "validate": "node js/build/validate.js",
+    "mcp": "node js/mcp/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.31.0",
+    "ajv": "8.20.0",
+    "cheerio": "1.2.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "prettier": "3.9.9"
+  },
+  "description": "Biblioteca de comportamentos de interação Magoo — MCP somente de leitura",
+  "homepage": "https://magoo.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acessibilidade/magoo.git"
+  },
+  "bin": {
+    "magoo-mcp": "js/mcp/server.js"
+  },
+  "files": [
+    "js/mcp/",
+    "js/lib/",
+    "js/build/validate.js",
+    "content/",
+    "README.md",
+    "LICENSE*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "Marcelo Sales"
+}

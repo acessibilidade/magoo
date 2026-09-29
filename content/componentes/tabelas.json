@@ -1,0 +1,2468 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "id": "tabelas",
+  "name": "Tabelas",
+  "category": "estrutura",
+  "summary": "Organizam dados em linhas e colunas, preservando as relações entre células e cabeçalhos.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/estrutura/tabelas.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://www.accessboost.com.br/aulas/v1/exemplo-doc/exemplo-tabelas.html",
+    "note": "Conteúdo migrado sem nova revisão normativa. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Questionamentos que devem ser feitos ao se projetar componentes do\n              tipo "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabelas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Dependendo do contexto de\n              construção de seus respectivos componentes, é possível que haja\n              mais questionamentos, bem como alguns dos apresentados aqui não\n              ser necessários. A avaliação precisa ser feita caso a caso.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.8",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de ler os dados é possível perceber que há relação entre\n                linhas e colunas?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A tabela possui título ou legenda que explica sua finalidade?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Cabeçalhos de linhas e colunas são visualmente claros?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.12",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.13",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.14",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando houver ordenação ou ação na tabela, há feedback visual no\n                controle?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Áreas clicáveis dentro de células são distinguíveis do dado\n                estático?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Tabela com rolagem horizontal indica que há mais conteúdo?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.18",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Em telas pequenas, a tabela continua legível e compreensível?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Rolagem horizontal, se existir, é fácil de executar?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A reorganização responsiva preserva cabeçalhos e relações dos\n                dados?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.23",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.24",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.25",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Tabela rolável horizontalmente pode receber foco para permitir\n                rolagem por teclado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Controles de ordenação ou ação possuem foco visível?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A ordem de foco acompanha a ordem visual e lógica dos dados?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.29",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-design.30",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A legenda ou título da tabela é anunciado?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Cabeçalhos de coluna e linha são associados aos dados?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-design.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mudanças de ordenação são anunciadas quando aplicável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Possíveis métodos de interação em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabelas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Apenas os principais métodos\n              estão listados aqui. Componentes customizados devem ter estudos\n              aprofundados.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.8",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.9",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabelas estáticas não exigem interação."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Clicar em cabeçalho ordenável altera a ordenação quando esse\n                recurso existir.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Links e botões dentro de células seguem seus próprios padrões.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.13",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.14",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.15",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Tabelas estáticas não devem adicionar foco em células sem\n                necessidade.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Controles internos devem ser alcançáveis por "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.interaction-methods.18",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Contêiner rolável pode receber "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.interaction-methods.20",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tabindex=\"0\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para\n                permitir rolagem por teclado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.21",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado (ou gestos) + leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.interaction-methods.22",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Use "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.interaction-methods.24",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "caption"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para título ou descrição da tabela.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Use "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.interaction-methods.26",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "th"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " com "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "scope"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para cabeçalhos\n                simples.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Tabelas complexas devem associar cabeçalhos e células de forma\n                programática.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.3",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.magentaa11y.com/checklist-web/table/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 1"
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.acceptance-criteria.4",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ",\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.5",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 2"
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.acceptance-criteria.6",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.7",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Cenário: Considerando que estou em uma página que contém tabelas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.8",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.9",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso teclado para navegar por uma tabela com controles\n                interativos\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO foco visível nos controles disponíveis"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando a tabela possui rolagem horizontal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                VEJO que consigo acessar e rolar o contêiner quando necessário\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.14",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.15",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e navego pelo componente\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.acceptance-criteria.17",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.18",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o título ou legenda da tabela."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.19",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o conteúdo é uma tabela."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.20",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO cabeçalhos relacionados às células de dados."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando interajo com o componente quando aplicável"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que a informação, estado, conteúdo ou ação\n                correspondente está disponível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.23",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.acceptance-criteria.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e\n                deslizo o dedo para navegar pelo componente, acontece o\n                seguinte:\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.acceptance-criteria.26",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.27",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o título ou legenda da tabela."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.28",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o conteúdo é uma tabela."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.acceptance-criteria.29",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    Consigo compreender a relação entre cabeçalhos e dados.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando interajo com o componente quando aplicável"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.acceptance-criteria.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que a informação, estado, conteúdo ou ação\n                correspondente está disponível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.considerations.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de Atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.considerations.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Pontos de atenção para se preocupar em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.considerations.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabelas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.considerations.4",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.considerations.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Não use tabela para layout visual."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.considerations.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Tabelas complexas exigem associação mais cuidadosa entre\n                cabeçalhos e células.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.considerations.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Versões responsivas não devem remover relações semânticas\n                importantes.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabelas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.7",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.8",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.9",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.10",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.11",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.13",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Documentação de padrões HTML: The Table Element\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.14",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.15",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.18",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/ARIA/apg/patterns/table/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C APG: Table Pattern\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.19",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.20",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.21",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.23",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/tutorials/tables/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C WAI: Tables Tutorial\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.24",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.25",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.27",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "tabelas.references.28",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.30",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/table/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "US.gov - Table\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.31",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.32",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.33",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.35",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/data-table/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Data table\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.36",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.37",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.38",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.40",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://spectrum.adobe.com/page/table/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Adobe Spectrum - Table\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.41",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.42",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.43",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabelas.references.44",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "tabelas.references.45",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/content/tables/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Tables\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.46",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.47",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "tabelas.references.48",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    }
+  ]
+}

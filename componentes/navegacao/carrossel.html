@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Carrossel | Magoo</title>
+    <meta
+      name="description"
+      content="Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles para navegar entre eles."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Carrossel | Magoo" />
+    <meta
+      property="og:description"
+      content="Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles para navegar entre eles."
+    />
+
+    <meta name="twitter:title" content="Carrossel | Magoo" />
+    <meta
+      name="twitter:description"
+      content="Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles para navegar entre eles."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="../../js/main.js" defer=""></script>
+    <script src="../../js/analytics.js" defer=""></script>
+    <meta
+      property="og:url"
+      content="https://magoo.cc/componentes/navegacao/carrossel.html"
+    />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/componentes/navegacao/carrossel.html" />
+  </head>
+  <body class="component-page">
+    <a class="skip-link" href="#conteudo"
+      >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
+    >
+    <header>
+      <div class="topbar wrap">
+        <a class="brand" href="../../index.html" aria-label="Magoo — início"
+          ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
+        ><span class="brand-note">faça seus componentes funcionarem corretamente</span
+        ><a class="library-link back-link" href="../../index.html"
+          ><span class="material-icons" aria-hidden="true">arrow_back</span>Voltar para
+          página principal</a
+        >
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / NAVEGAÇÃO</p>
+        <h1>Carrossel</h1>
+        <p>
+          Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles
+          para navegar entre eles.
+        </p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo"
+            >consulte a aba de referências<span class="sr-only">
+              (abre as referências na mesma página)</span
+            ></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="component-menu"
+          hidden=""
+        >
+          <span class="material-icons" aria-hidden="true">menu</span>Índice de componentes
+        </button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden="">
+            <span class="material-icons" aria-hidden="true">close</span>Fechar índice
+          </button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">
+                Flexbox &amp; Grid <small>Em desenvolvimento</small>
+              </li>
+              <li class="upcoming">
+                Header, Footer e Regiões <small>Em desenvolvimento</small>
+              </li>
+              <li>
+                <a href="../estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="../estrutura/listas.html">Listas</a></li>
+              <li class="upcoming">Tabbar <small>Em desenvolvimento</small></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="../mensagens/alertas.html">Alertas</a></li>
+              <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
+              <li class="upcoming">
+                Validação de formulários <small>Em desenvolvimento</small>
+              </li>
+              <li><a href="../mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="../navegacao/menu.html">Menu</a></li>
+              <li><a href="../navegacao/links.html">Links</a></li>
+              <li><a href="../navegacao/paginacao.html">Paginação</a></li>
+              <li>
+                <a href="../navegacao/carrossel.html" aria-current="page"
+                  >Carrossel<span
+                    class="material-icons active-menu-arrow"
+                    aria-hidden="true"
+                    >arrow_forward</span
+                  ></a
+                >
+              </li>
+              <li><a href="../navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="../elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="../elementos-ocultos/detalhes-mais-informacoes.html"
+                  >Detalhes e Mais informações</a
+                >
+              </li>
+              <li><a href="../elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="../elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="../elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="../formularios/botao.html">Botão</a></li>
+              <li><a href="../formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="../formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li class="upcoming">Inputs <small>Em desenvolvimento</small></li>
+              <li><a href="../formularios/select.html">Select (Combo)</a></li>
+              <li><a href="../formularios/slider.html">Slider</a></li>
+              <li><a href="../formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="aba-interacao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-interacao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-interacao-conteudo"
+              aria-selected="true"
+            >
+              Design de interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-metodo"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-metodo-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-metodo-conteudo"
+              aria-selected="false"
+            >
+              Métodos de Interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-gherkin"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-gherkin-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-gherkin-conteudo"
+              aria-selected="false"
+            >
+              Gherkin
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-atencao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-atencao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-atencao-conteudo"
+              aria-selected="false"
+            >
+              Pontos de atenção
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-ref"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-ref-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-ref-conteudo"
+              aria-selected="false"
+            >
+              Referências
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div
+            class="tab-pane fade show active"
+            id="aba-interacao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-interacao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">
+              Questionamentos que devem ser feitos ao se projetar componentes interativos
+              do tipo <span class="destaque">Carrossel</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Dependendo do contexto de construção de
+              seus respectivos componentes, é possível que haja mais questionamentos, bem
+              como alguns dos apresentados aqui não ser necessários. A avaliação precisa
+              ser feita caso a caso.
+            </p>
+
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente que se
+                trata de um agrupamento de conteúdos relacionados?
+              </li>
+              <li>
+                Antes de interagir com o componente é possível identificar qual item ou
+                slide está ativo?
+              </li>
+              <li>
+                Antes de interagir com o componente é possível perceber quantos itens
+                existem ou qual é a posição atual dentro da sequência?
+              </li>
+              <li>
+                Quando existe rotação automática, é possível perceber se o carrossel está
+                em reprodução ou pausado?
+              </li>
+              <li>
+                Os controles de avançar, voltar, selecionar item e pausar ficam
+                disponíveis sem depender apenas de gestos ou animações?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Há feedback visual ao passar o mouse sobre botões, indicadores e controles
+                de pausa?
+              </li>
+              <li>Há feedback visual ao clicar em controles acionáveis?</li>
+              <li>
+                Ao clicar em anterior ou próximo, o slide correspondente é exibido e o
+                indicador ativo é atualizado?
+              </li>
+              <li>
+                Ao clicar em um indicador, o carrossel apresenta o slide associado àquele
+                controle?
+              </li>
+              <li>
+                Quando houver rotação automática, passar o mouse sobre a área do carrossel
+                pausa a troca de slides?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Os controles possuem área suficiente para toque confortável?</li>
+              <li>
+                Quando houver gesto de deslizar, ele funciona como complemento aos
+                controles visíveis?
+              </li>
+              <li>
+                O gesto de deslizar atualiza o slide ativo e sua respectiva indicação
+                visual?
+              </li>
+              <li>
+                É possível operar o carrossel sem depender exclusivamente de movimentos
+                precisos ou complexos?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao focar em cada controle acionável?</li>
+              <li>
+                É possível navegar entre os controles acionáveis utilizando
+                <code>TAB</code> e <code>SHIFT</code>+<code>TAB</code>?
+              </li>
+              <li>
+                É possível acionar botões e indicadores com <code>ENTER</code> e
+                <code>SPACE</code>?
+              </li>
+              <li>Ao trocar de slide, o foco permanece em uma posição previsível?</li>
+              <li>Quando o foco entra no carrossel, a rotação automática é pausada?</li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Ao navegar por landmarks ou regiões é possível identificar o carrossel por
+                um nome acessível claro?
+              </li>
+              <li>
+                Ao focar em um controle acionável é possível ouvir seu nome, papel e
+                estado?
+              </li>
+              <li>
+                Ao focar em indicadores, é possível identificar qual slide será exibido e
+                qual está selecionado?
+              </li>
+              <li>
+                A posição do slide ativo, como "2 de 5", é comunicada quando isso ajuda a
+                orientação?
+              </li>
+              <li>
+                Atualizações automáticas são pausadas ou comunicadas de forma controlada
+                para não interromper a leitura?
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-metodo-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-metodo"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <p class="mt-3">
+              Possíveis métodos de interação em componentes do tipo
+              <span class="destaque">Carrossel</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Apenas os principais métodos estão
+              listados aqui. Componentes customizados devem ter estudos aprofundados.
+            </p>
+
+            <h3 class="destaque mt-4">
+              Interação com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao passar o mouse, cada controle acionável deve retornar feedback visual
+                confirmando possibilidade de interação.
+              </li>
+              <li>
+                Ao clicar no botão de próximo, o próximo slide deve ser apresentado.
+              </li>
+              <li>
+                Ao clicar no botão de anterior, o slide anterior deve ser apresentado.
+              </li>
+              <li>
+                Ao clicar em um indicador, o slide correspondente deve ser apresentado.
+              </li>
+              <li>
+                Ao clicar no controle de pausa, a rotação automática deve ser
+                interrompida.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao focar com teclado, cada controle acionável deve retornar feedback
+                visual com foco visível.
+              </li>
+              <li>
+                Deve ser possível navegar para o próximo item ou para o anterior
+                utilizando as teclas <code>TAB</code> ou <code>SHIFT</code>+<code
+                  >TAB</code
+                >
+                respectivamente.
+              </li>
+              <li>
+                Botões de controle devem ser acionados com as teclas
+                <code>ENTER</code> e <code>SPACE</code>.
+              </li>
+              <li>
+                Setas direcionais podem existir como interação complementar, desde que não
+                sejam o único método de uso e não conflitem com padrões esperados.
+              </li>
+              <li>
+                Ao receber foco, o carrossel com rotação automática deve pausar a troca de
+                slides.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado (ou gestos) + leitor de telas
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao chegar no carrossel é possível identificar seu nome acessível e sua
+                finalidade.
+              </li>
+              <li>
+                Ao focar em controles como anterior, próximo, pausar ou indicadores, seus
+                nomes devem descrever a ação executada.
+              </li>
+              <li>
+                O slide ativo e sua posição no conjunto devem ser perceptíveis quando
+                necessário para orientação.
+              </li>
+              <li>A troca de slide não deve deslocar o foco inesperadamente.</li>
+              <li>
+                Em dispositivos móveis, controles devem ser alcançáveis por gestos do
+                leitor de tela e acionáveis por duplo toque.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-gherkin-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-gherkin"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">
+              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
+              Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
+              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
+              <a
+                href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 1<span class="sr-only"> (abre em uma nova aba)</span></a
+              >.
+            </p>
+
+            <h3>Cenário: Considerando que estou em uma página que contém carrossel</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso a tecla <code>Tab</code> para mover o foco para os controles do
+                carrossel
+              </li>
+              <li>O foco que VEJO é fortemente indicado visualmente</li>
+              <li>
+                ENTÃO, quando uso as teclas <code>Enter</code> ou <code>Space</code> para
+                acionar um controle
+              </li>
+              <li>VEJO que o slide correspondente é apresentado</li>
+              <li>E VEJO que o indicador do slide atual é atualizado</li>
+              <li>E o foco permanece em uma posição previsível</li>
+            </ol>
+
+            <h4 class="mt-4">Rotação automática</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO o carrossel possui rotação automática</li>
+              <li>VEJO um controle para pausar, parar ou controlar a animação</li>
+              <li>
+                ENTÃO, quando o foco entra no carrossel ou o mouse passa sobre sua área
+              </li>
+              <li>VEJO que a rotação automática é pausada</li>
+              <li>
+                E, quando aciono o controle de pausa, a troca automática de slides é
+                interrompida
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Quando uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e
+                navego até o carrossel, acontece o seguinte:
+                <ul>
+                  <li>OUÇO o nome acessível do carrossel ou da região onde ele está.</li>
+                  <li>
+                    OUÇO o nome de cada controle, como slide anterior, próximo slide,
+                    pausar carrossel ou selecionar slide.
+                  </li>
+                  <li>
+                    OUÇO o estado ou posição do slide atual quando isso for necessário
+                    para orientação.
+                  </li>
+                </ul>
+              </li>
+              <li>ENTÃO, quando ativo um controle do carrossel</li>
+              <li>
+                OUÇO ou percebo que o slide foi atualizado sem anúncios repetitivos ou
+                interrupções excessivas.
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o
+                dedo para navegar pelo carrossel, acontece o seguinte:
+                <ul>
+                  <li>OUÇO o nome acessível do carrossel ou da região onde ele está.</li>
+                  <li>OUÇO controles e indicadores em ordem lógica.</li>
+                  <li>OUÇO nomes que deixam clara a ação de cada controle.</li>
+                </ul>
+              </li>
+              <li>ENTÃO, quando eu toco duas vezes para ativar um controle</li>
+              <li>
+                OUÇO ou percebo que o slide correspondente foi apresentado sem perda de
+                contexto.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-atencao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-atencao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Pontos de Atenção</h2>
+            <ul class="lista-detalhe link-padrao mt-3">
+              <li>
+                Se houver rotação automática, deve existir uma forma clara de pausar,
+                parar ou controlar a animação.
+              </li>
+              <li>
+                O carrossel deve pausar quando recebe foco de teclado ou quando o mouse
+                passa sobre sua área.
+              </li>
+              <li>
+                Conteúdos importantes não devem existir apenas em slides que desaparecem
+                automaticamente.
+              </li>
+              <li>As animações devem respeitar preferências de redução de movimento.</li>
+              <li>
+                Indicadores visuais, como pontos, precisam ter nome acessível e estado
+                ativo perceptível.
+              </li>
+              <li>
+                Use carrosséis com critério, pois eles adicionam complexidade de navegação
+                e podem ocultar conteúdo.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-ref-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-ref"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Carrossel</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />A maior parte das referências estão na
+              plataforma do curso junto com as aulas citadas neste material.
+            </p>
+            <p>
+              <strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui
+              não são recomendações, mas apenas uma curadoria de referências onde você
+              pode encontrar componentes construídos. É importante ressaltar que não há
+              uma unificação nos formatos de construção e não há garantias de que os links
+              mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser
+              direcionadas para as respectivas equipes envolvidas nas construções dos
+              materiais indicados. Antes de "copiar" algum modelo apresentado, leve em
+              consideração que todos os materiais são atualizados constantemente e que os
+              padrões (principalmente proprietários) podem sofrer alterações.
+            </p>
+
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C APG - Carousel Pattern
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MDN Web Docs - prefers-reduced-motion
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://getbootstrap.com/docs/5.2/components/carousel/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bootstrap - Carousel
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
+        >curso AccessBoost
+        <span class="material-icons" aria-hidden="true">open_in_new</span
+        ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos
+      podem ser customizadas (desde que haja instruções suficientes para que as pessoas
+      compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>
+            O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir
+            instruções em um mesmo local para entender o design de interação de
+            componentes antes de construir um sistema mais robusto (ou então atualizar um
+            sistema já construído).
+          </p>
+          <p>
+            Explore comportamentos, métodos de interação e critérios de aceite para criar
+            experiências mais acessíveis e inclusivas.
+          </p>
+        </div>
+        <a
+          class="initiative"
+          href="https://www.tudoeacessibilidade.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="../../img/iniciativa-tudo-off.svg"
+            width="350"
+            height="67"
+            alt="Uma iniciativa Tudo é Acessibilidade"
+          /><span class="sr-only"> (abre em uma nova aba)</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

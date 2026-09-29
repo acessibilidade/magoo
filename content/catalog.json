@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "language": "pt-BR",
+  "author": "Marcelo Sales",
+  "components": [
+    {
+      "id": "abas",
+      "name": "Abas",
+      "category": "elementos-ocultos",
+      "path": "componentes/elementos-ocultos/abas.html"
+    },
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "category": "elementos-ocultos",
+      "path": "componentes/elementos-ocultos/accordion.html"
+    },
+    {
+      "id": "detalhes-mais-informacoes",
+      "name": "Detalhes e Mais informações",
+      "category": "elementos-ocultos",
+      "path": "componentes/elementos-ocultos/detalhes-mais-informacoes.html"
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "category": "elementos-ocultos",
+      "path": "componentes/elementos-ocultos/modal.html"
+    },
+    {
+      "id": "tooltip-popover",
+      "name": "Tooltip e Popover",
+      "category": "elementos-ocultos",
+      "path": "componentes/elementos-ocultos/tooltip-popover.html"
+    },
+    {
+      "id": "listas",
+      "name": "Listas",
+      "category": "estrutura",
+      "path": "componentes/estrutura/listas.html"
+    },
+    {
+      "id": "tabelas",
+      "name": "Tabelas",
+      "category": "estrutura",
+      "path": "componentes/estrutura/tabelas.html"
+    },
+    {
+      "id": "titulos",
+      "name": "Títulos (Cabeçalhos)",
+      "category": "estrutura",
+      "path": "componentes/estrutura/titulos.html"
+    },
+    {
+      "id": "botao",
+      "name": "Botão",
+      "category": "formularios",
+      "path": "componentes/formularios/botao.html"
+    },
+    {
+      "id": "checkbox",
+      "name": "Checkbox",
+      "category": "formularios",
+      "path": "componentes/formularios/checkbox.html"
+    },
+    {
+      "id": "radio-button",
+      "name": "Radio Button",
+      "category": "formularios",
+      "path": "componentes/formularios/radio-button.html"
+    },
+    {
+      "id": "select",
+      "name": "Select (Combo)",
+      "category": "formularios",
+      "path": "componentes/formularios/select.html"
+    },
+    {
+      "id": "slider",
+      "name": "Slider",
+      "category": "formularios",
+      "path": "componentes/formularios/slider.html"
+    },
+    {
+      "id": "switch",
+      "name": "Switch",
+      "category": "formularios",
+      "path": "componentes/formularios/switch.html"
+    },
+    {
+      "id": "alertas",
+      "name": "Alertas",
+      "category": "mensagens",
+      "path": "componentes/mensagens/alertas.html"
+    },
+    {
+      "id": "dialogs",
+      "name": "Dialogs",
+      "category": "mensagens",
+      "path": "componentes/mensagens/dialogs.html"
+    },
+    {
+      "id": "toasts",
+      "name": "Toasts",
+      "category": "mensagens",
+      "path": "componentes/mensagens/toasts.html"
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "category": "navegacao",
+      "path": "componentes/navegacao/breadcrumb.html"
+    },
+    {
+      "id": "carrossel",
+      "name": "Carrossel",
+      "category": "navegacao",
+      "path": "componentes/navegacao/carrossel.html"
+    },
+    {
+      "id": "drag-drop",
+      "name": "Drag'n'Drop",
+      "category": "navegacao",
+      "path": "componentes/navegacao/drag-drop.html"
+    },
+    {
+      "id": "links",
+      "name": "Links",
+      "category": "navegacao",
+      "path": "componentes/navegacao/links.html"
+    },
+    {
+      "id": "menu",
+      "name": "Menu",
+      "category": "navegacao",
+      "path": "componentes/navegacao/menu.html"
+    },
+    {
+      "id": "paginacao",
+      "name": "Paginação",
+      "category": "navegacao",
+      "path": "componentes/navegacao/paginacao.html"
+    }
+  ],
+  "planned": [
+    {
+      "category": "Estrutura",
+      "name": "Flexbox & Grid",
+      "status": "in-development"
+    },
+    {
+      "category": "Estrutura",
+      "name": "Header, Footer e Regiões",
+      "status": "in-development"
+    },
+    {
+      "category": "Estrutura",
+      "name": "Tabbar",
+      "status": "in-development"
+    },
+    {
+      "category": "Mensagens",
+      "name": "Validação de formulários",
+      "status": "in-development"
+    },
+    {
+      "category": "Formulários",
+      "name": "Inputs",
+      "status": "in-development"
+    }
+  ]
+}

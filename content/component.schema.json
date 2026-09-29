@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "contentVersion",
+    "id",
+    "name",
+    "category",
+    "summary",
+    "author",
+    "language",
+    "path",
+    "source",
+    "sections"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "contentVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string", "minLength": 1 },
+    "category": {
+      "enum": [
+        "estrutura",
+        "mensagens",
+        "navegacao",
+        "elementos-ocultos",
+        "formularios"
+      ]
+    },
+    "summary": { "type": "string", "minLength": 1 },
+    "author": { "type": "string", "minLength": 1 },
+    "language": { "const": "pt-BR" },
+    "path": {
+      "type": "string",
+      "pattern": "^componentes/[a-z-]+/[a-z-]+\\.html$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "originalUrl", "note"],
+      "properties": {
+        "kind": { "const": "educational-guidance" },
+        "originalUrl": { "type": "string", "pattern": "^https://" },
+        "note": { "type": "string" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "panelId", "blocks"],
+        "properties": {
+          "id": {
+            "enum": [
+              "interaction-design",
+              "interaction-methods",
+              "acceptance-criteria",
+              "considerations",
+              "references"
+            ]
+          },
+          "title": { "type": "string", "minLength": 1 },
+          "panelId": { "type": "string", "pattern": "^aba-[a-z-]+-conteudo$" },
+          "blocks": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/node" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "node": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "value"],
+          "properties": {
+            "type": { "const": "text" },
+            "value": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "id", "tag", "attributes", "children"],
+          "properties": {
+            "type": { "const": "element" },
+            "id": { "type": "string", "minLength": 1 },
+            "tag": { "type": "string", "pattern": "^[a-z][a-z0-9]*$" },
+            "attributes": {
+              "type": "object",
+              "additionalProperties": { "type": "string" }
+            },
+            "children": {
+              "type": "array",
+              "items": { "$ref": "#/definitions/node" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

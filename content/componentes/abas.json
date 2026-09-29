@@ -1,0 +1,3570 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "id": "abas",
+  "name": "Abas",
+  "category": "elementos-ocultos",
+  "summary": "Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/elementos-ocultos/abas.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://www.accessboost.com.br/aulas/v1/exemplo-doc/exemplo-abas.html",
+    "note": "Conteúdo migrado sem nova revisão normativa. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Questionamentos que devem ser feitos ao se projetar componentes\n              interativos do tipo "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Abas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Dependendo do contexto de\n              construção de seus respectivos componentes, é possível que haja\n              mais questionamentos, bem como alguns dos apresentados aqui não\n              ser necessários. A avaliação precisa ser feita caso a caso.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.8",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente que o componente é interativo?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente qual componente em um conjunto está selecionado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.11",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.12",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.13",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Há feedback visual ao passar o mouse no componente acionável?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao clicar no componente acionável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar em um dos componentes do agrupamento, o conteúdo do\n                respectivo agrupamento é exibido?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.17",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.18",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao acionar o componente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao acionar um dos componentes do agrupamento, o conteúdo do\n                respectivo agrupamento é exibido?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.21",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.22",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.23",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao focar no componente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando configurado para carregamento automático, ao se navegar\n                entre os componentes da aba é possível perceber a mudança de\n                foco em conjunto com o carregamento do conteúdo?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando configurado para carregamento manual, ao se navegar entre\n                os componentes da aba é possível perceber a mudança de foco?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando configurado para carregamento manual, após navegar entre\n                os diferentes componentes da aba, é possível acionar o conteúdo\n                do conjunto com \"enter\" ou \"barra de espaço\"?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando estiver no último componente de um conjunto de abas, a\n                continuidade da navegação faz com que o foco seja direcionado\n                para o primeiro item?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando estiver no primeiro componente de um conjunto de abas, a\n                continuidade da navegação faz com que o foco seja direcionado\n                para o último item?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.30",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-design.31",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um dos componentes do conjunto de abas é possível\n                identificar qual é o componente de forma clara?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um dos componentes do conjunto de abas é possível\n                identificar qual a sua posição no conjunto (exemplo: 1 de 4)?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um dos componentes do conjunto de abas é possível\n                ouvir se o componente está selecionado ou não?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um dos componentes do conjunto de abas é possível\n                ouvir se o componente está ativado ou não?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-design.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um dos componentes do conjunto de abas e este não\n                estiver ativado, após ativá-lo é possívei ouvir que o componente\n                está ativado?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Possíveis métodos de interação em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Abas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Apenas os principais métodos\n              estão listados aqui. Componentes customizados devem ter estudos\n              aprofundados.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.8",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.9",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao passar o mouse, cada componente deve retornar feedback visual\n                confirmando possibilidade de interação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar com o botão do mouse, o componente deve retornar\n                feedback visual confirmando o clique e o conteúdo do agrupamento\n                selecionado deve ser exibido.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.12",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.13",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.14",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar com teclado, cada componente deve retornar feedback\n                visual com foco visível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o foco está fora do conjunto de abas em um componente\n                anterior ao conjunto e a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.17",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " é pressionada, o\n                componente do conjunto previamente ativo deve receber o foco.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o foco já estiver no conjunto de abas com um determinado\n                agrupamento ativado, ao pressionar "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.19",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", o foco é\n                movido para o primeiro componente acionável dentro deste\n                conjunto aberto. Caso não existe nenhum componente acionável no\n                conjunto, o foco vai para o próximo componente acionável na\n                tela.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A navegação entre os demais componentes do conjunto de abas deve\n                ocorrer através das setas direcionais\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.21",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.22",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "east"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.23",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para direita"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "e"
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.24",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.25",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "west"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para esquerda"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A configuração padrão para o carregamento de conteúdo de cada\n                agrupamento é que ele ocorra de forma automática após a\n                utilização das setas direcionais. É possível configurar de forma\n                que o carregamento de conteúdo ocorra apenas após o acionamento\n                da tecla \"enter\" ou \"barra de espaço\", no entanto isso não é\n                recomendado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o último componente em um conjunto de abas estiver\n                selecionado, a utilização da tecla\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.30",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "east"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.31",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para direita"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                deve mover o foco para o primeiro item do conjunto de abas.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando o primeiro componente em um conjunto de abas estiver\n                selecionado, a utilização da tecla\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-methods.33",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.34",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "west"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-methods.35",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para esquerda"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                deve mover o foco para o último item do conjunto de abas.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.36",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado (ou gestos) + leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.interaction-methods.37",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.38",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um componente de um conjunto de abas é possível\n                ouvir qual é este componente, a sua posição (exemplo: 1 de 4) e\n                se está ativado ou não.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em outros componentes de um conjunto de abas é possível\n                ouvir qual é o componente, a sua posição e se está ativado ou\n                não.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.interaction-methods.40",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em algum componente de um conjunto de abas é possível\n                ouvir de que se trata de uma \"aba\" e ela faz parte de um\n                conjunto de abas.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.3",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.magentaa11y.com/checklist-web/tab-panel/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 1"
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.4",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ",\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.5",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 2"
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.6",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.7",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Cenário: Considerando que estou em uma página que contém um\n              conjunto de abas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.8",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.9",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.11",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para o\n                conjunto de abas\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O foco que VEJO é fortemente indicado visualmente na aba ativa\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso as setas direcionais\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.14",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.15",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "east"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para direita"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                e\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.17",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.18",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "west"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.19",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "a11y"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "seta para esquerda"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o foco se move entre as abas do agrupamento"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando a ativação for manual e uso "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.22",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.23",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o painel da aba focada é exibido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.26",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " novamente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                VEJO que o foco vai para o painel de conteúdo ativo ou para o\n                primeiro componente acionável dentro dele\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.28",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.29",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para uma aba\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.31",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.32",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome da aba."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.33",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o componente é identificado como aba."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.34",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO sua posição no conjunto, quando disponível."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.35",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO se a aba está selecionada ou não."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando navego entre as abas e ativo uma delas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.37",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o painel correspondente à aba selecionada\n                está disponível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.38",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.acceptance-criteria.39",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.40",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e\n                deslizo o dedo para focar em uma aba, acontece o seguinte:\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.acceptance-criteria.41",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.42",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome da aba."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.43",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO que o componente é identificado como aba."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.acceptance-criteria.44",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO se a aba está selecionada ou não."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.45",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando eu toco duas vezes para ativar uma aba"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.acceptance-criteria.46",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o painel correspondente à aba selecionada\n                está disponível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.considerations.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de Atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.considerations.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Pontos de atenção para se preocupar em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.considerations.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Abas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.considerations.4",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.considerations.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.considerations.6",
+                  "tag": "strong",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Responsividade:"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " Este componente pode ser\n                substituído por outro mais adequado em telas menores.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.considerations.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                componentes do tipo Abas devem ser utilizados apenas quando\n                outros recursos não puderem ser utilizados.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.considerations.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A interação com setas direcionais nem sempre é compreendida por\n                todas as pessoas apesar de ser um padrão de design.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.considerations.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                As pessoas que desenvolvem telas também tem dificuldade em\n                compreender padrões de interações de teclado, podendo ocasionar\n                construções incorretas se a documentação não for seguida.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Abas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "abas.references.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.7",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.8",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "abas.references.9",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.10",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.11",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.13",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Apple - Human Interface Guidelines - Tab Views\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.14",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.15",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.18",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://m3.material.io/components/tabs/overview",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google - Material Design - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.19",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.20",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.21",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.23",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C APG: Tabs Pattern\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.24",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.25",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.27",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "abas.references.28",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.30",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://cauldron.dequelabs.com/components/Tabs",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Deque Cauldron: Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.31",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.32",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.33",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.35",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://ebay.gitbook.io/mindpatterns/disclosure/tabs",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "eBay MIND Patterns: Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.36",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.37",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.38",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.40",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://design-system.service.gov.uk/components/tabs/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Gov.UK - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.41",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.42",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.43",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.44",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.45",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/breadcrumb/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "US.gov - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.46",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.47",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.48",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.49",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.50",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://gold.designsystemau.org/components/breadcrumbs/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Gov.AU - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.51",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.52",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.53",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.54",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.55",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.bbc.co.uk/gel/features/tabs",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "BBC Gel - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.56",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.57",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.58",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.59",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.60",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://build.washingtonpost.com/components/tabs",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Washington Post - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.61",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.62",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.63",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.64",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.65",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.lightningdesignsystem.com/components/tabs/?variant=mobile-stack#site-main-content",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Salesforce Lightning - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.66",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.67",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.68",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.69",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.70",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/tabs/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.71",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.72",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.73",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.74",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.75",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://spectrum.adobe.com/page/tabs/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Adobe Spectrum - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.76",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.77",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.78",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.79",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.80",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://primer.style/design/components/tab-nav",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Github Primer - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.81",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.82",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.83",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "abas.references.84",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.references.85",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/components/navs-tabs/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Tabs\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.86",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.87",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.references.88",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    }
+  ]
+}

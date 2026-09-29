@@ -1,0 +1,3049 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.0.0",
+  "id": "paginacao",
+  "name": "Paginação",
+  "category": "navegacao",
+  "summary": "Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/navegacao/paginacao.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://www.accessboost.com.br/aulas/v1/exemplo-doc/exemplo-paginacao.html",
+    "note": "Conteúdo migrado sem nova revisão normativa. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Questionamentos que devem ser feitos ao se projetar componentes\n              interativos do tipo "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Paginação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Dependendo do contexto de\n              construção de seus respectivos componentes, é possível que haja\n              mais questionamentos, bem como alguns dos apresentados aqui não\n              ser necessários. A avaliação precisa ser feita caso a caso.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.8",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente que se trata de um agrupamento de navegação entre\n                páginas relacionadas?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente qual é a página atual?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente quais controles estão disponíveis, indisponíveis ou\n                representam páginas omitidas?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando houver reticências ou compactação de páginas, fica claro\n                que existem páginas intermediárias não exibidas?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.13",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.14",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.15",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Há feedback visual ao passar o mouse nos controles acionáveis?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao clicar no controle acionável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar em uma página, no botão anterior ou no botão próximo,\n                ocorre o carregamento do conteúdo correspondente?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após o carregamento, a página atual, o título da página e os\n                controles anterior/próximo são atualizados?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Controles indisponíveis, como \"anterior\" na primeira página ou\n                \"próximo\" na última página, deixam claro que não podem ser\n                acionados?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.21",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.22",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Os alvos tocáveis possuem área suficiente para acionamento\n                confortável?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao acionar um controle de paginação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao acionar uma página, o conteúdo relacionado é carregado e a\n                indicação de página atual é atualizada?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Em telas menores, a quantidade de páginas exibidas é reduzida\n                sem esconder a página atual, a anterior, a próxima, a primeira e\n                a última quando forem necessárias?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.27",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.28",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.29",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há feedback visual ao focar em cada controle acionável?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível navegar entre os controles acionáveis utilizando\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.32",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.33",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SHIFT"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "+"
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.34",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                É possível acionar links de páginas com a tecla\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.36",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.37",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Controles implementados como botões podem ser acionados com\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.38",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.39",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SPACE"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.40",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Elementos de reticências usados apenas para indicar páginas\n                ocultas não entram na ordem de foco?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.41",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Após a troca de página, o foco é gerenciado de forma\n                consistente, indo para o início do novo conteúdo ou permanecendo\n                em um ponto previsível do fluxo.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.42",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Projetando para uso com leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-design.43",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.44",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao navegar por landmarks é possível identificar a paginação como\n                uma região de navegação com nome acessível claro?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.45",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um controle acionável é possível ouvir se ele é um\n                link ou botão?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.46",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um número de página é possível ouvir o número e o\n                objetivo do controle, por exemplo \"Página 3\"?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.47",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar na página atual é possível ouvir que aquela é a página\n                atual através de "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-design.48",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-current=\"page\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-design.49",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao mudar de página, o novo conteúdo ou o novo estado da tela é\n                perceptível para pessoas usando leitor de telas?\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Possíveis métodos de interação em componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Paginação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Apenas os principais métodos\n              estão listados aqui. Componentes customizados devem ter estudos\n              aprofundados.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.7",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com mouse\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.8",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.9",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao passar o mouse, cada controle acionável deve retornar\n                feedback visual confirmando possibilidade de interação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar em um número de página, o conteúdo correspondente deve\n                ser carregado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao clicar em \"anterior\" ou \"próximo\", o conteúdo da página\n                imediatamente anterior ou posterior deve ser carregado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A página atual deve possuir indicação visual diferente dos\n                demais itens e também atualização semântica.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Controles indisponíveis devem possuir aparência de estado\n                desabilitado e não devem executar ação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.15",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.16",
+              "tag": "small",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(qualquer dispositivo que não seja de apontamento)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.17",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar com teclado, cada controle acionável deve retornar\n                feedback visual com foco visível.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Deve ser possível navegar para o próximo item ou para o anterior\n                utilizando as teclas "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.20",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.21",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SHIFT"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "+"
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.22",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "TAB"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " respectivamente.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Links de paginação devem ser acionados com a tecla\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.24",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Botões de paginação, quando utilizados em experiências\n                dinâmicas, devem ser acionados com as teclas\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.26",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ENTER"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "SPACE"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                A página atual deve ser identificada com\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.interaction-methods.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-current=\"page\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Itens meramente visuais, como reticências, não devem receber\n                foco por teclado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.31",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Interação com teclado (ou gestos) + leitor de telas\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.interaction-methods.32",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar no agrupamento de componentes em uma paginação é\n                possível identificar de que se trata de uma navegação.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando houver mais de uma navegação na página, o nome acessível\n                da paginação deve diferenciar sua finalidade, por exemplo\n                \"Paginação dos resultados de busca\".\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.35",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Ao focar em um controle acionável deve ser possível ouvir seu\n                nome acessível, papel e estado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.36",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A página atual deve ser anunciada como página atual."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.interaction-methods.37",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando a troca de página recarregar apenas parte da tela, a\n                mudança de conteúdo deve ser perceptível e o foco deve seguir\n                uma estratégia consistente.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.3",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.magentaa11y.com/#/web-criteria/component/pagination",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ref 1"
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.acceptance-criteria.4",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (abre em uma nova aba)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.5",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Cenário: Considerando que estou em uma página que contém paginação\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.6",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.7",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.acceptance-criteria.9",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para os\n                controles de paginação\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O foco que VEJO é fortemente indicado visualmente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.acceptance-criteria.12",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para acionar um\n                link de página\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.13",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                VEJO que o conteúdo correspondente à página selecionada é\n                carregado\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                E VEJO que a indicação visual da página atual é atualizada\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.15",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.16",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um controle\n                de paginação\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.acceptance-criteria.18",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.19",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que a paginação é identificada como uma região de\n                    navegação.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.20",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome acessível da navegação de paginação."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.21",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO o nome de cada controle, como página anterior, próxima\n                    página ou página específica.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.22",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que a página atual é indicada quando o foco está no\n                    item correspondente.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando uso a tecla Enter para ativar um controle de\n                paginação\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o navegador está indo para outro conteúdo ou\n                que o conteúdo da página foi atualizado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.25",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.acceptance-criteria.26",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e\n                deslizo o dedo para focar em um controle de paginação, acontece\n                o seguinte:\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.acceptance-criteria.28",
+                  "tag": "ul",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.29",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que a paginação é identificada como uma região de\n                    navegação.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.30",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "OUÇO o nome acessível da navegação de paginação."
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.31",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO o nome de cada controle, como página anterior, próxima\n                    página ou página específica.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.acceptance-criteria.32",
+                      "tag": "li",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n                    OUÇO que a página atual é indicada quando o foco está no\n                    item correspondente.\n                  "
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                ENTÃO, quando eu toco duas vezes para ativar um controle de\n                paginação\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.acceptance-criteria.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                OUÇO ou percebo que o navegador está indo para outro conteúdo ou\n                que o conteúdo da página foi atualizado.\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.considerations.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de Atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.3",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Paginação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.5",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.6",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.7",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.8",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.9",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.10",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.11",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.13",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://m3.material.io/components",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google - Material Design\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.14",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.15",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.16",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.18",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "MDN Web Docs - ARIA: aria-current\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.19",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.20",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.21",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.23",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C APG - Patterns\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.24",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.25",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.26",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.27",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n            "
+        },
+        {
+          "type": "element",
+          "id": "paginacao.references.28",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.30",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://design-system.w3.org/components/pagination.html",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C Design System: Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.31",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.32",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.33",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.35",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://design-system.service.gov.uk/components/pagination/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Gov.UK - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.36",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.37",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.38",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.40",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/pagination/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "US.gov - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.41",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.42",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.43",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.44",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.45",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://carbondesignsystem.com/components/pagination/usage/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "IBM Carbon - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.46",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.47",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.48",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.49",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.50",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://spectrum.adobe.com/page/pagination/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Adobe Spectrum - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.51",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.52",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.53",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.54",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.55",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://primer.style/product/components/pagination/accessibility/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Github Primer - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.56",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.57",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.58",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "paginacao.references.59",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.references.60",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.2/components/pagination/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap - Pagination\n                  "
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.61",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons icons",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.62",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "link externo - abre em uma nova janela"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "paginacao.references.63",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n              "
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n          "
+        }
+      ]
+    }
+  ]
+}

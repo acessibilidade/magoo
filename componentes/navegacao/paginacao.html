@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Paginação | Magoo</title>
+    <meta
+      name="description"
+      content="Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Paginação | Magoo" />
+    <meta
+      property="og:description"
+      content="Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas."
+    />
+
+    <meta name="twitter:title" content="Paginação | Magoo" />
+    <meta
+      name="twitter:description"
+      content="Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="../../js/main.js" defer=""></script>
+    <script src="../../js/analytics.js" defer=""></script>
+    <meta
+      property="og:url"
+      content="https://magoo.cc/componentes/navegacao/paginacao.html"
+    />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/componentes/navegacao/paginacao.html" />
+  </head>
+  <body class="component-page">
+    <a class="skip-link" href="#conteudo"
+      >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
+    >
+    <header>
+      <div class="topbar wrap">
+        <a class="brand" href="../../index.html" aria-label="Magoo — início"
+          ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
+        ><span class="brand-note">faça seus componentes funcionarem corretamente</span
+        ><a class="library-link back-link" href="../../index.html"
+          ><span class="material-icons" aria-hidden="true">arrow_back</span>Voltar para
+          página principal</a
+        >
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / NAVEGAÇÃO</p>
+        <h1>Paginação</h1>
+        <p>
+          Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas.
+        </p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo"
+            >consulte a aba de referências<span class="sr-only">
+              (abre as referências na mesma página)</span
+            ></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="component-menu"
+          hidden=""
+        >
+          <span class="material-icons" aria-hidden="true">menu</span>Índice de componentes
+        </button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden="">
+            <span class="material-icons" aria-hidden="true">close</span>Fechar índice
+          </button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">
+                Flexbox &amp; Grid <small>Em desenvolvimento</small>
+              </li>
+              <li class="upcoming">
+                Header, Footer e Regiões <small>Em desenvolvimento</small>
+              </li>
+              <li>
+                <a href="../estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="../estrutura/listas.html">Listas</a></li>
+              <li class="upcoming">Tabbar <small>Em desenvolvimento</small></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="../mensagens/alertas.html">Alertas</a></li>
+              <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
+              <li class="upcoming">
+                Validação de formulários <small>Em desenvolvimento</small>
+              </li>
+              <li><a href="../mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="../navegacao/menu.html">Menu</a></li>
+              <li><a href="../navegacao/links.html">Links</a></li>
+              <li>
+                <a href="../navegacao/paginacao.html" aria-current="page"
+                  >Paginação<span
+                    class="material-icons active-menu-arrow"
+                    aria-hidden="true"
+                    >arrow_forward</span
+                  ></a
+                >
+              </li>
+              <li><a href="../navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="../navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="../elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="../elementos-ocultos/detalhes-mais-informacoes.html"
+                  >Detalhes e Mais informações</a
+                >
+              </li>
+              <li><a href="../elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="../elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="../elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="../formularios/botao.html">Botão</a></li>
+              <li><a href="../formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="../formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li class="upcoming">Inputs <small>Em desenvolvimento</small></li>
+              <li><a href="../formularios/select.html">Select (Combo)</a></li>
+              <li><a href="../formularios/slider.html">Slider</a></li>
+              <li><a href="../formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="aba-interacao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-interacao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-interacao-conteudo"
+              aria-selected="true"
+            >
+              Design de interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-metodo"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-metodo-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-metodo-conteudo"
+              aria-selected="false"
+            >
+              Métodos de Interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-gherkin"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-gherkin-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-gherkin-conteudo"
+              aria-selected="false"
+            >
+              Gherkin
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-atencao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-atencao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-atencao-conteudo"
+              aria-selected="false"
+            >
+              Pontos de atenção
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-ref"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-ref-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-ref-conteudo"
+              aria-selected="false"
+            >
+              Referências
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div
+            class="tab-pane fade show active"
+            id="aba-interacao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-interacao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">
+              Questionamentos que devem ser feitos ao se projetar componentes interativos
+              do tipo <span class="destaque">Paginação</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Dependendo do contexto de construção de
+              seus respectivos componentes, é possível que haja mais questionamentos, bem
+              como alguns dos apresentados aqui não ser necessários. A avaliação precisa
+              ser feita caso a caso.
+            </p>
+
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente que se
+                trata de um agrupamento de navegação entre páginas relacionadas?
+              </li>
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente qual é
+                a página atual?
+              </li>
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente quais
+                controles estão disponíveis, indisponíveis ou representam páginas
+                omitidas?
+              </li>
+              <li>
+                Quando houver reticências ou compactação de páginas, fica claro que
+                existem páginas intermediárias não exibidas?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao passar o mouse nos controles acionáveis?</li>
+              <li>Há feedback visual ao clicar no controle acionável?</li>
+              <li>
+                Ao clicar em uma página, no botão anterior ou no botão próximo, ocorre o
+                carregamento do conteúdo correspondente?
+              </li>
+              <li>
+                Após o carregamento, a página atual, o título da página e os controles
+                anterior/próximo são atualizados?
+              </li>
+              <li>
+                Controles indisponíveis, como "anterior" na primeira página ou "próximo"
+                na última página, deixam claro que não podem ser acionados?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Os alvos tocáveis possuem área suficiente para acionamento confortável?
+              </li>
+              <li>Há feedback visual ao acionar um controle de paginação?</li>
+              <li>
+                Ao acionar uma página, o conteúdo relacionado é carregado e a indicação de
+                página atual é atualizada?
+              </li>
+              <li>
+                Em telas menores, a quantidade de páginas exibidas é reduzida sem esconder
+                a página atual, a anterior, a próxima, a primeira e a última quando forem
+                necessárias?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao focar em cada controle acionável?</li>
+              <li>
+                É possível navegar entre os controles acionáveis utilizando
+                <code>TAB</code> e <code>SHIFT</code>+<code>TAB</code>?
+              </li>
+              <li>
+                É possível acionar links de páginas com a tecla
+                <code>ENTER</code>?
+              </li>
+              <li>
+                Controles implementados como botões podem ser acionados com
+                <code>ENTER</code> e <code>SPACE</code>?
+              </li>
+              <li>
+                Elementos de reticências usados apenas para indicar páginas ocultas não
+                entram na ordem de foco?
+              </li>
+              <li>
+                Após a troca de página, o foco é gerenciado de forma consistente, indo
+                para o início do novo conteúdo ou permanecendo em um ponto previsível do
+                fluxo.
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Ao navegar por landmarks é possível identificar a paginação como uma
+                região de navegação com nome acessível claro?
+              </li>
+              <li>
+                Ao focar em um controle acionável é possível ouvir se ele é um link ou
+                botão?
+              </li>
+              <li>
+                Ao focar em um número de página é possível ouvir o número e o objetivo do
+                controle, por exemplo "Página 3"?
+              </li>
+              <li>
+                Ao focar na página atual é possível ouvir que aquela é a página atual
+                através de <code>aria-current="page"</code>?
+              </li>
+              <li>
+                Ao mudar de página, o novo conteúdo ou o novo estado da tela é perceptível
+                para pessoas usando leitor de telas?
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-metodo-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-metodo"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <p class="mt-3">
+              Possíveis métodos de interação em componentes do tipo
+              <span class="destaque">Paginação</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Apenas os principais métodos estão
+              listados aqui. Componentes customizados devem ter estudos aprofundados.
+            </p>
+
+            <h3 class="destaque mt-4">
+              Interação com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao passar o mouse, cada controle acionável deve retornar feedback visual
+                confirmando possibilidade de interação.
+              </li>
+              <li>
+                Ao clicar em um número de página, o conteúdo correspondente deve ser
+                carregado.
+              </li>
+              <li>
+                Ao clicar em "anterior" ou "próximo", o conteúdo da página imediatamente
+                anterior ou posterior deve ser carregado.
+              </li>
+              <li>
+                A página atual deve possuir indicação visual diferente dos demais itens e
+                também atualização semântica.
+              </li>
+              <li>
+                Controles indisponíveis devem possuir aparência de estado desabilitado e
+                não devem executar ação.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao focar com teclado, cada controle acionável deve retornar feedback
+                visual com foco visível.
+              </li>
+              <li>
+                Deve ser possível navegar para o próximo item ou para o anterior
+                utilizando as teclas <code>TAB</code> ou <code>SHIFT</code>+<code
+                  >TAB</code
+                >
+                respectivamente.
+              </li>
+              <li>
+                Links de paginação devem ser acionados com a tecla
+                <code>ENTER</code>.
+              </li>
+              <li>
+                Botões de paginação, quando utilizados em experiências dinâmicas, devem
+                ser acionados com as teclas
+                <code>ENTER</code> e <code>SPACE</code>.
+              </li>
+              <li>
+                A página atual deve ser identificada com
+                <code>aria-current="page"</code>.
+              </li>
+              <li>
+                Itens meramente visuais, como reticências, não devem receber foco por
+                teclado.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado (ou gestos) + leitor de telas
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao focar no agrupamento de componentes em uma paginação é possível
+                identificar de que se trata de uma navegação.
+              </li>
+              <li>
+                Quando houver mais de uma navegação na página, o nome acessível da
+                paginação deve diferenciar sua finalidade, por exemplo "Paginação dos
+                resultados de busca".
+              </li>
+              <li>
+                Ao focar em um controle acionável deve ser possível ouvir seu nome
+                acessível, papel e estado.
+              </li>
+              <li>A página atual deve ser anunciada como página atual.</li>
+              <li>
+                Quando a troca de página recarregar apenas parte da tela, a mudança de
+                conteúdo deve ser perceptível e o foco deve seguir uma estratégia
+                consistente.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-gherkin-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-gherkin"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">
+              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
+              Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
+              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
+              <a
+                href="https://www.magentaa11y.com/#/web-criteria/component/pagination"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 1<span class="sr-only"> (abre em uma nova aba)</span></a
+              >.
+            </p>
+
+            <h3>Cenário: Considerando que estou em uma página que contém paginação</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso a tecla <code>Tab</code> para mover o foco para os controles de
+                paginação
+              </li>
+              <li>O foco que VEJO é fortemente indicado visualmente</li>
+              <li>
+                ENTÃO, quando uso a tecla <code>Enter</code> para acionar um link de
+                página
+              </li>
+              <li>VEJO que o conteúdo correspondente à página selecionada é carregado</li>
+              <li>E VEJO que a indicação visual da página atual é atualizada</li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Quando uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso a
+                tecla Tab para mover o foco para um controle de paginação
+                <ul>
+                  <li>
+                    OUÇO que a paginação é identificada como uma região de navegação.
+                  </li>
+                  <li>OUÇO o nome acessível da navegação de paginação.</li>
+                  <li>
+                    OUÇO o nome de cada controle, como página anterior, próxima página ou
+                    página específica.
+                  </li>
+                  <li>
+                    OUÇO que a página atual é indicada quando o foco está no item
+                    correspondente.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                ENTÃO, quando uso a tecla Enter para ativar um controle de paginação
+              </li>
+              <li>
+                OUÇO ou percebo que o navegador está indo para outro conteúdo ou que o
+                conteúdo da página foi atualizado.
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o
+                dedo para focar em um controle de paginação, acontece o seguinte:
+                <ul>
+                  <li>
+                    OUÇO que a paginação é identificada como uma região de navegação.
+                  </li>
+                  <li>OUÇO o nome acessível da navegação de paginação.</li>
+                  <li>
+                    OUÇO o nome de cada controle, como página anterior, próxima página ou
+                    página específica.
+                  </li>
+                  <li>
+                    OUÇO que a página atual é indicada quando o foco está no item
+                    correspondente.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                ENTÃO, quando eu toco duas vezes para ativar um controle de paginação
+              </li>
+              <li>
+                OUÇO ou percebo que o navegador está indo para outro conteúdo ou que o
+                conteúdo da página foi atualizado.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-atencao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-atencao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Pontos de Atenção</h2>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-ref-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-ref"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Paginação</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />A maior parte das referências estão na
+              plataforma do curso junto com as aulas citadas neste material.
+            </p>
+            <p>
+              <strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui
+              não são recomendações, mas apenas uma curadoria de referências onde você
+              pode encontrar componentes construídos. É importante ressaltar que não há
+              uma unificação nos formatos de construção e não há garantias de que os links
+              mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser
+              direcionadas para as respectivas equipes envolvidas nas construções dos
+              materiais indicados. Antes de "copiar" algum modelo apresentado, leve em
+              consideração que todos os materiais são atualizados constantemente e que os
+              padrões (principalmente proprietários) podem sofrer alterações.
+            </p>
+
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://m3.material.io/components"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google - Material Design
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MDN Web Docs - ARIA: aria-current
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C APG - Patterns
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://design-system.w3.org/components/pagination.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C Design System: Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://design-system.service.gov.uk/components/pagination/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Gov.UK - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://designsystem.digital.gov/components/pagination/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >US.gov - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://carbondesignsystem.com/components/pagination/usage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >IBM Carbon - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://spectrum.adobe.com/page/pagination/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adobe Spectrum - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://primer.style/product/components/pagination/accessibility/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github Primer - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://getbootstrap.com/docs/5.2/components/pagination/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bootstrap - Pagination
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
+        >curso AccessBoost
+        <span class="material-icons" aria-hidden="true">open_in_new</span
+        ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos
+      podem ser customizadas (desde que haja instruções suficientes para que as pessoas
+      compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>
+            O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir
+            instruções em um mesmo local para entender o design de interação de
+            componentes antes de construir um sistema mais robusto (ou então atualizar um
+            sistema já construído).
+          </p>
+          <p>
+            Explore comportamentos, métodos de interação e critérios de aceite para criar
+            experiências mais acessíveis e inclusivas.
+          </p>
+        </div>
+        <a
+          class="initiative"
+          href="https://www.tudoeacessibilidade.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="../../img/iniciativa-tudo-off.svg"
+            width="350"
+            height="67"
+            alt="Uma iniciativa Tudo é Acessibilidade"
+          /><span class="sr-only"> (abre em uma nova aba)</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Radio Button | Magoo</title>
+    <meta
+      name="description"
+      content="Permite escolher uma única alternativa em um conjunto de opções relacionadas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Radio Button | Magoo" />
+    <meta
+      property="og:description"
+      content="Permite escolher uma única alternativa em um conjunto de opções relacionadas."
+    />
+
+    <meta name="twitter:title" content="Radio Button | Magoo" />
+    <meta
+      name="twitter:description"
+      content="Permite escolher uma única alternativa em um conjunto de opções relacionadas."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="../../js/main.js" defer=""></script>
+    <script src="../../js/analytics.js" defer=""></script>
+    <meta
+      property="og:url"
+      content="https://magoo.cc/componentes/formularios/radio-button.html"
+    />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link
+      rel="canonical"
+      href="https://magoo.cc/componentes/formularios/radio-button.html"
+    />
+  </head>
+  <body class="component-page">
+    <a class="skip-link" href="#conteudo"
+      >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
+    >
+    <header>
+      <div class="topbar wrap">
+        <a class="brand" href="../../index.html" aria-label="Magoo — início"
+          ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
+        ><span class="brand-note">faça seus componentes funcionarem corretamente</span
+        ><a class="library-link back-link" href="../../index.html"
+          ><span class="material-icons" aria-hidden="true">arrow_back</span>Voltar para
+          página principal</a
+        >
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / FORMULÁRIOS</p>
+        <h1>Radio Button</h1>
+        <p>
+          Permite escolher uma única alternativa em um conjunto de opções relacionadas.
+        </p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo"
+            >consulte a aba de referências<span class="sr-only">
+              (abre as referências na mesma página)</span
+            ></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="component-menu"
+          hidden=""
+        >
+          <span class="material-icons" aria-hidden="true">menu</span>Índice de componentes
+        </button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden="">
+            <span class="material-icons" aria-hidden="true">close</span>Fechar índice
+          </button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">
+                Flexbox &amp; Grid <small>Em desenvolvimento</small>
+              </li>
+              <li class="upcoming">
+                Header, Footer e Regiões <small>Em desenvolvimento</small>
+              </li>
+              <li>
+                <a href="../estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="../estrutura/listas.html">Listas</a></li>
+              <li class="upcoming">Tabbar <small>Em desenvolvimento</small></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="../mensagens/alertas.html">Alertas</a></li>
+              <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
+              <li class="upcoming">
+                Validação de formulários <small>Em desenvolvimento</small>
+              </li>
+              <li><a href="../mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="../navegacao/menu.html">Menu</a></li>
+              <li><a href="../navegacao/links.html">Links</a></li>
+              <li><a href="../navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="../navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="../navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="../elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="../elementos-ocultos/detalhes-mais-informacoes.html"
+                  >Detalhes e Mais informações</a
+                >
+              </li>
+              <li><a href="../elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="../elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="../elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="../formularios/botao.html">Botão</a></li>
+              <li><a href="../formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="../formularios/radio-button.html" aria-current="page"
+                  >Radio Button<span
+                    class="material-icons active-menu-arrow"
+                    aria-hidden="true"
+                    >arrow_forward</span
+                  ></a
+                >
+              </li>
+              <li class="upcoming">Inputs <small>Em desenvolvimento</small></li>
+              <li><a href="../formularios/select.html">Select (Combo)</a></li>
+              <li><a href="../formularios/slider.html">Slider</a></li>
+              <li><a href="../formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="aba-interacao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-interacao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-interacao-conteudo"
+              aria-selected="true"
+            >
+              Design de interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-metodo"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-metodo-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-metodo-conteudo"
+              aria-selected="false"
+            >
+              Métodos de Interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-gherkin"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-gherkin-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-gherkin-conteudo"
+              aria-selected="false"
+            >
+              Gherkin
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-atencao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-atencao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-atencao-conteudo"
+              aria-selected="false"
+            >
+              Pontos de atenção
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-ref"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-ref-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-ref-conteudo"
+              aria-selected="false"
+            >
+              Referências
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div
+            class="tab-pane fade show active"
+            id="aba-interacao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-interacao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">
+              Questionamentos que devem ser feitos ao se projetar componentes interativos
+              do tipo <span class="destaque">Radio Button</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Dependendo do contexto de construção de
+              seus respectivos componentes, é possível que haja mais questionamentos, bem
+              como alguns dos apresentados aqui não ser necessários. A avaliação precisa
+              ser feita caso a caso.
+            </p>
+
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Antes de interagir é possível perceber que se trata de escolha única
+                dentro de um grupo?
+              </li>
+              <li>
+                O rótulo do grupo comunica claramente a pergunta ou decisão a ser feita?
+              </li>
+              <li>É possível identificar visualmente qual opção está selecionada?</li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao passar o mouse no radio ou em seu rótulo?</li>
+              <li>Ao clicar no rótulo, a opção correspondente é selecionada?</li>
+              <li>
+                Ao selecionar uma opção, as demais opções do mesmo grupo são desmarcadas?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>O alvo tocável inclui o rótulo associado?</li>
+              <li>Ao tocar em uma opção, ela se torna a única selecionada no grupo?</li>
+              <li>A área de toque é confortável em telas pequenas?</li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                <code>TAB</code> leva o foco para a opção selecionada ou para a primeira
+                opção quando nenhuma estiver selecionada?
+              </li>
+              <li>
+                As setas direcionais movem o foco e alteram a seleção dentro do grupo?
+              </li>
+              <li><code>SPACE</code> seleciona a opção em foco?</li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>O rótulo do grupo é anunciado?</li>
+              <li>Cada opção é anunciada como radio button?</li>
+              <li>O estado selecionado ou não selecionado é anunciado?</li>
+              <li>A posição da opção no grupo é perceptível quando suportada?</li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-metodo-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-metodo"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <p class="mt-3">
+              Possíveis métodos de interação em componentes do tipo
+              <span class="destaque">Radio Button</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Apenas os principais métodos estão
+              listados aqui. Componentes customizados devem ter estudos aprofundados.
+            </p>
+
+            <h3 class="destaque mt-4">
+              Interação com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>Clicar no controle ou no rótulo seleciona a opção.</li>
+              <li>
+                Selecionar uma opção desmarca as demais opções com o mesmo nome de grupo.
+              </li>
+              <li>Uma opção já selecionada não é desmarcada pelo segundo clique.</li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li><code>TAB</code> entra no grupo uma vez.</li>
+              <li>Setas direcionais navegam e selecionam opções do grupo.</li>
+              <li><code>SPACE</code> seleciona a opção em foco quando necessário.</li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado (ou gestos) + leitor de telas
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                O grupo deve ter nome acessível, preferencialmente com
+                <code>fieldset</code> e <code>legend</code>.
+              </li>
+              <li>Cada opção deve ter rótulo programaticamente associado.</li>
+              <li>O estado selecionado deve ser exposto semanticamente.</li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-gherkin-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-gherkin"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">
+              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
+              Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
+              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
+              <a
+                href="https://www.magentaa11y.com/checklist-web/radio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 1<span class="sr-only"> (abre em uma nova aba)</span></a
+              >,
+              <a
+                href="https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 2<span class="sr-only"> (abre em uma nova aba)</span></a
+              >.
+            </p>
+
+            <h3>Cenário: Considerando que estou em uma página que contém radio button</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso a tecla <code>Tab</code> para mover o foco para um grupo de
+                radio buttons
+              </li>
+              <li>
+                O foco que VEJO é fortemente indicado visualmente na opção selecionada ou
+                na primeira opção
+              </li>
+              <li>ENTÃO, quando uso a tecla <code>Space</code></li>
+              <li>VEJO que a opção em foco é selecionada</li>
+              <li>ENTÃO, quando uso as setas direcionais</li>
+              <li>VEJO que a seleção muda dentro do grupo</li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Quando uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e movo
+                o foco para o componente
+                <ul>
+                  <li>OUÇO o rótulo e a finalidade do grupo.</li>
+                  <li>OUÇO que cada item é uma opção de radio.</li>
+                  <li>OUÇO seu estado atual, como selecionado ou não selecionado.</li>
+                </ul>
+              </li>
+              <li>ENTÃO, quando aciono ou altero o componente</li>
+              <li>
+                OUÇO ou percebo que o estado, valor, conteúdo ou ação correspondente foi
+                atualizado.
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o
+                dedo para focar no componente, acontece o seguinte:
+                <ul>
+                  <li>OUÇO o rótulo e a finalidade do grupo.</li>
+                  <li>OUÇO que cada item é uma opção de radio.</li>
+                  <li>OUÇO seu estado atual, como selecionado ou não selecionado.</li>
+                </ul>
+              </li>
+              <li>
+                ENTÃO, quando eu toco duas vezes ou uso o gesto adequado para ativar o
+                componente
+              </li>
+              <li>
+                OUÇO ou percebo que o estado, valor, conteúdo ou ação correspondente foi
+                atualizado.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-atencao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-atencao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Pontos de Atenção</h2>
+            <p class="mt-3">
+              Pontos de atenção para se preocupar em componentes do tipo
+              <span class="destaque">Radio Button</span>.
+            </p>
+
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Use radio button quando apenas uma opção do grupo puder ser escolhida.
+              </li>
+              <li>
+                Não coloque controles interativos dentro de rótulos de radio sem uma
+                estratégia clara de foco e leitura.
+              </li>
+              <li>
+                O mesmo atributo <code>name</code> é essencial para criar o grupo em HTML
+                nativo.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-ref-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-ref"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Radio Button</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />A maior parte das referências estão na
+              plataforma do curso junto com as aulas citadas neste material.
+            </p>
+            <p>
+              <strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui
+              não são recomendações, mas apenas uma curadoria de referências onde você
+              pode encontrar componentes construídos. É importante ressaltar que não há
+              uma unificação nos formatos de construção e não há garantias de que os links
+              mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser
+              direcionadas para as respectivas equipes envolvidas nas construções dos
+              materiais indicados. Antes de "copiar" algum modelo apresentado, leve em
+              consideração que todos os materiais são atualizados constantemente e que os
+              padrões (principalmente proprietários) podem sofrer alterações.
+            </p>
+
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://www.magentaa11y.com/checklist-web/radio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MagentaA11y - Radio button
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/radio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C APG: Radio Group Pattern
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://html.spec.whatwg.org/multipage/input.html#radio-button-state-(type=radio)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Documentação de padrões HTML: Radio button state
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://m3.material.io/components/radio-button/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google - Material Design - Radio button
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://designsystem.digital.gov/components/radio-buttons/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >US.gov - Radio buttons
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://carbondesignsystem.com/components/radio-button/usage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >IBM Carbon - Radio button
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://spectrum.adobe.com/page/radio-button/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adobe Spectrum - Radio button
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://getbootstrap.com/docs/5.2/forms/checks-radios/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bootstrap - Checks and Radios
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
+        >curso AccessBoost
+        <span class="material-icons" aria-hidden="true">open_in_new</span
+        ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos
+      podem ser customizadas (desde que haja instruções suficientes para que as pessoas
+      compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>
+            O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir
+            instruções em um mesmo local para entender o design de interação de
+            componentes antes de construir um sistema mais robusto (ou então atualizar um
+            sistema já construído).
+          </p>
+          <p>
+            Explore comportamentos, métodos de interação e critérios de aceite para criar
+            experiências mais acessíveis e inclusivas.
+          </p>
+        </div>
+        <a
+          class="initiative"
+          href="https://www.tudoeacessibilidade.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="../../img/iniciativa-tudo-off.svg"
+            width="350"
+            height="67"
+            alt="Uma iniciativa Tudo é Acessibilidade"
+          /><span class="sr-only"> (abre em uma nova aba)</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

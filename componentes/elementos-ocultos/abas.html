@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Abas | Magoo</title>
+    <meta
+      name="description"
+      content="Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Abas | Magoo" />
+    <meta
+      property="og:description"
+      content="Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada."
+    />
+
+    <meta name="twitter:title" content="Abas | Magoo" />
+    <meta
+      name="twitter:description"
+      content="Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada."
+    />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../img/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="../../js/main.js" defer=""></script>
+    <script src="../../js/analytics.js" defer=""></script>
+    <meta
+      property="og:url"
+      content="https://magoo.cc/componentes/elementos-ocultos/abas.html"
+    />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link
+      rel="canonical"
+      href="https://magoo.cc/componentes/elementos-ocultos/abas.html"
+    />
+  </head>
+  <body class="component-page">
+    <a class="skip-link" href="#conteudo"
+      >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
+    >
+    <header>
+      <div class="topbar wrap">
+        <a class="brand" href="../../index.html" aria-label="Magoo — início"
+          ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
+        ><span class="brand-note">faça seus componentes funcionarem corretamente</span
+        ><a class="library-link back-link" href="../../index.html"
+          ><span class="material-icons" aria-hidden="true">arrow_back</span>Voltar para
+          página principal</a
+        >
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / ELEMENTOS OCULTOS</p>
+        <h1>Abas</h1>
+        <p>
+          Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de
+          uma navegação compartilhada.
+        </p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo"
+            >consulte a aba de referências<span class="sr-only">
+              (abre as referências na mesma página)</span
+            ></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="component-menu"
+          hidden=""
+        >
+          <span class="material-icons" aria-hidden="true">menu</span>Índice de componentes
+        </button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden="">
+            <span class="material-icons" aria-hidden="true">close</span>Fechar índice
+          </button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">
+                Flexbox &amp; Grid <small>Em desenvolvimento</small>
+              </li>
+              <li class="upcoming">
+                Header, Footer e Regiões <small>Em desenvolvimento</small>
+              </li>
+              <li>
+                <a href="../estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="../estrutura/listas.html">Listas</a></li>
+              <li class="upcoming">Tabbar <small>Em desenvolvimento</small></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="../mensagens/alertas.html">Alertas</a></li>
+              <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
+              <li class="upcoming">
+                Validação de formulários <small>Em desenvolvimento</small>
+              </li>
+              <li><a href="../mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="../navegacao/menu.html">Menu</a></li>
+              <li><a href="../navegacao/links.html">Links</a></li>
+              <li><a href="../navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="../navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="../navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="../elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="../elementos-ocultos/detalhes-mais-informacoes.html"
+                  >Detalhes e Mais informações</a
+                >
+              </li>
+              <li>
+                <a href="../elementos-ocultos/abas.html" aria-current="page"
+                  >Abas<span class="material-icons active-menu-arrow" aria-hidden="true"
+                    >arrow_forward</span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="../elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="../elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="../formularios/botao.html">Botão</a></li>
+              <li><a href="../formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="../formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li class="upcoming">Inputs <small>Em desenvolvimento</small></li>
+              <li><a href="../formularios/select.html">Select (Combo)</a></li>
+              <li><a href="../formularios/slider.html">Slider</a></li>
+              <li><a href="../formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="aba-interacao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-interacao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-interacao-conteudo"
+              aria-selected="true"
+            >
+              Design de interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-metodo"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-metodo-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-metodo-conteudo"
+              aria-selected="false"
+            >
+              Métodos de Interação
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-gherkin"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-gherkin-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-gherkin-conteudo"
+              aria-selected="false"
+            >
+              Gherkin
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-atencao"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-atencao-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-atencao-conteudo"
+              aria-selected="false"
+            >
+              Pontos de atenção
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="aba-ref"
+              data-bs-toggle="tab"
+              data-bs-target="#aba-ref-conteudo"
+              type="button"
+              role="tab"
+              aria-controls="aba-ref-conteudo"
+              aria-selected="false"
+            >
+              Referências
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div
+            class="tab-pane fade show active"
+            id="aba-interacao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-interacao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">
+              Questionamentos que devem ser feitos ao se projetar componentes interativos
+              do tipo <span class="destaque">Abas</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Dependendo do contexto de construção de
+              seus respectivos componentes, é possível que haja mais questionamentos, bem
+              como alguns dos apresentados aqui não ser necessários. A avaliação precisa
+              ser feita caso a caso.
+            </p>
+
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente que o
+                componente é interativo?
+              </li>
+              <li>
+                Antes de interagir com o componente é possível perceber visualmente qual
+                componente em um conjunto está selecionado?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao passar o mouse no componente acionável?</li>
+              <li>Há feedback visual ao clicar no componente acionável?</li>
+              <li>
+                Ao clicar em um dos componentes do agrupamento, o conteúdo do respectivo
+                agrupamento é exibido?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao acionar o componente?</li>
+              <li>
+                Ao acionar um dos componentes do agrupamento, o conteúdo do respectivo
+                agrupamento é exibido?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">
+              Projetando para uso com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Há feedback visual ao focar no componente?</li>
+              <li>
+                Quando configurado para carregamento automático, ao se navegar entre os
+                componentes da aba é possível perceber a mudança de foco em conjunto com o
+                carregamento do conteúdo?
+              </li>
+              <li>
+                Quando configurado para carregamento manual, ao se navegar entre os
+                componentes da aba é possível perceber a mudança de foco?
+              </li>
+              <li>
+                Quando configurado para carregamento manual, após navegar entre os
+                diferentes componentes da aba, é possível acionar o conteúdo do conjunto
+                com "enter" ou "barra de espaço"?
+              </li>
+              <li>
+                Quando estiver no último componente de um conjunto de abas, a continuidade
+                da navegação faz com que o foco seja direcionado para o primeiro item?
+              </li>
+              <li>
+                Quando estiver no primeiro componente de um conjunto de abas, a
+                continuidade da navegação faz com que o foco seja direcionado para o
+                último item?
+              </li>
+            </ol>
+
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Ao focar em um dos componentes do conjunto de abas é possível identificar
+                qual é o componente de forma clara?
+              </li>
+              <li>
+                Ao focar em um dos componentes do conjunto de abas é possível identificar
+                qual a sua posição no conjunto (exemplo: 1 de 4)?
+              </li>
+              <li>
+                Ao focar em um dos componentes do conjunto de abas é possível ouvir se o
+                componente está selecionado ou não?
+              </li>
+              <li>
+                Ao focar em um dos componentes do conjunto de abas é possível ouvir se o
+                componente está ativado ou não?
+              </li>
+              <li>
+                Ao focar em um dos componentes do conjunto de abas e este não estiver
+                ativado, após ativá-lo é possívei ouvir que o componente está ativado?
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-metodo-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-metodo"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <p class="mt-3">
+              Possíveis métodos de interação em componentes do tipo
+              <span class="destaque">Abas</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />Apenas os principais métodos estão
+              listados aqui. Componentes customizados devem ter estudos aprofundados.
+            </p>
+
+            <h3 class="destaque mt-4">
+              Interação com mouse
+              <small>(qualquer dispositivo de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao passar o mouse, cada componente deve retornar feedback visual
+                confirmando possibilidade de interação.
+              </li>
+              <li>
+                Ao clicar com o botão do mouse, o componente deve retornar feedback visual
+                confirmando o clique e o conteúdo do agrupamento selecionado deve ser
+                exibido.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado
+              <small>(qualquer dispositivo que não seja de apontamento)</small>
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao focar com teclado, cada componente deve retornar feedback visual com
+                foco visível.
+              </li>
+              <li>
+                Quando o foco está fora do conjunto de abas em um componente anterior ao
+                conjunto e a tecla <code>TAB</code> é pressionada, o componente do
+                conjunto previamente ativo deve receber o foco.
+              </li>
+              <li>
+                Quando o foco já estiver no conjunto de abas com um determinado
+                agrupamento ativado, ao pressionar <code>TAB</code>, o foco é movido para
+                o primeiro componente acionável dentro deste conjunto aberto. Caso não
+                existe nenhum componente acionável no conjunto, o foco vai para o próximo
+                componente acionável na tela.
+              </li>
+              <li>
+                A navegação entre os demais componentes do conjunto de abas deve ocorrer
+                através das setas direcionais
+                <code
+                  ><i class="material-icons icons" aria-hidden="true">east</i
+                  ><span class="a11y">seta para direita</span></code
+                >e<code
+                  ><i class="material-icons icons" aria-hidden="true">west</i
+                  ><span class="a11y">seta para esquerda</span></code
+                >.
+              </li>
+              <li>
+                A configuração padrão para o carregamento de conteúdo de cada agrupamento
+                é que ele ocorra de forma automática após a utilização das setas
+                direcionais. É possível configurar de forma que o carregamento de conteúdo
+                ocorra apenas após o acionamento da tecla "enter" ou "barra de espaço", no
+                entanto isso não é recomendado.
+              </li>
+              <li>
+                Quando o último componente em um conjunto de abas estiver selecionado, a
+                utilização da tecla
+                <code
+                  ><i class="material-icons icons" aria-hidden="true">east</i
+                  ><span class="a11y">seta para direita</span></code
+                >
+                deve mover o foco para o primeiro item do conjunto de abas.
+              </li>
+              <li>
+                Quando o primeiro componente em um conjunto de abas estiver selecionado, a
+                utilização da tecla
+                <code
+                  ><i class="material-icons icons" aria-hidden="true">west</i
+                  ><span class="a11y">seta para esquerda</span></code
+                >
+                deve mover o foco para o último item do conjunto de abas.
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">
+              Interação com teclado (ou gestos) + leitor de telas
+            </h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                Ao focar em um componente de um conjunto de abas é possível ouvir qual é
+                este componente, a sua posição (exemplo: 1 de 4) e se está ativado ou não.
+              </li>
+              <li>
+                Ao focar em outros componentes de um conjunto de abas é possível ouvir
+                qual é o componente, a sua posição e se está ativado ou não.
+              </li>
+              <li>
+                Ao focar em algum componente de um conjunto de abas é possível ouvir de
+                que se trata de uma "aba" e ela faz parte de um conjunto de abas.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-gherkin-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-gherkin"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">
+              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
+              Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
+              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
+              <a
+                href="https://www.magentaa11y.com/checklist-web/tab-panel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 1<span class="sr-only"> (abre em uma nova aba)</span></a
+              >,
+              <a
+                href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ref 2<span class="sr-only"> (abre em uma nova aba)</span></a
+              >.
+            </p>
+
+            <h3>
+              Cenário: Considerando que estou em uma página que contém um conjunto de abas
+            </h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso a tecla <code>Tab</code> para mover o foco para o conjunto de
+                abas
+              </li>
+              <li>O foco que VEJO é fortemente indicado visualmente na aba ativa</li>
+              <li>
+                ENTÃO, quando uso as setas direcionais
+                <code
+                  ><i class="material-icons icons" aria-hidden="true">east</i
+                  ><span class="a11y">seta para direita</span></code
+                >
+                e
+                <code
+                  ><i class="material-icons icons" aria-hidden="true">west</i
+                  ><span class="a11y">seta para esquerda</span></code
+                >
+              </li>
+              <li>VEJO que o foco se move entre as abas do agrupamento</li>
+              <li>
+                ENTÃO, quando a ativação for manual e uso <code>Enter</code> ou
+                <code>Barra de espaço</code>
+              </li>
+              <li>VEJO que o painel da aba focada é exibido</li>
+              <li>ENTÃO, quando uso a tecla <code>Tab</code> novamente</li>
+              <li>
+                VEJO que o foco vai para o painel de conteúdo ativo ou para o primeiro
+                componente acionável dentro dele
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                Quando uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso a
+                tecla Tab para mover o foco para uma aba
+                <ul>
+                  <li>OUÇO o nome da aba.</li>
+                  <li>OUÇO que o componente é identificado como aba.</li>
+                  <li>OUÇO sua posição no conjunto, quando disponível.</li>
+                  <li>OUÇO se a aba está selecionada ou não.</li>
+                </ul>
+              </li>
+              <li>ENTÃO, quando navego entre as abas e ativo uma delas</li>
+              <li>
+                OUÇO ou percebo que o painel correspondente à aba selecionada está
+                disponível.
+              </li>
+            </ol>
+
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>
+                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o
+                dedo para focar em uma aba, acontece o seguinte:
+                <ul>
+                  <li>OUÇO o nome da aba.</li>
+                  <li>OUÇO que o componente é identificado como aba.</li>
+                  <li>OUÇO se a aba está selecionada ou não.</li>
+                </ul>
+              </li>
+              <li>ENTÃO, quando eu toco duas vezes para ativar uma aba</li>
+              <li>
+                OUÇO ou percebo que o painel correspondente à aba selecionada está
+                disponível.
+              </li>
+            </ol>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-atencao-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-atencao"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Pontos de Atenção</h2>
+            <p class="mt-3">
+              Pontos de atenção para se preocupar em componentes do tipo
+              <span class="destaque">Abas</span>.
+            </p>
+
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <strong>Responsividade:</strong> Este componente pode ser substituído por
+                outro mais adequado em telas menores.
+              </li>
+              <li>
+                componentes do tipo Abas devem ser utilizados apenas quando outros
+                recursos não puderem ser utilizados.
+              </li>
+              <li>
+                A interação com setas direcionais nem sempre é compreendida por todas as
+                pessoas apesar de ser um padrão de design.
+              </li>
+              <li>
+                As pessoas que desenvolvem telas também tem dificuldade em compreender
+                padrões de interações de teclado, podendo ocasionar construções incorretas
+                se a documentação não for seguida.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="aba-ref-conteudo"
+            role="tabpanel"
+            aria-labelledby="aba-ref"
+            tabindex="0"
+          >
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Abas</span>.
+            </p>
+            <p>
+              <strong>Importante:</strong><br />A maior parte das referências estão na
+              plataforma do curso junto com as aulas citadas neste material.
+            </p>
+            <p>
+              <strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui
+              não são recomendações, mas apenas uma curadoria de referências onde você
+              pode encontrar componentes construídos. É importante ressaltar que não há
+              uma unificação nos formatos de construção e não há garantias de que os links
+              mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser
+              direcionadas para as respectivas equipes envolvidas nas construções dos
+              materiais indicados. Antes de "copiar" algum modelo apresentado, leve em
+              consideração que todos os materiais são atualizados constantemente e que os
+              padrões (principalmente proprietários) podem sofrer alterações.
+            </p>
+
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Apple - Human Interface Guidelines - Tab Views
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://m3.material.io/components/tabs/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Google - Material Design - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >W3C APG: Tabs Pattern
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a
+                  href="https://cauldron.dequelabs.com/components/Tabs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Deque Cauldron: Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://ebay.gitbook.io/mindpatterns/disclosure/tabs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >eBay MIND Patterns: Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://design-system.service.gov.uk/components/tabs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Gov.UK - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://designsystem.digital.gov/components/breadcrumb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >US.gov - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://gold.designsystemau.org/components/breadcrumbs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Gov.AU - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.bbc.co.uk/gel/features/tabs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BBC Gel - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://build.washingtonpost.com/components/tabs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Washington Post - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.lightningdesignsystem.com/components/tabs/?variant=mobile-stack#site-main-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Salesforce Lightning - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://carbondesignsystem.com/components/tabs/usage/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >IBM Carbon - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://spectrum.adobe.com/page/tabs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Adobe Spectrum - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://primer.style/design/components/tab-nav"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Github Primer - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://getbootstrap.com/docs/5.2/components/navs-tabs/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bootstrap - Tabs
+                  <i class="material-icons icons" aria-hidden="true">open_in_new</i
+                  ><span class="sr-only">link externo - abre em uma nova janela</span
+                  ><span class="sr-only"> (abre em uma nova aba)</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
+        >curso AccessBoost
+        <span class="material-icons" aria-hidden="true">open_in_new</span
+        ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos
+      podem ser customizadas (desde que haja instruções suficientes para que as pessoas
+      compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>
+            O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir
+            instruções em um mesmo local para entender o design de interação de
+            componentes antes de construir um sistema mais robusto (ou então atualizar um
+            sistema já construído).
+          </p>
+          <p>
+            Explore comportamentos, métodos de interação e critérios de aceite para criar
+            experiências mais acessíveis e inclusivas.
+          </p>
+        </div>
+        <a
+          class="initiative"
+          href="https://www.tudoeacessibilidade.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="../../img/iniciativa-tudo-off.svg"
+            width="350"
+            height="67"
+            alt="Uma iniciativa Tudo é Acessibilidade"
+          /><span class="sr-only"> (abre em uma nova aba)</span></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

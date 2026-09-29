@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "magoo": {
+      "command": "/usr/local/bin/node",
+      "args": ["/Volumes/SSD 2TB/SITES/GitHub/magoo/js/mcp/server.js"]
+    }
+  }
+}
