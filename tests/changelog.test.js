@@ -114,3 +114,19 @@ test("Abrir e fechar o changelog gerencia foco e bloqueio de rolagem", async () 
   assert.equal(focused, "trigger");
   assert.ok(!classes.has("changelog-open"));
 });
+
+test("Home mostra contagem do catálogo e setas em todos os links de componentes", async () => {
+  const $ = load(await readFile(new URL("index.html", root), "utf8"));
+  assert.equal(
+    $(".catalog-count").text(),
+    `${catalog.components.length} componentes · ${new Set(catalog.components.map((c) => c.category)).size} categorias`,
+  );
+  const links = $(".category a[href]");
+  assert.equal(links.length, catalog.components.length);
+  links.each((_, el) => {
+    const icon = $(el).children(".material-icons");
+    assert.equal(icon.length, 1);
+    assert.equal(icon.text().trim(), "north_east");
+    assert.equal(icon.attr("aria-hidden"), "true");
+  });
+});

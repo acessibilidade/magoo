@@ -1,5 +1,9 @@
 # Histórico de versões
 
+## 1.3.4
+
+- Corrige as setas dos links na home e atualiza automaticamente a quantidade de componentes e categorias.
+
 ## 1.3.3
 
 - Revisa as orientações Gherkin e corrige a pontuação nas introduções de oito componentes.

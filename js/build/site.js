@@ -120,6 +120,15 @@ await writeFile(
 );
 updateSharingMetadata($, "");
 updateLinks($, "");
+$(".category a[href]").each((_, el) => {
+  if (!$(el).children(".material-icons").length)
+    $(el).append(
+      '<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span>',
+    );
+});
+$(".catalog-count").text(
+  `${components.length} componentes · ${new Set(components.map((c) => c.category)).size} categorias`,
+);
 for (const c of components) $(`option[value="${c.path}"]`).text(c.name);
 $(".material-version").text(`Versão do material: ${catalog.contentVersion}`);
 await writeFile(
