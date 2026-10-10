@@ -125,6 +125,7 @@
               <select id="componente" name="componente" required="">
                 <option value="">Selecione um componente</option>
                 <optgroup label="Estrutura">
+                  <option value="componentes/estrutura/tabbar.html">Tabbar</option>
                   <option value="componentes/estrutura/titulos.html">
                     Títulos (Cabeçalhos)
                   </option>
@@ -132,6 +133,9 @@
                   <option value="componentes/estrutura/listas.html">Listas</option>
                 </optgroup>
                 <optgroup label="Mensagens">
+                  <option value="componentes/mensagens/validacao-formularios.html">
+                    Validação de formulários
+                  </option>
                   <option value="componentes/mensagens/alertas.html">Alertas</option>
                   <option value="componentes/mensagens/dialogs.html">Dialogs</option>
                   <option value="componentes/mensagens/toasts.html">Toasts</option>
@@ -164,6 +168,18 @@
                   <option value="componentes/elementos-ocultos/modal.html">Modal</option>
                 </optgroup>
                 <optgroup label="Formulários">
+                  <option value="componentes/formularios/input-text.html">
+                    Input "text"
+                  </option>
+                  <option value="componentes/formularios/input-email.html">
+                    Input "email"
+                  </option>
+                  <option value="componentes/formularios/input-search.html">
+                    Input "search"
+                  </option>
+                  <option value="componentes/formularios/input-password.html">
+                    Input "password"
+                  </option>
                   <option value="componentes/formularios/botao.html">Botão</option>
                   <option value="componentes/formularios/checkbox.html">Checkbox</option>
                   <option value="componentes/formularios/radio-button.html">
@@ -255,7 +271,7 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">Tabbar<small>Em desenvolvimento</small></li>
+              <li><a href="componentes/estrutura/tabbar.html">Tabbar</a></li>
             </ul>
           </section>
           <section class="category">
@@ -287,8 +303,10 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">
-                Validação de formulários<small>Em desenvolvimento</small>
+              <li>
+                <a href="componentes/mensagens/validacao-formularios.html"
+                  >Validação de formulários</a
+                >
               </li>
               <li>
                 <a href="componentes/mensagens/toasts.html"
@@ -473,7 +491,16 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">Inputs<small>Em desenvolvimento</small></li>
+              <li><a href="componentes/formularios/input-text.html">Input "text"</a></li>
+              <li>
+                <a href="componentes/formularios/input-email.html">Input "email"</a>
+              </li>
+              <li>
+                <a href="componentes/formularios/input-search.html">Input "search"</a>
+              </li>
+              <li>
+                <a href="componentes/formularios/input-password.html">Input "password"</a>
+              </li>
               <li>
                 <a href="componentes/formularios/select.html"
                   >Select (Combo)<span
@@ -507,7 +534,134 @@
             </ul>
           </section>
         </div>
-        <p class="material-version">Versão do material: 1.0.1</p>
+        <div class="version-history">
+          <p class="material-version">Versão do material: 1.3.3</p>
+          <button
+            class="changelog-trigger"
+            type="button"
+            aria-haspopup="dialog"
+            aria-controls="changelog"
+            hidden=""
+          >
+            Acessar registro de alterações<span class="sr-only">
+              (abre uma janela com conteúdo adicional nesta mesma página)</span
+            >
+          </button>
+          <noscript><a href="CHANGELOG.md">Acessar registro de alterações</a></noscript>
+        </div>
+        <dialog
+          id="changelog"
+          class="changelog-dialog"
+          aria-labelledby="changelog-title"
+          aria-describedby="changelog-description"
+        >
+          <div class="changelog-header">
+            <h2 id="changelog-title" tabindex="-1" autofocus="">
+              Registro de alterações (changelog)
+            </h2>
+            <button class="changelog-close" type="button">
+              <span class="material-icons notranslate" translate="no" aria-hidden="true"
+                >close</span
+              >Fechar
+            </button>
+          </div>
+          <p id="changelog-description">
+            Alterações do material, da mais recente para a mais antiga.
+          </p>
+          <div class="changelog-entries">
+            <section class="changelog-entry" aria-labelledby="version-1-3-3">
+              <h3 id="version-1-3-3">Versão 1.3.3</h3>
+              <ul>
+                <li>
+                  Revisa as orientações Gherkin e corrige a pontuação nas introduções de
+                  oito componentes.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-2">
+              <h3 id="version-1-3-2">Versão 1.3.2</h3>
+              <ul>
+                <li>Inclui o changelog na home, com histórico de alterações em modal.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-1">
+              <h3 id="version-1-3-1">Versão 1.3.1</h3>
+              <ul>
+                <li>
+                  Corrige a marcação de código no guia Tabbar e restaura o texto autoral
+                  nas páginas internas.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-0">
+              <h3 id="version-1-3-0">Versão 1.3.0</h3>
+              <ul>
+                <li>
+                  Adiciona Tabbar em Estrutura, com orientações para navegação entre
+                  destinos e alternância de painéis.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-2-0">
+              <h3 id="version-1-2-0">Versão 1.2.0</h3>
+              <ul>
+                <li>
+                  Adiciona Validação de formulários em Mensagens, com erros junto aos
+                  campos, resumo de erros e orientações de correção.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-3">
+              <h3 id="version-1-1-3">Versão 1.1.3</h3>
+              <ul>
+                <li>
+                  Amplia as referências dos quatro inputs com design systems e exemplos
+                  específicos.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-2">
+              <h3 id="version-1-1-2">Versão 1.1.2</h3>
+              <ul>
+                <li>
+                  Padroniza o Gherkin dos quatro inputs, incluindo teclado e leitores de
+                  telas para desktop e dispositivos móveis.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-1">
+              <h3 id="version-1-1-1">Versão 1.1.1</h3>
+              <ul>
+                <li>
+                  Aplica marcação de código às menções de teclas e combinações nas
+                  orientações.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-0">
+              <h3 id="version-1-1-0">Versão 1.1.0</h3>
+              <ul>
+                <li>
+                  Adiciona Input "text", Input "email", Input "search" e Input "password"
+                  em Formulários.
+                </li>
+                <li>
+                  Inclui as regras de exibir e ocultar senha, com botão textual e
+                  orientação sobre ícones.
+                </li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-0-1">
+              <h3 id="version-1-0-1">Versão 1.0.1</h3>
+              <ul>
+                <li>
+                  Atualiza as instruções de instalação e uso, navegação por âncoras,
+                  tradução, licença, FAQ e orientações por perfil.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </dialog>
       </section>
       <section class="audience wrap" aria-labelledby="audience-title">
         <h2 id="audience-title" tabindex="-1">Para quem é o Magoo?</h2>
@@ -864,10 +1018,10 @@
               <div>
                 <dt>Argumentos</dt>
                 <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.0.1</code>
+                  <code>-y @acessibilidade/magoo-mcp@1.3.3</code>
                   <p>
                     Se o aplicativo pedir argumentos separados, adicione
-                    <code>-y</code> e <code>@acessibilidade/magoo-mcp@1.0.1</code> como
+                    <code>-y</code> e <code>@acessibilidade/magoo-mcp@1.3.3</code> como
                     dois itens.
                   </p>
                 </dd>
@@ -1093,7 +1247,7 @@
               <p>
                 Registre o componente, a URL, a versão consultada e a data. Ao adotar uma
                 nova versão, revise as diferenças e os testes do seu sistema. A
-                configuração MCP apresentada fixa a versão 1.0.1 e não troca
+                configuração MCP apresentada fixa a versão 1.3.3 e não troca
                 automaticamente para uma versão futura.
               </p>
             </dd>

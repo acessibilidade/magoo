@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.3.3",
   "id": "abas",
   "name": "Abas",
   "category": "elementos-ocultos",
@@ -454,7 +454,39 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando configurado para carregamento manual, após navegar entre\n                os diferentes componentes da aba, é possível acionar o conteúdo\n                do conjunto com \"enter\" ou \"barra de espaço\"?\n              "
+                  "value": "\n                Quando configurado para carregamento manual, após navegar entre\n                os diferentes componentes da aba, é possível acionar o conteúdo\n                do conjunto com \""
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" ou \""
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?\n              "
                 }
               ]
             },
@@ -938,7 +970,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                A navegação entre os demais componentes do conjunto de abas deve\n                ocorrer através das setas direcionais\n                "
+                  "value": "\n                A navegação entre os demais componentes do conjunto de abas deve\n                ocorrer através das "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                "
                 },
                 {
                   "type": "element",
@@ -1036,7 +1084,55 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                A configuração padrão para o carregamento de conteúdo de cada\n                agrupamento é que ele ocorra de forma automática após a\n                utilização das setas direcionais. É possível configurar de forma\n                que o carregamento de conteúdo ocorra apenas após o acionamento\n                da tecla \"enter\" ou \"barra de espaço\", no entanto isso não é\n                recomendado.\n              "
+                  "value": "\n                A configuração padrão para o carregamento de conteúdo de cada\n                agrupamento é que ele ocorra de forma automática após a\n                utilização das "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.4",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". É possível configurar de forma\n                que o carregamento de conteúdo ocorra apenas após o acionamento\n                da tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.5",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" ou \""
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.6",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\", no entanto isso não é\n                recomendado.\n              "
                 }
               ]
             },
@@ -1288,44 +1384,6 @@
             {
               "type": "text",
               "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
-            },
-            {
-              "type": "text",
-              "value": ",\n              "
-            },
-            {
-              "type": "element",
-              "id": "abas.acceptance-criteria.5",
-              "tag": "a",
-              "attributes": {
-                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
-                "target": "_blank",
-                "rel": "noopener noreferrer"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Ref 2"
-                },
-                {
-                  "type": "element",
-                  "id": "abas.acceptance-criteria.6",
-                  "tag": "span",
-                  "attributes": {
-                    "class": "sr-only"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": " (abre em uma nova aba)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": ".\n            "
             }
           ]
         },
@@ -1435,7 +1493,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                ENTÃO, quando uso as setas direcionais\n                "
+                  "value": "\n                ENTÃO, quando uso as "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.7",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                "
                 },
                 {
                   "type": "element",
@@ -1697,7 +1771,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para uma aba\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.8",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para uma aba\n                "
                 },
                 {
                   "type": "element",
@@ -2104,7 +2194,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                A interação com setas direcionais nem sempre é compreendida por\n                todas as pessoas apesar de ser um padrão de design.\n              "
+                  "value": "\n                A interação com "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.key-code.9",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " nem sempre é compreendida por\n                todas as pessoas apesar de ser um padrão de design.\n              "
                 }
               ]
             },

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "carrossel",
   "name": "Carrossel",
   "category": "navegacao",
@@ -1210,7 +1210,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Setas direcionais podem existir como interação complementar,\n                desde que não sejam o único método de uso e não conflitem com\n                padrões esperados.\n              "
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "carrossel.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " podem existir como interação complementar,\n                desde que não sejam o único método de uso e não conflitem com\n                padrões esperados.\n              "
                 }
               ]
             },

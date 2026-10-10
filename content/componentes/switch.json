@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "switch",
   "name": "Switch",
   "category": "formularios",
@@ -946,7 +946,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " pode funcionar em implementações\n                customizadas, mas não deve substituir o suporte à barra de\n                espaço.\n              "
+                  "value": " pode funcionar em implementações\n                customizadas, mas não deve substituir o suporte à "
+                },
+                {
+                  "type": "element",
+                  "id": "switch.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de\n                espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
                 }
               ]
             },

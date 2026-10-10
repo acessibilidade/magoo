@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "links",
   "name": "Links",
   "category": "navegacao",
@@ -422,7 +422,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "É possível interagir com o link através da tecla \"enter\"?"
+                  "value": "É possível interagir com o link através da tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "links.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?"
                 }
               ]
             },
@@ -942,7 +958,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Após acionar a tecla \"enter\" é possível identificar que outro\n                conteúdo foi carregado na tela.\n              "
+                  "value": "\n                Após acionar a tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "links.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" é possível identificar que outro\n                conteúdo foi carregado na tela.\n              "
                 }
               ]
             },
@@ -1193,7 +1225,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um link\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "links.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para um link\n                "
                 },
                 {
                   "type": "element",
@@ -1273,7 +1321,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "ENTÃO, quando uso a tecla Enter para ativar o link"
+                  "value": "ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "links.key-code.4",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar o link"
                 }
               ]
             },

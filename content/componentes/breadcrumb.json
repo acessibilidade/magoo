@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.3.3",
   "id": "breadcrumb",
   "name": "Breadcrumb",
   "category": "navegacao",
@@ -438,7 +438,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                É possível interagir com o componente acionável através da tecla\n                \"enter\"?\n              "
+                  "value": "\n                É possível interagir com o componente acionável através da tecla\n                \""
+                },
+                {
+                  "type": "element",
+                  "id": "breadcrumb.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?\n              "
                 }
               ]
             },
@@ -1108,44 +1124,6 @@
             {
               "type": "text",
               "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
-            },
-            {
-              "type": "text",
-              "value": ",\n              "
-            },
-            {
-              "type": "element",
-              "id": "breadcrumb.acceptance-criteria.5",
-              "tag": "a",
-              "attributes": {
-                "href": "https://github.com/AFixt/apg-gherkin/blob/main/features/breadcrumb.feature",
-                "target": "_blank",
-                "rel": "noopener noreferrer"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Ref 2"
-                },
-                {
-                  "type": "element",
-                  "id": "breadcrumb.acceptance-criteria.6",
-                  "tag": "span",
-                  "attributes": {
-                    "class": "sr-only"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": " (abre em uma nova aba)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": ".\n            "
             }
           ]
         },
@@ -1339,7 +1317,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um link\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "breadcrumb.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para um link\n                "
                 },
                 {
                   "type": "element",
@@ -1435,7 +1429,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "ENTÃO, quando uso a tecla Enter para ativar o link"
+                  "value": "ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "breadcrumb.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar o link"
                 }
               ]
             },

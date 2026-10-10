@@ -6,18 +6,18 @@
 
 Biblioteca de comportamentos de interação de componentes, de Marcelo Sales.
 
-O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.0.1** remove os links genéricos “Ref 1” de 22 componentes, preservando as demais orientações e referências.
+O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.3.3** reúne 29 componentes, incluindo os quatro tipos de input, Validação de formulários e Tabbar.
 
 ## Instalação pelo npm
 
-O pacote **@acessibilidade/magoo-mcp 1.0.1** está publicado e permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
+O pacote **@acessibilidade/magoo-mcp 1.3.3** está publicado e permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
 
 Nas configurações de servidores MCP do seu assistente, adicione:
 
 - **Nome:** `magoo`
 - **Tipo:** STDIO (local)
 - **Comando:** `npx`
-- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.0.1`
+- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.3.3`
 
 Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o formato `mcpServers`, use:
 
@@ -26,17 +26,19 @@ Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o form
   "mcpServers": {
     "magoo": {
       "command": "npx",
-      "args": ["-y", "@acessibilidade/magoo-mcp@1.0.1"]
+      "args": ["-y", "@acessibilidade/magoo-mcp@1.3.3"]
     }
   }
 }
 ```
 
-O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.0.1; atualizar o GitHub não atualiza automaticamente o pacote instalado.
+O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.3.3; atualizar o GitHub não atualiza automaticamente o pacote instalado.
 
 Experimente: **“Use o MCP Magoo para consultar o componente Modal e explicar seus comportamentos por teclado. Informe a versão consultada.”**
 
 O MCP é somente de leitura: não instala componentes visuais nem altera arquivos de código ou design. Você também pode consultar todo o material diretamente em [magoo.cc](https://magoo.cc), sem instalar nada.
+
+A revisão do conteúdo **1.3.3** inclui Tabbar em Estrutura e Validação de formulários em Mensagens e adiciona Input "text", Input "email", Input "search" e Input "password", incluindo as regras de exibir e ocultar senha. O histórico completo está em [CHANGELOG.md](CHANGELOG.md).
 
 ## Desenvolvimento local
 
@@ -53,8 +55,8 @@ O site continua funcionando como arquivos HTML estáticos. Não depende do MCP n
 
 ## Onde editar
 
-- `content/componentes/*.json`: fonte dos nomes, resumos e das cinco seções dos 23 componentes.
-- `content/catalog.json`: catálogo, versão da biblioteca e cinco itens em desenvolvimento. Ao renomear um componente, atualize também seu nome no catálogo; a validação detecta divergências.
+- `content/componentes/*.json`: fonte dos nomes, resumos e das cinco seções dos 29 componentes.
+- `content/catalog.json`: catálogo, versão da biblioteca e dois itens em desenvolvimento. Ao renomear um componente, atualize também seu nome no catálogo; a validação detecta divergências.
 - `content/component.schema.json`: contrato validado automaticamente.
 - `templates/index.html`: layout e textos institucionais da home.
 - `templates/404.html`: página de erro.
@@ -125,7 +127,7 @@ Para execução manual, `npm run mcp` inicia o processo e aguarda mensagens MCP.
 
 Categorias: `estrutura`, `mensagens`, `navegacao`, `elementos-ocultos`, `formularios`.
 
-Recursos: `magoo://catalog` e `magoo://components/{id}`. Todos os 23 recursos de componentes são listáveis. Ferramentas declaram `readOnlyHint`, e retornam conteúdo estruturado e texto JSON com versão e origem. IDs desconhecidos são rejeitados; IDs não são usados para acessar caminhos fornecidos por clientes.
+Recursos: `magoo://catalog` e `magoo://components/{id}`. Todos os 29 recursos de componentes são listáveis. Ferramentas declaram `readOnlyHint`, e retornam conteúdo estruturado e texto JSON com versão e origem. IDs desconhecidos são rejeitados; IDs não são usados para acessar caminhos fornecidos por clientes.
 
 Exemplos de pedidos a um assistente conectado:
 

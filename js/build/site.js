@@ -95,6 +95,29 @@ for (const c of components) {
   );
 }
 const $ = load(await readFile(new URL("templates/index.html", root), "utf8"));
+const changelog = JSON.parse(
+  await readFile(new URL("content/changelog.json", root), "utf8"),
+);
+if (changelog[0]?.version !== catalog.contentVersion)
+  throw new Error("Changelog divergente da versão do catálogo.");
+$(".changelog-entries").html(
+  changelog
+    .map(
+      (entry) =>
+        `<section class="changelog-entry" aria-labelledby="version-${escape(entry.version.replaceAll(".", "-"))}"><h3 id="version-${escape(entry.version.replaceAll(".", "-"))}">Versão ${escape(entry.version)}</h3><ul>${entry.changes.map((change) => `<li>${escape(change)}</li>`).join("")}</ul></section>`,
+    )
+    .join(""),
+);
+await writeFile(
+  new URL("CHANGELOG.md", root),
+  "# Histórico de versões\n\n" +
+    changelog
+      .map(
+        (entry) =>
+          `## ${entry.version}\n\n${entry.changes.map((change) => `- ${change}`).join("\n")}\n`,
+      )
+      .join("\n"),
+);
 updateSharingMetadata($, "");
 updateLinks($, "");
 for (const c of components) $(`option[value="${c.path}"]`).text(c.name);

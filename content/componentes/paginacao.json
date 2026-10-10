@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "paginacao",
   "name": "Paginação",
   "category": "navegacao",
@@ -1689,7 +1689,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um controle\n                de paginação\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para um controle\n                de paginação\n                "
                 },
                 {
                   "type": "element",
@@ -1785,7 +1801,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                ENTÃO, quando uso a tecla Enter para ativar um controle de\n                paginação\n              "
+                  "value": "\n                ENTÃO, quando uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "paginacao.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar um controle de\n                paginação\n              "
                 }
               ]
             },

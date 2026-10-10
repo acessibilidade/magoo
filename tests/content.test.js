@@ -7,9 +7,9 @@ import { root } from "../js/lib/paths.js";
 import { validateContent } from "../js/build/validate.js";
 
 test("Base completa e IDs únicos validados", () => {
-  assert.equal(validateContent().components, 23);
-  assert.equal(catalog.planned.length, 5);
-  assert.equal(search("", "formularios").length, 6);
+  assert.equal(validateContent().components, 29);
+  assert.equal(catalog.planned.length, 2);
+  assert.equal(search("", "formularios").length, 10);
 });
 test("HTML gerado contém as cinco seções e todos os links de referência", async () => {
   for (const c of components) {

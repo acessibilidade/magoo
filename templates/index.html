@@ -135,7 +135,7 @@
             <div class="select-control">
               <select id="componente" name="componente" required="">
                 <option value="">Selecione um componente</option>
-                <optgroup label="Estrutura">
+                <optgroup label="Estrutura"><option value="componentes/estrutura/tabbar.html">Tabbar</option>
                   <option value="componentes/estrutura/titulos.html">
                     Títulos (Cabeçalhos)
                   </option>
@@ -146,7 +146,7 @@
                     Listas
                   </option>
                 </optgroup>
-                <optgroup label="Mensagens">
+                <optgroup label="Mensagens"><option value="componentes/mensagens/validacao-formularios.html">Validação de formulários</option>
                   <option value="componentes/mensagens/alertas.html">
                     Alertas
                   </option>
@@ -196,7 +196,7 @@
                     Modal
                   </option>
                 </optgroup>
-                <optgroup label="Formulários">
+                <optgroup label="Formulários"><option value="componentes/formularios/input-text.html">Input &quot;text&quot;</option><option value="componentes/formularios/input-email.html">Input &quot;email&quot;</option><option value="componentes/formularios/input-search.html">Input &quot;search&quot;</option><option value="componentes/formularios/input-password.html">Input &quot;password&quot;</option>
                   <option value="componentes/formularios/botao.html">
                     Botão
                   </option>
@@ -303,7 +303,7 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">Tabbar<small>Em desenvolvimento</small></li>
+              <li><a href="componentes/estrutura/tabbar.html">Tabbar</a></li>
             </ul>
           </section>
           <section class="category">
@@ -335,9 +335,7 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">
-                Validação de formulários<small>Em desenvolvimento</small>
-              </li>
+              <li><a href="componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li>
                 <a href="componentes/mensagens/toasts.html"
                   >Toasts<span
@@ -522,7 +520,10 @@
                   ></a
                 >
               </li>
-              <li class="upcoming">Inputs<small>Em desenvolvimento</small></li>
+              <li><a href="componentes/formularios/input-text.html">Input &quot;text&quot;</a></li>
+<li><a href="componentes/formularios/input-email.html">Input &quot;email&quot;</a></li>
+<li><a href="componentes/formularios/input-search.html">Input &quot;search&quot;</a></li>
+<li><a href="componentes/formularios/input-password.html">Input &quot;password&quot;</a></li>
               <li>
                 <a href="componentes/formularios/select.html"
                   >Select (Combo)<span
@@ -556,7 +557,19 @@
             </ul>
           </section>
         </div>
-        <p class="material-version">Versão do material: 1.0.1</p>
+        <div class="version-history">
+          <p class="material-version">Versão do material: 1.3.2</p>
+          <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden>Acessar registro de alterações<span class="sr-only"> (abre uma janela com conteúdo adicional nesta mesma página)</span></button>
+          <noscript><a href="CHANGELOG.md">Acessar registro de alterações</a></noscript>
+        </div>
+        <dialog id="changelog" class="changelog-dialog" aria-labelledby="changelog-title" aria-describedby="changelog-description">
+          <div class="changelog-header">
+            <h2 id="changelog-title" tabindex="-1" autofocus>Registro de alterações (changelog)</h2>
+            <button class="changelog-close" type="button"><span class="material-icons notranslate" translate="no" aria-hidden="true">close</span>Fechar</button>
+          </div>
+          <p id="changelog-description">Alterações do material, da mais recente para a mais antiga.</p>
+          <div class="changelog-entries">MAGOO_CHANGELOG</div>
+        </dialog>
       </section>
       <section class="audience wrap" aria-labelledby="audience-title">
         <h2 id="audience-title" tabindex="-1">Para quem é o Magoo?</h2>
@@ -940,11 +953,11 @@
               <div>
                 <dt>Argumentos</dt>
                 <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.0.1</code>
+                  <code>-y @acessibilidade/magoo-mcp@1.3.3</code>
                   <p>
                     Se o aplicativo pedir argumentos separados, adicione
                     <code>-y</code> e
-                    <code>@acessibilidade/magoo-mcp@1.0.1</code> como dois
+                    <code>@acessibilidade/magoo-mcp@1.3.3</code> como dois
                     itens.
                   </p>
                 </dd>
@@ -1177,7 +1190,7 @@
               <p>
                 Registre o componente, a URL, a versão consultada e a data. Ao
                 adotar uma nova versão, revise as diferenças e os testes do seu
-                sistema. A configuração MCP apresentada fixa a versão 1.0.1 e
+                sistema. A configuração MCP apresentada fixa a versão 1.3.3 e
                 não troca automaticamente para uma versão futura.
               </p>
             </dd>

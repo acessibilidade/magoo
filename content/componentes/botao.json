@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "botao",
   "name": "Botão",
   "category": "formularios",
@@ -438,7 +438,39 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                É possível interagir com o botão através da tecla \"enter\" e da\n                tecla de \"espaço\"?\n              "
+                  "value": "\n                É possível interagir com o botão através da tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" e da\n                tecla de \""
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?\n              "
                 }
               ]
             },
@@ -974,7 +1006,39 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Após acionar a tecla \"enter\" ou \"barra de espaço\" é possível\n                identificar que a ação foi executada.\n              "
+                  "value": "\n                Após acionar a tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" ou \""
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.4",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" é possível\n                identificar que a ação foi executada.\n              "
                 }
               ]
             },
@@ -1289,7 +1353,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um botão\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.5",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para um botão\n                "
                 },
                 {
                   "type": "element",
@@ -1369,7 +1449,39 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                ENTÃO, quando uso Enter ou Barra de espaço para ativar o botão\n              "
+                  "value": "\n                ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.6",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "botao.key-code.7",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar o botão\n              "
                 }
               ]
             },

@@ -165,14 +165,16 @@
               </li>
               <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="../estrutura/listas.html">Listas</a></li>
-              <li class="upcoming">Tabbar <small>Em desenvolvimento</small></li>
+              <li><a href="../estrutura/tabbar.html">Tabbar</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
               <li><a href="../mensagens/alertas.html">Alertas</a></li>
               <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
-              <li class="upcoming">
-                Validação de formulários <small>Em desenvolvimento</small>
+              <li>
+                <a href="../mensagens/validacao-formularios.html"
+                  >Validação de formulários</a
+                >
               </li>
               <li><a href="../mensagens/toasts.html">Toasts</a></li>
             </ul>
@@ -217,7 +219,10 @@
               <li>
                 <a href="../formularios/radio-button.html">Radio Button</a>
               </li>
-              <li class="upcoming">Inputs <small>Em desenvolvimento</small></li>
+              <li><a href="../formularios/input-text.html">Input "text"</a></li>
+              <li><a href="../formularios/input-email.html">Input "email"</a></li>
+              <li><a href="../formularios/input-search.html">Input "search"</a></li>
+              <li><a href="../formularios/input-password.html">Input "password"</a></li>
               <li><a href="../formularios/select.html">Select (Combo)</a></li>
               <li><a href="../formularios/slider.html">Slider</a></li>
               <li><a href="../formularios/switch.html">Switch</a></li>
@@ -368,7 +373,8 @@
             <ol class="lista-detalhe link-padrao">
               <li>Há feedback visual ao focar no componente acionável?</li>
               <li>
-                É possível interagir com o componente acionável através da tecla "enter"?
+                É possível interagir com o componente acionável através da tecla
+                "<code>enter</code>"?
               </li>
               <li>
                 Ao ser acionado por teclado o componente acionável direciona a pessoa para
@@ -490,13 +496,7 @@
             <p class="mt-3">
               Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
               Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
-              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)). ,
-              <a
-                href="https://github.com/AFixt/apg-gherkin/blob/main/features/breadcrumb.feature"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Ref 2<span class="sr-only"> (abre em uma nova aba)</span></a
-              >.
+              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
             </p>
 
             <h3>Cenário: Considerando que estou em uma página que contém breadcrumb</h3>
@@ -512,7 +512,7 @@
             <ol class="lista-detalhe link-padrao">
               <li>
                 Quando uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso a
-                tecla Tab para mover o foco para um link
+                tecla <code>Tab</code> para mover o foco para um link
                 <ul>
                   <li>
                     VEJO que os nomes dos links correspondem aos títulos das páginas de
@@ -532,7 +532,7 @@
                   </li>
                 </ul>
               </li>
-              <li>ENTÃO, quando uso a tecla Enter para ativar o link</li>
+              <li>ENTÃO, quando uso a tecla <code>Enter</code> para ativar o link</li>
               <li>OUÇO dizer que meu navegador está indo para algum lugar.</li>
             </ol>
 

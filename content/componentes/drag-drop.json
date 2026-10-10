@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.0",
+  "contentVersion": "1.1.1",
   "id": "drag-drop",
   "name": "Drag'n'Drop",
   "category": "navegacao",
@@ -1098,7 +1098,23 @@
                 },
                 {
                   "type": "text",
-                  "value": ", deve ser\n                possível utilizar utilizar as setas direcionais\n                "
+                  "value": ", deve ser\n                possível utilizar utilizar as "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n                "
                 },
                 {
                   "type": "element",
@@ -1669,7 +1685,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "ENTÃO, quando uso as setas direcionais para mover o item"
+                  "value": "ENTÃO, quando uso as "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o item"
                 }
               ]
             },
@@ -1769,7 +1801,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para um item\n                arrastável\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para um item\n                arrastável\n                "
                 },
                 {
                   "type": "element",

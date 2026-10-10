@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "accordion",
   "name": "Accordion",
   "category": "elementos-ocultos",
@@ -986,7 +986,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Setas direcionais podem ser usadas como recurso adicional,\n                quando documentadas e consistentes.\n              "
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " podem ser usadas como recurso adicional,\n                quando documentadas e consistentes.\n              "
                 }
               ]
             },

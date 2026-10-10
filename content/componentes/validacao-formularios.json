@@ -1,0 +1,2479 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.2.0",
+  "id": "validacao-formularios",
+  "name": "Validação de formulários",
+  "category": "mensagens",
+  "summary": "Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/mensagens/validacao-formularios.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/mensagens/validacao-formularios.html",
+    "note": "Orientações adicionadas à biblioteca Magoo nesta revisão; referências na seção Referências. Adaptações dependem do contexto; não constitui certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.1",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.2",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Questionamentos que devem ser feitos ao projetar mensagens de validação de formulários."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Avalie cada orientação conforme o contexto. A validação informa problemas na entrada e orienta a correção; falhas do serviço exigem mensagens próprias."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.4",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para a \"não interação\""
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.9",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "As instruções, formatos esperados e campos obrigatórios estão claros antes de preencher?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A mensagem identifica o campo, explica o problema e informa como corrigir, sem culpar a pessoa?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Os erros são identificáveis por texto, além de cor ou ícone?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Foi definido quando validar: no envio, ao sair do campo ou durante uma verificação específica? Evita-se mostrar erro antes de a pessoa ter oportunidade de preencher?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.10",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com mouse"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.13",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A mensagem permanece perto do campo e disponível enquanto houver erro?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se houver resumo de erros, seus links levam ao campo correspondente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.14",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "É possível ler a mensagem e corrigir o campo mesmo com o teclado virtual aberto ou com ampliação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Os links do resumo possuem área de toque adequada?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.18",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Após um envio inválido, há um destino de foco previsível, como o resumo de erros ou o primeiro campo inválido?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Os links do resumo podem ser percorridos com "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.20",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e acionados com "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.21",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Validar durante a edição preserva o foco e não impede a digitação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.25",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Projetando para uso com leitor de telas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.29",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A mensagem está associada ao campo e o estado inválido é identificado?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Os erros novos são comunicados sem repetição excessiva ou leitura a cada tecla?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O resumo tem um título claro e links com nomes que identificam os problemas?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.30",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.31",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Interação com mouse"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.35",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.32",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao enviar dados inválidos, apresentar mensagens específicas junto aos campos e, quando adequado, um resumo com links para correção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.33",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Clicar em um link do resumo leva ao campo correspondente na mesma página e posiciona o foco para corrigi-lo."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.34",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Preservar os dados preenchidos, inclusive os que precisam de correção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.36",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Interação com teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.46",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.39",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.37",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.38",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Shift + Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorrem campos, botão de envio e links do resumo na ordem da interface."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.43",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.40",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.41",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ativa o botão de envio; "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.42",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ativa os links do resumo."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.44",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Após um envio rejeitado, posicionar o foco no resumo ou no primeiro campo inválido, conforme o padrão escolhido."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.45",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Durante validações ao sair do campo ou durante a edição, manter o fluxo de foco e a entrada de texto."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.47",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Interação com gestos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.50",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.48",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tocar no botão de envio permite validar o formulário."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.49",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tocar no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.51",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Interação com teclado (ou gestos) + leitor de telas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.59",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.53",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.52",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-describedby"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", preservando também a associação com as instruções."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.55",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Usar "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.54",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-invalid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.56",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se o foco for movido para um resumo, permitir a leitura de seu título, erros e links. Se o foco permanecer onde estava, anunciar erros dinâmicos com uma região de atualização adequada ao contexto."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.58",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.57",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-live"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.60",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Correção e novo envio"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.64",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.61",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Após uma correção confirmada, remover ou atualizar a mensagem e a entrada correspondente no resumo, sem apagar outros erros."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.62",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enviar novamente executa a validação necessária; somente confirmar sucesso depois que a operação for concluída."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.63",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Em verificações assíncronas, informar o andamento e evitar que respostas antigas substituam o resultado do valor atual."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.65",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.66",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              \n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.67",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página que contém um formulário com validação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.68",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.81",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.70",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.69",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco até o botão de envio"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.71",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O foco que VEJO é fortemente indicado visualmente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.74",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.72",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.73",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para enviar dados inválidos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.75",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO mensagens que identificam os campos com erro e explicam como corrigir"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.76",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "E percebo que o foco foi direcionado ao resumo ou ao primeiro campo inválido, conforme o padrão definido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.79",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.77",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para focar um link do resumo e "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.78",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativá-lo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.80",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que o foco chega ao campo correspondente na mesma página e posso corrigi-lo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.82",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.91",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.83",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e envio um formulário com dados inválidos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.84",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo que o envio não foi concluído e que existem erros a corrigir"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.86",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.85",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para navegar até um campo inválido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.87",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO o rótulo, a indicação de erro e a orientação de correção"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.89",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "E, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.88",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar um link do resumo, percebo que cheguei ao campo correspondente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.90",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo as mensagens sem anúncios duplicados desnecessários"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.92",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.99",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.93",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e envio um formulário com dados inválidos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.94",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo que o envio não foi concluído e que existem erros a corrigir"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.95",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando deslizo o dedo para navegar até um campo inválido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.96",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO o rótulo, a indicação de erro e a orientação de correção"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.97",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "E, quando toco duas vezes ou uso o gesto adequado para ativar um link do resumo, percebo que cheguei ao campo correspondente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.98",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo as mensagens sem anúncios duplicados desnecessários"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.100",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Correção e novo envio"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.105",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.101",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO corrijo um campo e a nova validação confirma a correção"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.102",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO que a mensagem e o estado inválido daquele campo são atualizados, preservando os outros erros e os valores preenchidos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.103",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando envio o formulário com todas as entradas válidas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.104",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO ou OUÇO a confirmação somente depois que a operação for concluída"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.106",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Validação durante a edição"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.110",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.107",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uma validação ocorre ao sair de um campo ou durante uma verificação específica"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.108",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO ou OUÇO uma mensagem no momento definido, sem erro prematuro antes de preencher"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.109",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "E percebo que o foco e a digitação não foram interrompidos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.111",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.127",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.112",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Preferir mensagens concretas, como \"Informe um e-mail no formato nome@exemplo.com\", em vez de apenas \"Valor inválido\"."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.113",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Distinguir campo vazio obrigatório, formato incorreto e regra de negócio. Não tratar uma falha de conexão ou indisponibilidade do serviço como erro de preenchimento."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.114",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Não depender apenas de bordas vermelhas, ícones ou mensagens temporárias. Manter a orientação até que a correção seja confirmada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.117",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Associar o erro ao campo com "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.115",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-describedby"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e manter as instruções existentes nessa associação. Usar "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.116",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-invalid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " apenas quando o erro for detectado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.118",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O resumo complementa as mensagens junto aos campos. Seus links devem indicar para leitores de tela que levam ao campo na mesma página e mover o foco para o destino adequado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.121",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Escolher entre o anúncio pelo foco e uma região dinâmica conforme o fluxo. Usar "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.119",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "role=\"alert\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " apenas quando a urgência justificar; "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.120",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "role=\"status\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " pode servir para atualizações não urgentes. Evitar anúncios a cada tecla."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.122",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Preservar valores após um envio inválido. Não incluir senhas ou outros dados sensíveis no resumo ou em mensagens de estado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.123",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A validação no cliente ajuda a orientar, mas a validação no servidor continua necessária. Verificações assíncronas devem considerar o valor atual e informar falhas da verificação."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.124",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Não desabilitar o botão de envio como única forma de indicar problemas: a pessoa precisa saber o que falta e como corrigir."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.125",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se usar ícones complementares, preferir Material Icons e ocultar os decorativos das tecnologias assistivas; a informação deve continuar disponível em texto."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.126",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Bootstrap informa limitações de acessibilidade nos estilos personalizados de validação do cliente e tooltips. Avaliar os exemplos antes de adotá-los; cores e estilos não garantem associação ou anúncio acessível."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.128",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.129",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Padrões de Design"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.134",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.133",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.132",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://www.w3.org/WAI/tutorials/forms/notifications/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "W3C WAI — User Notification "
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.130",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons notranslate",
+                        "translate": "no",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.131",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Erros, notificações e retorno após envio de formulários."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.135",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Design System"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.block.152",
+          "tag": "ul",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.139",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.138",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://design-system.service.gov.uk/components/error-message/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "GOV.UK — Error message "
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.136",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons notranslate",
+                        "translate": "no",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.137",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Mensagens associadas aos campos e orientações de correção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.143",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.142",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://design-system.service.gov.uk/components/error-summary/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "GOV.UK — Error summary "
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.140",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons notranslate",
+                        "translate": "no",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.141",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Resumo de erros, links para os campos e gerenciamento de foco."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.147",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.146",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://designsystem.digital.gov/components/validation/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "USWDS — Validation "
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.144",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons notranslate",
+                        "translate": "no",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.145",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Validação e retorno sobre requisitos de entrada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.151",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.150",
+                  "tag": "a",
+                  "attributes": {
+                    "href": "https://getbootstrap.com/docs/5.3/forms/validation/",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bootstrap — Validation "
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.148",
+                      "tag": "i",
+                      "attributes": {
+                        "class": "material-icons notranslate",
+                        "translate": "no",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "id": "validacao-formularios.block.149",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "sr-only"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " — Exemplos de validação e limitações de acessibilidade documentadas."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

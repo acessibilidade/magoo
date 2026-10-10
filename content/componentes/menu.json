@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.3.3",
   "id": "menu",
   "name": "Menu",
   "category": "navegacao",
@@ -1176,44 +1176,6 @@
             {
               "type": "text",
               "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
-            },
-            {
-              "type": "text",
-              "value": ",\n              "
-            },
-            {
-              "type": "element",
-              "id": "menu.acceptance-criteria.5",
-              "tag": "a",
-              "attributes": {
-                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
-                "target": "_blank",
-                "rel": "noopener noreferrer"
-              },
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Ref 2"
-                },
-                {
-                  "type": "element",
-                  "id": "menu.acceptance-criteria.6",
-                  "tag": "span",
-                  "attributes": {
-                    "class": "sr-only"
-                  },
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": " (abre em uma nova aba)"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": ".\n            "
             }
           ]
         },

@@ -185,6 +185,7 @@ a:hover {
   color: var(--ink);
 }
 .picker-row button {
+  color: #22231f;
   padding: 14px 23px;
   background: var(--lime);
   border: 1px solid #b4cc7c;
@@ -1526,4 +1527,91 @@ small,
 }
 .usage-tabs .accordion-heading {
   margin: 0;
+}
+
+/* Histórico de alterações da biblioteca */
+.version-history {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
+  margin-top: 24px;
+}
+.version-history .material-version {
+  margin: 0;
+}
+.changelog-trigger {
+  padding: 6px 0;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.changelog-trigger:hover {
+  text-decoration-thickness: 2px;
+}
+.changelog-dialog {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  color: var(--ink);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.changelog-dialog::backdrop {
+  background: rgb(0 0 0 / 60%);
+}
+.changelog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.changelog-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.changelog-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--green);
+}
+.changelog-entry {
+  padding-block: 18px;
+  border-top: 1px solid var(--line);
+}
+.changelog-entry h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+.changelog-entry ul {
+  margin: 0;
+  padding-left: 24px;
+}
+.changelog-entry li + li {
+  margin-top: 6px;
+}
+body.changelog-open {
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .changelog-dialog {
+    padding: 20px;
+  }
+  .changelog-header {
+    flex-direction: column-reverse;
+  }
+  .changelog-close {
+    align-self: flex-end;
+  }
 }

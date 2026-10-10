@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "slider",
   "name": "Slider",
   "category": "formularios",
@@ -454,7 +454,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Setas direcionais alteram o valor em incrementos esperados?\n              "
+                  "value": "\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "slider.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Setas direcionais"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " alteram o valor em incrementos esperados?\n              "
                 }
               ]
             },
@@ -921,8 +937,20 @@
               "attributes": {},
               "children": [
                 {
+                  "type": "element",
+                  "id": "slider.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Setas direcionais"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "Setas direcionais alteram o valor em passos menores."
+                  "value": " alteram o valor em passos menores."
                 }
               ]
             },
@@ -1269,7 +1297,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "ENTÃO, quando uso setas direcionais"
+                  "value": "ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "slider.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas direcionais"
+                    }
+                  ]
                 }
               ]
             },

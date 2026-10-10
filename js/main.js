@@ -259,3 +259,27 @@ for (const link of document.querySelectorAll(".home-section-link")) {
 }
 window.addEventListener("hashchange", focusHomeSection);
 focusHomeSection();
+
+// Native dialog keeps background content inert and contains keyboard focus.
+const changelogDialog = document.querySelector(".changelog-dialog");
+const changelogTrigger = document.querySelector(".changelog-trigger");
+if (
+  changelogDialog &&
+  changelogTrigger &&
+  typeof changelogDialog.showModal === "function"
+) {
+  changelogTrigger.hidden = false;
+  changelogTrigger.addEventListener("click", () => {
+    if (changelogDialog.open) return;
+    changelogDialog.showModal();
+    document.body.classList.add("changelog-open");
+    document.getElementById("changelog-title").focus();
+  });
+  changelogDialog
+    .querySelector(".changelog-close")
+    .addEventListener("click", () => changelogDialog.close());
+  changelogDialog.addEventListener("close", () => {
+    document.body.classList.remove("changelog-open");
+    changelogTrigger.focus({ preventScroll: true });
+  });
+}

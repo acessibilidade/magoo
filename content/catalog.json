@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.3.3",
   "language": "pt-BR",
   "author": "Marcelo Sales",
   "components": [
@@ -141,6 +141,42 @@
       "name": "Paginação",
       "category": "navegacao",
       "path": "componentes/navegacao/paginacao.html"
+    },
+    {
+      "id": "input-text",
+      "name": "Input \"text\"",
+      "category": "formularios",
+      "path": "componentes/formularios/input-text.html"
+    },
+    {
+      "id": "input-email",
+      "name": "Input \"email\"",
+      "category": "formularios",
+      "path": "componentes/formularios/input-email.html"
+    },
+    {
+      "id": "input-search",
+      "name": "Input \"search\"",
+      "category": "formularios",
+      "path": "componentes/formularios/input-search.html"
+    },
+    {
+      "id": "input-password",
+      "name": "Input \"password\"",
+      "category": "formularios",
+      "path": "componentes/formularios/input-password.html"
+    },
+    {
+      "id": "validacao-formularios",
+      "name": "Validação de formulários",
+      "category": "mensagens",
+      "path": "componentes/mensagens/validacao-formularios.html"
+    },
+    {
+      "id": "tabbar",
+      "name": "Tabbar",
+      "category": "estrutura",
+      "path": "componentes/estrutura/tabbar.html"
     }
   ],
   "planned": [
@@ -152,21 +188,6 @@
     {
       "category": "Estrutura",
       "name": "Header, Footer e Regiões",
-      "status": "in-development"
-    },
-    {
-      "category": "Estrutura",
-      "name": "Tabbar",
-      "status": "in-development"
-    },
-    {
-      "category": "Mensagens",
-      "name": "Validação de formulários",
-      "status": "in-development"
-    },
-    {
-      "category": "Formulários",
-      "name": "Inputs",
       "status": "in-development"
     }
   ]

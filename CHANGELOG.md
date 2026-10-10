@@ -1,9 +1,42 @@
 # Histórico de versões
 
+## 1.3.3
+
+- Revisa as orientações Gherkin e corrige a pontuação nas introduções de oito componentes.
+
+## 1.3.2
+
+- Inclui o changelog na home, com histórico de alterações em modal.
+
+## 1.3.1
+
+- Corrige a marcação de código no guia Tabbar e restaura o texto autoral nas páginas internas.
+
+## 1.3.0
+
+- Adiciona Tabbar em Estrutura, com orientações para navegação entre destinos e alternância de painéis.
+
+## 1.2.0
+
+- Adiciona Validação de formulários em Mensagens, com erros junto aos campos, resumo de erros e orientações de correção.
+
+## 1.1.3
+
+- Amplia as referências dos quatro inputs com design systems e exemplos específicos.
+
+## 1.1.2
+
+- Padroniza o Gherkin dos quatro inputs, incluindo teclado e leitores de telas para desktop e dispositivos móveis.
+
+## 1.1.1
+
+- Aplica marcação de código às menções de teclas e combinações nas orientações.
+
+## 1.1.0
+
+- Adiciona Input "text", Input "email", Input "search" e Input "password" em Formulários.
+- Inclui as regras de exibir e ocultar senha, com botão textual e orientação sobre ícones.
+
 ## 1.0.1
 
-- Remove os links genéricos “Ref 1” de 22 componentes.
-- Atualiza as instruções públicas de instalação e uso.
-- Site: navegação por âncoras, tradução, licença, FAQ e orientações por perfil.
-
-O componente drag-drop mantém seu conteúdo na versão 1.0.0, pois não foi alterado nesta revisão.
+- Atualiza as instruções de instalação e uso, navegação por âncoras, tradução, licença, FAQ e orientações por perfil.

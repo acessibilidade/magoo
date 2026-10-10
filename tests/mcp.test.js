@@ -27,7 +27,7 @@ test("MCP real via stdio: descoberta, busca, leitura, referências e erros", asy
       list.structuredContent.components.some((c) => c.id === "paginacao"),
     );
     const resources = await client.listResources();
-    assert.equal(resources.resources.length, 24);
+    assert.equal(resources.resources.length, components.length + 1);
     for (const c of components) {
       const r = await client.callTool({
         name: "get_component",

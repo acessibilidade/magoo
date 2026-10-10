@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.1.1",
   "id": "tooltip-popover",
   "name": "Tooltip e Popover",
   "category": "elementos-ocultos",
@@ -504,7 +504,39 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                É possível interagir com o componente acionável através da tecla\n                \"enter\" ou \"barra de espaço\"?\n              "
+                  "value": "\n                É possível interagir com o componente acionável através da tecla\n                \""
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.1",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" ou \""
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.2",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?\n              "
                 }
               ]
             },
@@ -552,7 +584,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                É possível realizar o fechamento do conteúdo adicional com a\n                tecla \"esc\"?\n              "
+                  "value": "\n                É possível realizar o fechamento do conteúdo adicional com a\n                tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.3",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?\n              "
                 }
               ]
             },
@@ -1234,7 +1282,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Caso exista um controle de fechamento (no caso do conteúdo\n                adicional estar aberto) deve ser possível ao pressionar a tecla\n                \"tab\", ouvir que o controle é um botão e que ele é responsável\n                pelo fechamento do conteúdo adicional.\n              "
+                  "value": "\n                Caso exista um controle de fechamento (no caso do conteúdo\n                adicional estar aberto) deve ser possível ao pressionar a tecla\n                \""
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.4",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\", ouvir que o controle é um botão e que ele é responsável\n                pelo fechamento do conteúdo adicional.\n              "
                 }
               ]
             },
@@ -1250,7 +1314,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Com o conteúdo adicional aberto, caso a tecla \"esc\" seja\n                pressionada, deve ser possível identificar que o conteúdo\n                adicional não está mais aberto.\n              "
+                  "value": "\n                Com o conteúdo adicional aberto, caso a tecla \""
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.5",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\" seja\n                pressionada, deve ser possível identificar que o conteúdo\n                adicional não está mais aberto.\n              "
                 }
               ]
             },
@@ -1565,7 +1645,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla Tab para mover o foco para o componente\n                que abre conteúdo adicional\n                "
+                  "value": "\n                Quando uso um leitor de tela no computador (NVDA, JAWS,\n                VoiceOver) e uso a tecla "
+                },
+                {
+                  "type": "element",
+                  "id": "tooltip-popover.key-code.6",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para mover o foco para o componente\n                que abre conteúdo adicional\n                "
                 },
                 {
                   "type": "element",
