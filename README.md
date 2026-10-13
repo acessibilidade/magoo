@@ -142,3 +142,47 @@ A consulta não comprova conformidade nem testa uma implementação. Para altera
 O código e a documentação autoral do Magoo, incluindo a base `content/`, são distribuídos sob a licença MIT, com autoria de Marcelo Sales. É permitido usar, adaptar e redistribuir, inclusive comercialmente, mantendo o aviso de copyright e a licença em cópias ou partes substanciais. Consulte [LICENSE](LICENSE). Dependências e materiais externos citados continuam sujeitos às respectivas licenças; a licença do Magoo não altera as condições desses materiais.
 
 Documentação do SDK utilizado: https://ts.sdk.modelcontextprotocol.io/server
+
+## Sitemap e descoberta para agentes
+
+`npm run build` também gera `sitemap.xml`, `robots.txt`, `llms.txt` e `.well-known/ard.json`, usando o catálogo e os componentes atuais. Publique esses arquivos junto com o site, incluindo a pasta oculta `.well-known`. Para regenerar somente a descoberta, execute `node js/build/discovery.js`. A atualização ocorre a cada build; editar a base no servidor sem executar o build não regenera os arquivos.
+
+O sitemap lista as homes e os componentes de todos os idiomas publicados, cada um com canônica própria e alternativas `hreflang`. Não inclui `/index.html`, 404, templates, itens planejados nem arquivos de dados. Não há `lastmod`: datas de build ou de cópia não são datas confiáveis de mudança do conteúdo. Envie `https://magoo.cc/sitemap.xml` ao Search Console após publicar.
+
+`llms.txt` apresenta autoria, versão, limites de uso e links para os JSON completos dos componentes, preservando IDs e referências da fonte. Não controla permissões de rastreamento nem garante indexação por assistentes.
+
+A descoberta estática segue a camada de publicação da [proposta ARD v0.91](https://agenticresourcediscovery.org/spec/): manifesto em `/.well-known/ard.json`, diretiva `Agentmap` no robots e cabeçalho HTTP `Link` com `rel="ard"` para HTML. O `.htaccess` também anuncia `llms.txt` por `rel="describedby"` e configura JSON/CORS para o manifesto quando `mod_headers` está disponível.
+
+O manifesto descreve um único recurso invocável: o MCP local do Magoo. Usa um cartão genérico (`application/agent-card+json`) com dados de instalação próprios do projeto, sem afirmar que existe um contrato oficial de MCP Server Card. Seu campo `data` documenta STDIO, pacote, versão, ferramentas e recursos; não é um endpoint remoto. As páginas educacionais não são anunciadas como agentes. Não há registro dinâmico, API de busca ARD, assinatura ou certificação de confiança.
+
+Após publicar, confira HTTP 200 para os quatro arquivos, `Content-Type: application/json` e `Access-Control-Allow-Origin: *` para o manifesto, e o cabeçalho `Link` da home. A hospedagem pode precisar habilitar `mod_headers`/`AllowOverride`; a conformidade HTTP depende dessa verificação em produção. A publicação do manifesto não garante sua inclusão em registros externos.
+
+
+## Idiomas do site
+
+O português brasileiro é o padrão em `/pt-br`; o inglês americano está em `/en`. A raiz redireciona para `/pt-br`, independentemente do idioma do navegador. A troca de idioma mantém o componente e, com JavaScript, a consulta e a seção aberta. As URLs inglesas traduzem pastas e nomes: `/en/components/messages/toasts.html`, por exemplo. Os IDs do conteúdo permanecem estáveis; a troca de idioma usa o mapeamento centralizado `routeSegments` em `locales.json`. As URLs inglesas anteriores redirecionam por HTTP 301 no Apache e por JavaScript em prévias estáticas.
+
+A implementação usa **dicionários JSON e geração estática a partir de um único conjunto de templates**, aproveitando o build existente. Não há cópias manuais dos layouts nem dependência de uma biblioteca de idiomas no navegador. Para este projeto, essa estrutura mantém a manutenção simples; uma biblioteca de i18n passa a ser útil se surgirem necessidades como pluralização complexa e mensagens dinâmicas extensas.
+
+- `content/locales/locales.json`: cadastro dos idiomas, rótulos nativos e mensagens das interações em JavaScript.
+- `content/locales/en.json`: tradução inglesa dos textos em português, incluindo home, changelog, metadados, instruções para leitores de tela e documentação dos 29 componentes. As chaves normalizam espaços; uma alteração de redação exige atualizar a tradução. Nomes técnicos e referências que já estão em inglês são mantidos explicitamente.
+- `js/build/i18n.js`: gera páginas, metadados, links, mensagens em `js/locales/` e regras de idioma no `.htaccess`.
+- `js/languages.js`: preserva consulta e âncora na troca e limpa a seleção anterior do Google Tradutor.
+- `pt-br/` e `en/`: saídas geradas; não editar manualmente.
+
+Para adicionar um idioma:
+
+1. Crie um dicionário JSON seguindo `en.json`, mantenha as chaves em português e traduza os valores. Informe o código BCP 47 em `locale`.
+2. Adicione o idioma em `locales.json`, com `id` para a URL (por exemplo `es`), `lang`, `googleLanguage`, `label`, `selectLabel`, `otherLabel`, `dictionary` e as mensagens de `ui`.
+3. Execute `npm run build` e `npm test`. O build rejeita mensagens ausentes em vez de publicar conteúdo parcialmente traduzido. Revise a tradução e o layout antes de publicar.
+
+O seletor principal usa botões em uma lista `ul`, nomeada pelo título visível com `aria-labelledby`. Cada botão está em um formulário para funcionar também sem JavaScript. O menu principal usa uma lista `ul` com `aria-label` traduzido. O Google Tradutor continua disponível separadamente em **“Selecionar outros idiomas”**, com rótulo apenas para leitores de tela associado ao combo, usando o idioma real de cada página como origem; as versões nativas funcionam independentemente dele. O MCP e sua base JSON continuam em português brasileiro.
+
+Publique as pastas dos idiomas, `js/locales/`, o JavaScript compartilhado e os `.htaccess` gerados junto com o restante do site. As URLs sem barra final usam Apache 2.4 com `mod_rewrite` e `mod_dir`, conforme a [documentação de reescrita do Apache](https://httpd.apache.org/docs/2.4/rewrite/flags.html). O `.htaccess` de cada idioma usa `DirectorySlash Off` e `RewriteOptions AllowNoSlash`, trata sua própria entrada sem barra final por `REQUEST_URI` e configura sua página de erro com status 404. A regra local é necessária porque as regras próprias do idioma podem substituir a configuração de reescrita da raiz; somente a regra raiz não basta. Entradas com barra final ou `index.html` redirecionam para a URL sem barra, e a home é servida por reescrita interna. Rotas antigas de componentes redirecionam permanentemente para a versão portuguesa. Em hospedagens sem suporte a `.htaccess`, configure redirecionamentos equivalentes; o JavaScript da home só oferece uma alternativa para a raiz em prévias estáticas.
+
+Google Analytics 4, Open Graph, Twitter Cards, imagem de compartilhamento e autoria são preservados. Canônicas, `lang`, `og:locale`, `hreflang` e sitemap identificam as versões por idioma.
+
+A configuração `.prettierrc.json` e o build mantêm tags HTML e seus atributos em uma única linha, com indentação de dois espaços por nível. Os testes verificam essa formatação nos HTML gerados.
+
+
+Cada página publicada aponta `rel="canonical"` para seu próprio endereço no respectivo idioma: português em `/pt-br/componentes/...` e inglês em `/en/components/...`. `og:url` usa esse mesmo endereço. As versões se relacionam por `hreflang`, e `x-default` aponta para o português brasileiro, que continua sendo o idioma padrão. O sitemap lista as páginas canônicas de ambos os idiomas. Os aliases ingleses antigos apontam para a canônica inglesa atual e continuam redirecionando para ela.

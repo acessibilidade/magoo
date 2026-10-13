@@ -3,7 +3,16 @@ RewriteCond %{SERVER_PORT} 80
 RewriteCond %{HTTPS} !on
 RewriteRule ^(.*)$ https://magoo.cc/$1 [R,L]
 
-errordocument 404 https://magoo.cc/404.html
+# BEGIN MAGOO LANGUAGES (gerado por npm run build)
+RewriteRule ^$ /pt-br [R=302,L]
+RewriteRule ^index\.html$ /pt-br [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(?:pt-br|en)/(?:index\.html)?[?\s]
+RewriteRule ^(pt-br|en)/(?:index\.html)?$ /$1 [R=301,L]
+RewriteRule ^(pt-br|en)$ /$1/index.html [END]
+RewriteRule ^componentes/(.+\.html)$ /pt-br/componentes/$1 [R=301,L]
+# END MAGOO LANGUAGES
+
+ErrorDocument 404 /pt-br/404.html
 
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/xml
@@ -24,3 +33,14 @@ BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4.0[678] no-gzip
 BrowserMatch ^HMSI[E] !no-gzip !gzip-only-text/html
 SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+# Descoberta estática para agentes; mod_headers é opcional no servidor.
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header add Link "</.well-known/ard.json>; rel=\"ard\", </llms.txt>; rel=\"describedby\""
+  </FilesMatch>
+  <Files "ard.json">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Content-Type "application/json"
+  </Files>
+</IfModule>

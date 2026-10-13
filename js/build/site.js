@@ -4,7 +4,21 @@ import { format } from "prettier";
 import { catalog, components } from "../lib/catalog.js";
 import { root } from "../lib/paths.js";
 import { validateContent } from "./validate.js";
+import { canonicalUrl, writeDiscovery } from "./discovery.js";
+import {
+  writeLocalizedPages,
+  writeLocaleRuntime,
+  localizePage,
+  locales,
+  localeConfig,
+  writeLocaleRouting,
+  writeLocalizedChangelog,
+} from "./i18n.js";
 validateContent();
+await writeLocaleRuntime();
+const defaultLocale = locales.find(
+  (locale) => locale.id === localeConfig.default,
+);
 const escape = (s) =>
   s
     .replaceAll("&", "&amp;")
@@ -25,7 +39,7 @@ export function htmlOf(nodes) {
     .join("");
 }
 function updateSharingMetadata($, path) {
-  const url = new URL(path, "https://magoo.cc/").href;
+  const url = canonicalUrl(path);
   const image = "https://magoo.cc/img/magoo-share.jpg";
   const metadata = {
     "og:url": url,
@@ -89,9 +103,14 @@ for (const c of components) {
   }
   for (const section of c.sections)
     $(`[aria-controls="${section.panelId}"]`).text(section.title);
+  await writeLocalizedPages($.html(), c.path);
   await writeFile(
     new URL(c.path, root),
-    await format($.html(), { parser: "html", printWidth: 90 }),
+    await format(localizePage($.html(), c.path, defaultLocale), {
+      parser: "html",
+      printWidth: 10000,
+      htmlWhitespaceSensitivity: "css",
+    }),
   );
 }
 const $ = load(await readFile(new URL("templates/index.html", root), "utf8"));
@@ -131,18 +150,31 @@ $(".catalog-count").text(
 );
 for (const c of components) $(`option[value="${c.path}"]`).text(c.name);
 $(".material-version").text(`Versão do material: ${catalog.contentVersion}`);
+await writeLocalizedPages($.html());
 await writeFile(
   new URL("index.html", root),
-  await format($.html(), { parser: "html", printWidth: 90 }),
+  await format(localizePage($.html(), "", defaultLocale), {
+    parser: "html",
+    printWidth: 10000,
+    htmlWhitespaceSensitivity: "css",
+  }),
 );
 const errorPage = load(
   await readFile(new URL("templates/404.html", root), "utf8"),
 );
 updateSharingMetadata(errorPage, "404.html");
+await writeLocalizedPages(errorPage.html(), "404.html");
 await writeFile(
   new URL("404.html", root),
-  await format(errorPage.html(), { parser: "html", printWidth: 90 }),
+  await format(localizePage(errorPage.html(), "404.html", defaultLocale), {
+    parser: "html",
+    printWidth: 10000,
+    htmlWhitespaceSensitivity: "css",
+  }),
 );
+await writeLocalizedChangelog(changelog);
+await writeLocaleRouting();
+await writeDiscovery();
 console.log(
   `Site gerado: ${components.length} componentes; conteúdo ${catalog.contentVersion}.`,
 );

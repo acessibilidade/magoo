@@ -20,6 +20,15 @@ if (translationHost) {
       arrow.textContent = "expand_more";
       wrapper.append(arrow);
     }
+    const placeholder = select.querySelector('option[value=""]');
+    if (
+      placeholder &&
+      placeholder.textContent !==
+        translationHost.parentElement.dataset.otherLabel
+    )
+      placeholder.textContent =
+        translationHost.parentElement.dataset.otherLabel ||
+        "Selecionar outros idiomas";
     status.hidden = true;
   }
   const observer = new MutationObserver(labelTranslationSelect);
@@ -27,8 +36,8 @@ if (translationHost) {
   window.googleTranslateElementInit = function () {
     new window.google.translate.TranslateElement(
       {
-        pageLanguage: "pt",
-        includedLanguages: "en,de,fr,es",
+        pageLanguage:
+          translationHost.parentElement.dataset.pageLanguage || "pt",
         autoDisplay: false,
       },
       "google_translate_element",
@@ -40,7 +49,9 @@ if (translationHost) {
     "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
   script.async = true;
   script.onerror = function () {
-    status.textContent = "Tradutor indisponível. Tente recarregar a página.";
+    status.textContent =
+      window.magooMessages?.translatorUnavailable ||
+      "Tradutor indisponível. Tente recarregar a página.";
   };
   document.head.appendChild(script);
 }

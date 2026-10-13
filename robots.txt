@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://magoo.cc/sitemap.xml
+Agentmap: https://magoo.cc/.well-known/ard.json

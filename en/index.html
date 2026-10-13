@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Magoo | Your pre-design system library</title>
+    <meta name="description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Magoo | Your pre-design system library" />
+    <meta property="og:description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+
+    <meta name="twitter:title" content="Magoo | Your pre-design system library" />
+    <meta name="twitter:description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/en.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+
+    <meta property="og:url" content="https://magoo.cc/en" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/en" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="home-page" lang="en-US">
+    <header lang="en-US">
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Magoo project">
+          <ul class="main-menu" aria-label="Main menu" role="list">
+            <li>
+              <a class="home-section-link" href="#audience-title">
+                Who it's for
+                <span class="sr-only">(link to a section on this page)</span>
+              </a>
+            </li>
+            <li>
+              <a class="home-section-link" href="#how-to-title">
+                How to use
+                <span class="sr-only">(link to a section on this page)</span>
+              </a>
+            </li>
+            <li>
+              <a class="home-section-link" href="#faq-title">
+                About
+                <span class="sr-only">(link to a section on this page)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                <span class="sr-only">(external link, opens in a new tab)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">
+                npm
+                <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                <span class="sr-only">(external link, opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Select your language</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br" aria-pressed="false" lang="pt-BR" data-language="pt-br"><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en" method="get">
+                  <button class="language-option" type="submit" data-url="/en" aria-pressed="true" lang="en-US" data-language="en"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="en" data-other-label="Select other languages">
+            <span id="translation-label" class="sr-only">Select other languages</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Automatic translation</p>
+            <p class="translation-status" role="status">Loading translator…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <div class="brand">
+          <img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" />
+        </div>
+      </div>
+    </header>
+    <main id="conteudo" lang="en-US">
+      <section class="hero wrap">
+        <h1>
+          Your
+          <br />
+          <span>pre-design system library</span>
+        </h1>
+        <p class="hero-description">
+          Everything you need to know about component interaction design BEFORE building your design system.
+          <br />
+          Don't reinvent the wheel. Start the right way!
+        </p>
+        <form class="component-picker" action="/en/components/messages/alerts.html">
+          <label for="componente">Which component would you like to explore?</label>
+          <div class="picker-row">
+            <div class="select-control">
+              <select id="componente" name="componente" required="">
+                <option value="">Select a component</option>
+                <optgroup label="Structure">
+                  <option value="/en/components/structure/tabbar.html">Tabbar</option>
+                  <option value="/en/components/structure/headings.html">Headings</option>
+                  <option value="/en/components/structure/tables.html">Tables</option>
+                  <option value="/en/components/structure/lists.html">Lists</option>
+                </optgroup>
+                <optgroup label="Messages">
+                  <option value="/en/components/messages/form-validation.html">Form validation</option>
+                  <option value="/en/components/messages/alerts.html">Alerts</option>
+                  <option value="/en/components/messages/dialogs.html">Dialogs</option>
+                  <option value="/en/components/messages/toasts.html">Toasts</option>
+                </optgroup>
+                <optgroup label="Navigation">
+                  <option value="/en/components/navigation/breadcrumb.html">Breadcrumb</option>
+                  <option value="/en/components/navigation/menu.html">Menu</option>
+                  <option value="/en/components/navigation/links.html">Links</option>
+                  <option value="/en/components/navigation/pagination.html">Pagination</option>
+                  <option value="/en/components/navigation/carousel.html">Carousel</option>
+                  <option value="/en/components/navigation/drag-drop.html">Drag'n'Drop</option>
+                </optgroup>
+                <optgroup label="Hidden elements">
+                  <option value="/en/components/hidden-elements/accordion.html">Accordion</option>
+                  <option value="/en/components/hidden-elements/details-more-information.html">Details and more information</option>
+                  <option value="/en/components/hidden-elements/tabs.html">Tabs</option>
+                  <option value="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover</option>
+                  <option value="/en/components/hidden-elements/modal.html">Modal</option>
+                </optgroup>
+                <optgroup label="Forms">
+                  <option value="/en/components/forms/input-text.html">Input "text"</option>
+                  <option value="/en/components/forms/input-email.html">Input "email"</option>
+                  <option value="/en/components/forms/input-search.html">Input "search"</option>
+                  <option value="/en/components/forms/input-password.html">Input "password"</option>
+                  <option value="/en/components/forms/button.html">Button</option>
+                  <option value="/en/components/forms/checkbox.html">Checkbox</option>
+                  <option value="/en/components/forms/radio-button.html">Radio Button</option>
+                  <option value="/en/components/forms/select.html">Select (Combo)</option>
+                  <option value="/en/components/forms/slider.html">Slider</option>
+                  <option value="/en/components/forms/switch.html">Switch</option>
+                </optgroup>
+              </select>
+              <span class="material-icons select-arrow notranslate" aria-hidden="true" translate="no"> expand_more </span>
+            </div>
+            <button type="submit">
+              Explore
+              <span class="material-icons notranslate" aria-hidden="true" translate="no"> arrow_forward </span>
+            </button>
+          </div>
+          <p class="catalog-count">29 components · 5 categories</p>
+        </form>
+        <noscript>
+          <p>Choose a component from the library links below.</p>
+        </noscript>
+        <div class="hero-foot">
+          <span>INTERACTION DESIGN</span>
+          <span>ACCESSIBILITY</span>
+          <span>ACCEPTANCE CRITERIA</span>
+        </div>
+      </section>
+      <section id="biblioteca" class="catalog wrap">
+        <div class="section-heading">
+          <div>
+            <h2>Explore the library</h2>
+            <p class="library-introduction">Component interactions directly affect accessibility. Learn about interaction design, interaction methods, considerations, and how to write acceptance criteria for more effective component development.</p>
+          </div>
+        </div>
+        <div class="categories">
+          <section class="category">
+            <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> view_quilt </span>
+            <h3>Structure</h3>
+            <ul>
+              <li class="upcoming">
+                Flexbox &amp; Grid
+                <small>In development</small>
+              </li>
+              <li class="upcoming">
+                Header, Footer and Regions
+                <small>In development</small>
+              </li>
+              <li>
+                <a href="/en/components/structure/headings.html">Headings<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/structure/tables.html">Tables<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/structure/lists.html">Lists<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/structure/tabbar.html">Tabbar<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+            </ul>
+          </section>
+          <section class="category">
+            <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> chat_bubble_outline </span>
+            <h3>Messages</h3>
+            <ul>
+              <li>
+                <a href="/en/components/messages/alerts.html">Alerts<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/messages/dialogs.html">Dialogs<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/messages/form-validation.html">Form validation<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/messages/toasts.html">Toasts<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+            </ul>
+          </section>
+          <section class="category">
+            <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> near_me </span>
+            <h3>Navigation</h3>
+            <ul>
+              <li>
+                <a href="/en/components/navigation/breadcrumb.html">Breadcrumb<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/menu.html">Menu<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/links.html">Links<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/pagination.html">Pagination<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/carousel.html">Carousel<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/drag-drop.html">Drag'n'Drop<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+            </ul>
+          </section>
+          <section class="category">
+            <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> layers </span>
+            <h3>Hidden elements</h3>
+            <ul>
+              <li>
+                <a href="/en/components/hidden-elements/accordion.html">Accordion<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/details-more-information.html">Details and more information<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/tabs.html">Tabs<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/modal.html">Modal<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+            </ul>
+          </section>
+          <section class="category">
+            <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> tune </span>
+            <h3>Forms</h3>
+            <ul>
+              <li>
+                <a href="/en/components/forms/button.html">Button<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/checkbox.html">Checkbox<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/radio-button.html">Radio Button<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/input-text.html">Input "text"<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/input-email.html">Input "email"<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/input-search.html">Input "search"<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/input-password.html">Input "password"<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/select.html">Select (Combo)<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/slider.html">Slider<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/switch.html">Switch<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="version-history">
+          <p class="material-version">Content version: 1.3.4</p>
+          <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
+            View changelog
+            <span class="sr-only"> (opens a window with additional content on this page) </span>
+          </button>
+          <noscript>
+            <a href="/en/CHANGELOG.md">View changelog</a>
+          </noscript>
+        </div>
+        <dialog id="changelog" class="changelog-dialog" aria-labelledby="changelog-title" aria-describedby="changelog-description">
+          <div class="changelog-header">
+            <h2 id="changelog-title" tabindex="-1" autofocus="">Changelog</h2>
+            <button class="changelog-close" type="button">
+              <span class="material-icons notranslate" translate="no" aria-hidden="true"> close </span>
+              Close
+            </button>
+          </div>
+          <p id="changelog-description">Content changes, from newest to oldest.</p>
+          <div class="changelog-entries">
+            <section class="changelog-entry" aria-labelledby="version-1-3-4">
+              <h3 id="version-1-3-4">Version 1.3.4</h3>
+              <ul>
+                <li>Fixes the arrows on homepage links and automatically updates the component and category counts.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-3">
+              <h3 id="version-1-3-3">Version 1.3.3</h3>
+              <ul>
+                <li>Reviews the Gherkin guidance and fixes punctuation in the introductions to eight components.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-2">
+              <h3 id="version-1-3-2">Version 1.3.2</h3>
+              <ul>
+                <li>Adds the changelog to the homepage, with a history of changes in a modal.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-1">
+              <h3 id="version-1-3-1">Version 1.3.1</h3>
+              <ul>
+                <li>Fixes code markup in the Tabbar guide and restores the author's text on internal pages.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-3-0">
+              <h3 id="version-1-3-0">Version 1.3.0</h3>
+              <ul>
+                <li>Adds Tabbar under Structure, with guidance on navigating between destinations and switching panels.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-2-0">
+              <h3 id="version-1-2-0">Version 1.2.0</h3>
+              <ul>
+                <li>Adds Form validation under Messages, with errors next to fields, an error summary, and guidance on correcting errors.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-3">
+              <h3 id="version-1-1-3">Version 1.1.3</h3>
+              <ul>
+                <li>Expands the references for the four input types with design systems and specific examples.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-2">
+              <h3 id="version-1-1-2">Version 1.1.2</h3>
+              <ul>
+                <li>Standardizes the Gherkin for the four input types, including keyboards and screen readers on desktop and mobile devices.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-1">
+              <h3 id="version-1-1-1">Version 1.1.1</h3>
+              <ul>
+                <li>Adds code markup to mentions of keys and key combinations in the guidance.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-1-0">
+              <h3 id="version-1-1-0">Version 1.1.0</h3>
+              <ul>
+                <li>Adds Input "text", Input "email", Input "search" and Input "password" under Forms.</li>
+                <li>Includes rules for showing and hiding passwords, with a text button and guidance on icons.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-0-1">
+              <h3 id="version-1-0-1">Version 1.0.1</h3>
+              <ul>
+                <li>Updates installation and usage instructions, anchor navigation, translation, license, FAQ, and guidance by role.</li>
+              </ul>
+            </section>
+          </div>
+        </dialog>
+      </section>
+      <section class="audience wrap" aria-labelledby="audience-title">
+        <h2 id="audience-title" tabindex="-1">Who is Magoo for?</h2>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> palette </span>
+            <h3>UI designers</h3>
+            <p>Design states, visual hierarchy, and feedback that make every component clear and consistent beyond its appearance.</p>
+          </article>
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> psychology </span>
+            <h3>UX designers</h3>
+            <p>Explore behaviors and interaction methods to anticipate needs, reduce barriers, and guide more inclusive journeys.</p>
+          </article>
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> design_services </span>
+            <h3>Product Designers</h3>
+            <p>Connect interface and experience decisions to expected behaviors before documenting your design system.</p>
+          </article>
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> assignment </span>
+            <h3>Product Owners</h3>
+            <p>Use the questions and acceptance criteria to clarify requirements, align the team, and define a complete delivery.</p>
+          </article>
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> fact_check </span>
+            <h3>Test analysts</h3>
+            <p>Turn scenarios and considerations into test cases to check components using different interaction methods.</p>
+          </article>
+          <article class="audience-card">
+            <span class="material-icons audience-icon notranslate" aria-hidden="true" translate="no"> code </span>
+            <h3>Developers</h3>
+            <p>Understand states, keyboard interactions, and expected feedback to implement accessible components from the start.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="project-context wrap" aria-labelledby="how-to-title">
+        <h2 id="how-to-title" tabindex="-1">How to use?</h2>
+        <article class="context-card">
+          <h3 id="implementation-title">Instructions for including this document as a reference in your design system</h3>
+          <p>Choose your role to view the guidance. The MCP setup shown after the tabs can be used by anyone with a compatible assistant.</p>
+          <div class="usage-tabs">
+            <div class="nav nav-tabs" role="tablist" aria-label="Guidance by role">
+              <button type="button" class="nav-link" role="tab" id="usage-tab-dev" aria-controls="usage-panel-dev" aria-selected="true">For developers</button>
+              <button type="button" class="nav-link" role="tab" id="usage-tab-design" aria-controls="usage-panel-design" aria-selected="false">For designers</button>
+              <button type="button" class="nav-link" role="tab" id="usage-tab-tests" aria-controls="usage-panel-tests" aria-selected="false">For testing teams</button>
+              <button type="button" class="nav-link" role="tab" id="usage-tab-product" aria-controls="usage-panel-product" aria-selected="false">For product teams</button>
+            </div>
+            <section class="usage-panel" id="usage-panel-dev" role="tabpanel" aria-labelledby="usage-tab-dev" tabindex="0">
+              <h4>From reference to implementation</h4>
+              <ol>
+                <li>
+                  <strong>Record the reference.</strong>
+                  In each component's documentation, include the corresponding Magoo page link, the author's name, the version used, and the date accessed. Use the public URL rather than a local preview address.
+                </li>
+                <li>
+                  <strong>Map the behaviors.</strong>
+                  Map the guidance to your component's variants, states, and actions. Document keyboard operation, focus management, and expected feedback for each interaction.
+                </li>
+                <li>
+                  <strong>Adapt to your context.</strong>
+                  Use the behavior as a reference for your implementation, regardless of framework. Apply your system's tokens and styles and record differences in behavior, reasons, and usage instructions.
+                </li>
+                <li>
+                  <strong>Define verifiable criteria.</strong>
+                  Turn scenarios into acceptance criteria using Given, When, and Then. Link these criteria to tests and the documented component, for example in Storybook or a documentation page.
+                </li>
+                <li>
+                  <strong>Validate and track revisions.</strong>
+                  Test the implementation with keyboards, screen readers, touch, and zoom. Record results and reassess adaptations when the reference or component changes. The reference alone does not prove an implementation is accessible.
+                </li>
+              </ol>
+              <p>
+                With the MCP configured below, use
+                <code>get_component</code>
+                to retrieve the guidance and
+                <code>get_acceptance_criteria</code>
+                to get the acceptance scenarios. The package provides documentation; the components must be implemented in your project.
+              </p>
+            </section>
+            <section class="usage-panel" id="usage-panel-design" role="tabpanel" aria-labelledby="usage-tab-design" tabindex="0">
+              <h4>Document decisions in Figma</h4>
+              <ol>
+                <li>
+                  <strong>Choose the component in Magoo.</strong>
+                  Read the interaction design, interaction methods, and considerations before designing the states.
+                </li>
+                <li>
+                  <strong>Create a guidance page in Figma.</strong>
+                  Record expected behaviors, states, focus, keyboard operation, and project adaptations.
+                </li>
+                <li>
+                  <strong>Include the reference.</strong>
+                  Include the component link, the version used, and the date accessed in your design system documentation.
+                </li>
+                <li>
+                  <strong>Use an assistant if you wish.</strong>
+                  Configure the local MCP as described below and take the retrieved guidance into Figma. A separate Figma integration is needed for the assistant to read your design file too.
+                </li>
+              </ol>
+              <p>
+                <strong>Suggested instruction:</strong>
+                “Before proposing or reviewing this component's behaviors, consult the Magoo MCP. Consider keyboard, focus, states, and acceptance criteria. State the version and distinguish library guidance from project adaptations. If you cannot consult Magoo, state that limitation.”
+              </p>
+              <p>
+                <strong>Direct connection in Figma:</strong>
+                custom connectors for the Figma agent and Figma Make require a remote MCP server URL. Magoo currently uses local npx/STDIO and does not yet provide that address. Recording an instruction in the file does not automatically enable a connection.
+              </p>
+            </section>
+            <section class="usage-panel" id="usage-panel-tests" role="tabpanel" aria-labelledby="usage-tab-tests" tabindex="0">
+              <h4>Turn guidance into checks</h4>
+              <ol>
+                <li>
+                  <strong>Consult the Gherkin scenarios.</strong>
+                  Identify the initial conditions, actions, and expected results for each component.
+                </li>
+                <li>
+                  <strong>Adapt cases to the product.</strong>
+                  Cover states, errors, keyboard navigation, focus, screen readers, touch, and zoom.
+                </li>
+                <li>
+                  <strong>Record evidence.</strong>
+                  Associate each result with the component version, test environment, and acceptance criterion.
+                </li>
+                <li>
+                  <strong>Review with the team.</strong>
+                  Document differences and repeat tests after fixes or behavioral changes.
+                </li>
+              </ol>
+              <p>
+                <strong>Example request to a connected assistant:</strong>
+                “Consult the Modal acceptance criteria in the Magoo MCP. Organize a manual testing checklist, keeping the version and separating original scenarios from suggested additional cases.”
+              </p>
+              <p>Consulting the MCP does not run tests or prove an implementation is accessible.</p>
+            </section>
+            <section class="usage-panel" id="usage-panel-product" role="tabpanel" aria-labelledby="usage-tab-product" tabindex="0">
+              <h4>Align scope and acceptance criteria</h4>
+              <ol>
+                <li>
+                  <strong>Identify the components being delivered.</strong>
+                  Use the catalog to discuss expected behavior with design, development, and testing.
+                </li>
+                <li>
+                  <strong>Include criteria in tasks.</strong>
+                  Record interactions and verifiable results before starting implementation.
+                </li>
+                <li>
+                  <strong>Document decisions.</strong>
+                  Explain behavioral adaptations and the instructions people need to understand these changes.
+                </li>
+                <li>
+                  <strong>Track validation.</strong>
+                  Link the delivery to test evidence and the version of the reference used.
+                </li>
+              </ol>
+              <p>
+                <strong>Example request to a connected assistant:</strong>
+                “Consult the Select component in Magoo and help write acceptance criteria for this delivery. Distinguish library content from product-specific recommendations.”
+              </p>
+            </section>
+          </div>
+
+          <div class="mcp-guide">
+            <h3>How to use Magoo with your AI</h3>
+            <p>
+              You can ask your AI to consult Magoo before suggesting how a component should work. To do so, you need to connect the library once. This connection is called
+              <strong>MCP</strong>
+              .
+            </p>
+            <p>
+              <strong>Prefer not to configure anything?</strong>
+              Browse the components here on the website and copy the passage you want to discuss with your AI.
+            </p>
+            <ol>
+              <li>
+                <strong>Prepare your computer.</strong>
+                You need Node.js 20.19 or later installed. It allows the connection to run on your computer. If you don't have it yet, download the installer from
+                <a href="https://nodejs.org/pt" target="_blank" rel="noopener noreferrer">
+                  nodejs.org
+                  <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                  <span class="sr-only"> (external link, opens in a new tab) </span>
+                </a>
+                and follow the installation instructions.
+              </li>
+              <li>
+                <strong>Open your AI settings.</strong>
+                Look for the option to add an MCP server. Not every application supports this connection: it must let you enter a command to run on your computer. If it only asks for a URL, that option does not work with Magoo's current version.
+              </li>
+              <li>
+                <strong>Copy the details below.</strong>
+                Fill each field with the value shown. You don't need to understand the commands or create an npm account.
+              </li>
+            </ol>
+            <dl class="mcp-settings">
+              <div>
+                <dt>Name</dt>
+                <dd><code>magoo</code></dd>
+              </div>
+              <div>
+                <dt>Connection type</dt>
+                <dd>STDIO (local)</dd>
+              </div>
+              <div>
+                <dt>Command</dt>
+                <dd><code>npx</code></dd>
+              </div>
+              <div>
+                <dt>Arguments</dt>
+                <dd>
+                  <code>-y @acessibilidade/magoo-mcp@1.3.4</code>
+                  <p>
+                    If the application asks for separate arguments, add
+                    <code>-y</code>
+                    and
+                    <code>@acessibilidade/magoo-mcp@1.3.4</code>
+                    as two items.
+                  </p>
+                </dd>
+              </div>
+            </dl>
+            <p>
+              <strong>Save and start chatting.</strong>
+              If Magoo does not appear among the connections, close and reopen the application. The first time, it needs internet access to download the library.
+            </p>
+            <p>
+              <strong>Try this request:</strong>
+              “Consult Magoo and explain how a modal should work with the keyboard. State the library version used.”
+            </p>
+            <p>Magoo provides guidance for AI to consult. It does not automatically change your project or design file.</p>
+          </div>
+        </article>
+      </section>
+      <section class="faq wrap" aria-labelledby="faq-title">
+        <div>
+          <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+          <h2 id="faq-title" tabindex="-1">About Magoo</h2>
+        </div>
+        <dl class="faq-list">
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-name" type="button" aria-expanded="true" aria-controls="faq-answer-name">
+                  Where does the name Magoo come from?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-name" aria-labelledby="faq-trigger-name">
+              <p>Magoo is a character from a 1949 cartoon, with some episodes broadcast in Brazil in the 1970s and 1980s. So if you know who Magoo is, you're probably well over 40... :)</p>
+              <p>Magoo was a wealthy retiree who found himself in a series of comic situations because of his extreme nearsightedness. The key point was that he did not recognize his difficulty seeing things.</p>
+              <p>
+                When I thought of a name for a possible library, this was the first name that came to mind. Read this
+                <a href="https://pt.wikipedia.org/wiki/Mr._Magoo" target="_blank" rel="noopener noreferrer">
+                  Wikipedia article about Mr. Magoo
+                  <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                  <span class="sr-only"> (external link, opens in a new tab) </span>
+                </a>
+                .
+              </p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-1" type="button" aria-expanded="true" aria-controls="faq-answer-1">
+                  Why was this material developed?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-1" aria-labelledby="faq-trigger-1">
+              <p>While developing various courses and lessons, students often asked where they could look up component interaction patterns. However, the references we had were either in English, in books such as Alan Cooper's About Face, or in libraries no longer updated, such as Yahoo YUI (User Interface Library). In that context, this library began as a resource for training delivered by Marcelo Sales.</p>
+              <p>The name "Magoo" was originally created for other purposes, but the projects were brought together with the idea of publishing this library openly.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-2" type="button" aria-expanded="true" aria-controls="faq-answer-2">
+                  Do I need to install anything to use Magoo?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-2" aria-labelledby="faq-trigger-2">
+              <p>No. You can browse all components directly on this website. Installing Node.js and setting up the MCP are only necessary to connect the library to an assistant that supports local servers.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-3" type="button" aria-expanded="true" aria-controls="faq-answer-3">
+                  Does the package install ready-made components in my project?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-3" aria-labelledby="faq-trigger-3">
+              <p>No. Magoo provides documentation of interaction behaviors. The package exposes this content through a read-only MCP; visual and functional implementation remains part of your design system, using your team's technologies.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-4" type="button" aria-expanded="true" aria-controls="faq-answer-4">
+                  How can designers use the MCP?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-4" aria-labelledby="faq-trigger-4">
+              <p>In a compatible assistant, ask for guidance on states, keyboard navigation, focus, and acceptance criteria. Use the responses to document decisions and specifications. The Magoo MCP does not create or modify files in Figma or other design tools.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-5" type="button" aria-expanded="true" aria-controls="faq-answer-5">
+                  Can I adapt the material and use it in commercial projects?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-5" aria-labelledby="faq-trigger-5">
+              <p>Yes. Magoo's code and original content are distributed under the MIT license, which permits use, adaptation, and redistribution, including commercially. Keep the authorship notice and license in copies or substantial portions. External materials cited have their own terms of use.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-6" type="button" aria-expanded="true" aria-controls="faq-answer-6">
+                  Does following Magoo guarantee my component is accessible?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-6" aria-labelledby="faq-trigger-6">
+              <p>The reference helps define behaviors and acceptance criteria, but accessibility depends on implementation and context. Validate with keyboards, screen readers, zoom, and people with disabilities. Document and explain any behavioral adaptations.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-7" type="button" aria-expanded="true" aria-controls="faq-answer-7">
+                  How do I keep the reference up to date in my design system?
+                  <span class="material-icons notranslate" aria-hidden="true" translate="no"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
+              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.3.4 and does not automatically switch to a future version.</p>
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>
+              <h3>
+                <button class="faq-trigger" id="faq-trigger-8" type="button" aria-expanded="true" aria-controls="faq-answer-8">
+                  I don't understand code, but would like to help with suggestions. How can I?
+                  <span class="material-icons notranslate" translate="no" aria-hidden="true"> remove </span>
+                </button>
+              </h3>
+            </dt>
+            <dd id="faq-answer-8" aria-labelledby="faq-trigger-8">
+              <p>Send tips, suggestions, and improvements to oi@tudoeacessibilidade.com.br with the Magoo project in the subject line.</p>
+            </dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+    <footer class="site-footer" lang="en-US">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>
+            The
+            <strong>Magoo</strong>
+            is a pre-design system library. The idea is to bring instructions together in one place to understand component interaction design before building a more robust system (or updating an existing one).
+          </p>
+          <p>Explore behaviors, interaction methods, and acceptance criteria to create more accessible and inclusive experiences.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">
+              MIT license
+              <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+              <span class="sr-only">(external link, opens in a new tab)</span>
+            </a>
+          </p>
+        </div>
+        <a class="initiative initiative-logo-only" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer">
+          <img src="/img/tudo-acessibilidade-logo.svg" width="185" height="67" alt="Tudo é Acessibilidade" />
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

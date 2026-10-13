@@ -14,43 +14,21 @@
     <meta name="twitter:title" content='Input "email" | Magoo' />
     <meta name="twitter:description" content="Permite informar um endereço de e-mail." />
     <meta name="theme-color" content="#f7f7f2" />
-    <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../../img/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../../img/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../../img/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="../../img/favicon/site.webmanifest" />
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <script src="../../js/main.js" defer=""></script>
-    <script src="../../js/analytics.js" defer=""></script>
-    <script src="../../js/translate.js" defer=""></script>
-    <meta
-      property="og:url"
-      content="https://magoo.cc/componentes/formularios/input-email.html"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/formularios/input-email.html" />
     <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
     <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -61,52 +39,53 @@
     <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
     <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
     <meta name="author" content="Marcelo Sales" />
-    <link
-      rel="canonical"
-      href="https://magoo.cc/componentes/formularios/input-email.html"
-    />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/formularios/input-email.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/formularios/input-email.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/forms/input-email.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/formularios/input-email.html" />
+    <script src="/js/languages.js" defer=""></script>
   </head>
-  <body class="component-page">
-    <a class="skip-link" href="#conteudo"
-      >Pular para o conteúdo<span class="sr-only"> na mesma página</span></a
-    >
-    <header>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
       <div class="header-actions wrap utility-bar">
         <nav aria-label="Projeto Magoo">
-          <a
-            href="https://github.com/acessibilidade/magoo"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub
-            <span class="material-icons notranslate" translate="no" aria-hidden="true"
-              >open_in_new</span
-            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-          ><a
-            href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp"
-            target="_blank"
-            rel="noopener noreferrer"
-            >npm
-            <span class="material-icons notranslate" translate="no" aria-hidden="true"
-              >open_in_new</span
-            ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-          >
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
         </nav>
-        <div class="translation-control">
-          <span id="translation-label" class="sr-only">Traduzir esta página</span>
-          <div id="google_translate_element"></div>
-          <p id="translation-note" class="sr-only">Tradução automática</p>
-          <p class="translation-status" role="status">Carregando tradutor…</p>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/formularios/input-email.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/formularios/input-email.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/forms/input-email.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/forms/input-email.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
         </div>
       </div>
       <div class="topbar wrap">
-        <a class="brand" href="../../index.html" aria-label="Magoo — início"
-          ><img src="../../img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a
-        ><span class="brand-note">faça seus componentes funcionarem corretamente</span
-        ><a class="library-link back-link" href="../../index.html"
-          ><span class="material-icons notranslate" aria-hidden="true" translate="no"
-            >arrow_back</span
-          >Voltar para página principal</a
-        >
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
         <p class="eyebrow">BIBLIOTECA / FORMULÁRIOS</p>
@@ -114,396 +93,203 @@
         <p>Permite informar um endereço de e-mail.</p>
         <p class="reference-shortcut">
           Para ver exemplos funcionais e padrões de design deste componente,
-          <a href="#aba-ref-conteudo"
-            >consulte a aba de referências<span class="sr-only">
-              (abre as referências na mesma página)</span
-            ></a
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
           >.
         </p>
       </div>
     </header>
     <div class="documentation wrap">
       <aside class="sidebar">
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="component-menu"
-          hidden=""
-        >
-          <span class="material-icons notranslate" aria-hidden="true" translate="no"
-            >menu</span
-          >Índice de componentes
-        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
         <div class="menu-panel" id="component-menu">
-          <button class="menu-close" type="button" hidden="">
-            <span class="material-icons notranslate" aria-hidden="true" translate="no"
-              >close</span
-            >Fechar índice
-          </button>
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
           <h2 class="menu-title">Índice de componentes</h2>
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">
-                Flexbox &amp; Grid <small>Em desenvolvimento</small>
-              </li>
-              <li class="upcoming">
-                Header, Footer e Regiões <small>Em desenvolvimento</small>
-              </li>
+              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
+              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
               <li>
-                <a href="../estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
-              <li><a href="../estrutura/tabelas.html">Tabelas</a></li>
-              <li><a href="../estrutura/listas.html">Listas</a></li>
-              <li><a href="../estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
-              <li><a href="../mensagens/alertas.html">Alertas</a></li>
-              <li><a href="../mensagens/dialogs.html">Dialogs</a></li>
-              <li>
-                <a href="../mensagens/validacao-formularios.html"
-                  >Validação de formulários</a
-                >
-              </li>
-              <li><a href="../mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
-              <li><a href="../navegacao/breadcrumb.html">Breadcrumb</a></li>
-              <li><a href="../navegacao/menu.html">Menu</a></li>
-              <li><a href="../navegacao/links.html">Links</a></li>
-              <li><a href="../navegacao/paginacao.html">Paginação</a></li>
-              <li><a href="../navegacao/carrossel.html">Carrossel</a></li>
-              <li><a href="../navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
               <li>
-                <a href="../elementos-ocultos/accordion.html">Accordion</a>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
               </li>
               <li>
-                <a href="../elementos-ocultos/detalhes-mais-informacoes.html"
-                  >Detalhes e Mais informações</a
-                >
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
               </li>
-              <li><a href="../elementos-ocultos/abas.html">Abas</a></li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
               <li>
-                <a href="../elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
               </li>
-              <li><a href="../elementos-ocultos/modal.html">Modal</a></li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
             </ul>
             <h3>Formulários</h3>
             <ul>
-              <li><a href="../formularios/botao.html">Botão</a></li>
-              <li><a href="../formularios/checkbox.html">Checkbox</a></li>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
               <li>
-                <a href="../formularios/radio-button.html">Radio Button</a>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
               </li>
-              <li><a href="../formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html" aria-current="page">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li>
-                <a href="../formularios/input-email.html" aria-current="page"
-                  >Input "email"</a
-                >
-              </li>
-              <li><a href="../formularios/input-search.html">Input "search"</a></li>
-              <li><a href="../formularios/input-password.html">Input "password"</a></li>
-              <li><a href="../formularios/select.html">Select (Combo)</a></li>
-              <li><a href="../formularios/slider.html">Slider</a></li>
-              <li>
-                <a href="../formularios/switch.html">Switch</a>
+                <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
               </li>
             </ul>
           </nav>
         </div>
       </aside>
-      <main id="conteudo" class="component-content">
+      <main id="conteudo" class="component-content" lang="pt-BR">
         <div class="content-intro">
           <span class="eyebrow">GUIA DO COMPONENTE</span>
           <p>Explore os comportamentos antes de definir a interface.</p>
         </div>
         <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active"
-              id="aba-interacao"
-              data-bs-toggle="tab"
-              data-bs-target="#aba-interacao-conteudo"
-              type="button"
-              role="tab"
-              aria-controls="aba-interacao-conteudo"
-              aria-selected="true"
-            >
-              Design de interação
-            </button>
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="aba-metodo"
-              data-bs-toggle="tab"
-              data-bs-target="#aba-metodo-conteudo"
-              type="button"
-              role="tab"
-              aria-controls="aba-metodo-conteudo"
-              aria-selected="false"
-            >
-              Métodos de Interação
-            </button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="aba-gherkin"
-              data-bs-toggle="tab"
-              data-bs-target="#aba-gherkin-conteudo"
-              type="button"
-              role="tab"
-              aria-controls="aba-gherkin-conteudo"
-              aria-selected="false"
-            >
-              Gherkin
-            </button>
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="aba-atencao"
-              data-bs-toggle="tab"
-              data-bs-target="#aba-atencao-conteudo"
-              type="button"
-              role="tab"
-              aria-controls="aba-atencao-conteudo"
-              aria-selected="false"
-            >
-              Pontos de atenção
-            </button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="aba-ref"
-              data-bs-toggle="tab"
-              data-bs-target="#aba-ref-conteudo"
-              type="button"
-              role="tab"
-              aria-controls="aba-ref-conteudo"
-              aria-selected="false"
-            >
-              Referências
-            </button>
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
           </li>
         </ul>
 
         <div class="tab-content" id="instrucoes-conteudo">
-          <div
-            class="tab-pane fade show active"
-            id="aba-interacao-conteudo"
-            role="tabpanel"
-            aria-labelledby="aba-interacao"
-            tabindex="0"
-          >
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
             <h2 class="titulo-mobile">Design de Interação</h2>
-            <p class="mt-3">
-              Questionamentos que devem ser feitos ao projetar componentes do tipo Input
-              "email".
-            </p>
+            <p class="mt-3">Questionamentos que devem ser feitos ao projetar componentes do tipo Input "email".</p>
             <p>Avalie cada orientação conforme o contexto de uso do componente.</p>
             <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
             <ol class="lista-detalhe link-padrao">
               <li>O rótulo permanece visível e explica a finalidade do campo?</li>
-              <li>
-                Instruções, obrigatoriedade e limites estão disponíveis antes da entrada?
-              </li>
-              <li>
-                Estados vazio, preenchido, inválido, desabilitado e somente leitura são
-                distinguíveis sem depender apenas de cor?
-              </li>
+              <li>Instruções, obrigatoriedade e limites estão disponíveis antes da entrada?</li>
+              <li>Estados vazio, preenchido, inválido, desabilitado e somente leitura são distinguíveis sem depender apenas de cor?</li>
             </ol>
             <h3 class="destaque mt-4">Projetando para uso com mouse</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                Clicar no campo ou no rótulo associado posiciona o foco para digitar?
-              </li>
+              <li>Clicar no campo ou no rótulo associado posiciona o foco para digitar?</li>
               <li>O foco e os controles associados têm feedback visual perceptível?</li>
             </ol>
             <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                A área de toque permite selecionar o campo e seus controles sem
-                acionamentos acidentais?
-              </li>
-              <li>
-                O teclado virtual e a ampliação permitem continuar vendo e editando o
-                campo?
-              </li>
+              <li>A área de toque permite selecionar o campo e seus controles sem acionamentos acidentais?</li>
+              <li>O teclado virtual e a ampliação permitem continuar vendo e editando o campo?</li>
             </ol>
             <h3 class="destaque mt-4">Projetando para uso com teclado</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                <code>Tab</code> e <code>Shift + Tab</code> percorrem os controles na
-                ordem da interface?
-              </li>
-              <li>
-                É possível editar e selecionar texto com os comandos nativos, sem prender
-                o foco?
-              </li>
+              <li><code>Tab</code> e <code>Shift + Tab</code> percorrem os controles na ordem da interface?</li>
+              <li>É possível editar e selecionar texto com os comandos nativos, sem prender o foco?</li>
             </ol>
             <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                Nome, tipo, obrigatoriedade, instruções e erros são apresentados de forma
-                compreensível?
-              </li>
-              <li>
-                O rótulo está associado ao campo e permanece disponível depois de
-                preencher?
-              </li>
+              <li>Nome, tipo, obrigatoriedade, instruções e erros são apresentados de forma compreensível?</li>
+              <li>O rótulo está associado ao campo e permanece disponível depois de preencher?</li>
             </ol>
           </div>
-          <div
-            class="tab-pane fade"
-            id="aba-metodo-conteudo"
-            role="tabpanel"
-            aria-labelledby="aba-metodo"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
             <h2 class="titulo-mobile">Métodos de Interação</h2>
-            <p class="mt-3">
-              O campo usa type="email" e, em dispositivos compatíveis, oferece teclado
-              adequado para e-mail.
-            </p>
+            <p class="mt-3">O campo usa type="email" e, em dispositivos compatíveis, oferece teclado adequado para e-mail.</p>
             <h3 class="destaque mt-4">Interação com mouse</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Clicar no campo ou no rótulo associado coloca o foco no campo.</li>
-              <li>
-                Selecionar, editar, copiar e colar segue o comportamento nativo do campo.
-              </li>
+              <li>Selecionar, editar, copiar e colar segue o comportamento nativo do campo.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                <code>Tab</code> move o foco para o campo;
-                <code>Shift + Tab</code> retorna ao controle anterior.
-              </li>
-              <li>
-                Digitação insere texto; <code>setas</code>, <code>Home</code>,
-                <code>End</code> e comandos de seleção e edição seguem a plataforma.
-              </li>
-              <li>
-                <code>Enter</code> segue a ação de envio definida para o formulário; o
-                campo não cria uma nova linha.
-              </li>
+              <li><code>Tab</code> move o foco para o campo; <code>Shift + Tab</code> retorna ao controle anterior.</li>
+              <li>Digitação insere texto; <code>setas</code>, <code>Home</code>, <code>End</code> e comandos de seleção e edição seguem a plataforma.</li>
+              <li><code>Enter</code> segue a ação de envio definida para o formulário; o campo não cria uma nova linha.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com gestos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Tocar no campo ou no rótulo permite editar com o teclado virtual.</li>
-              <li>
-                A seleção e edição de texto seguem os gestos disponíveis na plataforma.
-              </li>
+              <li>A seleção e edição de texto seguem os gestos disponíveis na plataforma.</li>
             </ol>
-            <h3 class="destaque mt-4">
-              Interação com teclado (ou gestos) + leitor de telas
-            </h3>
+            <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                Ao navegar até o campo, o leitor apresenta seu rótulo e tipo, além de
-                estados e instruções associados.
-              </li>
-              <li>
-                Erros são associados ao campo e explicam como corrigir a informação; o
-                valor digitado é preservado.
-              </li>
+              <li>Ao navegar até o campo, o leitor apresenta seu rótulo e tipo, além de estados e instruções associados.</li>
+              <li>Erros são associados ao campo e explicam como corrigir a informação; o valor digitado é preservado.</li>
             </ol>
           </div>
-          <div
-            class="tab-pane fade"
-            id="aba-gherkin-conteudo"
-            role="tabpanel"
-            aria-labelledby="aba-gherkin"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
             <h2 class="titulo-mobile">Gherkin</h2>
-            <p class="mt-3">
-              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao
-              Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de
-              Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).
-            </p>
-            <h3>
-              Cenário: Considerando que estou em uma página que contém Input "email"
-            </h3>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página que contém Input "email"</h3>
             <h4 class="mt-4">Navegação por teclado</h4>
             <ol class="lista-detalhe link-padrao">
               <li>QUANDO uso a tecla <code>Tab</code> para mover o foco para o campo</li>
               <li>O foco que VEJO é fortemente indicado visualmente</li>
-              <li>
-                ENTÃO, quando digito, seleciono ou edito o conteúdo com os comandos
-                nativos
-              </li>
+              <li>ENTÃO, quando digito, seleciono ou edito o conteúdo com os comandos nativos</li>
               <li>VEJO que o valor do campo é atualizado</li>
-              <li>
-                E, quando uso <code>Tab</code> ou <code>Shift + Tab</code>, VEJO que o
-                foco segue a ordem da página, sem ficar preso no campo
-              </li>
+              <li>E, quando uso <code>Tab</code> ou <code>Shift + Tab</code>, VEJO que o foco segue a ordem da página, sem ficar preso no campo</li>
             </ol>
             <h4 class="mt-4">Leitor de telas para desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
-                QUANDO uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso a
-                tecla <code>Tab</code> para mover o foco para o campo, acontece o
-                seguinte:
+                QUANDO uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso a tecla <code>Tab</code> para mover o foco para o campo, acontece o seguinte:
                 <ul>
                   <li>OUÇO o rótulo e a finalidade do campo.</li>
                   <li>OUÇO que o componente é um campo de e-mail.</li>
-                  <li>
-                    OUÇO a obrigatoriedade, as instruções e os erros associados, quando
-                    existirem.
-                  </li>
+                  <li>OUÇO a obrigatoriedade, as instruções e os erros associados, quando existirem.</li>
                 </ul>
               </li>
               <li>ENTÃO, quando digito ou edito o conteúdo com os comandos nativos</li>
-              <li>
-                OUÇO ou percebo que posso editar o campo e que seu valor foi atualizado.
-              </li>
+              <li>OUÇO ou percebo que posso editar o campo e que seu valor foi atualizado.</li>
             </ol>
             <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
-                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o
-                dedo para focar no campo, acontece o seguinte:
+                QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o dedo para focar no campo, acontece o seguinte:
                 <ul>
                   <li>OUÇO o rótulo e a finalidade do campo.</li>
                   <li>OUÇO que o componente é um campo de e-mail.</li>
-                  <li>
-                    OUÇO a obrigatoriedade, as instruções e os erros associados, quando
-                    existirem.
-                  </li>
+                  <li>OUÇO a obrigatoriedade, as instruções e os erros associados, quando existirem.</li>
                 </ul>
               </li>
-              <li>
-                ENTÃO, quando eu toco duas vezes ou uso o gesto adequado para ativar o
-                campo e editar seu conteúdo
-              </li>
-              <li>
-                OUÇO ou percebo que posso editar o campo e que seu valor foi atualizado.
-              </li>
+              <li>ENTÃO, quando eu toco duas vezes ou uso o gesto adequado para ativar o campo e editar seu conteúdo</li>
+              <li>OUÇO ou percebo que posso editar o campo e que seu valor foi atualizado.</li>
             </ol>
             <h4 class="mt-4">Validação da entrada</h4>
             <ol class="lista-detalhe link-padrao">
               <li>QUANDO uma entrada é rejeitada por uma regra de validação informada</li>
-              <li>
-                VEJO uma mensagem associada ao campo que explica como corrigir a
-                informação
-              </li>
-              <li>
-                E, quando navego até o campo com leitor de telas, OUÇO a indicação de erro
-                e a orientação associada
-              </li>
-              <li>
-                ENTÃO, quando volto a editar, VEJO que o valor foi preservado para
-                correção
-              </li>
+              <li>VEJO uma mensagem associada ao campo que explica como corrigir a informação</li>
+              <li>E, quando navego até o campo com leitor de telas, OUÇO a indicação de erro e a orientação associada</li>
+              <li>ENTÃO, quando volto a editar, VEJO que o valor foi preservado para correção</li>
             </ol>
             <h4 class="mt-4">Formato do e-mail</h4>
             <ol class="lista-detalhe link-padrao">
@@ -512,108 +298,37 @@
               <li>A validação de formato não comprova a existência do endereço</li>
             </ol>
           </div>
-          <div
-            class="tab-pane fade"
-            id="aba-atencao-conteudo"
-            role="tabpanel"
-            aria-labelledby="aba-atencao"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de atenção</h2>
             <ol class="lista-detalhe link-padrao">
-              <li>
-                Usar um rótulo persistente associado ao input. Placeholder é uma dica
-                complementar e não substitui o rótulo.
-              </li>
-              <li>
-                Associar instruções e erros ao campo, por exemplo com aria-describedby, e
-                marcar aria-invalid quando houver erro.
-              </li>
-              <li>
-                Informar a obrigatoriedade e usar required quando necessário. Não
-                comunicar erros apenas por cor.
-              </li>
-              <li>
-                Manter foco visível e garantir contraste e área de interação adequados.
-              </li>
-              <li>
-                A validação de formato não comprova que o endereço existe. Aceitar um
-                endereço por padrão; usar multiple apenas se o contexto pedir vários
-                endereços e explicar como separá-los.
-              </li>
+              <li>Usar um rótulo persistente associado ao input. Placeholder é uma dica complementar e não substitui o rótulo.</li>
+              <li>Associar instruções e erros ao campo, por exemplo com aria-describedby, e marcar aria-invalid quando houver erro.</li>
+              <li>Informar a obrigatoriedade e usar required quando necessário. Não comunicar erros apenas por cor.</li>
+              <li>Manter foco visível e garantir contraste e área de interação adequados.</li>
+              <li>A validação de formato não comprova que o endereço existe. Aceitar um endereço por padrão; usar multiple apenas se o contexto pedir vários endereços e explicar como separá-los.</li>
             </ol>
           </div>
-          <div
-            class="tab-pane fade"
-            id="aba-ref-conteudo"
-            role="tabpanel"
-            aria-labelledby="aba-ref"
-            tabindex="0"
-          >
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
             <h3 class="destaque mt-4">Documentação do campo</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >MDN — input type="email"<span class="sr-only">
-                    (link externo, abre em uma nova aba)</span
-                  ></a
-                >
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email" target="_blank" rel="noopener noreferrer">MDN — input type="email"<span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
               </li>
             </ul>
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a
-                  href="https://design-system.service.gov.uk/patterns/email-addresses/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GOV.UK — Email addresses
-                  <i class="material-icons notranslate" translate="no" aria-hidden="true"
-                    >open_in_new</i
-                  ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-                >
-                — Padrão específico para e-mail, com type="email", autocomplete e
-                mensagens de erro.
+                <a href="https://design-system.service.gov.uk/patterns/email-addresses/" target="_blank" rel="noopener noreferrer">GOV.UK — Email addresses <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Padrão específico para e-mail, com type="email", autocomplete e mensagens de erro.
               </li>
               <li>
-                <a
-                  href="https://design-system.service.gov.uk/components/text-input/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GOV.UK — Text input
-                  <i class="material-icons notranslate" translate="no" aria-hidden="true"
-                    >open_in_new</i
-                  ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-                >
-                — Componente de base utilizado pelo padrão de e-mail.
+                <a href="https://design-system.service.gov.uk/components/text-input/" target="_blank" rel="noopener noreferrer">GOV.UK — Text input <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Componente de base utilizado pelo padrão de e-mail.
               </li>
               <li>
-                <a
-                  href="https://getbootstrap.com/docs/5.3/forms/form-control/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Bootstrap — Form controls
-                  <i class="material-icons notranslate" translate="no" aria-hidden="true"
-                    >open_in_new</i
-                  ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-                >
-                — Exemplo de campo type="email".
+                <a href="https://getbootstrap.com/docs/5.3/forms/form-control/" target="_blank" rel="noopener noreferrer">Bootstrap — Form controls <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Exemplo de campo type="email".
               </li>
               <li>
-                <a
-                  href="https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Carbon — Text input
-                  <i class="material-icons notranslate" translate="no" aria-hidden="true"
-                    >open_in_new</i
-                  ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-                >
-                — Orientações gerais de campos de texto, complementares ao tipo e-mail.
+                <a href="https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines" target="_blank" rel="noopener noreferrer">Carbon — Text input <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Orientações gerais de campos de texto, complementares ao tipo e-mail.
               </li>
             </ul>
           </div>
@@ -622,52 +337,19 @@
     </div>
     <p class="source-note page-source-note wrap">
       Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
-      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer"
-        >curso AccessBoost
-        <span class="material-icons notranslate" aria-hidden="true" translate="no"
-          >open_in_new</span
-        ><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
-      >. As interações representam o formato padrão da indústria, mas em casos específicos
-      podem ser customizadas (desde que haja instruções suficientes para que as pessoas
-      compreendam a mudança de comportamento).
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
-    <footer class="site-footer">
+    <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">
-          <p>
-            O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir
-            instruções em um mesmo local para entender o design de interação de
-            componentes antes de construir um sistema mais robusto (ou então atualizar um
-            sistema já construído).
-          </p>
-          <p>
-            Explore comportamentos, métodos de interação e critérios de aceite para criar
-            experiências mais acessíveis e inclusivas.
-          </p>
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
           <p class="footer-license">
-            <a
-              href="https://github.com/acessibilidade/magoo/blob/master/LICENSE"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Licença MIT
-              <span class="material-icons notranslate" translate="no" aria-hidden="true"
-                >open_in_new</span
-              ><span class="sr-only"> (link externo, abre em uma nova aba)</span></a
-            >
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
           </p>
         </div>
-        <a
-          class="initiative"
-          href="https://www.tudoeacessibilidade.com.br/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img
-            src="../../img/iniciativa-tudo-off.svg"
-            width="350"
-            height="67"
-            alt="Uma iniciativa Tudo é Acessibilidade"
-          /><span class="sr-only"> (abre em uma nova aba)</span></a
-        >
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
       </div>
     </footer>
   </body>

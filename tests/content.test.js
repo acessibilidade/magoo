@@ -59,7 +59,16 @@ test("Geração preserva todo o texto da fonte, IDs HTML e destinos locais", asy
         assert.ok(ids.includes(target.slice(1)), target);
         continue;
       }
-      await readFile(new URL(target.split("#")[0], new URL(c.path, root)));
+      const pathname = new URL(
+        target,
+        `https://magoo.cc/${c.path}`,
+      ).pathname.slice(1);
+      await readFile(
+        new URL(
+          /^(pt-br|en)$/.test(pathname) ? `${pathname}/index.html` : pathname,
+          root,
+        ),
+      );
     }
   }
 });

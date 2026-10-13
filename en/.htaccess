@@ -1,0 +1,38 @@
+DirectorySlash Off
+DirectoryIndex index.html
+ErrorDocument 404 /en/404.html
+RewriteEngine On
+RewriteOptions AllowNoSlash
+RewriteCond %{THE_REQUEST} \s/+en/(?:index\.html)?[?\s]
+RewriteRule ^ /en [R=301,L]
+RewriteCond %{REQUEST_URI} ^/en/?$
+RewriteRule ^ /en/index.html [END]
+RewriteRule ^componentes/elementos-ocultos/abas\.html$ /en/components/hidden-elements/tabs.html [R=301,L]
+RewriteRule ^componentes/elementos-ocultos/accordion\.html$ /en/components/hidden-elements/accordion.html [R=301,L]
+RewriteRule ^componentes/elementos-ocultos/detalhes-mais-informacoes\.html$ /en/components/hidden-elements/details-more-information.html [R=301,L]
+RewriteRule ^componentes/elementos-ocultos/modal\.html$ /en/components/hidden-elements/modal.html [R=301,L]
+RewriteRule ^componentes/elementos-ocultos/tooltip-popover\.html$ /en/components/hidden-elements/tooltip-popover.html [R=301,L]
+RewriteRule ^componentes/estrutura/listas\.html$ /en/components/structure/lists.html [R=301,L]
+RewriteRule ^componentes/estrutura/tabelas\.html$ /en/components/structure/tables.html [R=301,L]
+RewriteRule ^componentes/estrutura/titulos\.html$ /en/components/structure/headings.html [R=301,L]
+RewriteRule ^componentes/formularios/botao\.html$ /en/components/forms/button.html [R=301,L]
+RewriteRule ^componentes/formularios/checkbox\.html$ /en/components/forms/checkbox.html [R=301,L]
+RewriteRule ^componentes/formularios/radio-button\.html$ /en/components/forms/radio-button.html [R=301,L]
+RewriteRule ^componentes/formularios/select\.html$ /en/components/forms/select.html [R=301,L]
+RewriteRule ^componentes/formularios/slider\.html$ /en/components/forms/slider.html [R=301,L]
+RewriteRule ^componentes/formularios/switch\.html$ /en/components/forms/switch.html [R=301,L]
+RewriteRule ^componentes/mensagens/alertas\.html$ /en/components/messages/alerts.html [R=301,L]
+RewriteRule ^componentes/mensagens/dialogs\.html$ /en/components/messages/dialogs.html [R=301,L]
+RewriteRule ^componentes/mensagens/toasts\.html$ /en/components/messages/toasts.html [R=301,L]
+RewriteRule ^componentes/navegacao/breadcrumb\.html$ /en/components/navigation/breadcrumb.html [R=301,L]
+RewriteRule ^componentes/navegacao/carrossel\.html$ /en/components/navigation/carousel.html [R=301,L]
+RewriteRule ^componentes/navegacao/drag-drop\.html$ /en/components/navigation/drag-drop.html [R=301,L]
+RewriteRule ^componentes/navegacao/links\.html$ /en/components/navigation/links.html [R=301,L]
+RewriteRule ^componentes/navegacao/menu\.html$ /en/components/navigation/menu.html [R=301,L]
+RewriteRule ^componentes/navegacao/paginacao\.html$ /en/components/navigation/pagination.html [R=301,L]
+RewriteRule ^componentes/formularios/input-text\.html$ /en/components/forms/input-text.html [R=301,L]
+RewriteRule ^componentes/formularios/input-email\.html$ /en/components/forms/input-email.html [R=301,L]
+RewriteRule ^componentes/formularios/input-search\.html$ /en/components/forms/input-search.html [R=301,L]
+RewriteRule ^componentes/formularios/input-password\.html$ /en/components/forms/input-password.html [R=301,L]
+RewriteRule ^componentes/mensagens/validacao-formularios\.html$ /en/components/messages/form-validation.html [R=301,L]
+RewriteRule ^componentes/estrutura/tabbar\.html$ /en/components/structure/tabbar.html [R=301,L]

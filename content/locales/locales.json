@@ -1,0 +1,60 @@
+{
+  "default": "pt-br",
+  "languages": [
+    {
+      "id": "pt-br",
+      "lang": "pt-BR",
+      "googleLanguage": "pt",
+      "label": "Português (BR)",
+      "selectLabel": "Seleciona o idioma",
+      "otherLabel": "Selecionar outros idiomas",
+      "ui": {
+        "documentation": "Documentação do componente",
+        "closeIndex": "Fechar índice de componentes",
+        "componentIndex": "Índice de componentes",
+        "translatorUnavailable": "Tradutor indisponível. Tente recarregar a página.",
+        "mainMenu": "Menu principal"
+      }
+    },
+    {
+      "id": "en",
+      "lang": "en-US",
+      "googleLanguage": "en",
+      "label": "English (US)",
+      "selectLabel": "Select your language",
+      "otherLabel": "Select other languages",
+      "dictionary": "en.json",
+      "ui": {
+        "documentation": "Component documentation",
+        "closeIndex": "Close component index",
+        "componentIndex": "Component index",
+        "translatorUnavailable": "Translator unavailable. Try reloading the page.",
+        "mainMenu": "Main menu"
+      },
+      "routeSegments": {
+        "componentes": "components",
+        "estrutura": "structure",
+        "mensagens": "messages",
+        "navegacao": "navigation",
+        "elementos-ocultos": "hidden-elements",
+        "formularios": "forms",
+        "abas": "tabs",
+        "detalhes-mais-informacoes": "details-more-information",
+        "listas": "lists",
+        "tabelas": "tables",
+        "titulos": "headings",
+        "botao": "button",
+        "alertas": "alerts",
+        "validacao-formularios": "form-validation",
+        "paginacao": "pagination",
+        "carrossel": "carousel"
+      },
+      "initiativeImage": {
+        "src": "/img/tudo-acessibilidade-logo.svg",
+        "width": 185,
+        "height": 67,
+        "alt": "Tudo é Acessibilidade"
+      }
+    }
+  ]
+}

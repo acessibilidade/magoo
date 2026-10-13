@@ -1,0 +1,9 @@
+DirectorySlash Off
+DirectoryIndex index.html
+ErrorDocument 404 /pt-br/404.html
+RewriteEngine On
+RewriteOptions AllowNoSlash
+RewriteCond %{THE_REQUEST} \s/+pt-br/(?:index\.html)?[?\s]
+RewriteRule ^ /pt-br [R=301,L]
+RewriteCond %{REQUEST_URI} ^/pt-br/?$
+RewriteRule ^ /pt-br/index.html [END]

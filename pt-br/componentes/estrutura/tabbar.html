@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tabbar | Magoo</title>
+    <meta name="description" content="Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Tabbar | Magoo" />
+    <meta property="og:description" content="Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente." />
+
+    <meta name="twitter:title" content="Tabbar | Magoo" />
+    <meta name="twitter:description" content="Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/estrutura/tabbar.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/estrutura/tabbar.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/estrutura/tabbar.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/structure/tabbar.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/estrutura/tabbar.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Projeto Magoo">
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/estrutura/tabbar.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/estrutura/tabbar.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/structure/tabbar.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/structure/tabbar.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / ESTRUTURA</p>
+        <h1>Tabbar</h1>
+        <p>Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
+              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html" aria-current="page">Tabbar</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">Questionamentos que devem ser feitos ao projetar uma Tabbar: uma barra persistente de acesso às principais áreas de uma interface.</p>
+            <p>Defina se os itens navegam entre destinos ou alternam painéis de conteúdo. Essa escolha determina a semântica, a navegação por teclado e o gerenciamento de foco.</p>
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Os destinos principais possuem rótulos curtos e compreensíveis, além dos ícones?</li>
+              <li>É possível identificar a área atual sem depender apenas de cor?</li>
+              <li>A ordem e os destinos permanecem consistentes entre as áreas da interface?</li>
+              <li>A quantidade de itens permite reconhecer e alcançar cada destino sem rótulos cortados?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com mouse</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Cada item oferece uma área de clique clara e feedback de interação?</li>
+              <li>O item escolhido leva ao destino esperado, sem confundir navegação com ações como salvar ou excluir?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A área de toque permite selecionar um destino sem acionar o item vizinho?</li>
+              <li>A barra respeita as áreas seguras do dispositivo e não encobre conteúdo, foco ou controles?</li>
+              <li>A interface continua utilizável com ampliação, rotação e teclado virtual?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com teclado</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>O foco é visível e a ordem segue a apresentação dos itens?</li>
+              <li>A navegação usa links nativos ou um conjunto de abas, com comandos coerentes com o comportamento escolhido?</li>
+              <li>Após mudar de destino, o foco e o retorno permitem continuar a tarefa?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A barra tem um nome que identifica sua finalidade?</li>
+              <li>Cada item informa seu nome e o destino atual ou a aba selecionada?</li>
+              <li>Badges, como contagens de itens novos, são compreensíveis sem depender apenas de sua aparência?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <h3 class="destaque mt-4">Interação com mouse</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Clicar em um item abre o destino correspondente e atualiza a indicação de área atual.</li>
+              <li>No padrão de links, preservar comportamentos nativos como abrir um destino em outra aba.</li>
+              <li>Ao selecionar a área atual, evitar recarregamentos ou redefinições inesperadas; comportamentos adicionais precisam ser previsíveis e documentados.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Tocar em um item permite acessar a área correspondente.</li>
+              <li>A indicação de seleção é atualizada e a barra permanece consistente entre os destinos.</li>
+              <li>Gestos adicionais podem complementar a navegação, mantendo cada destino disponível por um controle explícito.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com teclado — navegação entre destinos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Em uma Tabbar web que navega entre páginas ou rotas, <code>Tab</code> e <code>Shift + Tab</code> percorrem os links na ordem da interface.</li>
+              <li><code>Enter</code> ativa o link focado. Não exigir <code>Barra de espaço</code> para links nem interceptar setas como se fossem abas.</li>
+              <li>Ao mudar de rota sem recarregar a página, atualizar o título e posicionar o foco em um destino lógico, como o título ou início do conteúdo.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com teclado — alternância de painéis</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Quando o componente realmente alterna painéis na mesma página, aplicar o padrão de abas: <code>Tab</code> entra pela aba selecionada e depois sai do conjunto para o próximo elemento na sequência.</li>
+              <li><code>Seta para a direita</code> e <code>Seta para a esquerda</code> movem o foco entre abas horizontais, incluindo a passagem da última à primeira e vice-versa.</li>
+              <li>Na ativação manual, <code>Enter</code> ou <code>Barra de espaço</code> exibe o painel da aba focada. Ativação automática só é adequada quando o painel aparece sem atraso perceptível.</li>
+              <li><code>Home</code> e <code>End</code> podem mover o foco para a primeira e última aba. Esse comportamento é opcional e deve ser consistente.</li>
+              <li>Atualizar <code>aria-selected</code> e a associação com o painel; o foco permanece na aba após a seleção, e <code>Tab</code> permite seguir para o conteúdo.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Na navegação web entre destinos, identificar a região de navegação, o nome de cada link e a área atual por <code>aria-current="page"</code>.</li>
+              <li>Na alternância de painéis, identificar o conjunto como <code>tablist</code>, cada controle como aba e o painel como <code>tabpanel</code>, com rótulos e associações adequados.</li>
+              <li>Em aplicativos nativos, usar a semântica e os comandos fornecidos pela plataforma para a barra e seus itens.</li>
+              <li>Com leitor de telas móvel, navegar pelos itens com os gestos da plataforma e tocar duas vezes ou usar o gesto de ativação para abrir o destino.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página ou aplicativo que contém uma Tabbar</h3>
+            <h4 class="mt-4">Navegação por teclado — destinos</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso <code>Tab</code> para mover o foco para um link da Tabbar</li>
+              <li>O foco que VEJO é fortemente indicado visualmente</li>
+              <li>ENTÃO, quando uso <code>Enter</code> para ativar o link</li>
+              <li>VEJO a área correspondente e a indicação de destino atual é atualizada</li>
+              <li>E percebo que o foco permite continuar a navegação no novo conteúdo</li>
+              <li>QUANDO uso <code>Tab</code> ou <code>Shift + Tab</code>, VEJO que posso percorrer os links sem prender o foco na barra</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e uso <code>Tab</code> para focar um item de navegação</li>
+              <li>OUÇO o nome do destino, a identificação de link ou controle nativo equivalente e a indicação de área atual, quando aplicável</li>
+              <li>ENTÃO, quando aciono o item com o comando adequado à plataforma</li>
+              <li>OUÇO ou percebo que a área correspondente foi aberta e posso continuar a navegação pelo conteúdo</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e deslizo o dedo para focar um item de navegação</li>
+              <li>OUÇO o nome do destino, a identificação de link ou controle nativo equivalente e a indicação de área atual, quando aplicável</li>
+              <li>ENTÃO, quando toco duas vezes ou uso o gesto adequado</li>
+              <li>OUÇO ou percebo que a área correspondente foi aberta e posso continuar a navegação pelo conteúdo</li>
+            </ol>
+            <h4 class="mt-4">Alternância de painéis na mesma página</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO a Tabbar foi implementada como conjunto de abas e uso <code>Tab</code> para entrar no conjunto</li>
+              <li>VEJO que o foco chega à aba selecionada</li>
+              <li>ENTÃO, quando uso <code>Seta para a direita</code> ou <code>Seta para a esquerda</code></li>
+              <li>VEJO que o foco se move entre as abas</li>
+              <li>E, na ativação manual, quando uso <code>Enter</code> ou <code>Barra de espaço</code>, VEJO o painel correspondente</li>
+              <li>QUANDO uso leitor de telas, OUÇO o nome da aba e seu estado selecionado atualizado</li>
+              <li>E posso seguir para o conteúdo do painel com <code>Tab</code></li>
+            </ol>
+            <h4 class="mt-4">Interação com mouse ou toque</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO clico ou toco em um item da barra</li>
+              <li>VEJO a área correspondente e a indicação de área atual</li>
+              <li>E VEJO que a barra não encobre o conteúdo ou os controles necessários para continuar a tarefa</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h2 class="titulo-mobile">Pontos de atenção</h2>
+            <ol class="lista-detalhe link-padrao">
+              <li>Tabbar de navegação e abas de conteúdo podem ter aparência semelhante, mas possuem comportamentos diferentes. Não usar tablist apenas porque os links estão alinhados em uma barra.</li>
+              <li>Na web, usar links para destinos navegáveis e <code>aria-current="page"</code> para o atual. Usar o padrão de abas e <code>aria-selected</code> quando houver painéis alternados na mesma página.</li>
+              <li>Manter uma quantidade reduzida de destinos principais. A quantidade e a posição devem seguir o contexto e as recomendações da plataforma adotada.</li>
+              <li>Não usar a barra para ações isoladas, como salvar, excluir ou enviar um formulário.</li>
+              <li>Manter rótulos visíveis sempre que possível. Se houver apenas ícones, fornecer nomes acessíveis e avaliar se sua finalidade é reconhecível. Preferir Material Icons em exemplos web.</li>
+              <li>Ícones decorativos devem ser ocultados das tecnologias assistivas. Contagens e badges informativos precisam ter significado acessível e evitar anúncios duplicados.</li>
+              <li>Não depender apenas de cor para indicar o destino atual; combinar texto e indicação visual perceptível.</li>
+              <li>Se a barra for fixa, reservar espaço no conteúdo e respeitar as áreas seguras da plataforma. Conferir foco, ampliação e teclado virtual.</li>
+              <li>Mudanças de rota precisam atualizar título, foco e histórico de navegação conforme o fluxo. Evitar apagar dados ou o progresso ao alternar áreas.</li>
+              <li>Os padrões nativos Apple e Material usam recursos próprios de suas plataformas. Adaptar os exemplos web conforme a finalidade do componente e verificar o comportamento com tecnologias assistivas.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://developer.apple.com/design/human-interface-guidelines/tab-bars" target="_blank" rel="noopener noreferrer">Apple — Tab bars <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Orientações para barras de navegação em interfaces Apple.
+              </li>
+              <li>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank" rel="noopener noreferrer">W3C WAI-ARIA APG — Tabs Pattern <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Referência para a variação que alterna painéis na mesma página.
+              </li>
+            </ul>
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://m3.material.io/components/navigation-bar/overview" target="_blank" rel="noopener noreferrer">Material Design 3 — Navigation bar <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Barra de navegação entre destinos principais.
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank" rel="noopener noreferrer">Bootstrap — Navs and tabs <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Exemplos web de navegação e abas; escolher a semântica conforme a finalidade.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

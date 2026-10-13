@@ -1,4 +1,5 @@
 "use strict";
+const messages = window.magooMessages || {};
 const picker = document.querySelector(".component-picker");
 if (picker)
   picker.addEventListener("submit", (event) => {
@@ -9,7 +10,10 @@ if (picker)
 const compact = window.matchMedia("(max-width: 1000px)");
 for (const tablist of document.querySelectorAll('[role="tablist"]')) {
   if (!tablist.hasAttribute("aria-label"))
-    tablist.setAttribute("aria-label", "Documentação do componente");
+    tablist.setAttribute(
+      "aria-label",
+      messages.documentation || "Documentação do componente",
+    );
   const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
   let selected = 0;
   const entries = tabs.map((tab, index) => {
@@ -111,7 +115,10 @@ if (menu) {
   const backdrop = document.createElement("button");
   backdrop.className = "menu-backdrop";
   backdrop.tabIndex = -1;
-  backdrop.setAttribute("aria-label", "Fechar índice de componentes");
+  backdrop.setAttribute(
+    "aria-label",
+    messages.closeIndex || "Fechar índice de componentes",
+  );
   backdrop.hidden = true;
   document.body.append(backdrop);
   let opened = false;
@@ -132,7 +139,10 @@ if (menu) {
     if (compact.matches) {
       menu.setAttribute("role", "dialog");
       menu.setAttribute("aria-modal", "true");
-      menu.setAttribute("aria-label", "Índice de componentes");
+      menu.setAttribute(
+        "aria-label",
+        messages.componentIndex || "Índice de componentes",
+      );
     } else {
       menu.removeAttribute("role");
       menu.removeAttribute("aria-modal");
@@ -235,7 +245,7 @@ for (const trigger of document.querySelectorAll(".faq-trigger")) {
 function focusHomeSection() {
   if (!document.body.classList.contains("home-page")) return;
   const id = window.location.hash.slice(1);
-  if (!["audience-title", "faq-title"].includes(id)) return;
+  if (!["audience-title", "how-to-title", "faq-title"].includes(id)) return;
   const heading = document.getElementById(id);
   if (!heading) return;
   heading.focus({ preventScroll: true });

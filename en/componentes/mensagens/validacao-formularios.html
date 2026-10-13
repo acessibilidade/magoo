@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-US" data-route-redirect="/en/components/messages/form-validation.html">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Form validation | Magoo</title>
+    <meta name="description" content="Messages that identify entry errors, guide corrections, and communicate the result of form submissions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Form validation | Magoo" />
+    <meta property="og:description" content="Messages that identify entry errors, guide corrections, and communicate the result of form submissions." />
+
+    <meta name="twitter:title" content="Form validation | Magoo" />
+    <meta name="twitter:description" content="Messages that identify entry errors, guide corrections, and communicate the result of form submissions." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/en.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/en/components/messages/form-validation.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/en/components/messages/form-validation.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/messages/form-validation.html" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <script src="/js/languages.js" defer=""></script>
+    <meta name="robots" content="noindex, follow" />
+    <script src="/js/route-redirect.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="en-US">
+    <a class="skip-link" href="#conteudo">Skip to content<span class="sr-only"> on this page</span></a>
+    <header lang="en-US">
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Magoo project">
+          <ul class="main-menu" aria-label="Main menu" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Select your language</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/mensagens/validacao-formularios.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/mensagens/validacao-formularios.html" aria-pressed="false" lang="pt-BR" data-language="pt-br"><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/messages/form-validation.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/messages/form-validation.html" aria-pressed="true" lang="en-US" data-language="en"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="en" data-other-label="Select other languages">
+            <span id="translation-label" class="sr-only">Select other languages</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Automatic translation</p>
+            <p class="translation-status" role="status">Loading translator…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">LIBRARY / MESSAGES</p>
+        <h1>Form validation</h1>
+        <p>Messages that identify entry errors, guide corrections, and communicate the result of form submissions.</p>
+        <p class="reference-shortcut">
+          For working examples and design patterns for this component,
+          <a href="#aba-ref-conteudo">see the references tab<span class="sr-only"> (opens the references on this page)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Component index</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Close index</button>
+          <h2 class="menu-title">Component index</h2>
+          <nav aria-label="Components">
+            <h3>Structure</h3>
+            <ul>
+              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
+              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li>
+                <a href="/en/components/structure/headings.html">Headings</a>
+              </li>
+              <li><a href="/en/components/structure/tables.html">Tables</a></li>
+              <li><a href="/en/components/structure/lists.html">Lists</a></li>
+              <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+            </ul>
+            <h3>Messages</h3>
+            <ul>
+              <li>
+                <a href="/en/components/messages/alerts.html">Alerts</a>
+              </li>
+              <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
+              <li><a href="/en/components/messages/form-validation.html" aria-current="page">Form validation</a></li>
+              <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="/en/components/navigation/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/en/components/navigation/menu.html">Menu</a></li>
+              <li><a href="/en/components/navigation/links.html">Links</a></li>
+              <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
+              <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
+              <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Hidden elements</h3>
+            <ul>
+              <li>
+                <a href="/en/components/hidden-elements/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/details-more-information.html">Details and more information</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/tabs.html">Tabs</a></li>
+              <li>
+                <a href="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/modal.html">Modal</a></li>
+            </ul>
+            <h3>Forms</h3>
+            <ul>
+              <li><a href="/en/components/forms/button.html">Button</a></li>
+              <li><a href="/en/components/forms/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/en/components/forms/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/en/components/forms/input-text.html">Input "text"</a></li>
+              <li><a href="/en/components/forms/input-email.html">Input "email"</a></li>
+              <li><a href="/en/components/forms/input-search.html">Input "search"</a></li>
+              <li><a href="/en/components/forms/input-password.html">Input "password"</a></li>
+              <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
+              <li><a href="/en/components/forms/slider.html">Slider</a></li>
+              <li><a href="/en/components/forms/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="en-US">
+        <div class="content-intro">
+          <span class="eyebrow">COMPONENT GUIDE</span>
+          <p>Explore behaviors before defining the interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <h2 class="titulo-mobile">Interaction Design</h2>
+            <p class="mt-3">Questions to ask when designing form validation messages.</p>
+            <p>Assess each guideline in context. Validation reports entry problems and guides correction; service failures require their own messages.</p>
+            <h3 class="destaque mt-4">Designing for "no interaction"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Are instructions, expected formats, and required fields clear before entry?</li>
+              <li>Does the message identify the field, explain the problem, and say how to correct it without blaming the person?</li>
+              <li>Are errors identifiable through text as well as color or icons?</li>
+              <li>Has validation timing been defined: on submission, on leaving a field, or during a specific check? Are errors avoided before the person has had a chance to enter information?</li>
+            </ol>
+            <h3 class="destaque mt-4">Designing for mouse use</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the message stay near the field and available while the error remains?</li>
+              <li>If there is an error summary, do its links lead to the corresponding fields?</li>
+            </ol>
+            <h3 class="destaque mt-4">Designing for gesture use</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Can the message be read and the field corrected even with the virtual keyboard open or zoom enabled?</li>
+              <li>Do summary links have adequate touch areas?</li>
+            </ol>
+            <h3 class="destaque mt-4">Designing for keyboard use</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>After an invalid submission, is there a predictable focus destination, such as the error summary or first invalid field?</li>
+              <li>Can summary links be navigated with <code>Tab</code> and activated with <code>Enter</code>?</li>
+              <li>Does validation during editing preserve focus and allow typing?</li>
+            </ol>
+            <h3 class="destaque mt-4">Designing for screen reader use</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Is the message associated with the field and its invalid state identified?</li>
+              <li>Are new errors communicated without excessive repetition or announcements on every key?</li>
+              <li>Does the summary have a clear title and links with names identifying the problems?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h3 class="destaque mt-4">Mouse interaction</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>On submitting invalid data, display specific messages next to fields and, when appropriate, a summary with correction links.</li>
+              <li>Clicking a summary link leads to the corresponding field on the same page and positions focus for correction.</li>
+              <li>Preserve entered data, including values needing correction.</li>
+            </ol>
+            <h3 class="destaque mt-4">Keyboard interaction</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li><code>Tab</code> and <code>Shift + Tab</code> move through fields, the submit button, and summary links in interface order.</li>
+              <li><code>Enter</code> or <code>Space</code> activates the submit button; <code>Enter</code> activates summary links.</li>
+              <li>After a rejected submission, place focus on the summary or first invalid field according to the chosen pattern.</li>
+              <li>During validation on leaving a field or while editing, maintain focus flow and text entry.</li>
+            </ol>
+            <h3 class="destaque mt-4">Gesture interaction</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Tapping the submit button allows form validation.</li>
+              <li>Tapping a summary link leads to the field; the message remains available for consultation and correction.</li>
+            </ol>
+            <h3 class="destaque mt-4">Keyboard (or gesture) interaction + screen reader</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>When navigating to an invalid field, present its label, error indication, and associated message through <code>aria-describedby</code>, while preserving the association with instructions.</li>
+              <li>Use <code>aria-invalid</code> to indicate a detected error; update the state when the error is corrected and new validation confirms the correction.</li>
+              <li>If focus moves to a summary, allow its title, errors, and links to be read. If focus stays where it was, announce dynamic errors through an update region appropriate to the context.</li>
+              <li>Avoid announcing the same message simultaneously through focus and several <code>aria-live</code>.</li>
+            </ol>
+            <h3 class="destaque mt-4">Correction and resubmission</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>After a confirmed correction, remove or update the message and corresponding summary entry without clearing other errors.</li>
+              <li>Resubmitting performs the necessary validation; confirm success only after the operation completes.</li>
+              <li>For asynchronous checks, communicate progress and prevent old responses from replacing the result for the current value.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">BDD (Behavior-Driven Development) methodology focusing on three pillars: User Stories, Acceptance Criteria, and Gherkin Syntax (Given, When, Then).</p>
+            <h3>Scenario: Given that I am on a page containing a form with validation</h3>
+            <h4 class="mt-4">Keyboard navigation</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I use <code>Tab</code> key to move focus to the submit button</li>
+              <li>The focus I SEE is strongly indicated visually</li>
+              <li>THEN, when I use <code>Enter</code> or <code>Space</code> to submit invalid data</li>
+              <li>I SEE messages identifying fields with errors and explaining how to correct them</li>
+              <li>AND I perceive focus moved to the summary or first invalid field according to the defined pattern</li>
+              <li>WHEN I use <code>Tab</code> to focus a summary link and <code>Enter</code> to activate it</li>
+              <li>I SEE focus reach the corresponding field on the same page and I can correct it</li>
+            </ol>
+            <h4 class="mt-4">Desktop screen reader</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and submit a form with invalid data</li>
+              <li>I HEAR or perceive that submission was not completed and there are errors to correct</li>
+              <li>THEN, when I use <code>Tab</code> to navigate to an invalid field</li>
+              <li>I HEAR its label, error indication, and correction guidance</li>
+              <li>AND, when I use <code>Enter</code> to activate a summary link, I perceive that I reached the corresponding field</li>
+              <li>I HEAR or perceive messages without unnecessary duplicate announcements</li>
+            </ol>
+            <h4 class="mt-4">Mobile screen reader</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and submit a form with invalid data</li>
+              <li>I HEAR or perceive that submission was not completed and there are errors to correct</li>
+              <li>THEN, when I swipe to navigate to an invalid field</li>
+              <li>I HEAR its label, error indication, and correction guidance</li>
+              <li>AND, when I double-tap or use the appropriate gesture to activate a summary link, I perceive that I reached the corresponding field</li>
+              <li>I HEAR or perceive messages without unnecessary duplicate announcements</li>
+            </ol>
+            <h4 class="mt-4">Correction and resubmission</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I correct a field and new validation confirms the correction</li>
+              <li>I SEE that field's message and invalid state updated, preserving other errors and entered values</li>
+              <li>THEN, when I submit the form with all valid entries</li>
+              <li>I SEE or HEAR confirmation only after the operation completes</li>
+            </ol>
+            <h4 class="mt-4">Validation while editing</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN validation occurs on leaving a field or during a specific check</li>
+              <li>I SEE or HEAR a message at the defined time without premature errors before entry</li>
+              <li>AND I perceive that focus and typing were not interrupted</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h2 class="titulo-mobile">Considerations</h2>
+            <ol class="lista-detalhe link-padrao">
+              <li>Prefer concrete messages, such as "Enter an email in the format name@example.com", rather than just "Invalid value".</li>
+              <li>Distinguish empty required fields, incorrect formats, and business rules. Do not treat connection failures or unavailable services as entry errors.</li>
+              <li>Do not rely solely on red borders, icons, or temporary messages. Keep guidance until the correction is confirmed.</li>
+              <li>Associate the error with the field using <code>aria-describedby</code> and preserve existing instructions in that association. Use <code>aria-invalid</code> only when an error is detected.</li>
+              <li>The summary complements messages next to fields. Its links must tell screen reader users that they lead to fields on the same page and move focus to the appropriate destination.</li>
+              <li>Choose between a focus announcement and a dynamic region according to the flow. Use <code>role="alert"</code> only when urgency justifies it; <code>role="status"</code> may serve for nonurgent updates. Avoid announcements on every key.</li>
+              <li>Preserve values after an invalid submission. Do not include passwords or other sensitive data in summaries or status messages.</li>
+              <li>Client-side validation helps provide guidance, but server-side validation remains necessary. Asynchronous checks must consider the current value and report check failures.</li>
+              <li>Do not disable the submit button as the only indication of problems: the person needs to know what is missing and how to correct it.</li>
+              <li>For supplementary icons, prefer Material Icons and hide decorative ones from assistive technologies; the information must remain available in text.</li>
+              <li>Bootstrap documents accessibility limitations in its custom client validation styles and tooltips. Evaluate examples before adopting them; colors and styles do not guarantee accessible association or announcements.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">References</h2>
+            <h3 class="destaque mt-4">Design patterns</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">W3C WAI — User Notification <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Errors, notifications, and feedback after form submission.
+              </li>
+            </ul>
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://design-system.service.gov.uk/components/error-message/" target="_blank" rel="noopener noreferrer">GOV.UK — Error message <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Messages associated with fields and correction guidance.
+              </li>
+              <li>
+                <a href="https://design-system.service.gov.uk/components/error-summary/" target="_blank" rel="noopener noreferrer">GOV.UK — Error summary <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Error summary, links to fields, and focus management.
+              </li>
+              <li>
+                <a href="https://designsystem.digital.gov/components/validation/" target="_blank" rel="noopener noreferrer">USWDS — Validation <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Validation and feedback on entry requirements.
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.3/forms/validation/" target="_blank" rel="noopener noreferrer">Bootstrap — Validation <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Validation examples and documented accessibility limitations.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Original content by Marcelo Sales, initially used in the
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
+      >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
+    </p>
+    <footer class="site-footer" lang="en-US">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>The <strong>Magoo</strong> is a pre-design system library. The idea is to bring instructions together in one place to understand component interaction design before building a more robust system (or updating an existing one).</p>
+          <p>Explore behaviors, interaction methods, and acceptance criteria to create more accessible and inclusive experiences.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT license <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+          </p>
+        </div>
+        <a class="initiative initiative-logo-only" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/tudo-acessibilidade-logo.svg" width="185" height="67" alt="Tudo é Acessibilidade" /><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

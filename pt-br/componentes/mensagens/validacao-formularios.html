@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Validação de formulários | Magoo</title>
+    <meta name="description" content="Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Validação de formulários | Magoo" />
+    <meta property="og:description" content="Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários." />
+
+    <meta name="twitter:title" content="Validação de formulários | Magoo" />
+    <meta name="twitter:description" content="Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/messages/form-validation.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/mensagens/validacao-formularios.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav aria-label="Projeto Magoo">
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/mensagens/validacao-formularios.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/mensagens/validacao-formularios.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/messages/form-validation.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/messages/form-validation.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <p class="eyebrow">BIBLIOTECA / MENSAGENS</p>
+        <h1>Validação de formulários</h1>
+        <p>Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
+              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a>
+              </li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html" aria-current="page">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <h2 class="titulo-mobile">Design de Interação</h2>
+            <p class="mt-3">Questionamentos que devem ser feitos ao projetar mensagens de validação de formulários.</p>
+            <p>Avalie cada orientação conforme o contexto. A validação informa problemas na entrada e orienta a correção; falhas do serviço exigem mensagens próprias.</p>
+            <h3 class="destaque mt-4">Projetando para a "não interação"</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>As instruções, formatos esperados e campos obrigatórios estão claros antes de preencher?</li>
+              <li>A mensagem identifica o campo, explica o problema e informa como corrigir, sem culpar a pessoa?</li>
+              <li>Os erros são identificáveis por texto, além de cor ou ícone?</li>
+              <li>Foi definido quando validar: no envio, ao sair do campo ou durante uma verificação específica? Evita-se mostrar erro antes de a pessoa ter oportunidade de preencher?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com mouse</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A mensagem permanece perto do campo e disponível enquanto houver erro?</li>
+              <li>Se houver resumo de erros, seus links levam ao campo correspondente?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>É possível ler a mensagem e corrigir o campo mesmo com o teclado virtual aberto ou com ampliação?</li>
+              <li>Os links do resumo possuem área de toque adequada?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com teclado</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Após um envio inválido, há um destino de foco previsível, como o resumo de erros ou o primeiro campo inválido?</li>
+              <li>Os links do resumo podem ser percorridos com <code>Tab</code> e acionados com <code>Enter</code>?</li>
+              <li>Validar durante a edição preserva o foco e não impede a digitação?</li>
+            </ol>
+            <h3 class="destaque mt-4">Projetando para uso com leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A mensagem está associada ao campo e o estado inválido é identificado?</li>
+              <li>Os erros novos são comunicados sem repetição excessiva ou leitura a cada tecla?</li>
+              <li>O resumo tem um título claro e links com nomes que identificam os problemas?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <h3 class="destaque mt-4">Interação com mouse</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Ao enviar dados inválidos, apresentar mensagens específicas junto aos campos e, quando adequado, um resumo com links para correção.</li>
+              <li>Clicar em um link do resumo leva ao campo correspondente na mesma página e posiciona o foco para corrigi-lo.</li>
+              <li>Preservar os dados preenchidos, inclusive os que precisam de correção.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com teclado</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li><code>Tab</code> e <code>Shift + Tab</code> percorrem campos, botão de envio e links do resumo na ordem da interface.</li>
+              <li><code>Enter</code> ou <code>Barra de espaço</code> ativa o botão de envio; <code>Enter</code> ativa os links do resumo.</li>
+              <li>Após um envio rejeitado, posicionar o foco no resumo ou no primeiro campo inválido, conforme o padrão escolhido.</li>
+              <li>Durante validações ao sair do campo ou durante a edição, manter o fluxo de foco e a entrada de texto.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com gestos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Tocar no botão de envio permite validar o formulário.</li>
+              <li>Tocar no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção.</li>
+            </ol>
+            <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por <code>aria-describedby</code>, preservando também a associação com as instruções.</li>
+              <li>Usar <code>aria-invalid</code> para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção.</li>
+              <li>Se o foco for movido para um resumo, permitir a leitura de seu título, erros e links. Se o foco permanecer onde estava, anunciar erros dinâmicos com uma região de atualização adequada ao contexto.</li>
+              <li>Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões <code>aria-live</code>.</li>
+            </ol>
+            <h3 class="destaque mt-4">Correção e novo envio</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Após uma correção confirmada, remover ou atualizar a mensagem e a entrada correspondente no resumo, sem apagar outros erros.</li>
+              <li>Enviar novamente executa a validação necessária; somente confirmar sucesso depois que a operação for concluída.</li>
+              <li>Em verificações assíncronas, informar o andamento e evitar que respostas antigas substituam o resultado do valor atual.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página que contém um formulário com validação</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso <code>Tab</code> para mover o foco até o botão de envio</li>
+              <li>O foco que VEJO é fortemente indicado visualmente</li>
+              <li>ENTÃO, quando uso <code>Enter</code> ou <code>Barra de espaço</code> para enviar dados inválidos</li>
+              <li>VEJO mensagens que identificam os campos com erro e explicam como corrigir</li>
+              <li>E percebo que o foco foi direcionado ao resumo ou ao primeiro campo inválido, conforme o padrão definido</li>
+              <li>QUANDO uso <code>Tab</code> para focar um link do resumo e <code>Enter</code> para ativá-lo</li>
+              <li>VEJO que o foco chega ao campo correspondente na mesma página e posso corrigi-lo</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso um leitor de tela no computador (NVDA, JAWS, VoiceOver) e envio um formulário com dados inválidos</li>
+              <li>OUÇO ou percebo que o envio não foi concluído e que existem erros a corrigir</li>
+              <li>ENTÃO, quando uso <code>Tab</code> para navegar até um campo inválido</li>
+              <li>OUÇO o rótulo, a indicação de erro e a orientação de correção</li>
+              <li>E, quando uso <code>Enter</code> para ativar um link do resumo, percebo que cheguei ao campo correspondente</li>
+              <li>OUÇO ou percebo as mensagens sem anúncios duplicados desnecessários</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso um leitor de tela no celular (Talkback, VoiceOver) e envio um formulário com dados inválidos</li>
+              <li>OUÇO ou percebo que o envio não foi concluído e que existem erros a corrigir</li>
+              <li>ENTÃO, quando deslizo o dedo para navegar até um campo inválido</li>
+              <li>OUÇO o rótulo, a indicação de erro e a orientação de correção</li>
+              <li>E, quando toco duas vezes ou uso o gesto adequado para ativar um link do resumo, percebo que cheguei ao campo correspondente</li>
+              <li>OUÇO ou percebo as mensagens sem anúncios duplicados desnecessários</li>
+            </ol>
+            <h4 class="mt-4">Correção e novo envio</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO corrijo um campo e a nova validação confirma a correção</li>
+              <li>VEJO que a mensagem e o estado inválido daquele campo são atualizados, preservando os outros erros e os valores preenchidos</li>
+              <li>ENTÃO, quando envio o formulário com todas as entradas válidas</li>
+              <li>VEJO ou OUÇO a confirmação somente depois que a operação for concluída</li>
+            </ol>
+            <h4 class="mt-4">Validação durante a edição</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uma validação ocorre ao sair de um campo ou durante uma verificação específica</li>
+              <li>VEJO ou OUÇO uma mensagem no momento definido, sem erro prematuro antes de preencher</li>
+              <li>E percebo que o foco e a digitação não foram interrompidos</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h2 class="titulo-mobile">Pontos de atenção</h2>
+            <ol class="lista-detalhe link-padrao">
+              <li>Preferir mensagens concretas, como "Informe um e-mail no formato nome@exemplo.com", em vez de apenas "Valor inválido".</li>
+              <li>Distinguir campo vazio obrigatório, formato incorreto e regra de negócio. Não tratar uma falha de conexão ou indisponibilidade do serviço como erro de preenchimento.</li>
+              <li>Não depender apenas de bordas vermelhas, ícones ou mensagens temporárias. Manter a orientação até que a correção seja confirmada.</li>
+              <li>Associar o erro ao campo com <code>aria-describedby</code> e manter as instruções existentes nessa associação. Usar <code>aria-invalid</code> apenas quando o erro for detectado.</li>
+              <li>O resumo complementa as mensagens junto aos campos. Seus links devem indicar para leitores de tela que levam ao campo na mesma página e mover o foco para o destino adequado.</li>
+              <li>Escolher entre o anúncio pelo foco e uma região dinâmica conforme o fluxo. Usar <code>role="alert"</code> apenas quando a urgência justificar; <code>role="status"</code> pode servir para atualizações não urgentes. Evitar anúncios a cada tecla.</li>
+              <li>Preservar valores após um envio inválido. Não incluir senhas ou outros dados sensíveis no resumo ou em mensagens de estado.</li>
+              <li>A validação no cliente ajuda a orientar, mas a validação no servidor continua necessária. Verificações assíncronas devem considerar o valor atual e informar falhas da verificação.</li>
+              <li>Não desabilitar o botão de envio como única forma de indicar problemas: a pessoa precisa saber o que falta e como corrigir.</li>
+              <li>Se usar ícones complementares, preferir Material Icons e ocultar os decorativos das tecnologias assistivas; a informação deve continuar disponível em texto.</li>
+              <li>Bootstrap informa limitações de acessibilidade nos estilos personalizados de validação do cliente e tooltips. Avaliar os exemplos antes de adotá-los; cores e estilos não garantem associação ou anúncio acessível.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <h3 class="destaque mt-4">Padrões de Design</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://www.w3.org/WAI/tutorials/forms/notifications/" target="_blank" rel="noopener noreferrer">W3C WAI — User Notification <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Erros, notificações e retorno após envio de formulários.
+              </li>
+            </ul>
+            <h3 class="destaque mt-4">Design System</h3>
+            <ul class="lista-detalhe link-padrao">
+              <li>
+                <a href="https://design-system.service.gov.uk/components/error-message/" target="_blank" rel="noopener noreferrer">GOV.UK — Error message <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Mensagens associadas aos campos e orientações de correção.
+              </li>
+              <li>
+                <a href="https://design-system.service.gov.uk/components/error-summary/" target="_blank" rel="noopener noreferrer">GOV.UK — Error summary <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Resumo de erros, links para os campos e gerenciamento de foco.
+              </li>
+              <li>
+                <a href="https://designsystem.digital.gov/components/validation/" target="_blank" rel="noopener noreferrer">USWDS — Validation <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Validação e retorno sobre requisitos de entrada.
+              </li>
+              <li>
+                <a href="https://getbootstrap.com/docs/5.3/forms/validation/" target="_blank" rel="noopener noreferrer">Bootstrap — Validation <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Exemplos de validação e limitações de acessibilidade documentadas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>
