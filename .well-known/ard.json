@@ -6,7 +6,7 @@
       "displayName": "Magoo MCP",
       "type": "application/agent-card+json",
       "description": "Consulta local, somente de leitura, da biblioteca educacional de comportamentos de interação Magoo.",
-      "version": "1.3.4",
+      "version": "1.4.0",
       "capabilities": [
         "search_components",
         "get_component",
@@ -27,7 +27,7 @@
       ],
       "data": {
         "name": "magoo",
-        "version": "1.3.4",
+        "version": "1.4.0",
         "protocol": "mcp",
         "transport": "stdio",
         "installation": {
@@ -36,7 +36,7 @@
           "command": "npx",
           "args": [
             "-y",
-            "@acessibilidade/magoo-mcp@1.3.4"
+            "@acessibilidade/magoo-mcp@1.4.0"
           ]
         },
         "tools": [
@@ -54,7 +54,7 @@
       },
       "metadata": {
         "author": "Marcelo Sales",
-        "contentVersion": "1.3.4",
+        "contentVersion": "1.4.0",
         "language": "pt-BR",
         "license": "MIT",
         "componentCount": 29

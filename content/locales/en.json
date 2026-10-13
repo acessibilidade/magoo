@@ -1829,6 +1829,19 @@
     "seta para esquerda": "Left Arrow",
     "Seta para a esquerda": "Left Arrow",
     "seta para cima": "Up Arrow",
-    "seta para baixo": "Down Arrow"
+    "seta para baixo": "Down Arrow",
+    "Versão 1.4.0": "Version 1.4.0",
+    "Versão do material: 1.4.0": "Content version: 1.4.0",
+    "Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.4.0 e não troca automaticamente para uma versão futura.": "Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.4.0 and does not automatically switch to a future version.",
+    "Adiciona inglês dos Estados Unidos como segundo idioma nativo do site, com home e documentação dos 29 componentes traduzidas; português brasileiro continua como idioma principal.": "Adds US English as the second native website language, with a translated homepage and documentation for all 29 components; Brazilian Portuguese remains the primary language.",
+    "Centraliza traduções e caminhos em arquivos JSON para facilitar a inclusão de novos idiomas, com português em /pt-br e inglês em /en.": "Centralizes translations and routes in JSON files to simplify adding languages, with Portuguese at /pt-br and English at /en.",
+    "Traduz as URLs inglesas, preserva o componente e a seção na troca de idioma e redireciona os caminhos anteriores.": "Translates English URLs, preserves the component and section when switching languages, and redirects previous routes.",
+    "Mantém canônicas próprias por idioma e atualiza hreflang, sitemap, Open Graph e Twitter Cards.": "Maintains a canonical URL for each language and updates hreflang, the sitemap, Open Graph, and Twitter Cards.",
+    "Adiciona listas e nomes acessíveis ao menu principal e à seleção de idiomas, com botões nativos, indicação de seleção e layout responsivo.": "Adds lists and accessible names to the main menu and language selection, with native buttons, selection state, and a responsive layout.",
+    "Mantém o Google Tradutor para outros idiomas, com o rótulo Selecionar outros idiomas associado ao combo apenas para leitores de tela.": "Keeps Google Translate for other languages, with the Select other languages label associated with the combo box for screen readers only.",
+    "Exibe apenas o logo Tudo é Acessibilidade no rodapé inglês, removendo a frase institucional e a barra divisória da imagem.": "Displays only the Tudo é Acessibilidade logo in the English footer, removing the institutional phrase and divider from the image.",
+    "Padroniza a indentação do HTML e mantém as tags de abertura e seus atributos em uma linha, com verificação automática após o build.": "Standardizes HTML indentation and keeps opening tags and their attributes on one line, with automatic checks after the build.",
+    "Corrige as regras Apache para servir /en e /pt-br sem barra final e evitar erro de acesso à home inglesa.": "Fixes Apache rules to serve /en and /pt-br without trailing slashes and prevent the English homepage access error.",
+    "Atualiza a documentação de publicação e descoberta estática para agentes; o servidor MCP e as orientações consultadas por ele continuam em português brasileiro.": "Updates deployment documentation and static discovery for agents; the MCP server and the guidance it retrieves remain in Brazilian Portuguese."
   }
 }

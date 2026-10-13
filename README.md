@@ -6,18 +6,20 @@
 
 Biblioteca de comportamentos de interação de componentes, de Marcelo Sales.
 
-O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.3.4** reúne 29 componentes, incluindo os quatro tipos de input, Validação de formulários e Tabbar.
+O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.4.0** reúne 29 componentes, incluindo os quatro tipos de input, Validação de formulários e Tabbar.
+
+A versão **1.4.0** adiciona inglês dos Estados Unidos ao site, com URLs traduzidas, canônicas por idioma e ajustes de acessibilidade e hospedagem. Português brasileiro continua como padrão e como idioma do MCP. As traduções do site não alteram o idioma das respostas do MCP.
 
 ## Instalação pelo npm
 
-O pacote **@acessibilidade/magoo-mcp 1.3.4** está publicado e permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
+O pacote **@acessibilidade/magoo-mcp 1.4.0** permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
 
 Nas configurações de servidores MCP do seu assistente, adicione:
 
 - **Nome:** `magoo`
 - **Tipo:** STDIO (local)
 - **Comando:** `npx`
-- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.3.4`
+- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.4.0`
 
 Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o formato `mcpServers`, use:
 
@@ -26,13 +28,13 @@ Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o form
   "mcpServers": {
     "magoo": {
       "command": "npx",
-      "args": ["-y", "@acessibilidade/magoo-mcp@1.3.4"]
+      "args": ["-y", "@acessibilidade/magoo-mcp@1.4.0"]
     }
   }
 }
 ```
 
-O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.3.4; atualizar o GitHub não atualiza automaticamente o pacote instalado.
+O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.4.0; atualizar o GitHub não atualiza automaticamente o pacote instalado.
 
 Experimente: **“Use o MCP Magoo para consultar o componente Modal e explicar seus comportamentos por teclado. Informe a versão consultada.”**
 

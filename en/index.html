@@ -327,7 +327,7 @@
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Content version: 1.3.4</p>
+          <p class="material-version">Content version: 1.4.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             View changelog
             <span class="sr-only"> (opens a window with additional content on this page) </span>
@@ -346,6 +346,21 @@
           </div>
           <p id="changelog-description">Content changes, from newest to oldest.</p>
           <div class="changelog-entries">
+            <section class="changelog-entry" aria-labelledby="version-1-4-0">
+              <h3 id="version-1-4-0">Version 1.4.0</h3>
+              <ul>
+                <li>Adds US English as the second native website language, with a translated homepage and documentation for all 29 components; Brazilian Portuguese remains the primary language.</li>
+                <li>Centralizes translations and routes in JSON files to simplify adding languages, with Portuguese at /pt-br and English at /en.</li>
+                <li>Translates English URLs, preserves the component and section when switching languages, and redirects previous routes.</li>
+                <li>Maintains a canonical URL for each language and updates hreflang, the sitemap, Open Graph, and Twitter Cards.</li>
+                <li>Adds lists and accessible names to the main menu and language selection, with native buttons, selection state, and a responsive layout.</li>
+                <li>Keeps Google Translate for other languages, with the Select other languages label associated with the combo box for screen readers only.</li>
+                <li>Displays only the Tudo é Acessibilidade logo in the English footer, removing the institutional phrase and divider from the image.</li>
+                <li>Standardizes HTML indentation and keeps opening tags and their attributes on one line, with automatic checks after the build.</li>
+                <li>Fixes Apache rules to serve /en and /pt-br without trailing slashes and prevent the English homepage access error.</li>
+                <li>Updates deployment documentation and static discovery for agents; the MCP server and the guidance it retrieves remain in Brazilian Portuguese.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-3-4">
               <h3 id="version-1-3-4">Version 1.3.4</h3>
               <ul>
@@ -625,12 +640,12 @@
               <div>
                 <dt>Arguments</dt>
                 <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.3.4</code>
+                  <code>-y @acessibilidade/magoo-mcp@1.4.0</code>
                   <p>
                     If the application asks for separate arguments, add
                     <code>-y</code>
                     and
-                    <code>@acessibilidade/magoo-mcp@1.3.4</code>
+                    <code>@acessibilidade/magoo-mcp@1.4.0</code>
                     as two items.
                   </p>
                 </dd>
@@ -766,7 +781,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.3.4 and does not automatically switch to a future version.</p>
+              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.4.0 and does not automatically switch to a future version.</p>
             </dd>
           </div>
           <div class="faq-item">

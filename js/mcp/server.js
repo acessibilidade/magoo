@@ -15,7 +15,7 @@ import { validateContent } from "../build/validate.js";
 export function createServer() {
   validateContent();
   const server = new McpServer(
-    { name: "magoo", version: "1.3.4" },
+    { name: "magoo", version: "1.4.0" },
     {
       instructions:
         "Biblioteca educacional de comportamentos de interação, somente leitura. Cite autor, versão, identificadores e referências. Não trate orientações como certificação nem afirme ter testado uma implementação. Diferencie conteúdo original de adaptações propostas.",

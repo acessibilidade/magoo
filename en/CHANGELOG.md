@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.4.0
+
+- Adds US English as the second native website language, with a translated homepage and documentation for all 29 components; Brazilian Portuguese remains the primary language.
+- Centralizes translations and routes in JSON files to simplify adding languages, with Portuguese at /pt-br and English at /en.
+- Translates English URLs, preserves the component and section when switching languages, and redirects previous routes.
+- Maintains a canonical URL for each language and updates hreflang, the sitemap, Open Graph, and Twitter Cards.
+- Adds lists and accessible names to the main menu and language selection, with native buttons, selection state, and a responsive layout.
+- Keeps Google Translate for other languages, with the Select other languages label associated with the combo box for screen readers only.
+- Displays only the Tudo é Acessibilidade logo in the English footer, removing the institutional phrase and divider from the image.
+- Standardizes HTML indentation and keeps opening tags and their attributes on one line, with automatic checks after the build.
+- Fixes Apache rules to serve /en and /pt-br without trailing slashes and prevent the English homepage access error.
+- Updates deployment documentation and static discovery for agents; the MCP server and the guidance it retrieves remain in Brazilian Portuguese.
+
 ## 1.3.4
 
 - Fixes the arrows on homepage links and automatically updates the component and category counts.
