@@ -1,3 +1,4 @@
+import { categoryPaths } from "../js/build/categories.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
@@ -14,7 +15,12 @@ import {
 
 test("Todas as páginas têm idiomas, destinos locais válidos e SEO correspondente", async () => {
   for (const locale of locales) {
-    for (const path of ["", "404.html", ...components.map((c) => c.path)]) {
+    for (const path of [
+      "",
+      "404.html",
+      ...categoryPaths(components),
+      ...components.map((c) => c.path),
+    ]) {
       const file = path
         ? localizedPath(locale.id, path).slice(1)
         : `${locale.id}/index.html`;

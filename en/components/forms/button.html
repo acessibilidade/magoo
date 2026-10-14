@@ -88,7 +88,13 @@
         <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">LIBRARY / FORMS</p>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/forms.html">Forms</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Button</span></li>
+          </ol>
+        </nav>
         <h1>Button</h1>
         <p>Triggers a task or changes a state. Labels, feedback, and behavior make the action predictable.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,22 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="botao-designer-guide-title">
+              <h3 id="botao-designer-guide-title">Quick guide for designers</h3>
+              <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
+              <h4>When to use</h4>
+              <p>Use to perform an action, such as saving or opening a component. Clearly define the expected result.</p>
+              <h4>What to draw</h4>
+              <p>Show default, hover, pressed, and keyboard focus states. If a disabled state exists, make the unavailable action clear.</p>
+              <h4>How it behaves</h4>
+              <p>Click, touch, Enter, and Space trigger the action. The person receives perceptible feedback that the button was activated.</p>
+              <h4>What to document in Figma</h4>
+              <p>Record each button’s purpose, the action result, and disabled behavior. If it opens or closes another component, document how that state will be communicated.</p>
+              <h4>How to review</h4>
+              <p>Does the text explain the action unambiguously? Are states distinguishable? Does the touch area work on small screens? Is keyboard focus visible? Activation and announcement as a button need implementation checks.</p>
+            </div>
+            <h3>Full guidance</h3>
+
             <h2 class="titulo-mobile">Interaction Design</h2>
             <p class="mt-3">Questions to ask when designing interactive components of type <span class="destaque">Button</span>.</p>
             <p><strong>Important:</strong><br />Depending on the context in which you build your components, there may be further questions, and some listed here may not be necessary. Assess each case individually.</p>

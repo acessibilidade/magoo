@@ -7,9 +7,27 @@ const schema = JSON.parse(
   await readFile(new URL("content/component.schema.json", root), "utf8"),
 );
 const validate = new Ajv({ allErrors: true }).compile(schema);
+const packageVersion = JSON.parse(
+  await readFile(new URL("package.json", root), "utf8"),
+).version;
+const lock = await readFile(new URL("package-lock.json", root), "utf8")
+  .then(JSON.parse)
+  .catch((error) => {
+    if (error.code === "ENOENT") return null;
+    throw error;
+  });
 export function validateContent() {
+  if (
+    [
+      catalog.contentVersion,
+      ...(lock ? [lock.version, lock.packages[""].version] : []),
+    ].some((v) => v !== packageVersion)
+  )
+    throw new Error("Versões divergentes entre pacote, lockfile e catálogo");
   const ids = new Set();
   for (const c of components) {
+    if (c.contentVersion !== catalog.contentVersion)
+      throw new Error(`Versão divergente: ${c.id}`);
     if (!validate(c))
       throw new Error(`${c.id}: ${JSON.stringify(validate.errors)}`);
     if (ids.has(c.id)) throw new Error(`ID duplicado: ${c.id}`);

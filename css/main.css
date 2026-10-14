@@ -1232,12 +1232,10 @@ small,
 }
 
 .mcp-guide {
-  margin-top: 32px;
-  padding-top: 24px;
-  border-top: 1px solid #c0cdae;
+  margin: 0;
 }
-.mcp-guide h3 {
-  font-size: 1.4rem;
+.mcp-guide > h3 {
+  font-size: 1.65rem;
   color: var(--green);
 }
 .mcp-guide .material-icons {
@@ -1727,5 +1725,247 @@ body.changelog-open {
 @media (max-width: 700px) {
   .language-options li {
     flex: 1 1 auto;
+  }
+}
+
+/* Guia rápido: proximidade entre título e explicação. */
+.designer-guide {
+  padding: 24px;
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  background: #eef3e2;
+  overflow-wrap: anywhere;
+}
+.tab-pane .designer-guide h3 {
+  margin: 0 0 12px;
+}
+.tab-pane .designer-guide h4 {
+  margin: 20px 0 6px;
+}
+.tab-pane .designer-guide p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 540px) {
+  .designer-guide {
+    padding: 16px;
+  }
+}
+
+/* Trilha de navegação e índices de categorias. */
+.page-breadcrumb {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.page-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.page-breadcrumb li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.page-breadcrumb a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.page-breadcrumb [aria-current="page"] {
+  font-weight: 700;
+}
+.breadcrumb-separator {
+  color: var(--muted);
+}
+.category-component-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.category-component-list > li {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.category-component-list h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+.category-component-list p {
+  margin: 0;
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+
+/* Passo a passo para designers, visível antes das abas por perfil. */
+.figma-guide {
+  margin-block: 28px;
+  padding: 28px;
+  border: 1px solid var(--green);
+  border-radius: 16px;
+  background: #eef3e2;
+  overflow-wrap: anywhere;
+}
+.figma-guide h3 {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+}
+.figma-guide h4 {
+  margin: 24px 0 8px;
+  font-size: 1.25rem;
+}
+.figma-setup-steps {
+  margin: 16px 0;
+  padding: 0;
+  list-style: none;
+}
+.figma-setup-steps > li {
+  margin-top: 24px;
+}
+.figma-setup-steps h5 {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+}
+.figma-guide p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+.figma-guide a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.figma-guide blockquote {
+  margin: 12px 0;
+  padding: 16px;
+  border-left: 3px solid var(--green);
+  background: var(--paper);
+  font-size: 1rem;
+}
+.figma-availability {
+  padding-top: 16px;
+  border-top: 1px solid var(--green);
+}
+@media (max-width: 540px) {
+  .figma-guide {
+    padding: 18px;
+  }
+}
+
+/* Três caminhos independentes de uso do Magoo. */
+.figma-instructions-layout > .figma-guide {
+  margin: 0;
+  padding: 32px;
+  border: 1px solid #d4ddc2;
+  border-radius: 12px;
+}
+.project-context > .context-card > h3 {
+  margin: 0 0 16px;
+  font-size: 1.65rem;
+  line-height: 1.35;
+  color: var(--green);
+}
+.instruction-paths ul {
+  display: block;
+  margin: 0;
+  padding-left: 24px;
+  list-style: disc;
+}
+.instruction-paths a {
+  display: inline-block;
+  padding-block: 8px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 540px) {
+  .figma-instructions-layout > .figma-guide {
+    padding: 20px;
+  }
+}
+.figma-guide .figma-setup-steps {
+  padding: 0;
+}
+
+/* Espaço uniforme de 16px entre títulos de seção e seu conteúdo. */
+.home-page .catalog .section-heading h2,
+.home-page .audience > h2 {
+  margin: 0 0 16px;
+}
+.home-page .library-introduction {
+  margin: 0;
+}
+.home-page .project-context {
+  gap: 0;
+}
+.home-page .project-context > h2 {
+  margin: 0;
+}
+.home-page .project-context > * + * {
+  margin-top: 24px;
+}
+.home-page .project-context > h2 + .instruction-paths {
+  margin-top: 16px;
+}
+.instruction-paths li:first-child a {
+  padding-top: 0;
+}
+
+/* Skill nativa do Figma ao lado das instruções para o Codex. */
+.figma-instructions-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 24px;
+}
+.native-skill-guide {
+  background: #fff8d9;
+  border-color: #d5c68e;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.native-skill-guide > h3 {
+  margin: 0 0 16px;
+}
+.native-skill-guide h4 {
+  margin: 24px 0 8px;
+  font-size: 1.25rem;
+}
+.native-skill-guide p,
+.native-skill-guide li,
+.native-skill-guide dd {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.native-skill-fields {
+  margin: 24px 0;
+}
+.native-skill-fields > div + div {
+  margin-top: 20px;
+}
+.native-skill-fields dt {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.native-skill-fields dd {
+  margin: 0;
+}
+.native-skill-guide blockquote {
+  margin: 0;
+  padding: 16px;
+  border-left: 3px solid #8b7423;
+  background: #fffdf3;
+  font-size: 1rem;
+}
+.native-skill-guide a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 1000px) {
+  .figma-instructions-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

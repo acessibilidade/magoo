@@ -1,3 +1,9 @@
+import {
+  categoryNames,
+  categoryPath,
+  breadcrumb,
+  categoryIndex,
+} from "./categories.js";
 import { readFile, writeFile } from "node:fs/promises";
 import { load } from "cheerio";
 import { format } from "prettier";
@@ -83,8 +89,9 @@ for (const c of components) {
   });
   const $ = load(html);
   updateSharingMetadata($, c.path);
+  $(".component-heading .eyebrow").replaceWith(breadcrumb(c.category, c));
   $(".component-heading h1").text(c.name);
-  $(".component-heading > p").eq(1).text(c.summary);
+  $(".component-heading > p").eq(0).text(c.summary);
   $("title").text(`${c.name} | Magoo`);
   $(
     'meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]',
@@ -113,6 +120,33 @@ for (const c of components) {
     }),
   );
 }
+for (const [category, name] of Object.entries(categoryNames)) {
+  const path = categoryPath(category);
+  const $ = load(
+    await readFile(new URL("templates/category.html", root), "utf8"),
+  );
+  $(".component-heading .eyebrow").replaceWith(breadcrumb(category));
+  $(".component-heading h1").text(name);
+  $(".component-heading > p").text(
+    "Explore os componentes desta categoria e consulte suas orientações de interação.",
+  );
+  $("#conteudo").html(
+    categoryIndex(components.filter((c) => c.category === category)),
+  );
+  $("title").text(`${name} | Magoo`);
+  $('meta[property="og:title"],meta[name="twitter:title"]').attr(
+    "content",
+    `${name} | Magoo`,
+  );
+  $(
+    'meta[name="description"],meta[property="og:description"],meta[name="twitter:description"]',
+  ).attr(
+    "content",
+    "Explore os componentes desta categoria e consulte suas orientações de interação.",
+  );
+  updateSharingMetadata($, path);
+  await writeLocalizedPages($.html(), path);
+}
 const $ = load(await readFile(new URL("templates/index.html", root), "utf8"));
 const changelog = JSON.parse(
   await readFile(new URL("content/changelog.json", root), "utf8"),
@@ -139,6 +173,20 @@ await writeFile(
 );
 updateSharingMetadata($, "");
 updateLinks($, "");
+$(".category > h3").each((_, element) => {
+  const name = $(element).text().trim();
+  const category = Object.keys(categoryNames).find(
+    (key) => categoryNames[key] === name,
+  );
+  if (category)
+    $(element)
+      .empty()
+      .append(
+        $("<a>")
+          .attr("href", `/${categoryPath(category)}`)
+          .text(name),
+      );
+});
 $(".category a[href]").each((_, el) => {
   if (!$(el).children(".material-icons").length)
     $(el).append(

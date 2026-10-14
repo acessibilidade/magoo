@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { realpathSync } from "node:fs";
+import { readFileSync, realpathSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
@@ -12,10 +12,13 @@ import {
   search,
 } from "../lib/catalog.js";
 import { validateContent } from "../build/validate.js";
+const packageVersion = JSON.parse(
+  readFileSync(new URL("../../package.json", import.meta.url), "utf8"),
+).version;
 export function createServer() {
   validateContent();
   const server = new McpServer(
-    { name: "magoo", version: "1.4.0" },
+    { name: "magoo", version: packageVersion },
     {
       instructions:
         "Biblioteca educacional de comportamentos de interação, somente leitura. Cite autor, versão, identificadores e referências. Não trate orientações como certificação nem afirme ter testado uma implementação. Diferencie conteúdo original de adaptações propostas.",

@@ -90,7 +90,13 @@
         <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">LIBRARY / FORMS</p>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/forms.html">Forms</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Input "text"</span></li>
+          </ol>
+        </nav>
         <h1>Input "text"</h1>
         <p>Allows entering and editing text on a single line.</p>
         <p class="reference-shortcut">
@@ -193,6 +199,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="input-text-designer-guide-title">
+              <h3 id="input-text-designer-guide-title">Quick guide for designers</h3>
+              <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
+              <h4>When to use</h4>
+              <p>Use for single-line text. For multiline answers, choose a field suited to that purpose.</p>
+              <h4>What to draw</h4>
+              <p>Show a persistent visible label and empty, filled, and error states. Include focus, disabled, and read-only states where applicable. Distinguish states without relying on color alone.</p>
+              <h4>How it behaves</h4>
+              <p>Clicking or tapping the field or its associated label allows editing. Keyboard navigation follows interface order and is not trapped in the field. On error, preserve entered text and explain how to correct it.</p>
+              <h4>What to document in Figma</h4>
+              <p>Record the label, instructions, required status, limits, and error messages. Define Enter behavior in the form and navigation order. Document what information screen readers should announce.</p>
+              <h4>How to review</h4>
+              <p>Does the label remain visible after entry? Does the error explain the correction? Can people still see and edit the field with zoom and the virtual keyboard? Label association, announcements, and keyboard editing need implementation checks.</p>
+            </div>
+            <h3>Full guidance</h3>
             <h2 class="titulo-mobile">Interaction Design</h2>
             <p class="mt-3">Questions to ask when designing Input "text" components.</p>
             <p>Assess each guideline according to the component's context of use.</p>

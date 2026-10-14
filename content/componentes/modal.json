@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.0.1",
+  "contentVersion": "1.5.0",
   "id": "modal",
   "name": "Modal",
   "category": "elementos-ocultos",
@@ -19,6 +19,232 @@
       "title": "Design de interação",
       "panelId": "aba-interacao-conteudo",
       "blocks": [
+        {
+          "type": "element",
+          "id": "modal.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "modal-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "modal.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "modal-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.2",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.3",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.4",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use quando uma tarefa ou informação precisar interromper o fluxo. Primeiro avalie se essa interrupção é necessária."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.5",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.6",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre o controle que abre a janela, a janela aberta acima do conteúdo, o título, as ações e uma forma visível de fechar ou cancelar."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.7",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.8",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao abrir, a navegação pelo teclado começa em um ponto adequado dentro da janela e permanece nela. Ao fechar, volta ao controle de abertura ou a um ponto coerente do fluxo. Escape pode fechar quando isso não causar perda de dados sem confirmação."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.9",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.10",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Anote onde a navegação começa e retorna, a ordem dos controles e o nome anunciado pelo leitor de telas. Registre se clicar fora fecha a janela e como evitar perda de dados. O conteúdo ao fundo fica indisponível enquanto ela estiver aberta."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.11",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "modal.designer-guide.12",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A abertura tem objetivo claro? É fácil cancelar? O conteúdo e as ações cabem em telas pequenas e grandes? Registre como pendentes de implementação a navegação pelo teclado e os anúncios do leitor de telas."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "modal.designer-guide.13",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Orientações completas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
         {
           "type": "text",
           "value": "\n            "

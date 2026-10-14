@@ -37,10 +37,10 @@ SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary
 # Descoberta estática para agentes; mod_headers é opcional no servidor.
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
-    Header add Link "</.well-known/ard.json>; rel=\"ard\", </llms.txt>; rel=\"describedby\""
+    Header add Link "</.well-known/ard.json>; rel=\"ard\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\", </llms.txt>; rel=\"describedby\""
   </FilesMatch>
-  <Files "ard.json">
+  <FilesMatch "^(ard|ai-catalog)\.json$">
     Header set Access-Control-Allow-Origin "*"
     Header set Content-Type "application/json"
-  </Files>
+  </FilesMatch>
 </IfModule>

@@ -88,7 +88,13 @@
         <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">BIBLIOTECA / ELEMENTOS OCULTOS</p>
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/elementos-ocultos.html">Elementos ocultos</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Modal</span></li>
+          </ol>
+        </nav>
         <h1>Modal</h1>
         <p>Exibe uma tarefa ou informação sobre a página, exigindo atenção à entrada, à permanência e à saída do foco.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,22 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="modal-designer-guide-title">
+              <h3 id="modal-designer-guide-title">Guia rápido para designers</h3>
+              <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
+              <h4>Quando usar</h4>
+              <p>Use quando uma tarefa ou informação precisar interromper o fluxo. Primeiro avalie se essa interrupção é necessária.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre o controle que abre a janela, a janela aberta acima do conteúdo, o título, as ações e uma forma visível de fechar ou cancelar.</p>
+              <h4>Como se comporta</h4>
+              <p>Ao abrir, a navegação pelo teclado começa em um ponto adequado dentro da janela e permanece nela. Ao fechar, volta ao controle de abertura ou a um ponto coerente do fluxo. Escape pode fechar quando isso não causar perda de dados sem confirmação.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Anote onde a navegação começa e retorna, a ordem dos controles e o nome anunciado pelo leitor de telas. Registre se clicar fora fecha a janela e como evitar perda de dados. O conteúdo ao fundo fica indisponível enquanto ela estiver aberta.</p>
+              <h4>Como revisar</h4>
+              <p>A abertura tem objetivo claro? É fácil cancelar? O conteúdo e as ações cabem em telas pequenas e grandes? Registre como pendentes de implementação a navegação pelo teclado e os anúncios do leitor de telas.</p>
+            </div>
+            <h3>Orientações completas</h3>
+
             <h2 class="titulo-mobile">Design de Interação</h2>
             <p class="mt-3">Questionamentos que devem ser feitos ao se projetar componentes interativos do tipo <span class="destaque">Modal</span>.</p>
             <p><strong>Importante:</strong><br />Dependendo do contexto de construção de seus respectivos componentes, é possível que haja mais questionamentos, bem como alguns dos apresentados aqui não ser necessários. A avaliação precisa ser feita caso a caso.</p>

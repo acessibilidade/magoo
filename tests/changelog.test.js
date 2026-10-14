@@ -121,7 +121,11 @@ test("Home mostra contagem do catálogo e setas em todos os links de componentes
     $(".catalog-count").text(),
     `${catalog.components.length} componentes · ${new Set(catalog.components.map((c) => c.category)).size} categorias`,
   );
-  const links = $(".category a[href]");
+  const links = $(".category ul a[href]");
+  assert.equal(
+    $(".category > h3 > a[href]").length,
+    new Set(catalog.components.map((c) => c.category)).size,
+  );
   assert.equal(links.length, catalog.components.length);
   links.each((_, el) => {
     const icon = $(el).children(".material-icons");

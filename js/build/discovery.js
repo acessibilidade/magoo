@@ -1,3 +1,4 @@
+import { categoryPaths } from "./categories.js";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { catalog, components } from "../lib/catalog.js";
@@ -24,7 +25,7 @@ export async function writeDiscovery({
   contentCatalog = catalog,
 } = {}) {
   const pkg = JSON.parse(await readFile(new URL("package.json", root), "utf8"));
-  const paths = ["", ...entries.map((c) => c.path)];
+  const paths = ["", ...categoryPaths(entries), ...entries.map((c) => c.path)];
   const urls = locales.flatMap((locale) =>
     paths.map((path) => localizedUrl(locale.id, path)),
   );
@@ -36,7 +37,7 @@ export async function writeDiscovery({
   );
   await writeFile(
     new URL("robots.txt", outputRoot),
-    "User-agent: *\nAllow: /\n\nSitemap: https://magoo.cc/sitemap.xml\nAgentmap: https://magoo.cc/.well-known/ard.json\n",
+    "User-agent: *\nAllow: /\n\nSitemap: https://magoo.cc/sitemap.xml\n",
   );
   const instructions =
     "Material educacional, não certificação de acessibilidade. Cite Marcelo Sales, a versão consultada, os IDs e as referências. Diferencie conteúdo original de adaptações. A consulta não executa testes nem comprova conformidade de uma implementação.";
@@ -51,6 +52,7 @@ export async function writeDiscovery({
     "get_references",
   ];
   const manifest = {
+    specVersion: "1.0",
     entries: [
       {
         "@context": "https://agenticresourcediscovery.org/context/v1",
@@ -101,10 +103,13 @@ export async function writeDiscovery({
     ],
   };
   await mkdir(new URL(".well-known/", outputRoot), { recursive: true });
-  await writeFile(
-    new URL(".well-known/ard.json", outputRoot),
-    JSON.stringify(manifest, null, 2) + "\n",
-  );
+  const manifestJson = JSON.stringify(manifest, null, 2) + "\n";
+  for (const filename of ["ard.json", "ai-catalog.json"]) {
+    await writeFile(
+      new URL(`.well-known/${filename}`, outputRoot),
+      manifestJson,
+    );
+  }
 }
 
 if (

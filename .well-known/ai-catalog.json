@@ -1,0 +1,65 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:magoo.cc:server:magoo-mcp",
+      "displayName": "Magoo MCP",
+      "type": "application/agent-card+json",
+      "description": "Consulta local, somente de leitura, da biblioteca educacional de comportamentos de interação Magoo.",
+      "version": "1.5.0",
+      "capabilities": [
+        "search_components",
+        "get_component",
+        "get_acceptance_criteria",
+        "get_references"
+      ],
+      "tags": [
+        "accessibility",
+        "interaction-design",
+        "pt-BR",
+        "read-only",
+        "mcp"
+      ],
+      "representativeQueries": [
+        "Consulte os comportamentos por teclado do componente Modal no Magoo.",
+        "Recupere os critérios de aceite de Accordion, com IDs, autoria e versão.",
+        "Mostre as referências do componente Alertas e diferencie o material original de sugestões."
+      ],
+      "data": {
+        "name": "magoo",
+        "version": "1.5.0",
+        "protocol": "mcp",
+        "transport": "stdio",
+        "installation": {
+          "package": "@acessibilidade/magoo-mcp",
+          "runtime": "Node.js >=20.19",
+          "command": "npx",
+          "args": [
+            "-y",
+            "@acessibilidade/magoo-mcp@1.5.0"
+          ]
+        },
+        "tools": [
+          "search_components",
+          "get_component",
+          "get_acceptance_criteria",
+          "get_references"
+        ],
+        "resources": [
+          "magoo://catalog",
+          "magoo://components/{id}"
+        ],
+        "instructions": "Material educacional, não certificação de acessibilidade. Cite Marcelo Sales, a versão consultada, os IDs e as referências. Diferencie conteúdo original de adaptações. A consulta não executa testes nem comprova conformidade de uma implementação.",
+        "documentation": "https://github.com/acessibilidade/magoo/blob/master/README.md"
+      },
+      "metadata": {
+        "author": "Marcelo Sales",
+        "contentVersion": "1.5.0",
+        "language": "pt-BR",
+        "license": "MIT",
+        "componentCount": 29
+      }
+    }
+  ]
+}

@@ -88,7 +88,13 @@
         <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">BIBLIOTECA / FORMULÁRIOS</p>
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/formularios.html">Formulários</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Input "text"</span></li>
+          </ol>
+        </nav>
         <h1>Input "text"</h1>
         <p>Permite inserir e editar texto em uma única linha.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="input-text-designer-guide-title">
+              <h3 id="input-text-designer-guide-title">Guia rápido para designers</h3>
+              <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
+              <h4>Quando usar</h4>
+              <p>Use para texto em uma linha. Para respostas com várias linhas, escolha um campo adequado a esse uso.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre o rótulo sempre visível e os estados vazio, preenchido e com erro. Inclua foco, desabilitado e somente leitura quando aplicáveis. Diferencie os estados sem depender apenas de cor.</p>
+              <h4>Como se comporta</h4>
+              <p>Clicar ou tocar no campo ou no rótulo associado permite editar. A navegação pelo teclado segue a ordem da interface e não fica presa no campo. Em caso de erro, preserve o texto digitado e explique como corrigir.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Registre rótulo, instruções, obrigatoriedade, limites e mensagens de erro. Defina a ação de Enter no formulário e a ordem de navegação. Documente quais informações devem ser anunciadas pelo leitor de telas.</p>
+              <h4>Como revisar</h4>
+              <p>O rótulo continua visível depois de preencher? O erro explica a correção? Com ampliação e teclado virtual, a pessoa ainda vê e edita o campo? Associação do rótulo, anúncios e edição pelo teclado precisam ser verificados na implementação.</p>
+            </div>
+            <h3>Orientações completas</h3>
             <h2 class="titulo-mobile">Design de Interação</h2>
             <p class="mt-3">Questionamentos que devem ser feitos ao projetar componentes do tipo Input "text".</p>
             <p>Avalie cada orientação conforme o contexto de uso do componente.</p>

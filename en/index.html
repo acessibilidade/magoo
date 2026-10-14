@@ -202,7 +202,9 @@
         <div class="categories">
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> view_quilt </span>
-            <h3>Structure</h3>
+            <h3>
+              <a href="/en/categories/structure.html">Structure<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li class="upcoming">
                 Flexbox &amp; Grid
@@ -228,7 +230,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> chat_bubble_outline </span>
-            <h3>Messages</h3>
+            <h3>
+              <a href="/en/categories/messages.html">Messages<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/en/components/messages/alerts.html">Alerts<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -246,7 +250,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> near_me </span>
-            <h3>Navigation</h3>
+            <h3>
+              <a href="/en/categories/navigation.html">Navigation<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/en/components/navigation/breadcrumb.html">Breadcrumb<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -270,7 +276,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> layers </span>
-            <h3>Hidden elements</h3>
+            <h3>
+              <a href="/en/categories/hidden-elements.html">Hidden elements<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/en/components/hidden-elements/accordion.html">Accordion<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -291,7 +299,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> tune </span>
-            <h3>Forms</h3>
+            <h3>
+              <a href="/en/categories/forms.html">Forms<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/en/components/forms/button.html">Button<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -327,7 +337,7 @@
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Content version: 1.4.0</p>
+          <p class="material-version">Content version: 1.5.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             View changelog
             <span class="sr-only"> (opens a window with additional content on this page) </span>
@@ -346,6 +356,18 @@
           </div>
           <p id="changelog-description">Content changes, from newest to oldest.</p>
           <div class="changelog-entries">
+            <section class="changelog-entry" aria-labelledby="version-1-5-0">
+              <h3 id="version-1-5-0">Version 1.5.0</h3>
+              <ul>
+                <li>Adds plain-language quick guides for Modal, Button, and Input text while preserving the full guidance.</li>
+                <li>Prepares the Magoo in Figma skill for reviewing and documenting behavior.</li>
+                <li>Aligns local snapshot versions and validates differences between package, lockfile, catalog, and components.</li>
+                <li>Extends quick guides to all 29 components, with framed panels, 1rem paragraphs, and English translations.</li>
+                <li>Adds indexes for the five categories and breadcrumbs linking to parent levels with an unlinked current page.</li>
+                <li>Highlights Magoo with Figma on the homepage, with beginner setup guidance and a skill download.</li>
+                <li>Fixes validation to work in the npm package without a lockfile and includes the skill in the distribution.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-4-0">
               <h3 id="version-1-4-0">Version 1.4.0</h3>
               <ul>
@@ -469,9 +491,23 @@
 
       <section class="project-context wrap" aria-labelledby="how-to-title">
         <h2 id="how-to-title" tabindex="-1">How to use?</h2>
-        <article class="context-card">
-          <h3 id="implementation-title">Instructions for including this document as a reference in your design system</h3>
-          <p>Choose your role to view the guidance. The MCP setup shown after the tabs can be used by anyone with a compatible assistant.</p>
+        <nav class="instruction-paths" aria-label="Choose how to use Magoo">
+          <ul>
+            <li>
+              <a href="#implementation-title">Instructions for including Magoo in your design system<span class="sr-only"> (opens the section on this page)</span></a>
+            </li>
+            <li>
+              <a href="#figma-guide-title">Instructions for using Magoo with Figma<span class="sr-only"> (opens the section on this page)</span></a>
+            </li>
+            <li>
+              <a href="#mcp-setup-title">Instructions for using Magoo with your preferred AI<span class="sr-only"> (opens the section on this page)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <article class="context-card" id="design-system-guide" aria-labelledby="implementation-title">
+          <h3 id="implementation-title">Instructions for including Magoo in your design system</h3>
+          <p>Use Magoo as a reference to define, document, and verify behavior. Choose your role in the tabs below for guidance on applying it to your design system.</p>
+
           <div class="usage-tabs">
             <div class="nav nav-tabs" role="tablist" aria-label="Guidance by role">
               <button type="button" class="nav-link" role="tab" id="usage-tab-dev" aria-controls="usage-panel-dev" aria-selected="true">For developers</button>
@@ -503,42 +539,20 @@
                   Test the implementation with keyboards, screen readers, touch, and zoom. Record results and reassess adaptations when the reference or component changes. The reference alone does not prove an implementation is accessible.
                 </li>
               </ol>
-              <p>
-                With the MCP configured below, use
-                <code>get_component</code>
-                to retrieve the guidance and
-                <code>get_acceptance_criteria</code>
-                to get the acceptance scenarios. The package provides documentation; the components must be implemented in your project.
-              </p>
             </section>
             <section class="usage-panel" id="usage-panel-design" role="tabpanel" aria-labelledby="usage-tab-design" tabindex="0">
-              <h4>Document decisions in Figma</h4>
+              <h4>Document design decisions</h4>
               <ol>
                 <li>
                   <strong>Choose the component in Magoo.</strong>
                   Read the interaction design, interaction methods, and considerations before designing the states.
                 </li>
-                <li>
-                  <strong>Create a guidance page in Figma.</strong>
-                  Record expected behaviors, states, focus, keyboard operation, and project adaptations.
-                </li>
+                <li><strong>Record decisions in your design system.</strong> Document states, keyboard navigation, focus, and the adaptations needed for your project.</li>
                 <li>
                   <strong>Include the reference.</strong>
                   Include the component link, the version used, and the date accessed in your design system documentation.
                 </li>
-                <li>
-                  <strong>Use an assistant if you wish.</strong>
-                  Configure the local MCP as described below and take the retrieved guidance into Figma. A separate Figma integration is needed for the assistant to read your design file too.
-                </li>
               </ol>
-              <p>
-                <strong>Suggested instruction:</strong>
-                “Before proposing or reviewing this component's behaviors, consult the Magoo MCP. Consider keyboard, focus, states, and acceptance criteria. State the version and distinguish library guidance from project adaptations. If you cannot consult Magoo, state that limitation.”
-              </p>
-              <p>
-                <strong>Direct connection in Figma:</strong>
-                custom connectors for the Figma agent and Figma Make require a remote MCP server URL. Magoo currently uses local npx/STDIO and does not yet provide that address. Recording an instruction in the file does not automatically enable a connection.
-              </p>
             </section>
             <section class="usage-panel" id="usage-panel-tests" role="tabpanel" aria-labelledby="usage-tab-tests" tabindex="0">
               <h4>Turn guidance into checks</h4>
@@ -592,75 +606,153 @@
               </p>
             </section>
           </div>
-
-          <div class="mcp-guide">
-            <h3>How to use Magoo with your AI</h3>
-            <p>
-              You can ask your AI to consult Magoo before suggesting how a component should work. To do so, you need to connect the library once. This connection is called
-              <strong>MCP</strong>
-              .
-            </p>
-            <p>
-              <strong>Prefer not to configure anything?</strong>
-              Browse the components here on the website and copy the passage you want to discuss with your AI.
-            </p>
-            <ol>
+        </article>
+        <div class="figma-instructions-layout">
+          <article class="context-card figma-guide" aria-labelledby="figma-guide-title" id="figma-guide">
+            <h3 id="figma-guide-title">Instructions for using Magoo with Figma</h3>
+            <p>Review states, discover pending decisions, and prepare behavior annotations using guides for all 29 components. You can start without writing code.</p>
+            <p>The skill is a set of instructions for the assistant. In this walkthrough, it is installed in Codex, which connects to Figma. There is no Magoo plugin to install inside the Figma editor.</p>
+            <h4>First time? Follow these steps</h4>
+            <ol class="figma-setup-steps">
               <li>
-                <strong>Prepare your computer.</strong>
-                You need Node.js 20.19 or later installed. It allows the connection to run on your computer. If you don't have it yet, download the installer from
-                <a href="https://nodejs.org/pt" target="_blank" rel="noopener noreferrer">
-                  nodejs.org
-                  <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
-                  <span class="sr-only"> (external link, opens in a new tab) </span>
-                </a>
-                and follow the installation instructions.
+                <h5>1. Open Codex on your computer</h5>
+                <p>Install the app and sign in. You also need a Figma account with access to the file you want to review.</p>
+                <p>
+                  <a href="https://developers.openai.com/codex/app/" target="_blank" rel="noopener noreferrer">Open the official Codex guide<span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+                </p>
               </li>
               <li>
-                <strong>Open your AI settings.</strong>
-                Look for the option to add an MCP server. Not every application supports this connection: it must let you enter a command to run on your computer. If it only asks for a URL, that option does not work with Magoo's current version.
+                <h5>2. Connect your Figma account</h5>
+                <p>In Codex, open Plugins, find Figma, and choose to install it. Sign in to Figma and authorize access when prompted. Return to Codex to continue.</p>
+                <p>
+                  <a href="https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex" target="_blank" rel="noopener noreferrer">See Figma’s official walkthrough<span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+                </p>
               </li>
               <li>
-                <strong>Copy the details below.</strong>
-                Fill each field with the value shown. You don't need to understand the commands or create an npm account.
+                <h5>3. Download the Magoo in Figma skill</h5>
+                <p>Download the ZIP and extract it. On Mac, double-clicking usually works; on Windows, use Extract All. You will get a folder named magoo-figma. Keep it somewhere easy to find.</p>
+                <p><a href="/downloads/magoo-figma.zip" download="magoo-figma.zip">Download Magoo in Figma skill (ZIP)</a></p>
+              </li>
+              <li>
+                <h5>4. Ask Codex to install the skill</h5>
+                <p>Drag the skill file into the Codex window or provide the folder location on your computer and send the request below, replacing the bracketed text with the real path. You do not need to edit the files.</p>
+                <blockquote>Install the magoo-figma skill from [folder path on my computer] for my personal use. Check that it is available and tell me if I need to start a new conversation.</blockquote>
+              </li>
+              <li>
+                <h5>5. Connect the Magoo library</h5>
+                <p>The skill organizes the work but needs to consult the library. Configure the Magoo connection using the MCP instructions on this page. MCP is the connection that lets an assistant consult another tool.</p>
+                <p>
+                  <a href="#mcp-setup-title">Go to Magoo setup<span class="sr-only"> (opens the section on this page)</span></a>
+                </p>
+              </li>
+              <li>
+                <h5>6. Copy your component’s link in Figma</h5>
+                <p>Open the file, select the component or frame you want reviewed, and copy the selection’s link. Paste the link in Codex with this request:</p>
+                <blockquote>Use $magoo-figma to review this component: [paste the Figma link]. Explain in plain language what is visible, what I need to document, and what needs implementation checks. Consult Magoo and report the version used.</blockquote>
               </li>
             </ol>
-            <dl class="mcp-settings">
+            <h4>How to know you are ready</h4>
+            <p>Ask the assistant to confirm it can find the skill, consult Magoo, and read the linked component. If anything is missing, it should explain which connection needs attention. To write annotations in Figma, request that action and identify the destination file.</p>
+            <p class="figma-availability">Guides for all 29 components are part of version 1.5.0. When setting up Magoo, use the version shown on this page and ask the assistant to confirm the version consulted. Older connections need updating and restarting.</p>
+          </article>
+          <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
+            <h3 id="native-skill-title">Instructions for using Magoo as a skill</h3>
+            <p>Create a skill within Figma to repeat reviews without rewriting the guidance. This route uses the Figma agent and consults Magoo through the website.</p>
+            <ol>
+              <li>Open your file in Figma and enter the agent chat.</li>
+              <li>In the prompt box, open the add-context menu and choose Skills → Add skill.</li>
+              <li>Choose Start from scratch and fill in the fields below.</li>
+              <li>Confirm with Add. Then type /magoo in the chat and describe what you want reviewed.</li>
+            </ol>
+            <dl class="native-skill-fields">
               <div>
-                <dt>Name</dt>
+                <dt>Skill name</dt>
                 <dd><code>magoo</code></dd>
               </div>
               <div>
-                <dt>Connection type</dt>
-                <dd>STDIO (local)</dd>
+                <dt>Skill description</dt>
+                <dd>Review components and document interaction decisions using Magoo in plain language.</dd>
               </div>
               <div>
-                <dt>Command</dt>
-                <dd><code>npx</code></dd>
-              </div>
-              <div>
-                <dt>Arguments</dt>
-                <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.4.0</code>
-                  <p>
-                    If the application asks for separate arguments, add
-                    <code>-y</code>
-                    and
-                    <code>@acessibilidade/magoo-mcp@1.4.0</code>
-                    as two items.
-                  </p>
-                </dd>
+                <dt>Skill instructions</dt>
+                <dd><blockquote>Before creating, editing, or reviewing a component, consult https://magoo.cc/llms.txt and locate its guidance. Preserve the components, styles, and variables of the library in use. Explain what to draw, how it behaves, and which decisions need documentation. Distinguish what is visible in the design from what needs implementation checks. Credit Marcelo Sales and report the version and references consulted. Separate your suggestions from original content. If you cannot access the source, report the limitation and request the necessary excerpt. When asked, record decisions in the file.</blockquote></dd>
               </div>
             </dl>
+            <h4>Try it after adding</h4>
+            <blockquote>/magoo review this modal and identify missing documentation about opening, closing, and keyboard navigation.</blockquote>
+            <p>Adding the skill saves its instructions; it does not create an MCP connection. If the agent cannot read the website, provide the component content for review.</p>
             <p>
-              <strong>Save and start chatting.</strong>
-              If Magoo does not appear among the connections, close and reopen the application. The first time, it needs internet access to download the library.
+              <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Create-and-manage-custom-skills-in-Figma" target="_blank" rel="noopener noreferrer">Consult the official Figma skills guide<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
             </p>
-            <p>
-              <strong>Try this request:</strong>
-              “Consult Magoo and explain how a modal should work with the keyboard. State the library version used.”
-            </p>
-            <p>Magoo provides guidance for AI to consult. It does not automatically change your project or design file.</p>
-          </div>
+          </aside>
+        </div>
+        <article class="context-card mcp-guide" aria-labelledby="mcp-setup-title">
+          <h3 id="mcp-setup-title">Instructions for using Magoo with your preferred AI</h3>
+          <p>
+            You can ask your AI to consult Magoo before suggesting how a component should work. To do so, you need to connect the library once. This connection is called
+            <strong>MCP</strong>
+            .
+          </p>
+          <p>
+            <strong>Prefer not to configure anything?</strong>
+            Browse the components here on the website and copy the passage you want to discuss with your AI.
+          </p>
+          <ol>
+            <li>
+              <strong>Prepare your computer.</strong>
+              You need Node.js 20.19 or later installed. It allows the connection to run on your computer. If you don't have it yet, download the installer from
+              <a href="https://nodejs.org/pt" target="_blank" rel="noopener noreferrer">
+                nodejs.org
+                <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                <span class="sr-only"> (external link, opens in a new tab) </span>
+              </a>
+              and follow the installation instructions.
+            </li>
+            <li>
+              <strong>Open your AI settings.</strong>
+              Look for the option to add an MCP server or ask the AI itself how to add one. Not every application supports this connection: it needs to let you enter a command to run on your computer. If it only asks for a URL, that option does not work with the current version of Magoo.
+            </li>
+            <li>
+              <strong>Copy the details below.</strong>
+              Fill each field with the value shown. You don't need to understand the commands or create an npm account.
+            </li>
+          </ol>
+          <dl class="mcp-settings">
+            <div>
+              <dt>Name</dt>
+              <dd><code>magoo</code></dd>
+            </div>
+            <div>
+              <dt>Connection type</dt>
+              <dd>STDIO (local)</dd>
+            </div>
+            <div>
+              <dt>Command</dt>
+              <dd><code>npx</code></dd>
+            </div>
+            <div>
+              <dt>Arguments</dt>
+              <dd>
+                <code>-y @acessibilidade/magoo-mcp@1.5.0</code>
+                <p>
+                  If the application asks for separate arguments, add
+                  <code>-y</code>
+                  and
+                  <code>@acessibilidade/magoo-mcp@1.5.0</code>
+                  as two items.
+                </p>
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Save and start chatting.</strong>
+            If Magoo does not appear among the connections, close and reopen the application. The first time, it needs internet access to download the library.
+          </p>
+          <p>
+            <strong>Try this request:</strong>
+            “Consult Magoo and explain how a modal should work with the keyboard. State the library version used.”
+          </p>
+          <p>Magoo provides guidance for AI to consult. It does not automatically change your project or design file.</p>
         </article>
       </section>
       <section class="faq wrap" aria-labelledby="faq-title">
@@ -742,7 +834,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-4" aria-labelledby="faq-trigger-4">
-              <p>In a compatible assistant, ask for guidance on states, keyboard navigation, focus, and acceptance criteria. Use the responses to document decisions and specifications. The Magoo MCP does not create or modify files in Figma or other design tools.</p>
+              <p>In a compatible assistant, request guidance on states, keyboard navigation, focus, and acceptance criteria. Use the responses to document decisions and specifications. Magoo’s MCP supplies the guidance. With the magoo-figma skill and a Figma integration connected to the assistant, you can review the file and request behavior annotations.</p>
             </dd>
           </div>
           <div class="faq-item">
@@ -781,7 +873,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.4.0 and does not automatically switch to a future version.</p>
+              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.5.0 and does not automatically switch to a future version.</p>
             </dd>
           </div>
           <div class="faq-item">

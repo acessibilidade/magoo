@@ -88,7 +88,13 @@
         <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">BIBLIOTECA / MENSAGENS</p>
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/mensagens.html">Mensagens</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Validação de formulários</span></li>
+          </ol>
+        </nav>
         <h1>Validação de formulários</h1>
         <p>Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="validacao-formularios-designer-guide-title">
+              <h3 id="validacao-formularios-designer-guide-title">Guia rápido para designers</h3>
+              <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
+              <h4>Quando usar</h4>
+              <p>Use para explicar problemas de preenchimento e orientar a correção. Falhas de serviço precisam de mensagens próprias.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre instruções, erro junto ao campo e resumo com links quando adequado. Explique a correção em texto, além de cor ou ícone.</p>
+              <h4>Como se comporta</h4>
+              <p>Preserve os valores após um envio inválido. Links do resumo levam ao campo. Não mostre erros antes de a pessoa ter oportunidade de preencher.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Defina quando validar, o destino de foco após envio inválido e os anúncios. Em verificações assíncronas, considere o valor atual e evite respostas antigas.</p>
+              <h4>Como revisar</h4>
+              <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
+            </div>
+            <h3>Orientações completas</h3>
             <h2 class="titulo-mobile">Design de Interação</h2>
             <p class="mt-3">Questionamentos que devem ser feitos ao projetar mensagens de validação de formulários.</p>
             <p>Avalie cada orientação conforme o contexto. A validação informa problemas na entrada e orienta a correção; falhas do serviço exigem mensagens próprias.</p>

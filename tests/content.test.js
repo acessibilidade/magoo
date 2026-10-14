@@ -72,3 +72,13 @@ test("Geração preserva todo o texto da fonte, IDs HTML e destinos locais", asy
     }
   }
 });
+
+test("Validação rejeita componente com snapshot divergente", () => {
+  const original = components[0].contentVersion;
+  try {
+    components[0].contentVersion = "0.0.0";
+    assert.throws(() => validateContent(), /Versão divergente/);
+  } finally {
+    components[0].contentVersion = original;
+  }
+});

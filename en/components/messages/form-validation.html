@@ -88,7 +88,13 @@
         <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">LIBRARY / MESSAGES</p>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/messages.html">Messages</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Form validation</span></li>
+          </ol>
+        </nav>
         <h1>Form validation</h1>
         <p>Messages that identify entry errors, guide corrections, and communicate the result of form submissions.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="validacao-formularios-designer-guide-title">
+              <h3 id="validacao-formularios-designer-guide-title">Quick guide for designers</h3>
+              <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
+              <h4>When to use</h4>
+              <p>Use to explain input problems and guide corrections. Service failures need their own messages.</p>
+              <h4>What to draw</h4>
+              <p>Show instructions, field-level errors, and a linked summary where appropriate. Explain corrections in text beyond color or icons.</p>
+              <h4>How it behaves</h4>
+              <p>Preserve values after invalid submission. Summary links lead to the field. Do not show errors before the person has had a chance to enter data.</p>
+              <h4>What to document in Figma</h4>
+              <p>Define validation timing, focus after invalid submission, and announcements. For asynchronous checks, consider the current value and avoid stale responses.</p>
+              <h4>How to review</h4>
+              <p>Check whether the purpose and states are clear on small and large screens and with zoom. Verify documented behavior in the implementation, including keyboard and screen reader use where applicable.</p>
+            </div>
+            <h3>Full guidance</h3>
             <h2 class="titulo-mobile">Interaction Design</h2>
             <p class="mt-3">Questions to ask when designing form validation messages.</p>
             <p>Assess each guideline in context. Validation reports entry problems and guides correction; service failures require their own messages.</p>

@@ -1,3 +1,4 @@
+import { categoryPaths } from "../js/build/categories.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
@@ -21,6 +22,7 @@ test("Sitemap publicado inclui somente páginas com canônica própria", async (
     urls,
     locales.flatMap((locale) => [
       localizedUrl(locale.id),
+      ...categoryPaths(components).map((path) => localizedUrl(locale.id, path)),
       ...components.map((c) => localizedUrl(locale.id, c.path)),
     ]),
   );
@@ -84,9 +86,11 @@ test("Nova inclusão e revisão do catálogo atualizam descoberta sem listas man
     ]);
     const robots = await readFile(new URL("robots.txt", outputRoot), "utf8");
     assert.ok(robots.includes("Sitemap: https://magoo.cc/sitemap.xml"));
-    assert.ok(
-      robots.includes("Agentmap: https://magoo.cc/.well-known/ard.json"),
-    );
+    assert.deepEqual(robots.split("\n").filter(Boolean), [
+      "User-agent: *",
+      "Allow: /",
+      "Sitemap: https://magoo.cc/sitemap.xml",
+    ]);
     await writeDiscovery({ outputRoot });
     assert.ok(
       !(await readFile(new URL("sitemap.xml", outputRoot), "utf8")).includes(
@@ -96,4 +100,18 @@ test("Nova inclusão e revisão do catálogo atualizam descoberta sem listas man
   } finally {
     await rm(directory, { recursive: true, force: true });
   }
+});
+
+test("Manifestos ARD e legado compartilham versão do contrato e conteúdo", async () => {
+  const ard = await readFile(new URL(".well-known/ard.json", root), "utf8");
+  const legacy = await readFile(
+    new URL(".well-known/ai-catalog.json", root),
+    "utf8",
+  );
+  assert.equal(legacy, ard);
+  const manifest = JSON.parse(ard);
+  assert.equal(manifest.specVersion, "1.0");
+  assert.equal(manifest.entries[0].version, catalog.contentVersion);
+  const headers = await readFile(new URL(".htaccess", root), "utf8");
+  assert.ok(headers.includes('rel=\\"ai-catalog\\"'));
 });

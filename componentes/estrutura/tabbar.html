@@ -88,7 +88,13 @@
         <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">BIBLIOTECA / ESTRUTURA</p>
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/estrutura.html">Estrutura</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Tabbar</span></li>
+          </ol>
+        </nav>
         <h1>Tabbar</h1>
         <p>Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente.</p>
         <p class="reference-shortcut">
@@ -189,6 +195,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="tabbar-designer-guide-title">
+              <h3 id="tabbar-designer-guide-title">Guia rápido para designers</h3>
+              <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
+              <h4>Quando usar</h4>
+              <p>Use para acesso persistente às principais áreas da interface. Defina se os itens mudam de destino ou alternam painéis.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre rótulos curtos, área atual, foco e contagens quando existirem. A barra não deve encobrir conteúdo ou controles.</p>
+              <h4>Como se comporta</h4>
+              <p>Para destinos web, Tab percorre os links e Enter navega. Para painéis, use o padrão de abas com setas e ativação manual ou automática conforme o contexto.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Registre o padrão escolhido, destinos, seleção e foco após a mudança. Preserve o progresso e respeite áreas seguras e teclado virtual.</p>
+              <h4>Como revisar</h4>
+              <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
+            </div>
+            <h3>Orientações completas</h3>
             <h2 class="titulo-mobile">Design de Interação</h2>
             <p class="mt-3">Questionamentos que devem ser feitos ao projetar uma Tabbar: uma barra persistente de acesso às principais áreas de uma interface.</p>
             <p>Defina se os itens navegam entre destinos ou alternam painéis de conteúdo. Essa escolha determina a semântica, a navegação por teclado e o gerenciamento de foco.</p>

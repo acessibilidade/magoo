@@ -1,5 +1,15 @@
 # Histórico de versões
 
+## 1.5.0
+
+- Adiciona guias rápidos em linguagem simples para Modal, Botão e Input text, preservando as orientações completas.
+- Prepara a skill Magoo no Figma para revisão e documentação de comportamentos.
+- Alinha as versões do snapshot local e valida divergências entre pacote, lockfile, catálogo e componentes.
+- Amplia os guias rápidos para os 29 componentes, com quadros, parágrafos de 1rem e traduções em inglês.
+- Adiciona índices das cinco categorias e breadcrumbs com links para os níveis anteriores e página atual sem link.
+- Destaca o uso do Magoo com Figma na home, com instalação guiada para iniciantes e download da skill.
+- Corrige o validador para funcionar no pacote npm sem lockfile e inclui a skill na distribuição.
+
 ## 1.4.0
 
 - Adiciona inglês dos Estados Unidos como segundo idioma nativo do site, com home e documentação dos 29 componentes traduzidas; português brasileiro continua como idioma principal.

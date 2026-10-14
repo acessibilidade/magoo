@@ -88,7 +88,13 @@
         <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">LIBRARY / STRUCTURE</p>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/structure.html">Structure</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Tabbar</span></li>
+          </ol>
+        </nav>
         <h1>Tabbar</h1>
         <p>A bar providing access to an interface's main areas, with a current destination indicator and consistent navigation.</p>
         <p class="reference-shortcut">
@@ -189,6 +195,21 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="tabbar-designer-guide-title">
+              <h3 id="tabbar-designer-guide-title">Quick guide for designers</h3>
+              <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
+              <h4>When to use</h4>
+              <p>Use for persistent access to the interface’s main areas. Define whether items navigate to destinations or switch panels.</p>
+              <h4>What to draw</h4>
+              <p>Show short labels, the current area, focus, and counts when present. The bar must not cover content or controls.</p>
+              <h4>How it behaves</h4>
+              <p>For web destinations, Tab moves through links and Enter navigates. For panels, use the tabs pattern with arrows and manual or automatic activation according to context.</p>
+              <h4>What to document in Figma</h4>
+              <p>Record the chosen pattern, destinations, selection, and focus after changes. Preserve progress and respect safe areas and the virtual keyboard.</p>
+              <h4>How to review</h4>
+              <p>Check whether the purpose and states are clear on small and large screens and with zoom. Verify documented behavior in the implementation, including keyboard and screen reader use where applicable.</p>
+            </div>
+            <h3>Full guidance</h3>
             <h2 class="titulo-mobile">Interaction Design</h2>
             <p class="mt-3">Questions to ask when designing a Tabbar: a persistent bar providing access to an interface's main areas.</p>
             <p>Define whether items navigate between destinations or switch content panels. This choice determines semantics, keyboard navigation, and focus management.</p>

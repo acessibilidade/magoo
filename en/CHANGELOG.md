@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.5.0
+
+- Adds plain-language quick guides for Modal, Button, and Input text while preserving the full guidance.
+- Prepares the Magoo in Figma skill for reviewing and documenting behavior.
+- Aligns local snapshot versions and validates differences between package, lockfile, catalog, and components.
+- Extends quick guides to all 29 components, with framed panels, 1rem paragraphs, and English translations.
+- Adds indexes for the five categories and breadcrumbs linking to parent levels with an unlinked current page.
+- Highlights Magoo with Figma on the homepage, with beginner setup guidance and a skill download.
+- Fixes validation to work in the npm package without a lockfile and includes the skill in the distribution.
+
 ## 1.4.0
 
 - Adds US English as the second native website language, with a translated homepage and documentation for all 29 components; Brazilian Portuguese remains the primary language.

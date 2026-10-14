@@ -47,7 +47,8 @@
         "alertas": "alerts",
         "validacao-formularios": "form-validation",
         "paginacao": "pagination",
-        "carrossel": "carousel"
+        "carrossel": "carousel",
+        "categorias": "categories"
       },
       "initiativeImage": {
         "src": "/img/tudo-acessibilidade-logo.svg",

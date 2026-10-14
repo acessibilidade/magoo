@@ -88,7 +88,13 @@
         <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
       </div>
       <div class="component-heading wrap">
-        <p class="eyebrow">BIBLIOTECA / NAVEGAÇÃO</p>
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/navegacao.html">Navegação</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Drag'n'Drop</span></li>
+          </ol>
+        </nav>
         <h1>Drag'n'Drop</h1>
         <p>Permite mover e reorganizar elementos, considerando alternativas ao gesto de arrastar e soltar.</p>
         <p class="reference-shortcut">
@@ -191,6 +197,22 @@
 
         <div class="tab-content" id="instrucoes-conteudo">
           <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="drag-drop-designer-guide-title">
+              <h3 id="drag-drop-designer-guide-title">Guia rápido para designers</h3>
+              <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
+              <h4>Quando usar</h4>
+              <p>Use para mover ou reorganizar itens, oferecendo alternativas ao gesto de arrastar.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre o item selecionado, os destinos permitidos e a nova posição, além da possibilidade de cancelar.</p>
+              <h4>Como se comporta</h4>
+              <p>No padrão descrito, Enter seleciona e setas reposicionam; Escape cancela. O movimento pode ser cancelado sem perder dados.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Anote os comandos, as alternativas sem arrastar e como informar a nova posição ou o motivo de um destino não ser permitido.</p>
+              <h4>Como revisar</h4>
+              <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
+            </div>
+            <h3>Orientações completas</h3>
+
             <h2 class="titulo-mobile">Design de Interação</h2>
             <p class="mt-3">Questionamentos que devem ser feitos ao se projetar componentes interativos do tipo <span class="destaque">Drag'n'Drop</span>.</p>
             <p><strong>Importante:</strong><br />Dependendo do contexto de construção de seus respectivos componentes, é possível que haja mais questionamentos, bem como alguns dos apresentados aqui não ser necessários. A avaliação precisa ser feita caso a caso.</p>

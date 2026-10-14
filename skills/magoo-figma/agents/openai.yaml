@@ -1,0 +1,6 @@
+interface:
+  display_name: "Magoo no Figma"
+  short_description: "Revise interações e documente decisões no Figma"
+  default_prompt: "Use $magoo-figma para revisar o componente indicado e preparar suas anotações de comportamento em linguagem simples."
+policy:
+  allow_implicit_invocation: true

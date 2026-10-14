@@ -202,7 +202,9 @@
         <div class="categories">
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> view_quilt </span>
-            <h3>Estrutura</h3>
+            <h3>
+              <a href="/pt-br/categorias/estrutura.html">Estrutura<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li class="upcoming">
                 Flexbox &amp; Grid
@@ -228,7 +230,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> chat_bubble_outline </span>
-            <h3>Mensagens</h3>
+            <h3>
+              <a href="/pt-br/categorias/mensagens.html">Mensagens<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/pt-br/componentes/mensagens/alertas.html">Alertas<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -246,7 +250,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> near_me </span>
-            <h3>Navegação</h3>
+            <h3>
+              <a href="/pt-br/categorias/navegacao.html">Navegação<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -270,7 +276,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> layers </span>
-            <h3>Elementos ocultos</h3>
+            <h3>
+              <a href="/pt-br/categorias/elementos-ocultos.html">Elementos ocultos<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -291,7 +299,9 @@
           </section>
           <section class="category">
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> tune </span>
-            <h3>Formulários</h3>
+            <h3>
+              <a href="/pt-br/categorias/formularios.html">Formulários<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+            </h3>
             <ul>
               <li>
                 <a href="/pt-br/componentes/formularios/botao.html">Botão<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -327,7 +337,7 @@
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Versão do material: 1.4.0</p>
+          <p class="material-version">Versão do material: 1.5.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             Acessar registro de alterações
             <span class="sr-only"> (abre uma janela com conteúdo adicional nesta mesma página) </span>
@@ -346,6 +356,18 @@
           </div>
           <p id="changelog-description">Alterações do material, da mais recente para a mais antiga.</p>
           <div class="changelog-entries">
+            <section class="changelog-entry" aria-labelledby="version-1-5-0">
+              <h3 id="version-1-5-0">Versão 1.5.0</h3>
+              <ul>
+                <li>Adiciona guias rápidos em linguagem simples para Modal, Botão e Input text, preservando as orientações completas.</li>
+                <li>Prepara a skill Magoo no Figma para revisão e documentação de comportamentos.</li>
+                <li>Alinha as versões do snapshot local e valida divergências entre pacote, lockfile, catálogo e componentes.</li>
+                <li>Amplia os guias rápidos para os 29 componentes, com quadros, parágrafos de 1rem e traduções em inglês.</li>
+                <li>Adiciona índices das cinco categorias e breadcrumbs com links para os níveis anteriores e página atual sem link.</li>
+                <li>Destaca o uso do Magoo com Figma na home, com instalação guiada para iniciantes e download da skill.</li>
+                <li>Corrige o validador para funcionar no pacote npm sem lockfile e inclui a skill na distribuição.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-4-0">
               <h3 id="version-1-4-0">Versão 1.4.0</h3>
               <ul>
@@ -469,9 +491,23 @@
 
       <section class="project-context wrap" aria-labelledby="how-to-title">
         <h2 id="how-to-title" tabindex="-1">Como usar?</h2>
-        <article class="context-card">
-          <h3 id="implementation-title">Instruções para incluir este documento como referência em seu design system</h3>
-          <p>Escolha seu perfil para consultar as orientações. A configuração do MCP apresentada depois das abas pode ser usada por qualquer pessoa com um assistente compatível.</p>
+        <nav class="instruction-paths" aria-label="Escolha como usar o Magoo">
+          <ul>
+            <li>
+              <a href="#implementation-title">Instruções para incluir no seu design system<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+            </li>
+            <li>
+              <a href="#figma-guide-title">Instruções para usar com o Figma<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+            </li>
+            <li>
+              <a href="#mcp-setup-title">Instruções para usar com sua IA preferida<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <article class="context-card" id="design-system-guide" aria-labelledby="implementation-title">
+          <h3 id="implementation-title">Instruções para incluir no seu design system</h3>
+          <p>Use o Magoo como referência para definir, documentar e verificar comportamentos. Escolha seu perfil nas abas abaixo para orientar a aplicação no seu design system.</p>
+
           <div class="usage-tabs">
             <div class="nav nav-tabs" role="tablist" aria-label="Orientações por perfil">
               <button type="button" class="nav-link" role="tab" id="usage-tab-dev" aria-controls="usage-panel-dev" aria-selected="true">Para desenvolvedores</button>
@@ -503,42 +539,20 @@
                   Teste a implementação com teclado, leitores de tela, toque e ampliação. Registre resultados e reavalie as adaptações quando a referência ou o componente mudar. A referência, por si só, não comprova a acessibilidade da implementação.
                 </li>
               </ol>
-              <p>
-                Com o MCP configurado abaixo, consulte
-                <code>get_component</code>
-                para recuperar as orientações e
-                <code>get_acceptance_criteria</code>
-                para obter os cenários de aceite. O pacote fornece documentação; os componentes devem ser implementados no seu projeto.
-              </p>
             </section>
             <section class="usage-panel" id="usage-panel-design" role="tabpanel" aria-labelledby="usage-tab-design" tabindex="0">
-              <h4>Documente as decisões no Figma</h4>
+              <h4>Documente as decisões de design</h4>
               <ol>
                 <li>
                   <strong>Escolha o componente no Magoo.</strong>
                   Leia o design de interação, os métodos de interação e os pontos de atenção antes de desenhar os estados.
                 </li>
-                <li>
-                  <strong>Crie uma página de orientações no Figma.</strong>
-                  Registre os comportamentos esperados, estados, foco, operação por teclado e adaptações feitas no projeto.
-                </li>
+                <li><strong>Registre as decisões no design system.</strong> Documente os estados, a navegação por teclado, o foco e as adaptações necessárias para seu projeto.</li>
                 <li>
                   <strong>Inclua a referência.</strong>
                   Informe o link do componente, a versão consultada e a data na documentação do seu design system.
                 </li>
-                <li>
-                  <strong>Use um assistente, se desejar.</strong>
-                  Configure o MCP local conforme as instruções abaixo e leve as orientações obtidas para o Figma. Para o assistente também ler seu arquivo de design, é necessária uma integração separada com o Figma.
-                </li>
               </ol>
-              <p>
-                <strong>Instrução sugerida:</strong>
-                “Antes de propor ou revisar os comportamentos deste componente, consulte o MCP Magoo. Considere teclado, foco, estados e critérios de aceite. Informe a versão e diferencie as orientações da biblioteca das adaptações do projeto. Se não conseguir consultar o Magoo, informe essa limitação.”
-              </p>
-              <p>
-                <strong>Conexão direta no Figma:</strong>
-                conectores personalizados do agente do Figma e do Figma Make exigem um servidor MCP remoto por URL. O Magoo atual usa npx/STDIO local e ainda não oferece esse endereço. Registrar uma instrução no arquivo não ativa uma conexão automaticamente.
-              </p>
             </section>
             <section class="usage-panel" id="usage-panel-tests" role="tabpanel" aria-labelledby="usage-tab-tests" tabindex="0">
               <h4>Transforme orientações em verificações</h4>
@@ -592,75 +606,153 @@
               </p>
             </section>
           </div>
-
-          <div class="mcp-guide">
-            <h3>Como usar o Magoo com sua IA</h3>
-            <p>
-              Você pode pedir à sua IA que consulte o Magoo antes de sugerir como um componente deve funcionar. Para isso, é preciso conectar a biblioteca uma única vez. Essa conexão é chamada de
-              <strong>MCP</strong>
-              .
-            </p>
-            <p>
-              <strong>Prefere não configurar nada?</strong>
-              Consulte os componentes aqui no site e copie o trecho que deseja discutir com sua IA.
-            </p>
-            <ol>
+        </article>
+        <div class="figma-instructions-layout">
+          <article class="context-card figma-guide" aria-labelledby="figma-guide-title" id="figma-guide">
+            <h3 id="figma-guide-title">Instruções para usar com o Figma</h3>
+            <p>Revise estados, descubra decisões pendentes e prepare anotações de comportamento usando os guias dos 29 componentes. Você pode começar sem escrever código.</p>
+            <p>A skill é um conjunto de instruções para o assistente. Neste passo a passo, ela é instalada no Codex, que se conecta ao Figma. Não há um plugin Magoo para instalar dentro do editor do Figma.</p>
+            <h4>Primeira vez? Siga estes passos</h4>
+            <ol class="figma-setup-steps">
               <li>
-                <strong>Prepare o computador.</strong>
-                Você precisa ter o Node.js 20.19 ou superior instalado. Ele permite que a conexão funcione no seu computador. Se ainda não tiver, baixe o instalador em
-                <a href="https://nodejs.org/pt" target="_blank" rel="noopener noreferrer">
-                  nodejs.org
-                  <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
-                  <span class="sr-only"> (link externo, abre em uma nova aba) </span>
-                </a>
-                e siga as instruções de instalação.
+                <h5>1. Abra o Codex no computador</h5>
+                <p>Instale o aplicativo e entre na sua conta. Você também precisa de uma conta Figma com acesso ao arquivo que deseja revisar.</p>
+                <p>
+                  <a href="https://developers.openai.com/codex/app/" target="_blank" rel="noopener noreferrer">Abrir o guia oficial do Codex<span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+                </p>
               </li>
               <li>
-                <strong>Abra as configurações da sua IA.</strong>
-                Procure a opção de adicionar um servidor MCP. Nem todo aplicativo aceita essa conexão: ele precisa permitir preencher um comando para executar no computador. Se pedir apenas uma URL, essa opção não funciona com a versão atual do Magoo.
+                <h5>2. Conecte sua conta Figma</h5>
+                <p>No Codex, abra Plugins, procure Figma e escolha instalar. Entre na sua conta Figma e autorize o acesso quando solicitado. Volte ao Codex para continuar.</p>
+                <p>
+                  <a href="https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#codex" target="_blank" rel="noopener noreferrer">Ver o passo a passo oficial do Figma<span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+                </p>
               </li>
               <li>
-                <strong>Copie os dados abaixo.</strong>
-                Preencha cada campo com o valor indicado. Não é preciso entender os comandos nem criar uma conta no npm.
+                <h5>3. Baixe a skill Magoo no Figma</h5>
+                <p>Baixe o ZIP e extraia seu conteúdo. No Mac, normalmente basta clicar duas vezes; no Windows, use Extrair tudo. Você terá uma pasta chamada magoo-figma. Guarde-a em um local fácil de encontrar.</p>
+                <p><a href="/downloads/magoo-figma.zip" download="magoo-figma.zip">Baixar skill Magoo no Figma (ZIP)</a></p>
+              </li>
+              <li>
+                <h5>4. Peça ao Codex para instalar a skill</h5>
+                <p>Arraste o arquivo da skill para a janela do Codex ou informe onde salvou a pasta no seu computador e envie o pedido abaixo, substituindo o trecho entre colchetes pelo caminho real. Não é necessário editar os arquivos.</p>
+                <blockquote>Instale para meu uso pessoal a skill magoo-figma da pasta [caminho da pasta no meu computador]. Confira se ela ficou disponível e me avise se preciso abrir uma nova conversa.</blockquote>
+              </li>
+              <li>
+                <h5>5. Conecte a biblioteca Magoo</h5>
+                <p>A skill organiza o trabalho, mas precisa consultar a biblioteca. Configure a conexão Magoo seguindo as instruções de MCP nesta página. MCP é a conexão que permite ao assistente consultar outra ferramenta.</p>
+                <p>
+                  <a href="#mcp-setup-title">Ir para a configuração do Magoo<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+                </p>
+              </li>
+              <li>
+                <h5>6. Copie o link do seu componente no Figma</h5>
+                <p>Abra o arquivo, selecione o componente ou frame que deseja revisar e copie o link da seleção. Cole o link no Codex junto com este pedido:</p>
+                <blockquote>Use $magoo-figma para revisar este componente: [cole o link do Figma]. Explique em linguagem simples o que está visível, o que preciso documentar e o que deve ser verificado na implementação. Consulte o Magoo e informe a versão utilizada.</blockquote>
               </li>
             </ol>
-            <dl class="mcp-settings">
+            <h4>Como saber se está pronto</h4>
+            <p>Peça ao assistente para confirmar que encontra a skill, consulta o Magoo e consegue ler o componente do link. Se algo faltar, ele deve explicar qual conexão precisa de ajuste. Para escrever anotações no Figma, peça essa ação e indique o arquivo de destino.</p>
+            <p class="figma-availability">Os guias dos 29 componentes fazem parte da versão 1.5.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
+          </article>
+          <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
+            <h3 id="native-skill-title">Instruções para usar como skill</h3>
+            <p>Crie uma habilidade no próprio Figma para repetir a revisão sem reescrever as orientações. Este caminho usa o agente do Figma e consulta o Magoo pelo site.</p>
+            <ol>
+              <li>Abra seu arquivo no Figma e entre no chat do agente.</li>
+              <li>Na caixa do pedido, abra o menu de adicionar contexto e escolha Habilidades → Adicionar habilidade.</li>
+              <li>Escolha Começar do zero (Start from scratch) e preencha os campos abaixo.</li>
+              <li>Confirme em Adicionar. Depois, digite /magoo no chat e escreva o que deseja revisar.</li>
+            </ol>
+            <dl class="native-skill-fields">
               <div>
-                <dt>Nome</dt>
+                <dt>Nome da habilidade</dt>
                 <dd><code>magoo</code></dd>
               </div>
               <div>
-                <dt>Tipo de conexão</dt>
-                <dd>STDIO (local)</dd>
+                <dt>Descrição da habilidade</dt>
+                <dd>Revise componentes e documente decisões de interação usando o Magoo em linguagem simples.</dd>
               </div>
               <div>
-                <dt>Comando</dt>
-                <dd><code>npx</code></dd>
-              </div>
-              <div>
-                <dt>Argumentos</dt>
-                <dd>
-                  <code>-y @acessibilidade/magoo-mcp@1.4.0</code>
-                  <p>
-                    Se o aplicativo pedir argumentos separados, adicione
-                    <code>-y</code>
-                    e
-                    <code>@acessibilidade/magoo-mcp@1.4.0</code>
-                    como dois itens.
-                  </p>
-                </dd>
+                <dt>Instruções da habilidade</dt>
+                <dd><blockquote>Antes de criar, editar ou revisar um componente, consulte https://magoo.cc/llms.txt e localize suas orientações. Preserve os componentes, estilos e variáveis da biblioteca utilizada. Explique o que desenhar, como se comporta e quais decisões precisam ser documentadas. Diferencie o que é visível no desenho do que precisa ser verificado na implementação. Informe Marcelo Sales como autor, a versão e as referências consultadas. Separe sugestões próprias do conteúdo original. Se não conseguir acessar a fonte, informe a limitação e peça o trecho necessário. Quando solicitado, registre as decisões no arquivo.</blockquote></dd>
               </div>
             </dl>
+            <h4>Experimente depois de adicionar</h4>
+            <blockquote>/magoo revise esta modal e indique o que falta documentar sobre abertura, fechamento e navegação pelo teclado.</blockquote>
+            <p>Adicionar a habilidade salva as instruções; não cria uma conexão MCP. Se o agente não conseguir ler o site, forneça o conteúdo do componente para a revisão.</p>
             <p>
-              <strong>Salve e comece a conversar.</strong>
-              Se o Magoo não aparecer entre as conexões, feche e abra o aplicativo. Na primeira vez, ele precisará de internet para baixar a biblioteca.
+              <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Create-and-manage-custom-skills-in-Figma" target="_blank" rel="noopener noreferrer">Consultar o guia oficial de habilidades do Figma<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
             </p>
-            <p>
-              <strong>Experimente este pedido:</strong>
-              “Consulte o Magoo e me explique como um modal deve funcionar com o teclado. Informe a versão da biblioteca utilizada.”
-            </p>
-            <p>O Magoo fornece orientações para a IA consultar. Ele não altera automaticamente seu projeto ou arquivo de design.</p>
-          </div>
+          </aside>
+        </div>
+        <article class="context-card mcp-guide" aria-labelledby="mcp-setup-title">
+          <h3 id="mcp-setup-title">Instruções para usar com sua IA preferida</h3>
+          <p>
+            Você pode pedir à sua IA que consulte o Magoo antes de sugerir como um componente deve funcionar. Para isso, é preciso conectar a biblioteca uma única vez. Essa conexão é chamada de
+            <strong>MCP</strong>
+            .
+          </p>
+          <p>
+            <strong>Prefere não configurar nada?</strong>
+            Consulte os componentes aqui no site e copie o trecho que deseja discutir com sua IA.
+          </p>
+          <ol>
+            <li>
+              <strong>Prepare o computador.</strong>
+              Você precisa ter o Node.js 20.19 ou superior instalado. Ele permite que a conexão funcione no seu computador. Se ainda não tiver, baixe o instalador em
+              <a href="https://nodejs.org/pt" target="_blank" rel="noopener noreferrer">
+                nodejs.org
+                <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
+                <span class="sr-only"> (link externo, abre em uma nova aba) </span>
+              </a>
+              e siga as instruções de instalação.
+            </li>
+            <li>
+              <strong>Abra as configurações da sua IA.</strong>
+              Procure a opção de adicionar um servidor MCP ou pergunte à própria IA como adicionar. Nem todo aplicativo aceita essa conexão: ele precisa permitir preencher um comando para executar no computador. Se pedir apenas uma URL, essa opção não funciona com a versão atual do Magoo.
+            </li>
+            <li>
+              <strong>Copie os dados abaixo.</strong>
+              Preencha cada campo com o valor indicado. Não é preciso entender os comandos nem criar uma conta no npm.
+            </li>
+          </ol>
+          <dl class="mcp-settings">
+            <div>
+              <dt>Nome</dt>
+              <dd><code>magoo</code></dd>
+            </div>
+            <div>
+              <dt>Tipo de conexão</dt>
+              <dd>STDIO (local)</dd>
+            </div>
+            <div>
+              <dt>Comando</dt>
+              <dd><code>npx</code></dd>
+            </div>
+            <div>
+              <dt>Argumentos</dt>
+              <dd>
+                <code>-y @acessibilidade/magoo-mcp@1.5.0</code>
+                <p>
+                  Se o aplicativo pedir argumentos separados, adicione
+                  <code>-y</code>
+                  e
+                  <code>@acessibilidade/magoo-mcp@1.5.0</code>
+                  como dois itens.
+                </p>
+              </dd>
+            </div>
+          </dl>
+          <p>
+            <strong>Salve e comece a conversar.</strong>
+            Se o Magoo não aparecer entre as conexões, feche e abra o aplicativo. Na primeira vez, ele precisará de internet para baixar a biblioteca.
+          </p>
+          <p>
+            <strong>Experimente este pedido:</strong>
+            “Consulte o Magoo e me explique como um modal deve funcionar com o teclado. Informe a versão da biblioteca utilizada.”
+          </p>
+          <p>O Magoo fornece orientações para a IA consultar. Ele não altera automaticamente seu projeto ou arquivo de design.</p>
         </article>
       </section>
       <section class="faq wrap" aria-labelledby="faq-title">
@@ -742,7 +834,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-4" aria-labelledby="faq-trigger-4">
-              <p>Em um assistente compatível, peça orientações para estados, navegação por teclado, foco e critérios de aceite. Use as respostas para documentar decisões e especificações. O MCP do Magoo não cria nem modifica arquivos no Figma ou em outras ferramentas de design.</p>
+              <p>Em um assistente compatível, peça orientações para estados, navegação por teclado, foco e critérios de aceite. Use as respostas para documentar decisões e especificações. O MCP do Magoo fornece as orientações. Com a skill magoo-figma e uma integração Figma conectada ao assistente, você pode revisar o arquivo e solicitar anotações de comportamento.</p>
             </dd>
           </div>
           <div class="faq-item">
@@ -781,7 +873,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.4.0 e não troca automaticamente para uma versão futura.</p>
+              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.5.0 e não troca automaticamente para uma versão futura.</p>
             </dd>
           </div>
           <div class="faq-item">

@@ -110,7 +110,8 @@ function rewriteLocalUrls($, path, locale) {
       target === "index.html" ||
       target === "404.html" ||
       target === "CHANGELOG.md" ||
-      target.startsWith("componentes/")
+      target.startsWith("componentes/") ||
+      target.startsWith("categorias/")
     )
       return localizedPath(locale.id, target) + url.search + url.hash;
     return url.pathname + url.search + url.hash;

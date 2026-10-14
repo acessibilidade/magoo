@@ -4,7 +4,7 @@ import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 import { fileURLToPath } from "node:url";
 import { root } from "../js/lib/paths.js";
-import { components } from "../js/lib/catalog.js";
+import { catalog, components } from "../js/lib/catalog.js";
 
 test("MCP real via stdio: descoberta, busca, leitura, referências e erros", async () => {
   const client = new Client({ name: "magoo-test", version: "1.0.0" });
@@ -16,6 +16,7 @@ test("MCP real via stdio: descoberta, busca, leitura, referências e erros", asy
   });
   try {
     await client.connect(transport);
+    assert.equal(client.getServerVersion().version, catalog.contentVersion);
     const { tools } = await client.listTools();
     assert.equal(tools.length, 4);
     assert.ok(tools.every((t) => t.annotations.readOnlyHint));
@@ -35,6 +36,14 @@ test("MCP real via stdio: descoberta, busca, leitura, referências e erros", asy
       });
       assert.equal(r.structuredContent.id, c.id);
       assert.equal(r.structuredContent.sections.length, 5);
+      assert.equal(r.structuredContent.contentVersion, catalog.contentVersion);
+      {
+        assert.ok(
+          r.structuredContent.sections[0].items.some((item) =>
+            item.id.startsWith(`${c.id}.designer-guide.`),
+          ),
+        );
+      }
     }
     const criteria = await client.callTool({
       name: "get_acceptance_criteria",
