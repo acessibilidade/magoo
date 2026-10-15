@@ -2052,7 +2052,6 @@
     "Baixe o Markdown e, no chat do Figma Design ou Make, abra Skills → Add skill → Upload a file. Selecione o arquivo e clique em Add. Use /magoo-figma-native para iniciar.": "Download the Markdown file and, in the Figma Design or Make chat, open Skills → Add skill → Upload a file. Select the file and click Add. Use /magoo-figma-native to start.",
     "Esta versão consulta a biblioteca publicada na web. Se o agente não conseguir acessar as fontes, anexe os JSONs dos componentes solicitados. O arquivo não instala o MCP Magoo.": "This version reads the library published on the web. If the agent cannot access the sources, attach the requested component JSON files. The file does not install the Magoo MCP.",
     "Baixar skill para o agente do Figma (MD)": "Download skill for the Figma agent (MD)",
-    "Para publicar na Community, abra Manage skills, selecione a skill e escolha More actions → Publish → Community.": "To publish to Community, open Manage skills, select the skill, and choose More actions → Publish → Community.",
     "Uso pelo Codex: siga estes passos": "Use through Codex: follow these steps",
     "A skill é um conjunto de instruções para o assistente. Escolha a versão para usar diretamente no agente do Figma ou a versão para o Codex conectado ao Figma.": "A skill is a set of instructions for the assistant. Choose the version for direct use in the Figma agent or the version for Codex connected to Figma.",
     "Baixar skill em português (MD)": "Download skill in Portuguese (MD)",
