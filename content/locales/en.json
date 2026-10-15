@@ -2055,6 +2055,9 @@
     "Uso pelo Codex: siga estes passos": "Use through Codex: follow these steps",
     "A skill é um conjunto de instruções para o assistente. Escolha a versão para usar diretamente no agente do Figma ou a versão para o Codex conectado ao Figma.": "A skill is a set of instructions for the assistant. Choose the version for direct use in the Figma agent or the version for Codex connected to Figma.",
     "Baixar skill em português (MD)": "Download skill in Portuguese (MD)",
-    "Baixar skill em inglês (MD)": "Download skill in English (MD)"
+    "Baixar skill em inglês (MD)": "Download skill in English (MD)",
+    "Magoo na Comunidade Figma": "Magoo on Figma Community",
+    "A skill já está disponível na Community. Adicione ao seu Figma para revisar componentes e documentar decisões de interação.": "The skill is now available on Community. Add it to Figma to review components and document interaction decisions.",
+    "Ver skill na Comunidade Figma": "View skill on Figma Community"
   }
 }

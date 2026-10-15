@@ -1969,3 +1969,36 @@ body.changelog-open {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Destaque da Community abaixo das instruções da skill nativa. */
+.native-skill-column {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+.figma-community-highlight {
+  border: 2px solid var(--green);
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+.figma-community-highlight h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  color: var(--green);
+}
+.figma-community-highlight a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.figma-community-highlight .material-icons {
+  margin-inline-start: 6px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+@media (max-width: 540px) {
+  .figma-community-highlight {
+    padding: 20px;
+  }
+}

@@ -660,36 +660,45 @@
             <p>Ask the assistant to confirm it can find the skill, consult Magoo, and read the linked component. If anything is missing, it should explain which connection needs attention. To write annotations in Figma, request that action and identify the destination file.</p>
             <p class="figma-availability">Guides for all 29 components are part of version 1.5.0. When setting up Magoo, use the version shown on this page and ask the assistant to confirm the version consulted. Older connections need updating and restarting.</p>
           </article>
-          <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
-            <h3 id="native-skill-title">Instructions for using Magoo as a skill</h3>
-            <p>Create a skill within Figma to repeat reviews without rewriting the guidance. This route uses the Figma agent and consults Magoo through the website.</p>
-            <ol>
-              <li>Open your file in Figma and enter the agent chat.</li>
-              <li>In the prompt box, open the add-context menu and choose Skills → Add skill.</li>
-              <li>Choose Start from scratch and fill in the fields below.</li>
-              <li>Confirm with Add. Then type /magoo in the chat and describe what you want reviewed.</li>
-            </ol>
-            <dl class="native-skill-fields">
-              <div>
-                <dt>Skill name</dt>
-                <dd><code>magoo</code></dd>
-              </div>
-              <div>
-                <dt>Skill description</dt>
-                <dd>Review components and document interaction decisions using Magoo in plain language.</dd>
-              </div>
-              <div>
-                <dt>Skill instructions</dt>
-                <dd><blockquote>Before creating, editing, or reviewing a component, consult https://magoo.cc/llms.txt and locate its guidance. Preserve the components, styles, and variables of the library in use. Explain what to draw, how it behaves, and which decisions need documentation. Distinguish what is visible in the design from what needs implementation checks. Credit Marcelo Sales and report the version and references consulted. Separate your suggestions from original content. If you cannot access the source, report the limitation and request the necessary excerpt. When asked, record decisions in the file.</blockquote></dd>
-              </div>
-            </dl>
-            <h4>Try it after adding</h4>
-            <blockquote>/magoo review this modal and identify missing documentation about opening, closing, and keyboard navigation.</blockquote>
-            <p>Adding the skill saves its instructions; it does not create an MCP connection. If the agent cannot read the website, provide the component content for review.</p>
-            <p>
-              <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Create-and-manage-custom-skills-in-Figma" target="_blank" rel="noopener noreferrer">Consult the official Figma skills guide<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
-            </p>
-          </aside>
+          <div class="native-skill-column">
+            <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
+              <h3 id="native-skill-title">Instructions for using Magoo as a skill</h3>
+              <p>Create a skill within Figma to repeat reviews without rewriting the guidance. This route uses the Figma agent and consults Magoo through the website.</p>
+              <ol>
+                <li>Open your file in Figma and enter the agent chat.</li>
+                <li>In the prompt box, open the add-context menu and choose Skills → Add skill.</li>
+                <li>Choose Start from scratch and fill in the fields below.</li>
+                <li>Confirm with Add. Then type /magoo in the chat and describe what you want reviewed.</li>
+              </ol>
+              <dl class="native-skill-fields">
+                <div>
+                  <dt>Skill name</dt>
+                  <dd><code>magoo</code></dd>
+                </div>
+                <div>
+                  <dt>Skill description</dt>
+                  <dd>Review components and document interaction decisions using Magoo in plain language.</dd>
+                </div>
+                <div>
+                  <dt>Skill instructions</dt>
+                  <dd><blockquote>Before creating, editing, or reviewing a component, consult https://magoo.cc/llms.txt and locate its guidance. Preserve the components, styles, and variables of the library in use. Explain what to draw, how it behaves, and which decisions need documentation. Distinguish what is visible in the design from what needs implementation checks. Credit Marcelo Sales and report the version and references consulted. Separate your suggestions from original content. If you cannot access the source, report the limitation and request the necessary excerpt. When asked, record decisions in the file.</blockquote></dd>
+                </div>
+              </dl>
+              <h4>Try it after adding</h4>
+              <blockquote>/magoo review this modal and identify missing documentation about opening, closing, and keyboard navigation.</blockquote>
+              <p>Adding the skill saves its instructions; it does not create an MCP connection. If the agent cannot read the website, provide the component content for review.</p>
+              <p>
+                <a href="https://help.figma.com/hc/en-us/articles/40283639496599-Create-and-manage-custom-skills-in-Figma" target="_blank" rel="noopener noreferrer">Consult the official Figma skills guide<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+              </p>
+            </aside>
+            <aside class="context-card figma-community-highlight" aria-labelledby="figma-community-title">
+              <h3 id="figma-community-title">Magoo on Figma Community</h3>
+              <p>The skill is now available on Community. Add it to Figma to review components and document interaction decisions.</p>
+              <p>
+                <a href="https://www.figma.com/community/skill/140419/magoo-figma-native" target="_blank" rel="noopener noreferrer">View skill on Figma Community<span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+              </p>
+            </aside>
+          </div>
         </div>
         <article class="context-card mcp-guide" aria-labelledby="mcp-setup-title">
           <h3 id="mcp-setup-title">Instructions for using Magoo with your preferred AI</h3>
