@@ -195,6 +195,13 @@ Cada página publicada aponta `rel="canonical"` para seu próprio endereço no r
 
 Os 29 componentes abrem a seção Design de interação com um guia rápido em um quadro, derivado das orientações completas. A fonte continua em `content/componentes/`; site e MCP compartilham as mesmas orientações.
 
+Há duas versões para ambientes diferentes, usando a mesma biblioteca:
+
+- **Codex com integração Figma:** `skills/magoo-figma/SKILL.md`, distribuída em `downloads/magoo-figma.zip`. Mantém a conexão MCP e as instruções específicas do Codex.
+- **Agente nativo do Figma Design/Make e Community:** `skills/magoo-figma-native/SKILL.md`, distribuída em português como `downloads/magoo-figma-native.md` e em inglês como `downloads/magoo-figma-native.en.md` (fonte: `SKILL.en.md` na mesma pasta). Importe apenas o arquivo do idioma escolhido; ambos usam o comando `/magoo-figma-native`. O build atualiza os dois downloads a partir das fontes. Consulta o catálogo e os componentes publicados em magoo.cc; quando a leitura de URLs não está disponível, solicita os JSONs como anexos. Não instala nem exige o MCP local.
+
+Para importar a versão nativa, use Skills → Add skill → Upload a file no chat do Figma. Para publicar na Community, use Manage skills → selecione a skill → More actions → Publish → Community. Prepare capa 1920 × 1080, nome, tagline, descrição, categoria e contato de suporte. Instruções oficiais: https://help.figma.com/hc/en-us/articles/40283639496599-Create-and-manage-custom-skills-in-Figma. A importação, o acesso às fontes e a escrita no arquivo ainda precisam ser verificados no agente nativo; o build não comprova esse funcionamento. Publicação no site ou na Community é uma etapa externa.
+
 A skill está em `skills/magoo-figma/SKILL.md`, com metadados em `agents/openai.yaml`. Também é distribuída no pacote npm e no ZIP de download do site. Requer MCP Magoo e integração Figma para operar no arquivo; sem Figma, entrega anotações no chat. Nenhum arquivo Figma foi criado nesta preparação.
 
 A partir de 1.5.0, a versão dos componentes identifica o snapshot distribuído, incluindo componentes cujo texto não mudou. `schemaVersion` permanece independente. O AGENTS.md estabelece a comparação entre cópia local, repositórios, npm e MCP conectado. A validação bloqueia divergências locais. A sincronização externa depende da publicação posterior e reconexão dos clientes.

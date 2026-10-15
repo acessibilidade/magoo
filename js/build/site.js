@@ -4,7 +4,7 @@ import {
   breadcrumb,
   categoryIndex,
 } from "./categories.js";
-import { readFile, writeFile } from "node:fs/promises";
+import { copyFile, mkdir, readFile, writeFile } from "node:fs/promises";
 import { load } from "cheerio";
 import { format } from "prettier";
 import { catalog, components } from "../lib/catalog.js";
@@ -21,6 +21,15 @@ import {
   writeLocalizedChangelog,
 } from "./i18n.js";
 validateContent();
+await mkdir(new URL("downloads/", root), { recursive: true });
+await copyFile(
+  new URL("skills/magoo-figma-native/SKILL.md", root),
+  new URL("downloads/magoo-figma-native.md", root),
+);
+await copyFile(
+  new URL("skills/magoo-figma-native/SKILL.en.md", root),
+  new URL("downloads/magoo-figma-native.en.md", root),
+);
 await writeLocaleRuntime();
 const defaultLocale = locales.find(
   (locale) => locale.id === localeConfig.default,
