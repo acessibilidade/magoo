@@ -187,13 +187,15 @@ for (const [index, category] of [
   const list = category.querySelector("ul");
   const categoryIcon = category.querySelector(".category-icon");
   const label = document.createElement("span");
-  label.textContent = heading.textContent;
+  label.append(...Array.from(heading.childNodes, (node) => node.cloneNode(true)));
+  const buttonLabel = heading.cloneNode(true);
+  buttonLabel.querySelectorAll(".material-icons").forEach((icon) => icon.remove());
   const button = document.createElement("button");
   button.type = "button";
   button.className = "category-toggle";
   list.id = `category-items-${index + 1}`;
   button.setAttribute("aria-controls", list.id);
-  button.append(document.createTextNode(heading.textContent));
+  button.append(document.createTextNode(buttonLabel.textContent.trim()));
   const icon = document.createElement("span");
   icon.className = "material-icons";
   icon.setAttribute("aria-hidden", "true");

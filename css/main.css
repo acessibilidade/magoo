@@ -258,6 +258,17 @@ a:hover {
   font-size: 1.16875rem;
   margin: 17px 0;
 }
+.category h3 a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-decoration: none;
+}
+.category h3 a .material-icons {
+  font-size: 1em;
+  flex-shrink: 0;
+}
 .category ul {
   list-style: none;
   margin: 0;
