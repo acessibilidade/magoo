@@ -1,6 +1,6 @@
 # Publicação via FTP — Magoo 1.6.0
 
-Versão 1.6.0 com publicação no GitHub e no npm autorizada; envio dos arquivos do site por FTP é uma etapa separada. Catálogo com 37 componentes. Este manifesto cobre o conjunto acumulado de ajustes locais desde o commit-base, incluindo a chamada da home e os desdobramentos de Select, Tabelas, Menu e Busca. Substitui FTP-1.5.1.md para este conjunto.
+Versão 1.6.0 publicada no GitHub e no npm em 21/10/2026; envio dos arquivos do site por FTP é uma etapa separada. Catálogo com 37 componentes. Este manifesto cobre o conjunto acumulado de ajustes locais desde o commit-base, incluindo a chamada da home e os desdobramentos de Select, Tabelas, Menu e Busca. Substitui FTP-1.5.1.md para este conjunto.
 
 ## Enviar para produção
 
@@ -321,9 +321,10 @@ Nenhuma remoção necessária. As novas URLs em inglês têm aliases gerados par
 ## Versões e publicação
 
 - Pacote, lockfile, catálogo e 37 componentes em 1.6.0; schemaVersion permanece 1.0.0.
-- GitHub consultado antes da publicação: master em 52ef1d1d7c2af4f26bf25de26c11c48eb90184b8, igual ao commit-base local. Origin: https://github.com/acessibilidade/magoo.git.
-- npm consultado antes da publicação: versão latest 1.5.0. Autenticação renovada para publicar 1.6.0.
-- Revisão final: validação, build e 24 testes aprovados. Pacote de distribuição revisado com 54 arquivos, incluindo os 37 componentes e os módulos do MCP.
-- Publicação em andamento; confirmar o npm e o GitHub após o envio.
-- MCP conectado ainda retorna contentVersion 1.5.0 e requer atualização/reinício/reconexão para carregar 1.6.0.
-- Nenhum arquivo foi enviado ao servidor do site por FTP nesta operação.
+- GitHub: alterações enviadas e confirmadas em master, commit 65555c865a6e29fd31f7ea8805b5e59305abee6b. Repositório: https://github.com/acessibilidade/magoo. Este manifesto recebe um commit de documentação complementar.
+- npm: @acessibilidade/magoo-mcp@1.6.0 publicado e confirmado no registro público como latest. Versão anterior: 1.5.0.
+- Integridade publicada: shasum a3a9b94b888d8f4ff21ec60edae106e734eff819, correspondente ao pacote revisado.
+- Revisão final: validação, build e 24 testes aprovados. Distribuição revisada com 54 arquivos, incluindo os 37 componentes e os módulos do MCP.
+- Instalação limpa do pacote público em diretório temporário: servidor MCP informa 1.6.0; busca lista 37 componentes; leitura retorna cinco seções para cada componente; Layout e ordem do conteúdo inclui os comandos de rolagem.
+- MCP já conectado ao chat ainda retorna contentVersion 1.5.0 e requer atualização/reinício/reconexão para carregar 1.6.0. A publicação não reinicia conexões existentes.
+- Nenhum arquivo foi enviado ao servidor do site por FTP nesta operação. Enviar os 216 arquivos acima, preservando os caminhos. Não é necessário remover ou renomear arquivos em produção.
