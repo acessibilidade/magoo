@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html" aria-current="page">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -166,6 +169,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -203,7 +209,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre rótulos curtos, área atual, foco e contagens quando existirem. A barra não deve encobrir conteúdo ou controles.</p>
               <h4>Como se comporta</h4>
-              <p>Para destinos web, Tab percorre os links e Enter navega. Para painéis, use o padrão de abas com setas e ativação manual ou automática conforme o contexto.</p>
+              <p>Para destinos web, <code data-interaction-label="true">Tab</code> percorre os links e <code data-interaction-label="true">Enter</code> navega. Para painéis, use o padrão de abas com <code data-interaction-label="true">setas</code> e ativação manual ou automática conforme o contexto.</p>
               <h4>O que documentar no Figma</h4>
               <p>Registre o padrão escolhido, destinos, seleção e foco após a mudança. Preserve o progresso e respeite áreas seguras e teclado virtual.</p>
               <h4>Como revisar</h4>
@@ -254,14 +260,14 @@
             </ol>
             <h3 class="destaque mt-4">Interação com gestos</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Tocar em um item permite acessar a área correspondente.</li>
+              <li><code data-interaction-label="true">Tocar</code> em um item permite acessar a área correspondente.</li>
               <li>A indicação de seleção é atualizada e a barra permanece consistente entre os destinos.</li>
               <li>Gestos adicionais podem complementar a navegação, mantendo cada destino disponível por um controle explícito.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado — navegação entre destinos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Em uma Tabbar web que navega entre páginas ou rotas, <code>Tab</code> e <code>Shift + Tab</code> percorrem os links na ordem da interface.</li>
-              <li><code>Enter</code> ativa o link focado. Não exigir <code>Barra de espaço</code> para links nem interceptar setas como se fossem abas.</li>
+              <li><code>Enter</code> ativa o link focado. Não exigir <code>Barra de espaço</code> para links nem interceptar <code data-interaction-label="true">setas</code> como se fossem abas.</li>
               <li>Ao mudar de rota sem recarregar a página, atualizar o título e posicionar o foco em um destino lógico, como o título ou início do conteúdo.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado — alternância de painéis</h3>
@@ -270,14 +276,14 @@
               <li><code>Seta para a direita</code> e <code>Seta para a esquerda</code> movem o foco entre abas horizontais, incluindo a passagem da última à primeira e vice-versa.</li>
               <li>Na ativação manual, <code>Enter</code> ou <code>Barra de espaço</code> exibe o painel da aba focada. Ativação automática só é adequada quando o painel aparece sem atraso perceptível.</li>
               <li><code>Home</code> e <code>End</code> podem mover o foco para a primeira e última aba. Esse comportamento é opcional e deve ser consistente.</li>
-              <li>Atualizar <code>aria-selected</code> e a associação com o painel; o foco permanece na aba após a seleção, e <code>Tab</code> permite seguir para o conteúdo.</li>
+              <li>Ao confirmar uma aba, seu painel é exibido e o foco permanece na aba; <code data-interaction-label="true">Tab</code> permite seguir para o conteúdo.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Na navegação web entre destinos, identificar a região de navegação, o nome de cada link e a área atual por <code>aria-current="page"</code>.</li>
+              <li>Ao percorrer os destinos com leitor de telas, a pessoa identifica a região de navegação, o nome de cada link e qual área é a atual.</li>
               <li>Na alternância de painéis, identificar o conjunto como <code>tablist</code>, cada controle como aba e o painel como <code>tabpanel</code>, com rótulos e associações adequados.</li>
-              <li>Em aplicativos nativos, usar a semântica e os comandos fornecidos pela plataforma para a barra e seus itens.</li>
-              <li>Com leitor de telas móvel, navegar pelos itens com os gestos da plataforma e tocar duas vezes ou usar o gesto de ativação para abrir o destino.</li>
+              <li>Em aplicativos nativos, os comandos de navegação do leitor de telas percorrem os itens e o comando de ativação abre a área escolhida, conforme a plataforma.</li>
+              <li>Com leitor de telas móvel, navegar pelos itens com os gestos da plataforma e <code data-interaction-label="true">tocar duas vezes</code> ou usar o gesto de ativação para abrir o destino.</li>
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -338,13 +344,31 @@
               <li>Mudanças de rota precisam atualizar título, foco e histórico de navegação conforme o fluxo. Evitar apagar dados ou o progresso ao alternar áreas.</li>
               <li>Os padrões nativos Apple e Material usam recursos próprios de suas plataformas. Adaptar os exemplos web conforme a finalidade do componente e verificar o comportamento com tecnologias assistivas.</li>
             </ol>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>Atualizar <code>aria-selected</code> e a associação com o painel; o foco permanece na aba após a seleção, e <code>Tab</code> permite seguir para o conteúdo.</li>
+            </ul>
+            <ul>
+              <li>Na navegação web entre destinos, identificar a região de navegação, o nome de cada link e a área atual por <code>aria-current="page"</code>.</li>
+            </ul>
+            <ul>
+              <li>Em aplicativos nativos, usar a semântica e os comandos fornecidos pela plataforma para a barra e seus itens.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Tabbar</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/tab-bars" target="_blank" rel="noopener noreferrer">Apple — Tab bars <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Orientações para barras de navegação em interfaces Apple.
+                <a href="https://developer.apple.com/design/human-interface-guidelines/tab-bars" target="_blank" rel="noopener noreferrer">Apple — Tabbars<i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Orientações para barras de navegação em interfaces Apple.
               </li>
               <li>
                 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank" rel="noopener noreferrer">W3C WAI-ARIA APG — Tabs Pattern <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Referência para a variação que alterna painéis na mesma página.
@@ -368,6 +392,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

@@ -2,11 +2,11 @@
 
 > Biblioteca educacional de comportamentos de interação de componentes, de Marcelo Sales.
 
-Versão do conteúdo: 1.5.0. Idioma: pt-BR. Licença MIT para o conteúdo autoral; referências externas conservam suas próprias licenças.
+Versão do conteúdo: 1.6.0. Idioma: pt-BR. Licença MIT para o conteúdo autoral; referências externas conservam suas próprias licenças.
 
 Material educacional, não certificação de acessibilidade. Cite Marcelo Sales, a versão consultada, os IDs e as referências. Diferencie conteúdo original de adaptações. A consulta não executa testes nem comprova conformidade de uma implementação.
 
-Os arquivos JSON contêm a fonte completa das cinco seções, com IDs estáveis e referências. O MCP é somente de leitura, executado localmente por STDIO; não há endpoint HTTP MCP. Instalação: Node.js 20.19 ou superior, comando npx, argumentos -y @acessibilidade/magoo-mcp@1.5.0.
+Os arquivos JSON contêm a fonte completa das cinco seções, com IDs estáveis e referências. O MCP é somente de leitura, executado localmente por STDIO; não há endpoint HTTP MCP. Instalação: Node.js 20.19 ou superior, comando npx, argumentos -y @acessibilidade/magoo-mcp@1.6.0.
 
 ## Catálogo e integração
 
@@ -16,35 +16,43 @@ Os arquivos JSON contêm a fonte completa das cinco seções, com IDs estáveis 
 
 ## Componentes — fonte estruturada
 
-- [Abas](https://magoo.cc/content/componentes/abas.json): Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada. Versão 1.5.0.
-- [Accordion](https://magoo.cc/content/componentes/accordion.json): Agrupa seções de conteúdo que podem ser expandidas e recolhidas conforme a necessidade. Versão 1.5.0.
-- [Detalhes e Mais informações](https://magoo.cc/content/componentes/detalhes-mais-informacoes.json): Oferece informações complementares sem interromper o caminho principal de leitura. Versão 1.5.0.
-- [Modal](https://magoo.cc/content/componentes/modal.json): Exibe uma tarefa ou informação sobre a página, exigindo atenção à entrada, à permanência e à saída do foco. Versão 1.5.0.
-- [Tooltip e Popover](https://magoo.cc/content/componentes/tooltip-popover.json): Apresentam informações adicionais associadas a um elemento da interface. Versão 1.5.0.
-- [Listas](https://magoo.cc/content/componentes/listas.json): Organizam conjuntos de informações e comunicam relações entre seus itens. Versão 1.5.0.
-- [Tabelas](https://magoo.cc/content/componentes/tabelas.json): Organizam dados em linhas e colunas, preservando as relações entre células e cabeçalhos. Versão 1.5.0.
-- [Títulos (Cabeçalhos)](https://magoo.cc/content/componentes/titulos.json): Estabelecem a hierarquia do conteúdo e ajudam a localizar e compreender as seções de uma página. Versão 1.5.0.
-- [Botão](https://magoo.cc/content/componentes/botao.json): Aciona uma tarefa ou altera um estado. Rótulos, feedback e comportamento tornam a ação previsível. Versão 1.5.0.
-- [Checkbox](https://magoo.cc/content/componentes/checkbox.json): Permite selecionar uma ou mais opções independentes, com estados claramente identificáveis. Versão 1.5.0.
-- [Radio Button](https://magoo.cc/content/componentes/radio-button.json): Permite escolher uma única alternativa em um conjunto de opções relacionadas. Versão 1.5.0.
-- [Select (Combo)](https://magoo.cc/content/componentes/select.json): Apresenta um conjunto de opções em um controle de seleção compacto. Versão 1.5.0.
-- [Slider](https://magoo.cc/content/componentes/slider.json): Permite ajustar um valor dentro de um intervalo por meio de um controle deslizante. Versão 1.5.0.
-- [Switch](https://magoo.cc/content/componentes/switch.json): Alterna uma configuração entre dois estados, como ativado e desativado. Versão 1.5.0.
-- [Alertas](https://magoo.cc/content/componentes/alertas.json): Mensagens que comunicam informações importantes, orientam decisões e ajudam a entender o que aconteceu. Versão 1.5.0.
-- [Dialogs](https://magoo.cc/content/componentes/dialogs.json): Apresentam mensagens e decisões em um contexto de diálogo com a pessoa. Versão 1.5.0.
-- [Toasts](https://magoo.cc/content/componentes/toasts.json): Comunicam retornos breves sobre ações e atualizações sem bloquear a tarefa em andamento. Versão 1.5.0.
-- [Breadcrumb](https://magoo.cc/content/componentes/breadcrumb.json): Mostra a localização da página na hierarquia e oferece caminhos de volta aos níveis anteriores. Versão 1.5.0.
-- [Carrossel](https://magoo.cc/content/componentes/carrossel.json): Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles para navegar entre eles. Versão 1.5.0.
-- [Drag'n'Drop](https://magoo.cc/content/componentes/drag-drop.json): Permite mover e reorganizar elementos, considerando alternativas ao gesto de arrastar e soltar. Versão 1.5.0.
-- [Links](https://magoo.cc/content/componentes/links.json): Conectam páginas, recursos e trechos de conteúdo por meio de destinos compreensíveis. Versão 1.5.0.
-- [Menu](https://magoo.cc/content/componentes/menu.json): Reúne opções de navegação ou ações em uma estrutura organizada e previsível. Versão 1.5.0.
-- [Paginação](https://magoo.cc/content/componentes/paginacao.json): Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas. Versão 1.5.0.
-- [Input "text"](https://magoo.cc/content/componentes/input-text.json): Permite inserir e editar texto em uma única linha. Versão 1.5.0.
-- [Input "email"](https://magoo.cc/content/componentes/input-email.json): Permite informar um endereço de e-mail. Versão 1.5.0.
-- [Input "search"](https://magoo.cc/content/componentes/input-search.json): Permite inserir termos para pesquisar conteúdo. Versão 1.5.0.
-- [Input "password"](https://magoo.cc/content/componentes/input-password.json): Permite inserir uma senha e alternar entre conteúdo oculto e visível. Versão 1.5.0.
-- [Validação de formulários](https://magoo.cc/content/componentes/validacao-formularios.json): Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários. Versão 1.5.0.
-- [Tabbar](https://magoo.cc/content/componentes/tabbar.json): Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente. Versão 1.5.0.
+- [Abas](https://magoo.cc/content/componentes/abas.json): Organizam conteúdos relacionados em painéis alternativos, exibidos a partir de uma navegação compartilhada. Versão 1.6.0.
+- [Accordion](https://magoo.cc/content/componentes/accordion.json): Agrupa seções de conteúdo que podem ser expandidas e recolhidas conforme a necessidade. Versão 1.6.0.
+- [Detalhes e Mais informações](https://magoo.cc/content/componentes/detalhes-mais-informacoes.json): Oferece informações complementares sem interromper o caminho principal de leitura. Versão 1.6.0.
+- [Modal](https://magoo.cc/content/componentes/modal.json): Exibe uma tarefa ou informação sobre a página, exigindo atenção à entrada, à permanência e à saída do foco. Versão 1.6.0.
+- [Tooltip e Popover](https://magoo.cc/content/componentes/tooltip-popover.json): Apresentam informações adicionais associadas a um elemento da interface. Versão 1.6.0.
+- [Listas](https://magoo.cc/content/componentes/listas.json): Organizam conjuntos de informações e comunicam relações entre seus itens. Versão 1.6.0.
+- [Tabelas](https://magoo.cc/content/componentes/tabelas.json): Organizam dados em linhas e colunas, preservando as relações entre células e cabeçalhos. Versão 1.6.0.
+- [Títulos (Cabeçalhos)](https://magoo.cc/content/componentes/titulos.json): Estabelecem a hierarquia do conteúdo e ajudam a localizar e compreender as seções de uma página. Versão 1.6.0.
+- [Botão](https://magoo.cc/content/componentes/botao.json): Aciona uma tarefa ou altera um estado. Rótulos, feedback e comportamento tornam a ação previsível. Versão 1.6.0.
+- [Checkbox](https://magoo.cc/content/componentes/checkbox.json): Permite selecionar uma ou mais opções independentes, com estados claramente identificáveis. Versão 1.6.0.
+- [Radio Button](https://magoo.cc/content/componentes/radio-button.json): Permite escolher uma única alternativa em um conjunto de opções relacionadas. Versão 1.6.0.
+- [Select (Combo)](https://magoo.cc/content/componentes/select.json): Apresenta um conjunto de opções em um controle de seleção compacto. Versão 1.6.0.
+- [Slider](https://magoo.cc/content/componentes/slider.json): Permite ajustar um valor dentro de um intervalo por meio de um controle deslizante. Versão 1.6.0.
+- [Switch](https://magoo.cc/content/componentes/switch.json): Alterna uma configuração entre dois estados, como ativado e desativado. Versão 1.6.0.
+- [Alertas](https://magoo.cc/content/componentes/alertas.json): Mensagens que comunicam informações importantes, orientam decisões e ajudam a entender o que aconteceu. Versão 1.6.0.
+- [Dialogs](https://magoo.cc/content/componentes/dialogs.json): Apresentam mensagens e decisões em um contexto de diálogo com a pessoa. Versão 1.6.0.
+- [Toasts](https://magoo.cc/content/componentes/toasts.json): Comunicam retornos breves sobre ações e atualizações sem bloquear a tarefa em andamento. Versão 1.6.0.
+- [Breadcrumb](https://magoo.cc/content/componentes/breadcrumb.json): Mostra a localização da página na hierarquia e oferece caminhos de volta aos níveis anteriores. Versão 1.6.0.
+- [Carrossel](https://magoo.cc/content/componentes/carrossel.json): Apresenta uma sequência de conteúdos em um espaço compartilhado, com controles para navegar entre eles. Versão 1.6.0.
+- [Drag'n'Drop](https://magoo.cc/content/componentes/drag-drop.json): Permite mover e reorganizar elementos, considerando alternativas ao gesto de arrastar e soltar. Versão 1.6.0.
+- [Links](https://magoo.cc/content/componentes/links.json): Conectam páginas, recursos e trechos de conteúdo por meio de destinos compreensíveis. Versão 1.6.0.
+- [Menu](https://magoo.cc/content/componentes/menu.json): Reúne opções de navegação ou ações em uma estrutura organizada e previsível. Versão 1.6.0.
+- [Paginação](https://magoo.cc/content/componentes/paginacao.json): Divide conjuntos extensos de conteúdo em páginas e permite navegar entre elas. Versão 1.6.0.
+- [Input "text"](https://magoo.cc/content/componentes/input-text.json): Permite inserir e editar texto em uma única linha. Versão 1.6.0.
+- [Input "email"](https://magoo.cc/content/componentes/input-email.json): Permite informar um endereço de e-mail. Versão 1.6.0.
+- [Input "search"](https://magoo.cc/content/componentes/input-search.json): Permite inserir termos para pesquisar conteúdo. Versão 1.6.0.
+- [Input "password"](https://magoo.cc/content/componentes/input-password.json): Permite inserir uma senha e alternar entre conteúdo oculto e visível. Versão 1.6.0.
+- [Validação de formulários](https://magoo.cc/content/componentes/validacao-formularios.json): Mensagens que identificam erros de preenchimento, orientam a correção e comunicam o resultado do envio de formulários. Versão 1.6.0.
+- [Tabbar](https://magoo.cc/content/componentes/tabbar.json): Barra de acesso às principais áreas de uma interface, com indicação do destino atual e navegação consistente. Versão 1.6.0.
+- [Upload de arquivos](https://magoo.cc/content/componentes/upload-arquivos.json): Permite selecionar, enviar e gerenciar arquivos, com limites, estados e recuperação de falhas claros. Versão 1.6.0.
+- [Autocomplete](https://magoo.cc/content/componentes/autocomplete.json): Oferece sugestões durante a digitação, distinguindo texto em edição, opção ativa e valor confirmado. Versão 1.6.0.
+- [Datas e intervalos](https://magoo.cc/content/componentes/datas-intervalos.json): Permite informar uma data ou um intervalo, com entrada manual, calendário e regras de validação compreensíveis. Versão 1.6.0.
+- [Carregamento e progresso](https://magoo.cc/content/componentes/carregamento-progresso.json): Comunica espera e avanço de operações, distinguindo duração desconhecida, progresso mensurável, conclusão e falha. Versão 1.6.0.
+- [Cards](https://magoo.cc/content/componentes/cards.json): Agrupam conteúdo sobre um assunto, com hierarquia clara e distinção entre informação, navegação e ações. Versão 1.6.0.
+- [Indicador de etapas](https://magoo.cc/content/componentes/indicador-etapas.json): Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente. Versão 1.6.0.
+- [Regiões da página](https://magoo.cc/content/componentes/regioes-pagina.json): Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página. Versão 1.6.0.
+- [Layout e ordem do conteúdo](https://magoo.cc/content/componentes/layout-ordem-conteudo.json): Organiza agrupamentos, leitura e navegação em diferentes tamanhos de tela, preservando relações, contexto e acesso aos controles. Versão 1.6.0.
 
 ## Optional
 

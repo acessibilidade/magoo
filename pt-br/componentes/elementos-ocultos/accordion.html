@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -166,6 +169,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -203,7 +209,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre títulos claros, seções abertas e fechadas e estados de interação dos cabeçalhos.</p>
               <h4>Como se comporta</h4>
-              <p>Clique, toque, Enter ou espaço abre ou fecha a seção. O conteúdo fechado fica fora da navegação pelo teclado.</p>
+              <p>Clique, toque, <code data-interaction-label="true">Enter</code>ou <code data-interaction-label="true">espaço</code> abre ou fecha a seção. O conteúdo fechado fica fora da navegação pelo teclado.</p>
               <h4>O que documentar no Figma</h4>
               <p>Defina se várias seções podem ficar abertas. Anote a ordem de navegação e como informar o estado aberto ou fechado.</p>
               <h4>Como revisar</h4>
@@ -235,7 +241,7 @@
             <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>O alvo tocável do cabeçalho possui área suficiente para acionamento confortável?</li>
-              <li>Ao tocar no cabeçalho, o painel correspondente alterna entre aberto e fechado?</li>
+              <li>Ao <code data-interaction-label="true">tocar</code> no cabeçalho, o painel correspondente alterna entre aberto e fechado?</li>
               <li>A mudança de estado fica perceptível visualmente após o toque?</li>
             </ol>
 
@@ -289,8 +295,8 @@
 
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ul class="lista-detalhe link-padrao">
-              <li>O botão deve expor o estado com <code>aria-expanded</code>.</li>
-              <li>Quando usado, <code>aria-controls</code> deve apontar para o painel controlado.</li>
+              <li>Ao navegar até o cabeçalho com leitor de telas, a pessoa identifica se a seção está aberta ou fechada.</li>
+              <li>Ao acionar o cabeçalho, a seção correspondente abre ou fecha e seu estado é atualizado.</li>
               <li>O conteúdo aberto deve ficar disponível na ordem de leitura e navegação.</li>
             </ul>
           </div>
@@ -350,6 +356,14 @@
               <li>Conteúdo fechado não deve receber foco por teclado.</li>
               <li>Quando apenas uma seção puder permanecer aberta, essa regra precisa ser previsível e testada.</li>
             </ul>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>O botão deve expor o estado com <code>aria-expanded</code>.</li>
+            </ul>
+            <ul>
+              <li>Quando usado, <code>aria-controls</code> deve apontar para o painel controlado.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
@@ -363,35 +377,35 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank" rel="noopener noreferrer">W3C APG: Accordion Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/" target="_blank" rel="noopener noreferrer">W3C APG: Accordion Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank" rel="noopener noreferrer">MDN Web Docs: The Details disclosure element <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details" target="_blank" rel="noopener noreferrer">MDN Web Docs: The Details disclosure element <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/lists/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Lists <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components/lists/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Lists <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://design-system.w3.org/components/accordion.html" target="_blank" rel="noopener noreferrer">W3C Design System: Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.w3.org/components/accordion.html" target="_blank" rel="noopener noreferrer">W3C Design System: Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://design-system.service.gov.uk/components/accordion/" target="_blank" rel="noopener noreferrer">Gov.UK - Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.service.gov.uk/components/accordion/" target="_blank" rel="noopener noreferrer">Gov.UK - Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/accordion/" target="_blank" rel="noopener noreferrer">US.gov - Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/accordion/" target="_blank" rel="noopener noreferrer">US.gov - Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/accordion/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/accordion/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/accordion/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/accordion/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/accordion/" target="_blank" rel="noopener noreferrer">Bootstrap - Accordion <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/accordion/" target="_blank" rel="noopener noreferrer">Bootstrap - Accordion <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -403,6 +417,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

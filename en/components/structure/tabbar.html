@@ -113,14 +113,15 @@
           <nav aria-label="Components">
             <h3>Structure</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
-              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings</a>
               </li>
               <li><a href="/en/components/structure/tables.html">Tables</a></li>
               <li><a href="/en/components/structure/lists.html">Lists</a></li>
               <li><a href="/en/components/structure/tabbar.html" aria-current="page">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
             </ul>
             <h3>Messages</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
               <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
               <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
             </ul>
             <h3>Navigation</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
               <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
               <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
             </ul>
             <h3>Hidden elements</h3>
             <ul>
@@ -166,6 +169,9 @@
               <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
               <li><a href="/en/components/forms/slider.html">Slider</a></li>
               <li><a href="/en/components/forms/switch.html">Switch</a></li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
             </ul>
           </nav>
         </div>
@@ -180,13 +186,13 @@
             <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
@@ -200,10 +206,10 @@
               <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
               <h4>When to use</h4>
               <p>Use for persistent access to the interface’s main areas. Define whether items navigate to destinations or switch panels.</p>
-              <h4>What to draw</h4>
+              <h4>What to design</h4>
               <p>Show short labels, the current area, focus, and counts when present. The bar must not cover content or controls.</p>
               <h4>How it behaves</h4>
-              <p>For web destinations, Tab moves through links and Enter navigates. For panels, use the tabs pattern with arrows and manual or automatic activation according to context.</p>
+              <p>For web destinations, <code data-interaction-label="true">Tab</code> moves through links and <code data-interaction-label="true">Enter</code> navigates. For panels, use the tabs pattern with <code data-interaction-label="true">arrow navigation</code> and manual or automatic activation according to context.</p>
               <h4>What to document in Figma</h4>
               <p>Record the chosen pattern, destinations, selection, and focus after changes. Preserve progress and respect safe areas and the virtual keyboard.</p>
               <h4>How to review</h4>
@@ -245,7 +251,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
-            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h2 class="titulo-mobile">Interaction Methods</h2>
             <h3 class="destaque mt-4">Mouse interaction</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Clicking an item opens the corresponding destination and updates the current area indicator.</li>
@@ -254,30 +260,30 @@
             </ol>
             <h3 class="destaque mt-4">Gesture interaction</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Tapping an item provides access to its corresponding area.</li>
+              <li><code data-interaction-label="true">Tapping</code> an item provides access to its corresponding area.</li>
               <li>The selection indicator updates and the bar remains consistent across destinations.</li>
               <li>Additional gestures may supplement navigation while keeping each destination available through an explicit control.</li>
             </ol>
             <h3 class="destaque mt-4">Keyboard interaction — navigation between destinations</h3>
             <ol class="lista-detalhe link-padrao">
               <li>In a web Tabbar that navigates between pages or routes, <code>Tab</code> and <code>Shift + Tab</code> move through links in interface order.</li>
-              <li><code>Enter</code> activates the focused link. Do not require <code>Space</code> for links or intercept arrow keys as though they were tabs.</li>
+              <li><code>Enter</code> activates the focused link. Do not require <code>Space bar</code> for links or intercept <code data-interaction-label="true">arrow navigation</code> as though they were tabs.</li>
               <li>When changing routes without reloading the page, update the title and position focus at a logical destination, such as the heading or start of content.</li>
             </ol>
             <h3 class="destaque mt-4">Keyboard interaction — panel switching</h3>
             <ol class="lista-detalhe link-padrao">
               <li>When the component actually switches panels on the same page, apply the tabs pattern: <code>Tab</code> enters through the selected tab and then leaves the set for the next element in the sequence.</li>
               <li><code>Right Arrow</code> and <code>Left Arrow</code> move focus between horizontal tabs, including wrapping from last to first and vice versa.</li>
-              <li>With manual activation, <code>Enter</code> or <code>Space</code> displays the focused tab's panel. Automatic activation is appropriate only when the panel appears without noticeable delay.</li>
+              <li>With manual activation, <code>Enter</code> or <code>Space bar</code> displays the focused tab's panel. Automatic activation is appropriate only when the panel appears without noticeable delay.</li>
               <li><code>Home</code> and <code>End</code> may move focus to the first and last tabs. This behavior is optional and should be consistent.</li>
-              <li>Update <code>aria-selected</code> and the panel association; focus remains on the tab after selection, and <code>Tab</code> allows moving on to the content.</li>
+              <li>On committing a tab, its panel appears and focus remains on the tab; <code data-interaction-label="true">Tab</code> allows moving to the content.</li>
             </ol>
             <h3 class="destaque mt-4">Keyboard (or gesture) interaction + screen reader</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>For web navigation between destinations, identify the navigation region, each link's name, and the current area through <code>aria-current="page"</code>.</li>
+              <li>When traversing destinations with a screen reader, people identify the navigation region, each link’s name, and the current area.</li>
               <li>For panel switching, identify the set as <code>tablist</code>, each control as a tab, and the panel as <code>tabpanel</code>, with appropriate labels and associations.</li>
-              <li>In native applications, use the semantics and commands provided by the platform for the bar and its items.</li>
-              <li>With a mobile screen reader, navigate items using platform gestures and double-tap or use the activation gesture to open the destination.</li>
+              <li>In native applications, screen reader navigation commands traverse items and the activation command opens the chosen area, according to the platform.</li>
+              <li>With a mobile screen reader, navigate items using platform gestures and <code data-interaction-label="true">double tapping</code> or use the activation gesture to open the destination.</li>
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -293,14 +299,14 @@
               <li>AND I perceive that focus allows continued navigation in the new content</li>
               <li>WHEN I use <code>Tab</code> or <code>Shift + Tab</code>, I SEE that I can move through links without trapping focus in the bar</li>
             </ol>
-            <h4 class="mt-4">Desktop screen reader</h4>
+            <h4 class="mt-4">Screen reader on desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>WHEN I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and use <code>Tab</code> to focus a navigation item</li>
               <li>I HEAR the destination name, identification as a link or equivalent native control, and the current area indication when applicable</li>
               <li>THEN, when I activate the item with the appropriate platform command</li>
               <li>I HEAR or perceive that the corresponding area opened and I can continue navigating the content</li>
             </ol>
-            <h4 class="mt-4">Mobile screen reader</h4>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
             <ol class="lista-detalhe link-padrao">
               <li>WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and swipe to focus a navigation item</li>
               <li>I HEAR the destination name, identification as a link or equivalent native control, and the current area indication when applicable</li>
@@ -313,7 +319,7 @@
               <li>I SEE focus reach the selected tab</li>
               <li>THEN, when I use <code>Right Arrow</code> or <code>Left Arrow</code></li>
               <li>I SEE focus move between tabs</li>
-              <li>AND, with manual activation, when I use <code>Enter</code> or <code>Space</code>, I SEE the corresponding panel</li>
+              <li>AND, with manual activation, when I use <code>Enter</code> or <code>Space bar</code>, I SEE the corresponding panel</li>
               <li>WHEN I use a screen reader, I HEAR the tab name and its updated selected state</li>
               <li>AND I can move on to the panel content with <code>Tab</code></li>
             </ol>
@@ -325,7 +331,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
-            <h2 class="titulo-mobile">Considerations</h2>
+            <h2 class="titulo-mobile">Points to consider</h2>
             <ol class="lista-detalhe link-padrao">
               <li>Navigation Tabbars and content tabs may look similar but behave differently. Do not use tablist merely because links are aligned in a bar.</li>
               <li>On the web, use links for navigable destinations and <code>aria-current="page"</code> for the current one. Use the tabs pattern and <code>aria-selected</code> when switching panels on the same page.</li>
@@ -338,13 +344,31 @@
               <li>Route changes need to update title, focus, and navigation history according to the flow. Avoid clearing data or progress when switching areas.</li>
               <li>Native Apple and Material patterns use their platforms' own resources. Adapt web examples to the component's purpose and verify behavior with assistive technologies.</li>
             </ol>
+
+            <h3>Implementation notes and behavior decisions</h3>
+            <ul>
+              <li>Update <code>aria-selected</code> and the panel association; focus remains on the tab after selection, and <code>Tab</code> allows moving to the content.</li>
+            </ul>
+            <ul>
+              <li>For web navigation between destinations, identify the navigation region, each link's name, and the current area through <code>aria-current="page"</code>.</li>
+            </ul>
+            <ul>
+              <li>In native applications, use the semantics and commands provided by the platform for the bar and its items.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">References</h2>
+            <p class="mt-3">
+              Additional references for components of type
+              <span class="destaque">Tabbar</span>.
+            </p>
+            <p><strong>Important:</strong><br />Most references are on the course platform alongside the lessons cited in this material.</p>
+            <p><strong>Disclaimer:</strong><br />The links listed here are a curated collection of references where you can find implemented components, rather than recommendations. There is no unified implementation format and no guarantee that these links follow every design pattern. Direct questions to the teams responsible for the linked materials. Before copying a model, remember that all materials are constantly updated and that patterns, particularly proprietary ones, may change.</p>
+
             <h3 class="destaque mt-4">Design patterns</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/tab-bars" target="_blank" rel="noopener noreferrer">Apple — Tab bars <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Guidance on navigation bars in Apple interfaces.
+                <a href="https://developer.apple.com/design/human-interface-guidelines/tab-bars" target="_blank" rel="noopener noreferrer">Apple — Tabbars<i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Guidance on navigation bars in Apple interfaces.
               </li>
               <li>
                 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank" rel="noopener noreferrer">W3C WAI-ARIA APG — Tabs Pattern <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span></a> — Reference for the variation that switches panels on the same page.
@@ -368,6 +392,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
       >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
     </p>
+
     <footer class="site-footer" lang="en-US">
       <div class="wrap footer-main">
         <div class="footer-about">

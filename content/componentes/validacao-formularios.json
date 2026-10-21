@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "validacao-formularios",
   "name": "Validação de formulários",
   "category": "mensagens",
@@ -1019,8 +1019,22 @@
               "attributes": {},
               "children": [
                 {
+                  "type": "element",
+                  "id": "validacao-formularios.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tocar"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "Tocar no botão de envio permite validar o formulário."
+                  "value": " no botão de envio permite validar o formulário."
                 }
               ]
             },
@@ -1035,8 +1049,22 @@
               "attributes": {},
               "children": [
                 {
+                  "type": "element",
+                  "id": "validacao-formularios.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tocar"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "Tocar no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção."
+                  "value": " no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção."
                 }
               ]
             },
@@ -1078,29 +1106,13 @@
           "children": [
             {
               "type": "element",
-              "id": "validacao-formularios.block.53",
+              "id": "validacao-formularios.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por "
-                },
-                {
-                  "type": "element",
-                  "id": "validacao-formularios.block.52",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-describedby"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": ", preservando também a associação com as instruções."
+                  "value": "Ao navegar até um campo inválido com leitor de telas, a pessoa identifica seu rótulo, erro e orientação de correção."
                 }
               ]
             },
@@ -1110,29 +1122,13 @@
             },
             {
               "type": "element",
-              "id": "validacao-formularios.block.55",
+              "id": "validacao-formularios.methods-review.4",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Usar "
-                },
-                {
-                  "type": "element",
-                  "id": "validacao-formularios.block.54",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-invalid"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção."
+                  "value": "Após corrigir um campo e executar a validação prevista, a pessoa percebe se o erro foi resolvido ou continua presente."
                 }
               ]
             },
@@ -1158,29 +1154,13 @@
             },
             {
               "type": "element",
-              "id": "validacao-formularios.block.58",
+              "id": "validacao-formularios.methods-review.6",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões "
-                },
-                {
-                  "type": "element",
-                  "id": "validacao-formularios.block.57",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-live"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": "."
+                  "value": "Ao receber o retorno da validação com leitor de telas, a pessoa identifica a mensagem sem várias repetições simultâneas do mesmo erro."
                 }
               ]
             },
@@ -2299,6 +2279,146 @@
         {
           "type": "text",
           "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.methods-review.7",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.53",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.52",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-describedby"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", preservando também a associação com as instruções."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.methods-review.3",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.55",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Usar "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.54",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-invalid"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.methods-review.5",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "validacao-formularios.block.58",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões "
+                },
+                {
+                  "type": "element",
+                  "id": "validacao-formularios.block.57",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-live"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2320,6 +2440,124 @@
               "value": "Referências"
             }
           ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Validação de formulários"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "validacao-formularios.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "validacao-formularios.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         },
         {
           "type": "text",

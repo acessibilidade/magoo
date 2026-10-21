@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cards | Magoo</title>
+    <meta name="description" content="Agrupam conteúdo sobre um assunto, com hierarquia clara e distinção entre informação, navegação e ações." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Cards | Magoo" />
+    <meta property="og:description" content="Agrupam conteúdo sobre um assunto, com hierarquia clara e distinção entre informação, navegação e ações." />
+
+    <meta name="twitter:title" content="Cards | Magoo" />
+    <meta name="twitter:description" content="Agrupam conteúdo sobre um assunto, com hierarquia clara e distinção entre informação, navegação e ações." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/estrutura/cards.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/estrutura/cards.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/estrutura/cards.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/structure/cards.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/estrutura/cards.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/estrutura/cards.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/estrutura/cards.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/structure/cards.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/structure/cards.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/estrutura.html">Estrutura</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Cards</span></li>
+          </ol>
+        </nav>
+        <h1>Cards</h1>
+        <p>Agrupam conteúdo sobre um assunto, com hierarquia clara e distinção entre informação, navegação e ações.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html" aria-current="page">Cards</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="cards-designer-guide-title">
+              <h3 id="cards-designer-guide-title">Guia rápido para designers</h3>
+              <h4>Quando usar</h4>
+              <p>Use para apresentar unidades de conteúdo relacionadas em uma coleção. Avalie tabela quando a tarefa exigir comparação por colunas.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre título, resumo, imagem quando necessária e ações. Diferencie card informativo, destino principal e ações independentes.</p>
+              <h4>Como se comporta</h4>
+              <p>Conteúdo estático é lido; links navegam e botões executam ações. A área acionável precisa ser previsível.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Defina hierarquia, área acionável, ordem de leitura, alternativas das imagens e tratamento de títulos longos.</p>
+              <h4>Como revisar</h4>
+              <p>Confira variações e telas pequenas no desenho. Na implementação, verifique semântica, foco, nomes e acionamento independente de cada controle.</p>
+            </div>
+
+            <h3 class="destaque mt-4">Conteúdo e finalidade</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Cada card apresenta uma unidade compreensível de conteúdo? O título e o resumo ajudam a distinguir itens sem depender da imagem?</li>
+              <li>O card é apenas informativo, possui um destino ou contém várias ações? Evite a mesma aparência de interação para cards com comportamentos diferentes.</li>
+              <li>A coleção precisa de lista e títulos? A hierarquia dos cabeçalhos deve acompanhar a página, sem fixar um nível só pela aparência.</li>
+            </ol>
+            <h3 class="destaque mt-4">Área acionável e controles</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A pessoa consegue reconhecer onde clicar e qual destino será aberto? Se toda a área ampliar um link, o foco visível também precisa comunicar essa área.</li>
+              <li>Ações secundárias, como Favoritar, continuam independentes? Não aninhe botões ou links dentro de outro link ou botão.</li>
+              <li>Há paradas de foco repetidas para o mesmo destino sem necessidade? O nome do link identifica o card, evitando uma coleção de links genéricos Saiba mais?</li>
+            </ol>
+            <h3 class="destaque mt-4">Adaptação do conteúdo</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Títulos longos, ausência de imagem e quantidades diferentes de texto preservam a leitura e o acesso às ações? Não esconda informação essencial em um corte sem alternativa.</li>
+              <li>Ao passar de várias colunas para uma, a ordem visual permanece coerente com leitura e foco? O conteúdo continua disponível com ampliação?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Métodos de Interação</h3>
+            <h4>Mouse e toque</h4>
+            <p>Links e botões apresentam áreas acionáveis identificáveis. Acionar uma ação secundária não deve também abrir o destino principal do card.</p>
+            <h4>Teclado</h4>
+            <p>Cards estáticos não recebem foco apenas por terem borda ou destaque. <code data-interaction-label="true">Tab</code> percorre links e botões na ordem do conteúdo.</p>
+            <p><code data-interaction-label="true">Enter</code> abre o link focado; <code data-interaction-label="true">Enter</code> ou <code data-interaction-label="true">Espaço</code> executa a ação do botão focado. Acionar um botão secundário não abre também o destino principal do card.</p>
+            <h4>Leitores de tela</h4>
+            <p>Os comandos de leitura e de navegação por títulos ou links do leitor de telas permitem percorrer a coleção e identificar o assunto e o destino de cada card.</p>
+            <p>Com leitor de telas no celular, <code data-interaction-label="true">deslizar o dedo</code> percorre conteúdo e controles no modo padrão; <code data-interaction-label="true">tocar duas vezes</code> ativa o link ou botão focado. Ao alternar Favoritar, a pessoa percebe o novo estado.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página que contém Cards</h3>
+            <p>Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados.</p>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO percorro uma coleção de cards com <code data-interaction-label="true">Tab</code> e <code data-interaction-label="true">Shift + Tab</code></li>
+              <li>VEJO foco nos links e botões, sem paradas criadas apenas para cards estáticos</li>
+              <li>ENTÃO, quando aciono uma ação secundária, VEJO seu resultado sem abrir também o destino principal</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO navego pela coleção com leitor de telas no computador</li>
+              <li>OUÇO os títulos e nomes de links que distinguem os destinos e identifico ações independentes</li>
+              <li>ENTÃO, quando aciono um link ou botão, OUÇO ou percebo o destino ou estado correspondente sem depender da imagem do card</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO exploro os cards com leitor de telas no celular</li>
+              <li>OUÇO o conteúdo em ordem compreensível e identifico cada controle por seu nome</li>
+              <li>ENTÃO, quando aciono um controle com o gesto da plataforma, OUÇO ou percebo somente a ação correspondente e continuo a navegação</li>
+            </ol>
+            <h3>Cenários complementares — ampliação editorial</h3>
+            <h4 class="mt-4">Card informativo</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um card sem ações</li>
+              <li>QUANDO percorro a página por teclado e leitor de telas</li>
+              <li>ENTÃO leio o conteúdo em ordem e não encontro uma parada de foco criada apenas para o contêiner.</li>
+            </ol>
+            <h4 class="mt-4">Destino principal e ação secundária</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um card com link e botão Favoritar</li>
+              <li>QUANDO aciono Favoritar</li>
+              <li>ENTÃO o estado é atualizado sem abrir o link principal e posso perceber a mudança com leitor de telas.</li>
+            </ol>
+            <h4 class="mt-4">Título longo e tela pequena</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um título longo</li>
+              <li>QUANDO a coleção é apresentada em tela pequena ou com ampliação</li>
+              <li>ENTÃO o título, o contexto e os controles permanecem disponíveis sem sobreposição.</li>
+            </ol>
+            <h4 class="mt-4">Identificar destinos</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma coleção de cards</li>
+              <li>QUANDO navego pela lista de links do leitor de telas</li>
+              <li>ENTÃO os nomes permitem distinguir os destinos sem depender de imagens ou da posição visual.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Pontos de atenção</h3>
+            <p>Card é uma composição visual, sem um papel ARIA universal chamado card. Escolha elementos pela função do conteúdo e dos controles.</p>
+            <p>Não substitua dados tabulares por cards se isso impedir comparar relações importantes entre linhas e colunas.</p>
+            <p>O USWDS apresenta cards acionáveis; a variante apenas informativa deste guia é uma ampliação editorial. A aparência não deve prometer interação inexistente.</p>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <p><code data-interaction-label="true">Enter</code> aciona links; <code data-interaction-label="true">Enter</code> e <code data-interaction-label="true">Espaço</code> acionam botões. Um contêiner com evento de clique não substitui um controle semântico.</p>
+            <p>Use títulos e agrupamento compatíveis com o conteúdo. Imagens informativas precisam de alternativa útil; imagens decorativas não devem repetir o título desnecessariamente.</p>
+            <p>Verifique nomes dos links e botões e a ordem de exploração no celular. Quando uma ação alterna um estado, esse estado precisa estar disponível além da aparência.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Cards</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
+            <p>Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação.</p>
+            <p>
+              <a href="https://designsystem.digital.gov/components/card/" target="_blank" rel="noopener noreferrer">USWDS — Card<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/tutorials/page-structure/" target="_blank" rel="noopener noreferrer">W3C WAI — Page structure<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

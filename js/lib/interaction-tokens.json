@@ -1,0 +1,54 @@
+[
+  {
+    "pt": "Shift\\s*\\+\\s*Tab|SHIFT\\+TAB",
+    "en": "Shift\\s*\\+\\s*Tab"
+  },
+  {
+    "pt": "Page\\s+(?:Up|Down)",
+    "en": "Page\\s+(?:Up|Down)"
+  },
+  {
+    "pt": "(?:[Ss]etas? (?:direcionais|para (?:a )?(?:direita|esquerda|cima|baixo))(?: (?:e|ou) (?:para (?:a )?)?(?:a )?(?:direita|esquerda|cima|baixo))?)",
+    "en": "(?:(?:Up|Down|Right|Left) (?:(?:and|or) (?:Up|Down|Right|Left) )?(?:arrows|arrow keys)|(?:up|down|right|left) arrow(?: key)?s?|arrow keys|directional arrows)"
+  },
+  {
+    "pt": "[Ss]etas\\b",
+    "en": "(?:[Aa]rrow keys|[Aa]rrows|[Aa]rrow navigation)"
+  },
+  {
+    "pt": "[Bb]arra de espa[çc]o|BARRA DE ESPAÇO|Espaço|SPACE|Space|(?<=ou )espaço",
+    "en": "(?:Space ?bar|space ?bar|Space|SPACE)"
+  },
+  {
+    "pt": "TAB|Tab|ENTER|Enter|enter|ESC|Esc|Escape|Home|End|Shift|SHIFT",
+    "en": "(?:TAB|Tab|ENTER|Enter|enter|ESC|Esc|Escape|Home|End|Shift|SHIFT)"
+  },
+  {
+    "pt": "[Tt]ocar duas vezes|[Tt]oca duas vezes|[Tt]oque duplo",
+    "en": "(?:[Dd]ouble tapping|[Dd]ouble[- ]tap(?:ping)?|[Tt]ap twice)"
+  },
+  {
+    "pt": "[Dd]eslizar o dedo|[Dd]eslizar",
+    "en": "(?:[Ss]wiping|[Ss]wipe)"
+  },
+  {
+    "pt": "[Aa]rrastar e soltar|[Aa]rrastando e soltando",
+    "en": "(?:[Dd]ragging and dropping|[Dd]rag and drop|[Dd]rag-and-drop)"
+  },
+  {
+    "pt": "[Cc]lique secundário",
+    "en": "(?:[Ss]econdary click)"
+  },
+  {
+    "pt": "[Gg]esto prolongado|[Tt]oque longo",
+    "en": "(?:[Ll]ong press)"
+  },
+  {
+    "pt": "[Aa]rrastar",
+    "en": "(?:[Dd]ragging|[Dd]rag)"
+  },
+  {
+    "pt": "[Tt]ocar",
+    "en": "(?:[Tt]apping|[Tt]ap)"
+  }
+]

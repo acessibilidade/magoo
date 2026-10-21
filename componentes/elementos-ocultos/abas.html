@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,7 +211,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre as abas, a selecionada, o painel correspondente e a indicação de navegação pelo teclado.</p>
               <h4>Como se comporta</h4>
-              <p>As setas percorrem as abas. Defina se o painel abre ao navegar ou somente após Enter ou espaço; Tab permite seguir para o conteúdo.</p>
+              <p>As <code data-interaction-label="true">setas</code> percorrem as abas. Defina se o painel abre ao navegar ou somente após <code data-interaction-label="true">Enter</code>ou <code data-interaction-label="true">espaço</code>;<code data-interaction-label="true">Tab</code> permite seguir para o conteúdo.</p>
               <h4>O que documentar no Figma</h4>
               <p>Registre a relação entre aba e painel, o modo de ativação e a passagem entre a primeira e a última aba.</p>
               <h4>Como revisar</h4>
@@ -287,8 +293,7 @@
               <li>Quando o foco está fora do conjunto de abas em um componente anterior ao conjunto e a tecla <code>TAB</code> é pressionada, o componente do conjunto previamente ativo deve receber o foco.</li>
               <li>Quando o foco já estiver no conjunto de abas com um determinado agrupamento ativado, ao pressionar <code>TAB</code>, o foco é movido para o primeiro componente acionável dentro deste conjunto aberto. Caso não existe nenhum componente acionável no conjunto, o foco vai para o próximo componente acionável na tela.</li>
               <li>
-                A navegação entre os demais componentes do conjunto de abas deve ocorrer através das <code>setas direcionais</code> <code><i class="material-icons icons" aria-hidden="true">east</i><span class="a11y">seta para direita</span></code
-                >e<code><i class="material-icons icons" aria-hidden="true">west</i><span class="a11y">seta para esquerda</span></code
+                A navegação entre os demais componentes do conjunto de abas deve ocorrer através das <code>setas direcionais</code> <code><i class="material-icons icons" aria-hidden="true">east</i><span class="a11y">seta para direita</span></code> e <code><i class="material-icons icons" aria-hidden="true">west</i><span class="a11y">seta para esquerda</span></code
                 >.
               </li>
               <li>A configuração padrão para o carregamento de conteúdo de cada agrupamento é que ele ocorra de forma automática após a utilização das <code>setas direcionais</code>. É possível configurar de forma que o carregamento de conteúdo ocorra apenas após o acionamento da tecla "<code>enter</code>" ou "<code>barra de espaço</code>", no entanto isso não é recomendado.</li>
@@ -391,53 +396,53 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - Tab Views <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - <code data-interaction-label="true">Tab</code> Views<i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/tabs/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components/tabs/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank" rel="noopener noreferrer">W3C APG: Tabs Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/" target="_blank" rel="noopener noreferrer">W3C APG: Tabs Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://cauldron.dequelabs.com/components/Tabs" target="_blank" rel="noopener noreferrer">Deque Cauldron: Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://cauldron.dequelabs.com/components/Tabs" target="_blank" rel="noopener noreferrer">Deque Cauldron: Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://ebay.gitbook.io/mindpatterns/disclosure/tabs" target="_blank" rel="noopener noreferrer">eBay MIND Patterns: Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://ebay.gitbook.io/mindpatterns/disclosure/tabs" target="_blank" rel="noopener noreferrer">eBay MIND Patterns: Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://design-system.service.gov.uk/components/tabs/" target="_blank" rel="noopener noreferrer">Gov.UK - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.service.gov.uk/components/tabs/" target="_blank" rel="noopener noreferrer">Gov.UK - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/breadcrumb/" target="_blank" rel="noopener noreferrer">US.gov - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/breadcrumb/" target="_blank" rel="noopener noreferrer">US.gov - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://gold.designsystemau.org/components/breadcrumbs/" target="_blank" rel="noopener noreferrer">Gov.AU - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://gold.designsystemau.org/components/breadcrumbs/" target="_blank" rel="noopener noreferrer">Gov.AU - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.bbc.co.uk/gel/features/tabs" target="_blank" rel="noopener noreferrer">BBC Gel - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.bbc.co.uk/gel/features/tabs" target="_blank" rel="noopener noreferrer">BBC Gel - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://build.washingtonpost.com/components/tabs" target="_blank" rel="noopener noreferrer">Washington Post - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://build.washingtonpost.com/components/tabs" target="_blank" rel="noopener noreferrer">Washington Post - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.lightningdesignsystem.com/components/tabs/?variant=mobile-stack#site-main-content" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.lightningdesignsystem.com/components/tabs/?variant=mobile-stack#site-main-content" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/tabs/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/tabs/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/tabs/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/tabs/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://primer.style/design/components/tab-nav" target="_blank" rel="noopener noreferrer">Github Primer - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://primer.style/design/components/tab-nav" target="_blank" rel="noopener noreferrer">Github Primer - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/navs-tabs/" target="_blank" rel="noopener noreferrer">Bootstrap - Tabs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/navs-tabs/" target="_blank" rel="noopener noreferrer">Bootstrap - Tabs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -449,6 +454,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,7 +211,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre o estado padrão, ao passar o mouse, ao pressionar e ao receber navegação pelo teclado. Quando houver estado desabilitado, deixe claro que a ação está indisponível.</p>
               <h4>Como se comporta</h4>
-              <p>Clique, toque, Enter e barra de espaço acionam a ação. A pessoa recebe uma indicação perceptível de que o botão foi acionado.</p>
+              <p>Clique, toque, <code data-interaction-label="true">Enter</code> e <code data-interaction-label="true">barra de espaço</code> acionam a ação. A pessoa recebe uma indicação perceptível de que o botão foi acionado.</p>
               <h4>O que documentar no Figma</h4>
               <p>Registre o objetivo de cada botão, o resultado da ação e o comportamento quando estiver desabilitado. Se abrir ou fechar outro componente, documente como esse estado será informado.</p>
               <h4>Como revisar</h4>
@@ -365,56 +371,56 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/components/menus-and-actions/buttons" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - Buttons <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.apple.com/design/human-interface-guidelines/components/menus-and-actions/buttons" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - Buttons <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/all-buttons" target="_blank" rel="noopener noreferrer">Google - Material Design - Buttons <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components/all-buttons" target="_blank" rel="noopener noreferrer">Google - Material Design - Buttons <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Button Element <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Button Element <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/button/" target="_blank" rel="noopener noreferrer">W3C APG: Button Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/button/" target="_blank" rel="noopener noreferrer">W3C APG: Button Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://design-system.w3.org/styles/buttons.html" target="_blank" rel="noopener noreferrer">W3C Design System: Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.w3.org/styles/buttons.html" target="_blank" rel="noopener noreferrer">W3C Design System: Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://cauldron.dequelabs.com/components/Button" target="_blank" rel="noopener noreferrer">Deque Cauldron: Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://cauldron.dequelabs.com/components/Button" target="_blank" rel="noopener noreferrer">Deque Cauldron: Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://ebay.gitbook.io/mindpatterns/input/button" target="_blank" rel="noopener noreferrer">eBay MIND Patterns: Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://ebay.gitbook.io/mindpatterns/input/button" target="_blank" rel="noopener noreferrer">eBay MIND Patterns: Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Gov.UK - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.service.gov.uk/components/button/" target="_blank" rel="noopener noreferrer">Gov.UK - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/button/" target="_blank" rel="noopener noreferrer">US.gov - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/button/" target="_blank" rel="noopener noreferrer">US.gov - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://gold.designsystemau.org/components/buttons/" target="_blank" rel="noopener noreferrer">Gov.AU - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://gold.designsystemau.org/components/buttons/" target="_blank" rel="noopener noreferrer">Gov.AU - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://build.washingtonpost.com/components/button" target="_blank" rel="noopener noreferrer">Washington Post - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://build.washingtonpost.com/components/button" target="_blank" rel="noopener noreferrer">Washington Post - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.lightningdesignsystem.com/components/buttons/" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.lightningdesignsystem.com/components/buttons/" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/button/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/button/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/button/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/button/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://primer.style/design/components/button" target="_blank" rel="noopener noreferrer">Github Primer - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://primer.style/design/components/button" target="_blank" rel="noopener noreferrer">Github Primer - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/buttons/" target="_blank" rel="noopener noreferrer">Bootstrap - Button <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/buttons/" target="_blank" rel="noopener noreferrer">Bootstrap - Button <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -426,6 +432,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

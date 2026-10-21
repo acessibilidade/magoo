@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "drag-drop",
   "name": "Drag'n'Drop",
   "category": "navegacao",
@@ -87,7 +87,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Use para mover ou reorganizar itens, oferecendo alternativas ao gesto de arrastar."
+                  "value": "Use para mover ou reorganizar itens, oferecendo alternativas ao gesto de "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
                 }
               ]
             },
@@ -151,7 +169,61 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "No padrão descrito, Enter seleciona e setas reposicionam; Escape cancela. O movimento pode ser cancelado sem perder dados."
+                  "value": "No padrão descrito, "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " seleciona e "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " reposicionam; "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.4",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " cancela. O movimento pode ser cancelado sem perder dados."
                 }
               ]
             },
@@ -183,7 +255,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Anote os comandos, as alternativas sem arrastar e como informar a nova posição ou o motivo de um destino não ser permitido."
+                  "value": "Anote os comandos, as alternativas sem "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.5",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e como informar a nova posição ou o motivo de um destino não ser permitido."
                 }
               ]
             },
@@ -396,7 +486,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Antes de interagir com o componente é possível perceber\n                visualmente que o componente permite interação através de\n                \"arrastar e soltar\"?\n              "
+                  "value": "Antes de interagir com o componente é possível perceber visualmente que o componente permite interação através de \""
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.6",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar e soltar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\"?"
                 }
               ]
             },
@@ -496,7 +604,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Ao arrastar o componente acionável é possível identificar de\n                onde ele saiu e pra onde ele está indo?\n              "
+                  "value": "Ao "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.7",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " o componente acionável é possível identificar de onde ele saiu e pra onde ele está indo?"
                 }
               ]
             },
@@ -612,7 +738,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Ao arrastar o componente acionável é possível identificar de\n                onde ele saiu e pra onde ele está indo?\n              "
+                  "value": "Ao "
+                },
+                {
+                  "type": "element",
+                  "id": "drag-drop.interaction-code.8",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " o componente acionável é possível identificar de onde ele saiu e pra onde ele está indo?"
                 }
               ]
             },
@@ -1381,7 +1525,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "e"
+                  "value": " e "
                 },
                 {
                   "type": "element",
@@ -1422,7 +1566,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "e"
+                  "value": " e "
                 },
                 {
                   "type": "element",
@@ -1463,7 +1607,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "e"
+                  "value": " e "
                 },
                 {
                   "type": "element",
@@ -2603,7 +2747,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2622,7 +2767,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2631,14 +2776,10 @@
                       "id": "drag-drop.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2682,7 +2823,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2701,7 +2843,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2710,14 +2852,10 @@
                       "id": "drag-drop.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2761,7 +2899,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2780,7 +2919,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2789,14 +2928,10 @@
                       "id": "drag-drop.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2840,7 +2975,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2859,7 +2995,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2868,14 +3004,10 @@
                       "id": "drag-drop.references.31",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2955,7 +3087,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2974,7 +3107,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2983,14 +3116,10 @@
                       "id": "drag-drop.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

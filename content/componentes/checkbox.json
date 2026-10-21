@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "checkbox",
   "name": "Checkbox",
   "category": "formularios",
@@ -151,7 +151,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Clicar no controle ou no rótulo alterna a seleção. Pelo teclado, Tab chega a cada opção disponível e espaço alterna o estado."
+                  "value": "Clicar no controle ou no rótulo alterna a seleção. Pelo teclado, "
+                },
+                {
+                  "type": "element",
+                  "id": "checkbox.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " chega a cada opção disponível e espaço alterna o estado."
                 }
               ]
             },
@@ -580,7 +598,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ao tocar no rótulo ou controle, o estado é alterado?"
+                  "value": "Ao "
+                },
+                {
+                  "type": "element",
+                  "id": "checkbox.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " no rótulo ou controle, o estado é alterado?"
                 }
               ]
             },
@@ -1238,13 +1274,13 @@
             },
             {
               "type": "element",
-              "id": "checkbox.interaction-methods.25",
+              "id": "checkbox.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "O componente deve ter rótulo programaticamente associado."
+                  "value": "Ao focar a opção com leitor de telas, a pessoa ouve seu rótulo e se está marcada, desmarcada ou em estado misto quando aplicável."
                 }
               ]
             },
@@ -1943,6 +1979,50 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "checkbox.methods-review.3",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "checkbox.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "checkbox.interaction-methods.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O componente deve ter rótulo programaticamente associado."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2147,7 +2227,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2166,7 +2247,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2175,14 +2256,10 @@
                       "id": "checkbox.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2226,7 +2303,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2245,7 +2323,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2254,14 +2332,10 @@
                       "id": "checkbox.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2305,7 +2379,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2324,7 +2399,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2333,14 +2408,10 @@
                       "id": "checkbox.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2420,7 +2491,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2439,7 +2511,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2448,14 +2520,10 @@
                       "id": "checkbox.references.33",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2499,7 +2567,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2518,7 +2587,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2527,14 +2596,10 @@
                       "id": "checkbox.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2578,7 +2643,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2597,7 +2663,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2606,14 +2672,10 @@
                       "id": "checkbox.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2657,7 +2719,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2676,7 +2739,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2685,14 +2748,10 @@
                       "id": "checkbox.references.48",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2736,7 +2795,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2755,7 +2815,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2764,14 +2824,10 @@
                       "id": "checkbox.references.53",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

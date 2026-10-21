@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -139,6 +141,7 @@
               </li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,7 +211,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre a página atual, números e anterior ou próximo quando aplicáveis. Distinga controles indisponíveis.</p>
               <h4>Como se comporta</h4>
-              <p>Selecionar uma página carrega seu conteúdo. Links usam Enter; botões também aceitam espaço. Reticências não são controles.</p>
+              <p>Selecionar uma página carrega seu conteúdo. Links usam <code data-interaction-label="true">Enter</code>; botões também aceitam espaço. Reticências não são controles.</p>
               <h4>O que documentar no Figma</h4>
               <p>Defina os destinos, o nome da paginação e como comunicar a página atual. Em atualização parcial, registre onde o foco fica ou vai.</p>
               <h4>Como revisar</h4>
@@ -311,10 +317,7 @@
                 Botões de paginação, quando utilizados em experiências dinâmicas, devem ser acionados com as teclas
                 <code>ENTER</code> e <code>SPACE</code>.
               </li>
-              <li>
-                A página atual deve ser identificada com
-                <code>aria-current="page"</code>.
-              </li>
+              <li>Ao navegar pelos links com leitor de telas, a pessoa identifica qual página é a atual.</li>
               <li>Itens meramente visuais, como reticências, não devem receber foco por teclado.</li>
             </ul>
 
@@ -373,6 +376,14 @@
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de Atenção</h2>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>
+                A página atual deve ser identificada com
+                <code>aria-current="page"</code>.
+              </li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
@@ -386,38 +397,38 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://m3.material.io/components" target="_blank" rel="noopener noreferrer">Google - Material Design <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components" target="_blank" rel="noopener noreferrer">Google - Material Design <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current" target="_blank" rel="noopener noreferrer">MDN Web Docs - ARIA: aria-current <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current" target="_blank" rel="noopener noreferrer">MDN Web Docs - ARIA: aria-current <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" target="_blank" rel="noopener noreferrer">W3C APG - Patterns <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" target="_blank" rel="noopener noreferrer">W3C APG - Patterns <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://design-system.w3.org/components/pagination.html" target="_blank" rel="noopener noreferrer">W3C Design System: Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.w3.org/components/pagination.html" target="_blank" rel="noopener noreferrer">W3C Design System: Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://design-system.service.gov.uk/components/pagination/" target="_blank" rel="noopener noreferrer">Gov.UK - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://design-system.service.gov.uk/components/pagination/" target="_blank" rel="noopener noreferrer">Gov.UK - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/pagination/" target="_blank" rel="noopener noreferrer">US.gov - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/pagination/" target="_blank" rel="noopener noreferrer">US.gov - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/pagination/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/pagination/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/pagination/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/pagination/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://primer.style/product/components/pagination/accessibility/" target="_blank" rel="noopener noreferrer">Github Primer - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://primer.style/product/components/pagination/accessibility/" target="_blank" rel="noopener noreferrer">Github Primer - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/pagination/" target="_blank" rel="noopener noreferrer">Bootstrap - Pagination <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/pagination/" target="_blank" rel="noopener noreferrer">Bootstrap - Pagination <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -429,6 +440,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

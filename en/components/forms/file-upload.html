@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>File upload | Magoo</title>
+    <meta name="description" content="Allows selecting, uploading, and managing files with clear limits, states, and failure recovery." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="File upload | Magoo" />
+    <meta property="og:description" content="Allows selecting, uploading, and managing files with clear limits, states, and failure recovery." />
+
+    <meta name="twitter:title" content="File upload | Magoo" />
+    <meta name="twitter:description" content="Allows selecting, uploading, and managing files with clear limits, states, and failure recovery." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/en.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/en/components/forms/file-upload.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/en/components/forms/file-upload.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/formularios/upload-arquivos.html" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/forms/file-upload.html" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/formularios/upload-arquivos.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="en-US">
+    <a class="skip-link" href="#conteudo">Skip to content<span class="sr-only"> on this page</span></a>
+    <header lang="en-US">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Main menu" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Select your language</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/formularios/upload-arquivos.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/formularios/upload-arquivos.html" aria-pressed="false" lang="pt-BR" data-language="pt-br"><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/forms/file-upload.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/forms/file-upload.html" aria-pressed="true" lang="en-US" data-language="en"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="en" data-other-label="Select other languages">
+            <span id="translation-label" class="sr-only">Select other languages</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Automatic translation</p>
+            <p class="translation-status" role="status">Loading translator…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/forms.html">Forms</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">File upload</span></li>
+          </ol>
+        </nav>
+        <h1>File upload</h1>
+        <p>Allows selecting, uploading, and managing files with clear limits, states, and failure recovery.</p>
+        <p class="reference-shortcut">
+          For working examples and design patterns for this component,
+          <a href="#aba-ref-conteudo">see the references tab<span class="sr-only"> (opens the references on this page)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Component index</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Close index</button>
+          <h2 class="menu-title">Component index</h2>
+          <nav aria-label="Components">
+            <h3>Structure</h3>
+            <ul>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
+              <li>
+                <a href="/en/components/structure/headings.html">Headings</a>
+              </li>
+              <li><a href="/en/components/structure/tables.html">Tables</a></li>
+              <li><a href="/en/components/structure/lists.html">Lists</a></li>
+              <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
+            </ul>
+            <h3>Messages</h3>
+            <ul>
+              <li><a href="/en/components/messages/alerts.html">Alerts</a></li>
+              <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
+              <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
+              <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
+            </ul>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="/en/components/navigation/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/en/components/navigation/menu.html">Menu</a></li>
+              <li><a href="/en/components/navigation/links.html">Links</a></li>
+              <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
+              <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
+              <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
+            </ul>
+            <h3>Hidden elements</h3>
+            <ul>
+              <li>
+                <a href="/en/components/hidden-elements/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/details-more-information.html">Details and more information</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/tabs.html">Tabs</a></li>
+              <li>
+                <a href="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/modal.html">Modal</a></li>
+            </ul>
+            <h3>Forms</h3>
+            <ul>
+              <li><a href="/en/components/forms/button.html">Button</a></li>
+              <li><a href="/en/components/forms/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/en/components/forms/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/en/components/forms/input-text.html">Input "text"</a></li>
+              <li><a href="/en/components/forms/input-email.html">Input "email"</a></li>
+              <li><a href="/en/components/forms/input-search.html">Input "search"</a></li>
+              <li><a href="/en/components/forms/input-password.html">Input "password"</a></li>
+              <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
+              <li><a href="/en/components/forms/slider.html">Slider</a></li>
+              <li>
+                <a href="/en/components/forms/switch.html">Switch</a>
+              </li>
+              <li><a href="/en/components/forms/file-upload.html" aria-current="page">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="en-US">
+        <div class="content-intro">
+          <span class="eyebrow">COMPONENT GUIDE</span>
+          <p>Explore behaviors before defining the interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="upload-arquivos-designer-guide-title">
+              <h3 id="upload-arquivos-designer-guide-title">Quick guide for designers</h3>
+              <h4>When to use</h4>
+              <p>Use when a task requires attaching files. Distinguish choosing a file from uploading it to the system.</p>
+              <h4>What to design</h4>
+              <p>Show allowed formats, size, and count, the file list, progress, success, errors, removal, and retry.</p>
+              <h4>How it behaves</h4>
+              <p>Selection opens the system file picker. <code data-interaction-label="true">Dragging</code> is an alternative; upload may be immediate or require an explicit action.</p>
+              <h4>What to document in Figma</h4>
+              <p>Define upload initiation, limits, duplicate files, cancellation, removal, and what is preserved after failures.</p>
+              <h4>How to review</h4>
+              <p>Check states in the design. In the implementation, verify selection, upload, and recovery with keyboards, touch, and screen readers.</p>
+            </div>
+
+            <h3 class="destaque mt-4">Before interaction</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Can people tell which documents are needed, whether the field is required, and which limits apply before opening the picker?</li>
+              <li>Does the drop zone also provide a control to select files without <code data-interaction-label="true">dragging</code>?</li>
+            </ol>
+            <h3 class="destaque mt-4">Selection and upload</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the list identify each file by name and size? Does the interface distinguish selected, waiting, uploading, uploaded, and failed?</li>
+              <li>Is it defined whether adding files accumulates the selection or replaces it? How are duplicates handled?</li>
+              <li>When the system picker is canceled, do previous files and data remain available?</li>
+            </ol>
+            <h3 class="destaque mt-4">Errors and recovery</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the error identify the file, problem, and correction? Does an isolated rejection preserve other valid files?</li>
+              <li>Are canceling a transfer, removing a selection, and deleting an uploaded file distinguished? Is the effect of each action documented?</li>
+              <li>After removing a file, does focus move to an available control? Are long names still identifiable on small screens and with magnification?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Interaction Methods</h3>
+            <h4>Mouse and touch</h4>
+            <p>Activating Select files opens the native picker. <code data-interaction-label="true">Drag and drop</code>, when available, runs the same checks as selection.</p>
+            <p>Clicking or <code data-interaction-label="true">tapping</code> Remove removes the file from the list; Cancel upload stops its transfer; Retry repeats the failed upload when these actions are available.</p>
+            <h4>Keyboard</h4>
+            <p><code data-interaction-label="true">Tab</code> and <code data-interaction-label="true">Shift + Tab</code> traverse the field and file controls. <code data-interaction-label="true">Enter</code> or <code data-interaction-label="true">Space</code> on Select files opens the native picker; choosing and canceling within it follow the platform.</p>
+            <p>After choosing a file, <code data-interaction-label="true">Tab</code> reaches Upload when submission is explicit. <code data-interaction-label="true">Enter</code> or <code data-interaction-label="true">Space</code> activates Upload, Remove, Cancel upload, or Retry on the focused button.</p>
+            <h4>Screen readers</h4>
+            <p>When navigating the field and files with a screen reader, people identify the label, restrictions, and each file’s name and state. Activating Select files opens the platform picker.</p>
+            <p>With a mobile screen reader, <code data-interaction-label="true">swiping</code> traverses controls in the standard navigation mode and <code data-interaction-label="true">double tapping</code> activates the focused control. Uploading or removing gives corresponding feedback.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">BDD (Behavior-Driven Development) methodology focusing on three pillars: User Stories, Acceptance Criteria, and Gherkin Syntax (Given, When, Then).</p>
+            <h3>Scenario: Given that I am on a page containing File upload</h3>
+            <p>Educational scenarios for reviewing behavior. Adapt them to context and execute them in the implementation; the presence of this text does not mean tests were performed.</p>
+            <h4 class="mt-4">Keyboard navigation</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I use <code data-interaction-label="true">Tab</code> to reach Select files</li>
+              <li>I SEE visible focus and can open the picker using the platform command without <code data-interaction-label="true">dragging</code> files</li>
+              <li>THEN, when I choose a file, I SEE its name and state in the list and can reach removal and retry controls when available</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I navigate the field and list with a desktop screen reader</li>
+              <li>I HEAR the label, restrictions, and identification of each file and its actions</li>
+              <li>THEN, when I upload or remove a file, I HEAR or perceive the outcome without losing focus to an unavailable element</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I explore the field and files with TalkBack or VoiceOver on mobile</li>
+              <li>I HEAR names and states and can open the picker with the platform gesture</li>
+              <li>THEN, when I activate a file action, I HEAR or perceive its update and keep navigating available controls</li>
+            </ol>
+            <h3>Additional scenarios — editorial extension</h3>
+            <h4 class="mt-4">Add without dragging</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN the file field</li>
+              <li>WHEN I select a file through the keyboard-accessible control</li>
+              <li>THEN it appears identified in the list and its state distinguishes selection from upload.</li>
+            </ol>
+            <h4 class="mt-4">Reject one file</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN valid files and one exceeding the stated limit</li>
+              <li>WHEN I add the set</li>
+              <li>THEN the error identifies the rejected file and valid files follow the documented preservation rule.</li>
+            </ol>
+            <h4 class="mt-4">Retry and removal</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN a failed upload</li>
+              <li>WHEN I activate Retry</li>
+              <li>THEN only the corresponding upload is retried; when an item is removed, focus remains on an available control.</li>
+            </ol>
+            <h4 class="mt-4">Review with a mobile screen reader</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN a file list</li>
+              <li>WHEN I navigate with a mobile screen reader</li>
+              <li>THEN I identify each name, state, and action and can select files with platform gestures.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Points to consider</h3>
+            <p>The accept attribute helps filter the picker but does not replace server-side file validation. Size, count, and contents also require implementation checks.</p>
+            <p>Do not promise resumable upload or file preservation after reload without actual support. Document recovery limits.</p>
+            <p>USWDS File input is a reference for file selection; the asynchronous upload flow described here is an editorial adaptation requiring its own implementation.</p>
+
+            <h3>Implementation notes and behavior decisions</h3>
+            <p>Remove, Cancel upload, and Retry are distinct controls when those actions exist.</p>
+            <p><code data-interaction-label="true">Tab</code> and <code data-interaction-label="true">Shift + Tab</code> traverse the field and each file control. Picker activation follows the native control and platform commands.</p>
+            <p>The gesture of <code data-interaction-label="true">dragging</code> cannot be the only way to add files. Focus order follows the displayed list.</p>
+            <p>Associate the label, restrictions, and errors with the field. Identify the file in repeated action names, such as Remove receipt.pdf.</p>
+            <p>Communicate upload start, completion, and failure without moving focus for every update. A progress indicator must identify its operation.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">References</h2>
+            <p class="mt-3">
+              Additional references for components of type
+              <span class="destaque">File upload</span>.
+            </p>
+            <p><strong>Important:</strong><br />Most references are on the course platform alongside the lessons cited in this material.</p>
+            <p><strong>Disclaimer:</strong><br />The links listed here are a curated collection of references where you can find implemented components, rather than recommendations. There is no unified implementation format and no guarantee that these links follow every design pattern. Direct questions to the teams responsible for the linked materials. Before copying a model, remember that all materials are constantly updated and that patterns, particularly proprietary ones, may change.</p>
+
+            <p>Technical references and examples consulted for this editorial adaptation. Each source retains its scope; consulting an example does not prove accessibility of another implementation.</p>
+            <p>
+              <a href="https://designsystem.digital.gov/components/file-input/" target="_blank" rel="noopener noreferrer">USWDS — File input<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file" target="_blank" rel="noopener noreferrer">MDN — input type="file"<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Original content by Marcelo Sales, initially used in the
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
+      >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
+    </p>
+
+    <footer class="site-footer" lang="en-US">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>The <strong>Magoo</strong> is a pre-design system library. The idea is to bring instructions together in one place to understand component interaction design before building a more robust system (or updating an existing one).</p>
+          <p>Explore behaviors, interaction methods, and acceptance criteria to create more accessible and inclusive experiences.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT license <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+          </p>
+        </div>
+        <a class="initiative initiative-logo-only" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/tudo-acessibilidade-logo.svg" width="185" height="67" alt="Tudo é Acessibilidade" /><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

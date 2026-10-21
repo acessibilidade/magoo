@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "tabbar",
   "name": "Tabbar",
   "category": "estrutura",
@@ -151,7 +151,61 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Para destinos web, Tab percorre os links e Enter navega. Para painéis, use o padrão de abas com setas e ativação manual ou automática conforme o contexto."
+                  "value": "Para destinos web, "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorre os links e "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " navega. Para painéis, use o padrão de abas com "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e ativação manual ou automática conforme o contexto."
                 }
               ]
             },
@@ -835,8 +889,22 @@
               "attributes": {},
               "children": [
                 {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.4",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tocar"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "Tocar em um item permite acessar a área correspondente."
+                  "value": " em um item permite acessar a área correspondente."
                 }
               ]
             },
@@ -916,15 +984,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Em uma "
-                },
-                {
-                  "type": "text",
-                  "value": "Tab"
-                },
-                {
-                  "type": "text",
-                  "value": "bar web que navega entre páginas ou rotas, "
+                  "value": "Em uma Tabbar web que navega entre páginas ou rotas, "
                 },
                 {
                   "type": "element",
@@ -1000,7 +1060,25 @@
                 },
                 {
                   "type": "text",
-                  "value": " para links nem interceptar setas como se fossem abas."
+                  "value": " para links nem interceptar "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.6",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " como se fossem abas."
                 }
               ]
             },
@@ -1226,35 +1304,21 @@
             },
             {
               "type": "element",
-              "id": "tabbar.block.64",
+              "id": "tabbar.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Atualizar "
+                  "value": "Ao confirmar uma aba, seu painel é exibido e o foco permanece na aba; "
                 },
                 {
                   "type": "element",
-                  "id": "tabbar.block.62",
+                  "id": "tabbar.interaction-code.7",
                   "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-selected"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " e a associação com o painel; o foco permanece na aba após a seleção, e "
-                },
-                {
-                  "type": "element",
-                  "id": "tabbar.block.63",
-                  "tag": "code",
-                  "attributes": {},
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
                   "children": [
                     {
                       "type": "text",
@@ -1306,29 +1370,13 @@
           "children": [
             {
               "type": "element",
-              "id": "tabbar.block.68",
+              "id": "tabbar.methods-review.4",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Na navegação web entre destinos, identificar a região de navegação, o nome de cada link e a área atual por "
-                },
-                {
-                  "type": "element",
-                  "id": "tabbar.block.67",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-current=\"page\""
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": "."
+                  "value": "Ao percorrer os destinos com leitor de telas, a pessoa identifica a região de navegação, o nome de cada link e qual área é a atual."
                 }
               ]
             },
@@ -1386,13 +1434,13 @@
             },
             {
               "type": "element",
-              "id": "tabbar.block.72",
+              "id": "tabbar.methods-review.6",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Em aplicativos nativos, usar a semântica e os comandos fornecidos pela plataforma para a barra e seus itens."
+                  "value": "Em aplicativos nativos, os comandos de navegação do leitor de telas percorrem os itens e o comando de ativação abre a área escolhida, conforme a plataforma."
                 }
               ]
             },
@@ -1408,7 +1456,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Com leitor de telas móvel, navegar pelos itens com os gestos da plataforma e tocar duas vezes ou usar o gesto de ativação para abrir o destino."
+                  "value": "Com leitor de telas móvel, navegar pelos itens com os gestos da plataforma e "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.interaction-code.12",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar duas vezes"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou usar o gesto de ativação para abrir o destino."
                 }
               ]
             },
@@ -1531,15 +1597,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " para mover o foco para um link da "
-                },
-                {
-                  "type": "text",
-                  "value": "Tab"
-                },
-                {
-                  "type": "text",
-                  "value": "bar"
+                  "value": " para mover o foco para um link da Tabbar"
                 }
               ]
             },
@@ -1923,15 +1981,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "QUANDO a "
-                },
-                {
-                  "type": "text",
-                  "value": "Tab"
-                },
-                {
-                  "type": "text",
-                  "value": "bar foi implementada como conjunto de abas e uso "
+                  "value": "QUANDO a Tabbar foi implementada como conjunto de abas e uso "
                 },
                 {
                   "type": "element",
@@ -2250,19 +2300,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Tab"
-                },
-                {
-                  "type": "text",
-                  "value": "bar de navegação e abas de conteúdo podem ter aparência semelhante, mas possuem comportamentos diferentes. Não usar "
-                },
-                {
-                  "type": "text",
-                  "value": "tablist"
-                },
-                {
-                  "type": "text",
-                  "value": " apenas porque os links estão alinhados em uma barra."
+                  "value": "Tabbar de navegação e abas de conteúdo podem ter aparência semelhante, mas possuem comportamentos diferentes. Não usar tablist apenas porque os links estão alinhados em uma barra."
                 }
               ]
             },
@@ -2451,6 +2489,146 @@
         {
           "type": "text",
           "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.methods-review.7",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "tabbar.block.64",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Atualizar "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.block.62",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-selected"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e a associação com o painel; o foco permanece na aba após a seleção, e "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.block.63",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " permite seguir para o conteúdo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.methods-review.3",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "tabbar.block.68",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Na navegação web entre destinos, identificar a região de navegação, o nome de cada link e a área atual por "
+                },
+                {
+                  "type": "element",
+                  "id": "tabbar.block.67",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-current=\"page\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.methods-review.5",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "tabbar.block.72",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Em aplicativos nativos, usar a semântica e os comandos fornecidos pela plataforma para a barra e seus itens."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2472,6 +2650,124 @@
               "value": "Referências"
             }
           ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabbar.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tabbar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabbar.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabbar.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "tabbar.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "tabbar.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "tabbar.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         },
         {
           "type": "text",
@@ -2521,7 +2817,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Apple — Tab bars "
+                      "value": "Apple — Tabbars"
                     },
                     {
                       "type": "element",

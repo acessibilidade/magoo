@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li>
                 <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
               </li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -203,11 +209,11 @@
               <h4>Quando usar</h4>
               <p>Use para informar termos e encontrar conteúdo.</p>
               <h4>O que desenhar</h4>
-              <p>Mostre rótulo, campo, resultados e ausência de resultados. Inclua Buscar e Limpar busca quando usados.</p>
+              <p>Mostre rótulo, campo, resultados, filtros e controles de limpeza. Inclua estado inicial, carregamento, ausência de correspondências e falha com nova tentativa.</p>
               <h4>Como se comporta</h4>
               <p>Defina se a busca ocorre ao enviar ou durante a digitação. Limpar esvazia o campo sem enviar e permite continuar editando.</p>
               <h4>O que documentar no Figma</h4>
-              <p>Registre o envio, a limpeza e como comunicar resultados sem mover o foco inesperadamente nem anunciar cada tecla.</p>
+              <p>Registre alcance da busca, envio ou atualização dinâmica, filtros, paginação e limpeza. Defina como preservar a consulta e comunicar resultados sem mover o foco inesperadamente.</p>
               <h4>Como revisar</h4>
               <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
             </div>
@@ -241,9 +247,35 @@
               <li>Nome, tipo, obrigatoriedade, instruções e erros são apresentados de forma compreensível?</li>
               <li>O rótulo está associado ao campo e permanece disponível depois de preencher?</li>
             </ol>
+
+            <h3>Ampliação editorial — padrões e decisões de interação</h3>
+
+            <p>Adaptação editorial do Magoo: complementa as orientações anteriores com decisões de desenho, documentação e revisão. As referências apoiam a adaptação; estes cenários não representam testes executados nem certificação.</p>
+
+            <h4>Do campo à experiência de busca</h4>
+
+            <p>Defina onde a busca procura: site inteiro, seção ou conjunto de registros. Mantenha o termo consultado visível e diferencie o texto em edição da consulta cujos resultados estão sendo exibidos.</p>
+
+            <p>Escolha entre envio explícito e atualização durante a digitação. No envio explícito, <code data-interaction-label="true">Enter</code> e o botão Buscar executam a mesma pesquisa. Na atualização dinâmica, documente a pausa antes da consulta e impeça que uma resposta antiga substitua os resultados de uma consulta mais recente.</p>
+
+            <p>Sugestões de busca e resultados são conjuntos diferentes. Se houver autocomplete, documente quando as sugestões aparecem e se confirmar uma delas apenas preenche o campo ou também executa a busca. Adote um padrão de combobox apropriado à interação.</p>
+
+            <h4>Resultados, filtros e recuperação</h4>
+
+            <p>Desenhe estado inicial, carregamento, resultados, ausência de correspondências e falha de consulta. Uma falha não deve parecer uma busca sem resultados. Ofereça tentar novamente preservando termo e filtros.</p>
+
+            <p>Mostre quantidade de resultados, termo pesquisado e filtros aplicados. Em ausência de resultados, permita editar o termo ou remover filtros. Defina se filtros atualizam imediatamente ou dependem de Aplicar, e o efeito sobre a paginação.</p>
+
+            <p>Diferencie Limpar busca, Remover filtro e Limpar todos os filtros. Documente se limpar o campo também atualiza os resultados. Ao voltar de um resultado, preserve consulta, filtros e página quando essa continuidade fizer parte do fluxo.</p>
+
+            <h4>Revisão do desenho e da implementação</h4>
+
+            <p>No desenho, confira se cada resultado apresenta título e contexto suficientes para escolher um destino, inclusive em telas pequenas. Na implementação, verifique busca por teclado, filtros, limpeza e recuperação de falhas, mantendo foco previsível. Em atualização na mesma página, comunique um resumo após a resposta, sem anunciar cada tecla ou reler toda a lista.</p>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
             <h2 class="titulo-mobile">Métodos de Interação</h2>
+            <p>Escopo: os métodos básicos abaixo descrevem o campo de busca. Resultados, filtros e recuperação de falhas são aprofundados na ampliação editorial da aba Design de interação.</p>
+
             <p class="mt-3">O campo usa type="search" e apresenta um rótulo que explica o que será pesquisado.</p>
             <h3 class="destaque mt-4">Interação com mouse</h3>
             <ol class="lista-detalhe link-padrao">
@@ -258,7 +290,7 @@
             </ol>
             <h3 class="destaque mt-4">Interação com gestos</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Tocar no campo ou no rótulo permite editar com o teclado virtual.</li>
+              <li><code data-interaction-label="true">Tocar</code> no campo ou no rótulo permite editar com o teclado virtual.</li>
               <li>A seleção e edição de texto seguem os gestos disponíveis na plataforma.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
@@ -324,6 +356,32 @@
               <li>VEJO os resultados ou uma mensagem de ausência de resultados</li>
               <li>E, quando uso leitor de telas, OUÇO ou percebo o retorno da busca sem deslocamento inesperado do foco</li>
             </ol>
+
+            <h3>Cenários complementares — ampliação editorial</h3>
+
+            <h4 class="mt-4">Busca dinâmica: respostas fora de ordem</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADAS duas consultas sucessivas</li>
+              <li>QUANDO a resposta da primeira chega depois da segunda</li>
+              <li>ENTÃO os resultados continuam correspondendo à consulta mais recente e o foco permanece previsível.</li>
+            </ol>
+
+            <h4 class="mt-4">Filtros sem correspondências</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma busca sem correspondências com filtros aplicados</li>
+              <li>QUANDO removo um filtro e aplico a alteração conforme o fluxo definido</li>
+              <li>ENTÃO os resultados e sua quantidade são atualizados e termo e filtros restantes são preservados.</li>
+            </ol>
+
+            <h4 class="mt-4">Falha de consulta e nova tentativa</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma falha na consulta</li>
+              <li>QUANDO aciono Tentar novamente</li>
+              <li>ENTÃO a busca usa o termo e os filtros preservados e apresenta seu resultado sem confundir falha com ausência de correspondências.</li>
+            </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de atenção</h2>
@@ -337,10 +395,17 @@
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Input "search"</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
             <h3 class="destaque mt-4">Documentação do campo</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/search" target="_blank" rel="noopener noreferrer">MDN — input type="search"<span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/search" target="_blank" rel="noopener noreferrer">MDN — input type="search"<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
               </li>
             </ul>
             <h3 class="destaque mt-4">Design System</h3>
@@ -352,6 +417,16 @@
                 <a href="https://designsystem.digital.gov/components/search/" target="_blank" rel="noopener noreferrer">USWDS — Search <i class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span></a> — Campo e botão para acionar uma busca.
               </li>
             </ul>
+
+            <h3>Referências da ampliação editorial</h3>
+
+            <p>
+              <a href="https://designsystem.digital.gov/components/search/" target="_blank" rel="noopener noreferrer">USWDS — Search<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" rel="noopener noreferrer">W3C APG — Combobox<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
           </div>
         </div>
       </main>
@@ -361,6 +436,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "accordion",
   "name": "Accordion",
   "category": "elementos-ocultos",
@@ -151,7 +151,43 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Clique, toque, Enter ou espaço abre ou fecha a seção. O conteúdo fechado fica fora da navegação pelo teclado."
+                  "value": "Clique, toque, "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "ou "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " abre ou fecha a seção. O conteúdo fechado fica fora da navegação pelo teclado."
                 }
               ]
             },
@@ -580,7 +616,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Ao tocar no cabeçalho, o painel correspondente alterna entre\n                aberto e fechado?\n              "
+                  "value": "Ao "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " no cabeçalho, o painel correspondente alterna entre aberto e fechado?"
                 }
               ]
             },
@@ -1274,29 +1328,13 @@
             },
             {
               "type": "element",
-              "id": "accordion.interaction-methods.24",
+              "id": "accordion.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                O botão deve expor o estado com "
-                },
-                {
-                  "type": "element",
-                  "id": "accordion.interaction-methods.25",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-expanded"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": ".\n              "
+                  "value": "Ao navegar até o cabeçalho com leitor de telas, a pessoa identifica se a seção está aberta ou fechada."
                 }
               ]
             },
@@ -1306,29 +1344,13 @@
             },
             {
               "type": "element",
-              "id": "accordion.interaction-methods.26",
+              "id": "accordion.methods-review.4",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando usado, "
-                },
-                {
-                  "type": "element",
-                  "id": "accordion.interaction-methods.27",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-controls"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " deve apontar para o\n                painel controlado.\n              "
+                  "value": "Ao acionar o cabeçalho, a seção correspondente abre ou fecha e seu estado é atualizado."
                 }
               ]
             },
@@ -1999,6 +2021,106 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "accordion.methods-review.5",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "accordion.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "accordion.interaction-methods.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O botão deve expor o estado com "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.interaction-methods.25",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-expanded"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ".\n              "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "accordion.methods-review.3",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "accordion.interaction-methods.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando usado, "
+                },
+                {
+                  "type": "element",
+                  "id": "accordion.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-controls"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " deve apontar para o\n                painel controlado.\n              "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2203,7 +2325,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2222,7 +2345,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2231,14 +2354,10 @@
                       "id": "accordion.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2282,7 +2401,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2301,7 +2421,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2310,14 +2430,10 @@
                       "id": "accordion.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2361,7 +2477,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2380,7 +2497,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2389,14 +2506,10 @@
                       "id": "accordion.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2476,7 +2589,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2495,7 +2609,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2504,14 +2618,10 @@
                       "id": "accordion.references.33",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2555,7 +2665,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2574,7 +2685,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2583,14 +2694,10 @@
                       "id": "accordion.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2634,7 +2741,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2653,7 +2761,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2662,14 +2770,10 @@
                       "id": "accordion.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2713,7 +2817,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2732,7 +2837,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2741,14 +2846,10 @@
                       "id": "accordion.references.48",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2792,7 +2893,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2811,7 +2913,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2820,14 +2922,10 @@
                       "id": "accordion.references.53",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2871,7 +2969,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2890,7 +2989,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2899,14 +2998,10 @@
                       "id": "accordion.references.58",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

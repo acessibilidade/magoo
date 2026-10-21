@@ -1,0 +1,2053 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.6.0",
+  "id": "regioes-pagina",
+  "name": "Regiões da página",
+  "category": "estrutura",
+  "summary": "Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/estrutura/regioes-pagina.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/estrutura/regioes-pagina.html",
+    "note": "Orientações sobre organização e navegação por regiões. Referências técnicas identificadas na seção Referências; adaptar e verificar na implementação."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "regioes-pagina.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "regioes-pagina-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "regioes-pagina-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.heading-2",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.text-2",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use para definir a estrutura de uma página e distinguir conteúdo principal de navegação e informações complementares."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.heading-3",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.text-3",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre as regiões, sua ordem, nomes quando necessários, os controles internos e o link para pular ao conteúdo."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.heading-4",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.text-4",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Regiões orientam a leitura e a navegação estrutural. A interação acontece nos controles; uma região não recebe foco apenas por existir."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.heading-5",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.text-5",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Defina a finalidade e os limites de cada região, nomes de navegações repetidas, destino do link de salto e a ordem em telas pequenas."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.heading-6",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.designer-guide.text-6",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "No desenho, confira ordem, agrupamentos e acesso ao conteúdo. Na implementação, verifique regiões reconhecidas, leitura, link de salto e controles por teclado e leitor de telas."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.13",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Cabeçalho da página"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.16",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O cabeçalho ajuda a reconhecer o site e acessar as opções globais? Identidade, busca e navegação têm finalidades distinguíveis?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Um cabeçalho de artigo ou card é distinguido do cabeçalho global? Não atribua a função de região global a todo bloco que parece um cabeçalho."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.17",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Conteúdo principal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.20",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "É possível reconhecer onde começa a informação ou tarefa principal? O título da página e as instruções pertencem a uma sequência compreensível?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O link Pular para o conteúdo leva ao início útil da tarefa, sem exigir percorrer o cabeçalho repetido? Seu destino permanece visível quando há cabeçalhos fixos?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.21",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegações e regiões repetidas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Navegação principal, navegação local e índice da página têm propósitos claros? Quando existem várias navegações diferentes, seus nomes permitem distingui-las?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Duas navegações com os mesmos links e a mesma finalidade mantêm um nome consistente? Evite criar nomes diferentes apenas por uma estar no início e outra no fim."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.25",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Conteúdo complementar e outras regiões"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A área complementar apoia o conteúdo principal e continua compreensível isoladamente? Uma coluna lateral puramente visual não define essa finalidade."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O agrupamento tem importância suficiente para ser localizado como região? Evite transformar cada card ou bloco visual em mais uma região."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.29",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Rodapé e adaptação do layout"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.32",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.30",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O rodapé reúne informações institucionais e acessos complementares reconhecíveis? Se incluir navegação, ela mantém um nome coerente com sua finalidade?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao mudar para uma coluna, a ordem visual continua coerente com leitura e foco? Regiões fixas não encobrem conteúdo nem controles com ampliação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.33",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.34",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Mouse e toque"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.35",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ler e percorrer a página permite reconhecer os agrupamentos. Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.36",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em links e botões executa as ações desses controles; o fundo de uma região estrutural não executa uma ação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.37",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.38",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.39",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.40",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shift + Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem os links, botões e campos na ordem da página; não percorrem cada região estática como uma parada de foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.41",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ao chegar ao link Pular para o conteúdo, "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.42",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " leva o foco ao destino principal. O próximo "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.43",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " permite continuar pelos controles a partir desse ponto, sem retornar ao cabeçalho repetido."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.44",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegar por controles internos mantém os comandos próprios de cada componente. Não existe um atalho universal de teclado do navegador para saltar entre todas as regiões."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.45",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas no computador"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.46",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Usar a lista de regiões ou os comandos de navegação estrutural do leitor de telas permite localizar conteúdo principal, navegações e outras regiões disponíveis pelo tipo e nome. Os comandos dependem do leitor e de seu modo de navegação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.47",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Escolher uma região nessa lista leva a leitura ao agrupamento correspondente. Em seguida, os comandos de leitura ou de controles permitem percorrer seu conteúdo; não é necessário focar o contêiner com "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.48",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.49",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas no celular"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.50",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "No VoiceOver, selecionar regiões no rotor, quando a opção estiver disponível, permite navegar entre elas. No TalkBack, os controles de leitura e comandos estruturais dependem da versão e configuração; use o recurso de regiões quando disponível."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.51",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "No modo padrão de exploração de controles, "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.52",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "deslizar o dedo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre o conteúdo e "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.53",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar duas vezes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ativa o link ou botão focado. Ativar Pular para o conteúdo leva ao destino principal; percorrer uma região não a transforma em botão."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "regioes-pagina.gherkin-intro.0",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.gherkin-intro.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.54",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página organizada em regiões"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.55",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.62",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.56",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.57",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " a partir do início da página"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.58",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO o link para pular ao conteúdo com foco visível"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.59",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.60",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", VEJO que o foco chega ao destino principal e o próximo "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.61",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " continua a navegação a partir desse ponto"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.63",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.67",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.64",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO abro a lista de regiões ou uso os comandos estruturais do leitor de telas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.65",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo conteúdo principal, navegações e outras regiões pelo tipo e nome quando necessário"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.66",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando escolho uma região, OUÇO ou percebo seu conteúdo e consigo continuar a leitura sem uma parada de foco artificial em cada contêiner"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.68",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.73",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.69",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO exploro a página com leitor de telas no celular e uso os recursos estruturais disponíveis"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.70",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo as regiões em uma ordem compreensível e identifico o conteúdo principal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.71",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando uso "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.72",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar duas vezes"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para ativar o link Pular para o conteúdo no modo padrão, OUÇO ou percebo o destino e continuo a tarefa sem repetir toda a navegação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.74",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Regiões repetidas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.78",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.75",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADAS duas navegações com finalidades diferentes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.76",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO consulto a lista de regiões do leitor de telas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.77",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO identifico nomes que distinguem as finalidades; navegações de conteúdo e finalidade idênticos mantêm nomes consistentes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.79",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.80",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Prefira elementos HTML correspondentes à finalidade: "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.81",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "header"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.82",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "main"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.83",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "nav"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.84",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "aside"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.85",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "footer"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ". Um agrupamento genérico só precisa ser uma região adicional quando isso ajuda a localizar conteúdo relevante."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.86",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O cabeçalho e o rodapé globais têm contexto diferente de "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.87",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "header"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.88",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "footer"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " internos a artigo ou seção. Nem todo cabeçalho ou rodapé interno é um marco global da página."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.89",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mantenha um conteúdo principal ativo por documento. Documentos incorporados podem ter sua própria estrutura. Não crie vários marcos principais apenas para separar colunas visuais."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.90",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegações diferentes precisam de nomes que as distingam. Navegações com os mesmos links e finalidade podem compartilhar o nome. Evite repetir o tipo no rótulo, como Navegação principal navegação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.91",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Uma "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.92",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "section"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " com nome acessível pode ser exposta como região. Use "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.93",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "aria-labelledby"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " para aproveitar um título visível quando apropriado; não nomeie cada bloco apenas para aumentar a quantidade de regiões."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.94",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O link de salto precisa de um destino existente e gerenciamento de foco verificado no navegador. Quando necessário, "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.95",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tabindex=\"-1\""
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " permite foco programático no destino sem adicioná-lo à sequência de "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.96",
+              "tag": "code",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.97",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Regiões e cabeçalhos oferecem formas complementares de navegação. A ordem de leitura não deve contradizer a ordem visual, e conteúdo recolhido não deve deixar controles ocultos no percurso do foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.98",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Regiões da página"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "regioes-pagina.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.101",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.100",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/tutorials/page-structure/regions/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C WAI — Page Regions"
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.99",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.104",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.103",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Landmark Regions"
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.102",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.107",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.106",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/WCAG22/Techniques/general/G1",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C — Technique G1: Skip to main content"
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.105",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.reference-link.3",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.110",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.109",
+              "tag": "a",
+              "attributes": {
+                "href": "https://magoo.cc/componentes/estrutura/titulos.html"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Títulos (Cabeçalhos)"
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.108",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only",
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "regioes-pagina.block.113",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "regioes-pagina.block.112",
+              "tag": "a",
+              "attributes": {
+                "href": "https://magoo.cc/componentes/navegacao/menu.html"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Menu"
+                },
+                {
+                  "type": "element",
+                  "id": "regioes-pagina.block.111",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only",
+                    "aria-hidden": "true"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

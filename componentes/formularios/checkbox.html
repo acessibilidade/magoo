@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,7 +211,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre rótulos, estados marcado e desmarcado, foco e desabilitado. Inclua estado misto quando necessário.</p>
               <h4>Como se comporta</h4>
-              <p>Clicar no controle ou no rótulo alterna a seleção. Pelo teclado, Tab chega a cada opção disponível e espaço alterna o estado.</p>
+              <p>Clicar no controle ou no rótulo alterna a seleção. Pelo teclado, <code data-interaction-label="true">Tab</code> chega a cada opção disponível e espaço alterna o estado.</p>
               <h4>O que documentar no Figma</h4>
               <p>Registre o nome do grupo e a regra de alternância caso exista estado misto.</p>
               <h4>Como revisar</h4>
@@ -237,7 +243,7 @@
             <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>O alvo tocável inclui o rótulo associado?</li>
-              <li>Ao tocar no rótulo ou controle, o estado é alterado?</li>
+              <li>Ao <code data-interaction-label="true">tocar</code> no rótulo ou controle, o estado é alterado?</li>
               <li>A área de toque é confortável em telas pequenas?</li>
             </ol>
 
@@ -289,7 +295,7 @@
 
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ul class="lista-detalhe link-padrao">
-              <li>O componente deve ter rótulo programaticamente associado.</li>
+              <li>Ao focar a opção com leitor de telas, a pessoa ouve seu rótulo e se está marcada, desmarcada ou em estado misto quando aplicável.</li>
               <li>Grupos devem utilizar <code>fieldset</code> e <code>legend</code> quando aplicável.</li>
               <li>O estado deve ser exposto semanticamente.</li>
             </ul>
@@ -347,6 +353,11 @@
               <li>O rótulo deve ser clicável/tocável e associado ao campo.</li>
               <li>Checkbox customizado precisa preservar foco, nome, papel e estado.</li>
             </ul>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>O componente deve ter rótulo programaticamente associado.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
@@ -360,32 +371,32 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/" target="_blank" rel="noopener noreferrer">W3C APG: Checkbox Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/" target="_blank" rel="noopener noreferrer">W3C APG: Checkbox Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: Checkbox state <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: Checkbox state <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/checkbox/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Checkbox <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components/checkbox/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Checkbox <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/checkbox/" target="_blank" rel="noopener noreferrer">US.gov - Checkbox <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/checkbox/" target="_blank" rel="noopener noreferrer">US.gov - Checkbox <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/checkbox/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Checkbox <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/checkbox/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Checkbox <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/checkbox/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Checkbox <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/checkbox/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Checkbox <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://primer.style/product/components/checkbox/" target="_blank" rel="noopener noreferrer">Github Primer - Checkbox <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://primer.style/product/components/checkbox/" target="_blank" rel="noopener noreferrer">Github Primer - Checkbox <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/forms/checks-radios/" target="_blank" rel="noopener noreferrer">Bootstrap - Checks and Radios <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/forms/checks-radios/" target="_blank" rel="noopener noreferrer">Bootstrap - Checks and Radios <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -397,6 +408,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

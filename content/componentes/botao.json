@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "botao",
   "name": "Botão",
   "category": "formularios",
@@ -151,7 +151,43 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Clique, toque, Enter e barra de espaço acionam a ação. A pessoa recebe uma indicação perceptível de que o botão foi acionado."
+                  "value": "Clique, toque, "
+                },
+                {
+                  "type": "element",
+                  "id": "botao.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e "
+                },
+                {
+                  "type": "element",
+                  "id": "botao.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "barra de espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " acionam a ação. A pessoa recebe uma indicação perceptível de que o botão foi acionado."
                 }
               ]
             },
@@ -2219,7 +2255,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2238,7 +2275,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2247,14 +2284,10 @@
                       "id": "botao.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2298,7 +2331,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2317,7 +2351,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2326,14 +2360,10 @@
                       "id": "botao.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2377,7 +2407,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2396,7 +2427,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2405,14 +2436,10 @@
                       "id": "botao.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2456,7 +2483,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2475,7 +2503,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2484,14 +2512,10 @@
                       "id": "botao.references.31",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2571,7 +2595,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2590,7 +2615,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2599,14 +2624,10 @@
                       "id": "botao.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2650,7 +2671,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2669,7 +2691,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2678,14 +2700,10 @@
                       "id": "botao.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2729,7 +2747,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2748,7 +2767,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2757,14 +2776,10 @@
                       "id": "botao.references.48",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2808,7 +2823,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2827,7 +2843,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2836,14 +2852,10 @@
                       "id": "botao.references.53",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2887,7 +2899,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2906,7 +2919,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2915,14 +2928,10 @@
                       "id": "botao.references.58",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2966,7 +2975,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2985,7 +2995,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2994,14 +3004,10 @@
                       "id": "botao.references.63",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3045,7 +3051,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3064,7 +3071,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3073,14 +3080,10 @@
                       "id": "botao.references.68",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3124,7 +3127,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3143,7 +3147,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3152,14 +3156,10 @@
                       "id": "botao.references.73",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3203,7 +3203,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3222,7 +3223,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3231,14 +3232,10 @@
                       "id": "botao.references.78",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3282,7 +3279,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3301,7 +3299,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3310,14 +3308,10 @@
                       "id": "botao.references.83",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3361,7 +3355,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3380,7 +3375,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3389,14 +3384,10 @@
                       "id": "botao.references.88",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3440,7 +3431,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3459,7 +3451,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3468,14 +3460,10 @@
                       "id": "botao.references.93",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

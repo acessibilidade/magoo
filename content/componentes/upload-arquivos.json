@@ -1,0 +1,2043 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.6.0",
+  "id": "upload-arquivos",
+  "name": "Upload de arquivos",
+  "category": "formularios",
+  "summary": "Permite selecionar, enviar e gerenciar arquivos, com limites, estados e recuperação de falhas claros.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/formularios/upload-arquivos.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/formularios/upload-arquivos.html",
+    "note": "Ampliação editorial do Magoo preparada para revisão, com referências externas identificadas. Não representa conteúdo migrado do curso nem certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "upload-arquivos.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "upload-arquivos-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "upload-arquivos-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.2",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.3",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use quando a tarefa exigir anexar arquivos. Diferencie escolher um arquivo de enviá-lo ao sistema."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.4",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.5",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre formatos, tamanho e quantidade permitidos, lista de arquivos, progresso, sucesso, erro, remoção e nova tentativa."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.6",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.7",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A seleção abre o seletor do sistema. "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " é uma alternativa; o envio pode ser imediato ou depender de uma ação explícita."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.8",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.9",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Defina início do envio, limites, arquivos repetidos, cancelamento, remoção e o que é preservado após falhas."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.10",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.designer-guide.11",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Confira os estados no desenho. Na implementação, verifique seleção, envio e recuperação com teclado, toque e leitores de tela."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.15",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Antes de interagir"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.18",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "É possível saber quais documentos são necessários, se o campo é obrigatório e quais limites se aplicam antes de abrir o seletor?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A área de soltar arquivos também oferece um controle para selecionar arquivos sem "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.19",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Seleção e envio"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.23",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A lista identifica cada arquivo por nome e tamanho? A interface distingue selecionado, aguardando envio, enviando, enviado e falha?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Está definido se adicionar mais arquivos acumula a seleção ou substitui a anterior? Como são tratados arquivos repetidos?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Ao cancelar o seletor do sistema, os arquivos e dados anteriores permanecem disponíveis?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.24",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Erros e recuperação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O erro identifica o arquivo, o problema e como corrigir? Uma rejeição isolada preserva os demais arquivos válidos?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Há distinção entre cancelar uma transferência, remover uma seleção e excluir um arquivo já enviado? O efeito de cada ação está documentado?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Após remover um arquivo, o foco segue para um controle disponível? Nomes longos continuam identificáveis em telas pequenas e com ampliação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "upload-arquivos.29",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.30",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mouse e toque"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.31",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Acionar Selecionar arquivos abre o seletor nativo. "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.3",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Arrastar e soltar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", quando disponível, executa as mesmas verificações da seleção."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.1",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.4",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em Remover retira o arquivo da lista; Cancelar envio interrompe sua transferência; Tentar novamente repete o envio que falhou, quando essas ações estiverem disponíveis."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.33",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.2",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.5",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.6",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shift + Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem o campo e os controles dos arquivos. "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.7",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.8",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Espaço"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em Selecionar arquivos abre o seletor nativo; a escolha e o cancelamento no seletor seguem a plataforma."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Após escolher um arquivo, "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.9",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " permite alcançar Enviar quando houver envio explícito. "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.10",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.11",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Espaço"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " aciona Enviar, Remover, Cancelar envio ou Tentar novamente no botão focado."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.36",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitores de tela"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ao navegar pelo campo e pelos arquivos com leitor de telas, a pessoa identifica rótulo, restrições, nome e estado de cada arquivo. Ativar Selecionar arquivos abre o seletor da plataforma."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Com leitor de telas no celular, "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.12",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "deslizar o dedo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre os controles no modo de navegação padrão e "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.13",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar duas vezes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ativa o controle focado. Ao enviar ou remover, a pessoa percebe o resultado correspondente."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.intro-0",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.intro-1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.39",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página que contém Upload de arquivos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.40",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.13",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.interaction-code.14",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para chegar ao controle Selecionar arquivos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO foco visível e consigo abrir o seletor com o comando da plataforma, sem "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.interaction-code.15",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "arrastar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " arquivos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando escolho um arquivo, VEJO seu nome e estado na lista e posso alcançar os controles de remoção e nova tentativa quando disponíveis"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.22",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego pelo campo e pela lista com leitor de telas no computador"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO o rótulo, as restrições e a identificação de cada arquivo e de suas ações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando envio ou removo um arquivo, OUÇO ou percebo o resultado sem perder o foco para um elemento indisponível"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.23",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.27",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO exploro o campo e os arquivos com TalkBack ou VoiceOver no celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO os nomes e estados e consigo abrir o seletor com o gesto da plataforma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando aciono uma ação de arquivo, OUÇO ou percebo a atualização correspondente e continuo navegando pelos controles disponíveis"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.gherkin-standard.28",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários complementares — ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.41",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Adicionar sem arrastar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.42",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.1",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO o campo de arquivos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.2",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO seleciono um arquivo pelo controle acessível por teclado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.3",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO ele aparece identificado na lista e o estado diferencia seleção de envio."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.43",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Rejeição de um arquivo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.44",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.4",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADOS arquivos válidos e um arquivo que excede o limite informado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO adiciono o conjunto"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO o erro identifica o arquivo rejeitado e os arquivos válidos seguem a regra de preservação documentada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.45",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Nova tentativa e remoção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.46",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO um envio com falha"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO aciono Tentar novamente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO somente o envio correspondente é retomado; ao remover um item, o foco permanece em um controle disponível."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.47",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Revisão com leitor de telas no celular"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.48",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma lista de arquivos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego com leitor de telas no celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.gherkin-standard.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO identifico cada nome, estado e ação e consigo selecionar arquivos pelos gestos da plataforma."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "upload-arquivos.49",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.50",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O atributo accept ajuda a filtrar o seletor, mas não substitui validação dos arquivos no servidor. Tamanho, quantidade e conteúdo também exigem verificação na implementação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.51",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Não prometa retomar um envio ou preservar arquivos após recarregar sem suporte real. Documente os limites dessa recuperação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.52",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O File input do USWDS é uma referência de seleção de arquivos; o fluxo de envio assíncrono descrito aqui é uma adaptação editorial e exige implementação própria."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.methods-review.6",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.32",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Remover, Cancelar envio e Tentar novamente são controles distintos quando essas ações existem."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.34",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.16",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.17",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shift + Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem o campo e os controles de cada arquivo. A ativação do seletor segue o controle nativo e os comandos da plataforma."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.35",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O gesto de "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.interaction-code.18",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "arrastar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " não pode ser a única forma de adicionar arquivos. A ordem de foco acompanha a lista apresentada."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.37",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Associe rótulo, restrições e erros ao campo. Identifique o arquivo nos nomes de ações repetidas, como Remover comprovante.pdf."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.38",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Comunique início, conclusão e falha do envio sem mover o foco para cada atualização. Um indicador de progresso precisa identificar a operação correspondente."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "upload-arquivos.53",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Upload de arquivos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "upload-arquivos.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.54",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.57",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.56",
+              "tag": "a",
+              "attributes": {
+                "href": "https://designsystem.digital.gov/components/file-input/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "USWDS — File input"
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.55",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "upload-arquivos.60",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "upload-arquivos.59",
+              "tag": "a",
+              "attributes": {
+                "href": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "MDN — input type=\"file\""
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.58",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "upload-arquivos.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

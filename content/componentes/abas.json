@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "abas",
   "name": "Abas",
   "category": "elementos-ocultos",
@@ -151,7 +151,79 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "As setas percorrem as abas. Defina se o painel abre ao navegar ou somente após Enter ou espaço; Tab permite seguir para o conteúdo."
+                  "value": "As "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorrem as abas. Defina se o painel abre ao navegar ou somente após "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "ou "
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-code.5",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ";"
+                },
+                {
+                  "type": "element",
+                  "id": "abas.interaction-code.4",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " permite seguir para o conteúdo."
                 }
               ]
             },
@@ -1253,7 +1325,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "e"
+                  "value": " e "
                 },
                 {
                   "type": "element",
@@ -2661,7 +2733,25 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Apple - Human Interface Guidelines - Tab Views\n                  "
+                      "value": "Apple - Human Interface Guidelines - "
+                    },
+                    {
+                      "type": "element",
+                      "id": "abas.interaction-code.1",
+                      "tag": "code",
+                      "attributes": {
+                        "data-interaction-label": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Tab"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " Views"
                     },
                     {
                       "type": "element",
@@ -2669,7 +2759,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2688,7 +2779,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2697,14 +2788,10 @@
                       "id": "abas.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2748,7 +2835,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2767,7 +2855,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2776,14 +2864,10 @@
                       "id": "abas.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2827,7 +2911,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2846,7 +2931,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2855,14 +2940,10 @@
                       "id": "abas.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2942,7 +3023,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2961,7 +3043,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2970,14 +3052,10 @@
                       "id": "abas.references.33",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3021,7 +3099,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3040,7 +3119,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3049,14 +3128,10 @@
                       "id": "abas.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3100,7 +3175,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3119,7 +3195,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3128,14 +3204,10 @@
                       "id": "abas.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3179,7 +3251,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3198,7 +3271,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3207,14 +3280,10 @@
                       "id": "abas.references.48",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3258,7 +3327,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3277,7 +3347,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3286,14 +3356,10 @@
                       "id": "abas.references.53",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3337,7 +3403,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3356,7 +3423,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3365,14 +3432,10 @@
                       "id": "abas.references.58",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3416,7 +3479,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3435,7 +3499,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3444,14 +3508,10 @@
                       "id": "abas.references.63",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3495,7 +3555,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3514,7 +3575,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3523,14 +3584,10 @@
                       "id": "abas.references.68",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3574,7 +3631,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3593,7 +3651,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3602,14 +3660,10 @@
                       "id": "abas.references.73",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3653,7 +3707,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3672,7 +3727,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3681,14 +3736,10 @@
                       "id": "abas.references.78",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3732,7 +3783,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3751,7 +3803,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3760,14 +3812,10 @@
                       "id": "abas.references.83",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3811,7 +3859,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -3830,7 +3879,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3839,14 +3888,10 @@
                       "id": "abas.references.88",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

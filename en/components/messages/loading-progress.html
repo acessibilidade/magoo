@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Loading and progress | Magoo</title>
+    <meta name="description" content="Communicates waiting and operation advancement, distinguishing unknown duration, measurable progress, completion, and failure." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Loading and progress | Magoo" />
+    <meta property="og:description" content="Communicates waiting and operation advancement, distinguishing unknown duration, measurable progress, completion, and failure." />
+
+    <meta name="twitter:title" content="Loading and progress | Magoo" />
+    <meta name="twitter:description" content="Communicates waiting and operation advancement, distinguishing unknown duration, measurable progress, completion, and failure." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/en.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/en/components/messages/loading-progress.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/en/components/messages/loading-progress.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/mensagens/carregamento-progresso.html" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/messages/loading-progress.html" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/mensagens/carregamento-progresso.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="en-US">
+    <a class="skip-link" href="#conteudo">Skip to content<span class="sr-only"> on this page</span></a>
+    <header lang="en-US">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Main menu" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Select your language</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/mensagens/carregamento-progresso.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/mensagens/carregamento-progresso.html" aria-pressed="false" lang="pt-BR" data-language="pt-br"><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/messages/loading-progress.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/messages/loading-progress.html" aria-pressed="true" lang="en-US" data-language="en"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="en" data-other-label="Select other languages">
+            <span id="translation-label" class="sr-only">Select other languages</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Automatic translation</p>
+            <p class="translation-status" role="status">Loading translator…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/messages.html">Messages</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Loading and progress</span></li>
+          </ol>
+        </nav>
+        <h1>Loading and progress</h1>
+        <p>Communicates waiting and operation advancement, distinguishing unknown duration, measurable progress, completion, and failure.</p>
+        <p class="reference-shortcut">
+          For working examples and design patterns for this component,
+          <a href="#aba-ref-conteudo">see the references tab<span class="sr-only"> (opens the references on this page)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Component index</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Close index</button>
+          <h2 class="menu-title">Component index</h2>
+          <nav aria-label="Components">
+            <h3>Structure</h3>
+            <ul>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
+              <li>
+                <a href="/en/components/structure/headings.html">Headings</a>
+              </li>
+              <li><a href="/en/components/structure/tables.html">Tables</a></li>
+              <li><a href="/en/components/structure/lists.html">Lists</a></li>
+              <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
+            </ul>
+            <h3>Messages</h3>
+            <ul>
+              <li><a href="/en/components/messages/alerts.html">Alerts</a></li>
+              <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
+              <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
+              <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html" aria-current="page">Loading and progress</a></li>
+            </ul>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="/en/components/navigation/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/en/components/navigation/menu.html">Menu</a></li>
+              <li><a href="/en/components/navigation/links.html">Links</a></li>
+              <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
+              <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
+              <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
+            </ul>
+            <h3>Hidden elements</h3>
+            <ul>
+              <li>
+                <a href="/en/components/hidden-elements/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/details-more-information.html">Details and more information</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/tabs.html">Tabs</a></li>
+              <li>
+                <a href="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/modal.html">Modal</a></li>
+            </ul>
+            <h3>Forms</h3>
+            <ul>
+              <li><a href="/en/components/forms/button.html">Button</a></li>
+              <li><a href="/en/components/forms/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/en/components/forms/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/en/components/forms/input-text.html">Input "text"</a></li>
+              <li><a href="/en/components/forms/input-email.html">Input "email"</a></li>
+              <li><a href="/en/components/forms/input-search.html">Input "search"</a></li>
+              <li><a href="/en/components/forms/input-password.html">Input "password"</a></li>
+              <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
+              <li><a href="/en/components/forms/slider.html">Slider</a></li>
+              <li>
+                <a href="/en/components/forms/switch.html">Switch</a>
+              </li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="en-US">
+        <div class="content-intro">
+          <span class="eyebrow">COMPONENT GUIDE</span>
+          <p>Explore behaviors before defining the interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="carregamento-progresso-designer-guide-title">
+              <h3 id="carregamento-progresso-designer-guide-title">Quick guide for designers</h3>
+              <h4>When to use</h4>
+              <p>Use when an operation requires waiting. Show determinate progress only when there is a real measure of advancement.</p>
+              <h4>What to design</h4>
+              <p>Show what is happening, the affected area, waiting, progress, success, failure, and recovery actions.</p>
+              <h4>How it behaves</h4>
+              <p>Updates keep focus predictable. Completion, failure, and cancellation end waiting with understandable feedback.</p>
+              <h4>What to document in Figma</h4>
+              <p>Define what progress measures, what remains available while waiting, and the effects of canceling or retrying.</p>
+              <h4>How to review</h4>
+              <p>Check messages and states in the design. In the implementation, verify updates, focus, announcements, and reduced motion preferences.</p>
+            </div>
+
+            <h3 class="destaque mt-4">Waiting and measuring advancement</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the message identify the operation and affected area? An isolated indicator may not explain whether the page is loading or an action was received.</li>
+              <li>Is progress determinate with a known total, or indeterminate? Do not display invented percentages or unsupported time estimates.</li>
+              <li>Does the measure represent transfer, processing, or the whole task? Reaching 100% transfer does not prove processing has finished.</li>
+            </ol>
+            <h3 class="destaque mt-4">Availability and continuity</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Which actions remain available? How can duplicate submission be prevented without blocking unrelated controls?</li>
+              <li>If a skeleton is used, does it anticipate content structure without presenting falsely actionable elements? Does waiting text remain available?</li>
+              <li>What happens on leaving the page, canceling, or losing connection? Document whether the operation continues and how its result is recovered.</li>
+            </ol>
+            <h3 class="destaque mt-4">Completion and recovery</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Are success, failure, and cancellation distinguishable? Does failure end the animation and offer an appropriate next step, preserving data where possible?</li>
+              <li>Do long text and controls remain visible on small screens? Does understanding depend on motion, color, or watching the animation continuously?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Interaction Methods</h3>
+            <h4>Mouse, touch, and keyboard</h4>
+            <p>An informational indicator is followed by reading its message and progress without clicking it. Clicking or <code data-interaction-label="true">tapping</code> Cancel or Retry executes that action when available.</p>
+            <p><code data-interaction-label="true">Tab</code> and <code data-interaction-label="true">Shift + Tab</code> traverse available controls; <code data-interaction-label="true">Enter</code> or <code data-interaction-label="true">Space</code> on Cancel or Retry executes the action. Progress updates keep focus on the task; the static indicator does not create a focus stop.</p>
+            <h4>Screen readers</h4>
+            <p>Using screen reader reading commands identifies the operation and its value when determinate. With indeterminate progress, people identify waiting without receiving a fictitious percentage.</p>
+            <p>On operation start or completion, people perceive progress, completion, or failure feedback without moving focus to the bar. To recover from failure, they navigate to Retry and activate the button.</p>
+            <p>With a mobile screen reader, <code data-interaction-label="true">swiping</code> traverses messages and controls in standard mode; <code data-interaction-label="true">double tapping</code> activates Cancel or Retry when available.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">BDD (Behavior-Driven Development) methodology focusing on three pillars: User Stories, Acceptance Criteria, and Gherkin Syntax (Given, When, Then).</p>
+            <h3>Scenario: Given that I am on a page containing Loading and progress</h3>
+            <p>Educational scenarios for reviewing behavior. Adapt them to context and execute them in the implementation; the presence of this text does not mean tests were performed.</p>
+            <h4 class="mt-4">Keyboard navigation</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN an operation starts and I navigate with the keyboard while waiting</li>
+              <li>I SEE operation identification and visible focus on available controls; the informational indicator does not create a focus stop</li>
+              <li>THEN, when progress updates, I SEE that focus remains predictable and can activate Cancel or Retry when available</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I follow an operation with a desktop screen reader</li>
+              <li>I HEAR or perceive which operation is running and its value for determinate progress, without a fictitious percentage during indeterminate waiting</li>
+              <li>THEN, when the operation completes or fails, I HEAR or perceive the outcome without moving focus to the indicator or following every percentage change</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I navigate the operation region with a mobile screen reader</li>
+              <li>I HEAR or perceive the waiting message and identify available controls by name</li>
+              <li>THEN, when completion, failure, or cancellation occurs, I HEAR or perceive the outcome and can continue the task without watching the animation</li>
+            </ol>
+            <h3>Additional scenarios — editorial extension</h3>
+            <h4 class="mt-4">Progress with an unknown total</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN an operation with no known total</li>
+              <li>WHEN it starts</li>
+              <li>THEN I perceive that waiting is in progress and do not receive a fictitious percentage.</li>
+            </ol>
+            <h4 class="mt-4">Actual completion</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN transfer followed by processing</li>
+              <li>WHEN transfer ends</li>
+              <li>THEN the interface reports pending processing and only presents success when the task actually completes.</li>
+            </ol>
+            <h4 class="mt-4">Failure and recovery</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN an ongoing operation</li>
+              <li>WHEN a failure occurs</li>
+              <li>THEN waiting ends, I identify the problem, and can activate available recovery with a keyboard, touch, or screen reader.</li>
+            </ol>
+            <h4 class="mt-4">Focus during updates</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN an available control while waiting</li>
+              <li>WHEN progress updates</li>
+              <li>THEN focus is not moved by the update and the outcome message can be perceived without watching the animation.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Points to consider</h3>
+            <p>Operation progress differs from a journey step indicator. Completed steps do not necessarily represent a percentage of remaining time.</p>
+            <p>Respect reduced motion preferences and preserve textual feedback when reducing animation. Avoid flashing effects.</p>
+            <p>Skeletons and spinners do not replace error, completion, or unavailability messages. Avoid waiting that never reaches an outcome.</p>
+
+            <h3>Implementation notes and behavior decisions</h3>
+            <p>An informational indicator does not need focus. Cancel and Retry, when available, follow button behavior and <code data-interaction-label="true">Tab</code>.</p>
+            <p>Do not move focus on every update. If a focused control is removed at completion, direct focus to a coherent, documented destination.</p>
+            <p>A progress bar needs a name and a value when determinate. For indeterminate progress, do not expose a false numeric value. Prefer native progress when appropriate.</p>
+            <p>Communicate the start and outcome and, if needed, relevant milestones. A progressbar does not guarantee automatic announcement of every change; avoid forcing announcements for every percentage point.</p>
+            <p>If aria-busy is used on an updated region, reset it to false on completion or failure. Keep the status message perceivable, including while the region is busy.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">References</h2>
+            <p class="mt-3">
+              Additional references for components of type
+              <span class="destaque">Loading and progress</span>.
+            </p>
+            <p><strong>Important:</strong><br />Most references are on the course platform alongside the lessons cited in this material.</p>
+            <p><strong>Disclaimer:</strong><br />The links listed here are a curated collection of references where you can find implemented components, rather than recommendations. There is no unified implementation format and no guarantee that these links follow every design pattern. Direct questions to the teams responsible for the linked materials. Before copying a model, remember that all materials are constantly updated and that patterns, particularly proprietary ones, may change.</p>
+
+            <p>Technical references and examples consulted for this editorial adaptation. Each source retains its scope; consulting an example does not prove accessibility of another implementation.</p>
+            <p>
+              <a href="https://carbondesignsystem.com/components/progress-bar/usage/" target="_blank" rel="noopener noreferrer">Carbon — Progress bar<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/progress" target="_blank" rel="noopener noreferrer">MDN — progress<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html" target="_blank" rel="noopener noreferrer">W3C WAI — Status messages<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Original content by Marcelo Sales, initially used in the
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
+      >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
+    </p>
+
+    <footer class="site-footer" lang="en-US">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>The <strong>Magoo</strong> is a pre-design system library. The idea is to bring instructions together in one place to understand component interaction design before building a more robust system (or updating an existing one).</p>
+          <p>Explore behaviors, interaction methods, and acceptance criteria to create more accessible and inclusive experiences.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT license <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+          </p>
+        </div>
+        <a class="initiative initiative-logo-only" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/tudo-acessibilidade-logo.svg" width="185" height="67" alt="Tudo é Acessibilidade" /><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,5 +1,17 @@
 # Histórico de versões
 
+## 1.6.0
+
+- Adiciona Upload de arquivos, Autocomplete, Datas e intervalos, Carregamento e progresso, Cards e Indicador de etapas, com guias de interação, cenários e referências.
+- Adiciona Regiões da página, com orientações sobre cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé.
+- Adiciona Layout e ordem do conteúdo, com orientações sobre sequência de leitura e foco, adaptação de colunas, zoom e rolagem por teclado.
+- Revisa os cenários Gherkin para contemplar navegação por teclado e leitores de telas no computador e no celular.
+- Revisa os métodos de interação para explicar as ações da pessoa e os resultados esperados em cada modalidade.
+
+## 1.5.1
+
+- Amplia Select, Tabelas, Menu e Input search com decisões de interação, guias rápidos, cenários complementares e referências, preservando IDs e orientações anteriores.
+
 ## 1.5.0
 
 - Adiciona guias rápidos em linguagem simples para Modal, Botão e Input text, preservando as orientações completas.

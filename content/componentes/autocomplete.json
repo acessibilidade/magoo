@@ -1,0 +1,2045 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.6.0",
+  "id": "autocomplete",
+  "name": "Autocomplete",
+  "category": "formularios",
+  "summary": "Oferece sugestões durante a digitação, distinguindo texto em edição, opção ativa e valor confirmado.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/formularios/autocomplete.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/formularios/autocomplete.html",
+    "note": "Ampliação editorial do Magoo preparada para revisão, com referências externas identificadas. Não representa conteúdo migrado do curso nem certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "autocomplete.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "autocomplete-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "autocomplete-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.2",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.3",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use quando sugestões ajudarem a encontrar ou preencher um valor. Para poucas opções visíveis, avalie um controle mais simples."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.4",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.5",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre rótulo, campo, lista de sugestões, opção ativa, valor confirmado, carregamento, ausência de opções e falha."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.6",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.7",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Digitar solicita sugestões. Percorrer opções não precisa confirmar uma escolha; "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " confirma conforme o padrão documentado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.8",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.9",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Defina entrada livre ou restrita, gatilho da consulta, confirmação, cancelamento e efeito de sair do campo."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.10",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.designer-guide.11",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Confira os estados no desenho. Na implementação, verifique edição, opção ativa e confirmação com teclado e leitores de tela."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.15",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Escolher o comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "As sugestões são valores obrigatórios ou a pessoa pode confirmar um texto que não aparece na lista? Essa regra está disponível antes do preenchimento?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Este guia adota combobox editável com lista de sugestões e confirmação explícita. A seleção múltipla é outro padrão, discutido no componente Select."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A busca começa ao focar, digitar ou atingir uma quantidade mínima de caracteres? A interface explica quando é preciso digitar mais?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.20",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Opções e estados"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "É possível distinguir texto digitado, opção ativa e valor confirmado? Sugestões com nomes semelhantes têm contexto suficiente para a escolha?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Carregamento, ausência de sugestões e falha têm mensagens diferentes? Uma falha preserva a entrada e permite tentar novamente?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A lista permanece utilizável com teclado virtual, ampliação e rótulos longos? A opção ativa continua visível durante a rolagem?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.25",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Confirmar e cancelar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que acontece ao clicar em uma sugestão, pressionar "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", sair com "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou fechar com "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.4",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "? No padrão deste guia, "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.5",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " fecha sem confirmar a opção apenas percorrida."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Depois de confirmar, editar o texto invalida a escolha anterior? Documente a relação entre o texto exibido e o identificador salvo."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "autocomplete.29",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.30",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mouse e toque"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.31",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.6",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em uma sugestão confirma seu valor. A lista não deve desaparecer antes que o acionamento seja concluído."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.32",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.33",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.7",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " entra no campo. Digitação, seleção, copiar e colar mantêm os comandos nativos de edição."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.34",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Com a lista aberta, "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.8",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas para baixo e para cima"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem sugestões; "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.9",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " confirma a opção ativa; "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.10",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Esc"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " fecha a lista sem confirmar uma opção apenas percorrida."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.35",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.11",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " sai do campo sem percorrer cada sugestão. Neste padrão de confirmação explícita, sair não confirma automaticamente a opção ativa."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.36",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitores de tela"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.methods-review.1",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ao focar o campo com leitor de telas, a pessoa identifica seu nome e se as sugestões estão abertas. Usar "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.12",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas para cima ou para baixo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre as opções e permite identificar a opção ativa; "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.13",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " confirma."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.methods-review.2",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Com leitor de telas no celular, a pessoa digita pelo teclado virtual, percorre sugestões com os gestos de navegação do leitor e "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.interaction-code.14",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "toca duas vezes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " na opção focada para confirmar. A lista pode informar a quantidade ou ausência de sugestões após a resposta."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.intro-0",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.intro-1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.39",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página que contém Autocomplete"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.40",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.13",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.15",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para focar o campo e digito um termo com sugestões"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO o foco e consigo percorrer sugestões com "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.16",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " sem impedir a edição nativa do texto"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.17",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", VEJO o valor confirmado; ao pressionar "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.18",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " antes de confirmar, VEJO a lista fechar sem salvar a opção apenas percorrida"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.22",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego até o combobox editável com leitor de telas no computador"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO seu rótulo, estado de expansão e as sugestões ativas durante a navegação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando confirmo uma sugestão, OUÇO ou percebo o valor confirmado e o fechamento da lista conforme o padrão definido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.23",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.27",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO foco o campo com leitor de telas no celular e digito um termo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo a disponibilidade das sugestões e consigo explorá-las pelos gestos da plataforma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando aciono uma sugestão, OUÇO ou percebo o valor confirmado sem depender apenas do destaque visual"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.gherkin-standard.28",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários complementares — ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.41",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Percorrer sem confirmar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.42",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.1",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADAS sugestões disponíveis"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.2",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO percorro com "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.19",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.20",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.3",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO a lista fecha sem salvar a sugestão apenas percorrida e posso continuar editando."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.43",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Confirmar uma opção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.44",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.4",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma opção ativa"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.interaction-code.21",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou a aciono por toque"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO o campo apresenta o valor confirmado e a lista fecha conforme a regra documentada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.45",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Respostas fora de ordem"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.46",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADAS consultas sucessivas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO a resposta antiga chega após a mais recente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO ela não substitui as sugestões atuais nem altera o valor confirmado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.47",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Sem correspondência em entrada restrita"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.48",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA entrada restrita às opções"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO tento confirmar um texto sem correspondência"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.gherkin-standard.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO recebo orientação associada ao campo, o texto é preservado e nenhum identificador antigo é enviado como se fosse a nova escolha."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "autocomplete.49",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.50",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Autocomplete de sugestões é diferente do atributo HTML autocomplete, que fornece informações ao navegador sobre preenchimento automático."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.51",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Não coloque links ou botões acionáveis dentro de opções de uma listbox. Conteúdo com ações independentes exige outro padrão."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.52",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cancelamento de requisições e descarte de respostas antigas precisam ser implementados. O desenho documenta a intenção, mas não comprova esse funcionamento."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.methods-review.3",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.37",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Exponha nome, estado de expansão e relação com a lista. No modelo com aria-activedescendant, o foco DOM permanece no campo e a opção ativa precisa existir e estar identificada na lista."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.38",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "A quantidade ou ausência de sugestões pode ser comunicada após a resposta, sem anunciar cada tecla. Verifique também exploração e confirmação com leitor de telas no celular."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "autocomplete.53",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Autocomplete"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "autocomplete.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.54",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.57",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.56",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Combobox"
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.55",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "autocomplete.60",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "autocomplete.59",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/listbox/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Listbox"
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.58",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "autocomplete.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

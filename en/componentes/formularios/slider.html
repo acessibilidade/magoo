@@ -115,14 +115,15 @@
           <nav aria-label="Components">
             <h3>Structure</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
-              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings</a>
               </li>
               <li><a href="/en/components/structure/tables.html">Tables</a></li>
               <li><a href="/en/components/structure/lists.html">Lists</a></li>
               <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
             </ul>
             <h3>Messages</h3>
             <ul>
@@ -130,6 +131,7 @@
               <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
               <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
               <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
             </ul>
             <h3>Navigation</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
               <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
               <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
             </ul>
             <h3>Hidden elements</h3>
             <ul>
@@ -170,6 +173,9 @@
                 <a href="/en/components/forms/slider.html" aria-current="page">Slider<span class="material-icons active-menu-arrow notranslate" aria-hidden="true" translate="no">arrow_forward</span></a>
               </li>
               <li><a href="/en/components/forms/switch.html">Switch</a></li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
             </ul>
           </nav>
         </div>
@@ -184,13 +190,13 @@
             <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
@@ -204,10 +210,10 @@
               <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
               <h4>When to use</h4>
               <p>Use to adjust a value within a range.</p>
-              <h4>What to draw</h4>
+              <h4>What to design</h4>
               <p>Show the track, thumb, limits, current value, and focus. With two thumbs, identify each one.</p>
               <h4>How it behaves</h4>
-              <p>Dragging changes the value; arrows adjust by smaller steps and Home and End reach the limits.</p>
+              <p><code data-interaction-label="true">Dragging</code> changes the value; <code data-interaction-label="true">arrow navigation</code> adjust by smaller steps and <code data-interaction-label="true">Home</code> and <code data-interaction-label="true">End</code> reach the limits.</p>
               <h4>What to document in Figma</h4>
               <p>Define minimum, maximum, step size, and whether clicking the track changes the value. Larger keyboard steps are optional.</p>
               <h4>How to review</h4>
@@ -231,15 +237,15 @@
               <small>(any pointing device)</small>
             </h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Is there visual feedback when hovering over or dragging the control?</li>
-              <li>Does dragging the thumb update the value perceptibly?</li>
+              <li>Is there visual feedback when hovering over or <code data-interaction-label="true">dragging</code> the control?</li>
+              <li>When <code data-interaction-label="true">dragging</code> the thumb update the value perceptibly?</li>
               <li>Can you select values with enough precision for the task?</li>
             </ol>
 
             <h3 class="destaque mt-4">Designing for gesture use</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Does the thumb have a comfortable touch area?</li>
-              <li>While dragging, does the current value remain visible and understandable?</li>
+              <li>When <code data-interaction-label="true">dragging</code>, does the current value remain visible and understandable?</li>
               <li>Does the interaction work without requiring excessive precision?</li>
             </ol>
 
@@ -249,7 +255,7 @@
             </h3>
             <ol class="lista-detalhe link-padrao">
               <li>Is there visible focus on the thumb or control?</li>
-              <li><code>arrow keys</code> change the value in expected increments?</li>
+              <li><code>Arrow keys</code> change the value in expected increments?</li>
               <li><code>Home</code> and <code>End</code> move to minimum and maximum when applicable?</li>
               <li><code>Page Up</code> and <code>Page Down</code> change the value in larger increments when applicable?</li>
             </ol>
@@ -263,7 +269,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
-            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h2 class="titulo-mobile">Interaction Methods</h2>
             <p class="mt-3">
               Possible interaction methods for components of type
               <span class="destaque">Slider</span>.
@@ -275,7 +281,7 @@
               <small>(any pointing device)</small>
             </h3>
             <ul class="lista-detalhe link-padrao">
-              <li>Dragging the thumb changes the value.</li>
+              <li><code data-interaction-label="true">Dragging</code> the thumb changes the value.</li>
               <li>Clicking the track may move the thumb when that behavior is intended.</li>
               <li>The visible value should follow the change.</li>
             </ul>
@@ -285,7 +291,7 @@
               <small>(any non-pointing device)</small>
             </h3>
             <ul class="lista-detalhe link-padrao">
-              <li><code>arrow keys</code> change the value in smaller steps.</li>
+              <li><code>Arrow keys</code> change the value in smaller steps.</li>
               <li><code>Home</code> and <code>End</code> move to minimum and maximum.</li>
               <li><code>Page Up</code> and <code>Page Down</code> may change the value in larger steps.</li>
             </ul>
@@ -312,7 +318,7 @@
               <li>I SEE the value go to minimum or maximum</li>
             </ol>
 
-            <h4 class="mt-4">Desktop screen reader</h4>
+            <h4 class="mt-4">Screen reader on desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 When I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and move focus to the component
@@ -326,7 +332,7 @@
               <li>I HEAR or perceive that its corresponding state, value, content, or action has been updated.</li>
             </ol>
 
-            <h4 class="mt-4">Mobile screen reader</h4>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and swipe to focus the component, the following happens:
@@ -365,32 +371,32 @@
             <h3 class="destaque mt-4">Design patterns</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider/" target="_blank" rel="noopener noreferrer">W3C APG: Slider Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider/" target="_blank" rel="noopener noreferrer">W3C APG: Slider Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/" target="_blank" rel="noopener noreferrer">W3C APG: Multi-Thumb Slider Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/" target="_blank" rel="noopener noreferrer">W3C APG: Multi-Thumb Slider Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)" target="_blank" rel="noopener noreferrer">HTML standards documentation: Range state <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)" target="_blank" rel="noopener noreferrer">HTML standards documentation: Range state <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/sliders/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Sliders <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://m3.material.io/components/sliders/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Sliders <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/range-slider/" target="_blank" rel="noopener noreferrer">US.gov - Range slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://designsystem.digital.gov/components/range-slider/" target="_blank" rel="noopener noreferrer">US.gov - Range slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/slider/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://carbondesignsystem.com/components/slider/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/slider/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://spectrum.adobe.com/page/slider/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/forms/range/" target="_blank" rel="noopener noreferrer">Bootstrap - Range <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/forms/range/" target="_blank" rel="noopener noreferrer">Bootstrap - Range <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -402,6 +408,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
       >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
     </p>
+
     <footer class="site-footer" lang="en-US">
       <div class="wrap footer-main">
         <div class="footer-about">

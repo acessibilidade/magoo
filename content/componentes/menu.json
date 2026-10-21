@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "menu",
   "name": "Menu",
   "category": "navegacao",
@@ -151,7 +151,61 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Links navegam e botões abrem submenus. Não dependa apenas de passar o mouse; Escape fecha submenus temporários quando aplicável."
+                  "value": "Na navegação comum, "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorre links e botões. Em menus de ações ARIA, "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorrem itens; "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " fecha e devolve o foco ao acionador. Menu contextual também precisa de acesso por teclado e toque."
                 }
               ]
             },
@@ -183,7 +237,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Diferencie links de botões e registre a ordem de navegação. Navegação comum de site não deve ser tratada como menu de aplicativo."
+                  "value": "Diferencie navegação, menu de ações e menu contextual. Registre o padrão de teclado, a abertura, o fechamento, o item ao qual a ação se aplica e o foco após executar comandos."
                 }
               ]
             },
@@ -837,6 +891,444 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.1",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ampliação editorial — padrões e decisões de interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.2",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Adaptação editorial do Magoo: complementa as orientações anteriores com decisões de desenho, documentação e revisão. As referências apoiam a adaptação; estes cenários não representam testes executados nem certificação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.3",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação, ações e contexto"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Na navegação comum de site, links levam a destinos e botões mostram ou ocultam grupos de links. Preserve a navegação por "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.4",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.5",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shift + Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e identifique a página atual. A aparência de dropdown não exige role=\"menu\"."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Um menu de ações reúne comandos, como Editar ou Duplicar. Se adotar o padrão ARIA menu, documente abertura, foco inicial, navegação por "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.21",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", ativação e saída. Não aplique a esse padrão a regra de percorrer todos os itens com "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.22",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " usada na navegação comum."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Um menu contextual apresenta ações sobre um item identificado. Ofereça um botão acessível, como Ações de Relatório mensal, além de eventual "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.6",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "clique secundário"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.7",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "gesto prolongado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ". Documente o atalho de teclado quando disponível e mantenha claro sobre qual item a ação será executada."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.7",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O que desenhar e documentar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.8",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mostre acionador, aberto, fechado, foco, itens indisponíveis e submenus quando existirem. Separe o link de destino do botão que expande um grupo quando os dois forem necessários. Não dependa apenas de hover ou de um ícone sem nome."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.9",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "No menu de ações ARIA, "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.8",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.9",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Espaço"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " no botão abrem o menu e levam o foco ao primeiro item; "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.10",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem os itens. "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.11",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Esc"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " fecha e devolve o foco ao acionador. "
+            },
+            {
+              "type": "element",
+              "id": "menu.interaction-code.12",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " sai do menu, em vez de percorrer cada item. Submenus exigem documentar também a entrada, a saída e o retorno ao item pai."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.10",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Após executar uma ação, direcione o foco conforme o resultado: por exemplo, para o diálogo aberto ou para um controle próximo se o item original for removido. Em telas pequenas, mantenha todas as ações disponíveis e o menu dentro da área visível."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.11",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Revisão do desenho e da implementação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.12",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "No desenho, confira se destino, comando e contexto são reconhecíveis. Na implementação, verifique o padrão escolhido, nomes, estado de expansão, sequência de foco e fechamento por teclado, toque e leitor de telas. Controles ocultos não devem permanecer no percurso do foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -848,6 +1340,26 @@
         {
           "type": "text",
           "value": "\n            "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.methods-scope",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Escopo: os métodos básicos abaixo descrevem navegação comum de site. Para menus de ações ARIA e menus contextuais, consulte as diferenças de foco e teclado na ampliação editorial da aba Design de interação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         },
         {
           "type": "element",
@@ -1246,29 +1758,13 @@
             },
             {
               "type": "element",
-              "id": "menu.interaction-methods.26",
+              "id": "menu.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Use "
-                },
-                {
-                  "type": "element",
-                  "id": "menu.interaction-methods.27",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "nav"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " para menus de navegação."
+                  "value": "Usar os comandos de regiões do leitor de telas permite localizar a navegação pelo seu nome."
                 }
               ]
             },
@@ -1278,13 +1774,13 @@
             },
             {
               "type": "element",
-              "id": "menu.interaction-methods.28",
+              "id": "menu.methods-review.4",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Use listas quando houver agrupamento de links."
+                  "value": "Percorrer os links com leitor de telas permite identificar cada destino e o agrupamento em que ele está."
                 }
               ]
             },
@@ -1294,29 +1790,13 @@
             },
             {
               "type": "element",
-              "id": "menu.interaction-methods.29",
+              "id": "menu.methods-review.6",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "Use "
-                },
-                {
-                  "type": "element",
-                  "id": "menu.interaction-methods.30",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-expanded"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " em acionadores de submenu."
+                  "value": "Acionar um botão de submenu abre ou fecha o grupo e permite perceber o novo estado."
                 }
               ]
             },
@@ -1326,29 +1806,67 @@
             },
             {
               "type": "element",
-              "id": "menu.interaction-methods.31",
+              "id": "menu.methods-review.8",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Evite aplicar "
+                  "value": "Na navegação comum de site, "
                 },
                 {
                   "type": "element",
-                  "id": "menu.interaction-methods.32",
+                  "id": "menu.interaction-code.13",
                   "tag": "code",
-                  "attributes": {},
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
                   "children": [
                     {
                       "type": "text",
-                      "value": "role=\"menu\""
+                      "value": "Tab"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "value": " em navegação comum de\n                site.\n              "
+                  "value": " percorre links e botões; em menu de ações ARIA, "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.14",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " percorrem os itens e "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.15",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " fecha o menu."
                 }
               ]
             },
@@ -1880,6 +2398,376 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.13",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários complementares — ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.14",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação comum: abrir um grupo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.15",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.1",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma navegação comum com grupo recolhido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.2",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO aciono seu botão por teclado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.3",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO o estado expandido é comunicado e os links ficam disponíveis na sequência de "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.16",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.16",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Menu de ações: abrir, percorrer e cancelar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.4",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO um botão de menu de ações ARIA"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO abro com "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.17",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " ou "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.18",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Espaço"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", percorro os itens com "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.19",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " e pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-code.20",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO o menu fecha sem executar uma ação e o foco retorna ao botão."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Menu contextual sem clique secundário"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO um item com ações contextuais"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso o botão de ações por teclado ou toque"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "menu.gherkin-standard.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO acesso as mesmas ações e consigo identificar o item ao qual se aplicam."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2027,6 +2915,170 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.methods-review.9",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.interaction-methods.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "nav"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para menus de navegação."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.methods-review.3",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use listas quando houver agrupamento de links."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.methods-review.5",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.interaction-methods.29",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-methods.30",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-expanded"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " em acionadores de submenu."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.methods-review.7",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.interaction-methods.31",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Evite aplicar "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.interaction-methods.32",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "role=\"menu\""
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " em navegação comum de\n                site.\n              "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2231,7 +3283,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2250,7 +3303,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2259,14 +3312,10 @@
                       "id": "menu.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2310,7 +3359,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2329,7 +3379,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2338,14 +3388,10 @@
                       "id": "menu.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2389,7 +3435,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2408,7 +3455,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2417,14 +3464,10 @@
                       "id": "menu.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2468,7 +3511,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2487,7 +3531,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2496,14 +3540,10 @@
                       "id": "menu.references.31",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2583,7 +3623,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2602,7 +3643,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2611,14 +3652,10 @@
                       "id": "menu.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2662,7 +3699,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2681,7 +3719,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2690,14 +3728,10 @@
                       "id": "menu.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2741,7 +3775,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2760,7 +3795,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2769,14 +3804,10 @@
                       "id": "menu.references.48",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2820,7 +3851,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2839,7 +3871,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2848,14 +3880,10 @@
                       "id": "menu.references.53",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2899,7 +3927,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2918,7 +3947,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2927,14 +3956,10 @@
                       "id": "menu.references.58",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2978,7 +4003,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2997,7 +4023,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -3006,14 +4032,10 @@
                       "id": "menu.references.63",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -3032,6 +4054,224 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.20",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências da ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.23",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.extension.22",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Disclosure navigation"
+                },
+                {
+                  "type": "element",
+                  "id": "menu.extension.21",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.26",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.extension.25",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Menu button"
+                },
+                {
+                  "type": "element",
+                  "id": "menu.extension.24",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "menu.extension.29",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "menu.extension.28",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/menubar/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Menu and menubar"
+                },
+                {
+                  "type": "element",
+                  "id": "menu.extension.27",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "menu.reference-link.3",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     }

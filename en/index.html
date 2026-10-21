@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Magoo | Your pre-design system library</title>
-    <meta name="description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+    <meta name="description" content="Everything you need to know about component interaction design BEFORE building your design system. Or to validate your system or environment AFTER it has been built. Don't reinvent the wheel. Start the right way!" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Magoo" />
     <meta property="og:title" content="Magoo | Your pre-design system library" />
-    <meta property="og:description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+    <meta property="og:description" content="Everything you need to know about component interaction design BEFORE building your design system. Or to validate your system or environment AFTER it has been built. Don't reinvent the wheel. Start the right way!" />
 
     <meta name="twitter:title" content="Magoo | Your pre-design system library" />
-    <meta name="twitter:description" content="Everything you need to know about component interaction design BEFORE building your design system. Don't reinvent the wheel. Start the right way!" />
+    <meta name="twitter:description" content="Everything you need to know about component interaction design BEFORE building your design system. Or to validate your system or environment AFTER it has been built. Don't reinvent the wheel. Start the right way!" />
     <meta name="theme-color" content="#f7f7f2" />
     <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
@@ -124,7 +124,7 @@
           <span>pre-design system library</span>
         </h1>
         <p class="hero-description">
-          Everything you need to know about component interaction design BEFORE building your design system.
+          Everything you need to know about component interaction design BEFORE building your design system. Or to validate your system or environment AFTER it has been built.
           <br />
           Don't reinvent the wheel. Start the right way!
         </p>
@@ -139,12 +139,16 @@
                   <option value="/en/components/structure/headings.html">Headings</option>
                   <option value="/en/components/structure/tables.html">Tables</option>
                   <option value="/en/components/structure/lists.html">Lists</option>
+                  <option value="/en/components/structure/cards.html">Cards</option>
+                  <option value="/en/components/structure/page-regions.html">Page regions</option>
+                  <option value="/en/components/structure/layout-content-order.html">Layout and content order</option>
                 </optgroup>
                 <optgroup label="Messages">
                   <option value="/en/components/messages/form-validation.html">Form validation</option>
                   <option value="/en/components/messages/alerts.html">Alerts</option>
                   <option value="/en/components/messages/dialogs.html">Dialogs</option>
                   <option value="/en/components/messages/toasts.html">Toasts</option>
+                  <option value="/en/components/messages/loading-progress.html">Loading and progress</option>
                 </optgroup>
                 <optgroup label="Navigation">
                   <option value="/en/components/navigation/breadcrumb.html">Breadcrumb</option>
@@ -153,6 +157,7 @@
                   <option value="/en/components/navigation/pagination.html">Pagination</option>
                   <option value="/en/components/navigation/carousel.html">Carousel</option>
                   <option value="/en/components/navigation/drag-drop.html">Drag'n'Drop</option>
+                  <option value="/en/components/navigation/step-indicator.html">Step indicator</option>
                 </optgroup>
                 <optgroup label="Hidden elements">
                   <option value="/en/components/hidden-elements/accordion.html">Accordion</option>
@@ -172,6 +177,9 @@
                   <option value="/en/components/forms/select.html">Select (Combo)</option>
                   <option value="/en/components/forms/slider.html">Slider</option>
                   <option value="/en/components/forms/switch.html">Switch</option>
+                  <option value="/en/components/forms/file-upload.html">File upload</option>
+                  <option value="/en/components/forms/autocomplete.html">Autocomplete</option>
+                  <option value="/en/components/forms/dates-ranges.html">Dates and date ranges</option>
                 </optgroup>
               </select>
               <span class="material-icons select-arrow notranslate" aria-hidden="true" translate="no"> expand_more </span>
@@ -181,7 +189,7 @@
               <span class="material-icons notranslate" aria-hidden="true" translate="no"> arrow_forward </span>
             </button>
           </div>
-          <p class="catalog-count">29 components · 5 categories</p>
+          <p class="catalog-count">37 components · 5 categories</p>
         </form>
         <noscript>
           <p>Choose a component from the library links below.</p>
@@ -206,13 +214,11 @@
               <a href="/en/categories/structure.html">Structure<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
             </h3>
             <ul>
-              <li class="upcoming">
-                Flexbox &amp; Grid
-                <small>In development</small>
+              <li>
+                <a href="/en/components/structure/layout-content-order.html">Layout and content order<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
-              <li class="upcoming">
-                Header, Footer and Regions
-                <small>In development</small>
+              <li>
+                <a href="/en/components/structure/page-regions.html">Page regions<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -225,6 +231,9 @@
               </li>
               <li>
                 <a href="/en/components/structure/tabbar.html">Tabbar<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/structure/cards.html">Cards<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -245,6 +254,9 @@
               </li>
               <li>
                 <a href="/en/components/messages/toasts.html">Toasts<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/messages/loading-progress.html">Loading and progress<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -271,6 +283,9 @@
               </li>
               <li>
                 <a href="/en/components/navigation/drag-drop.html">Drag'n'Drop<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/en/components/navigation/step-indicator.html">Step indicator<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -333,11 +348,20 @@
               <li>
                 <a href="/en/components/forms/switch.html">Switch<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
               </li>
+              <li>
+                <a href="/en/components/forms/file-upload.html">File upload<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/autocomplete.html">Autocomplete<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
+              <li>
+                <a href="/en/components/forms/dates-ranges.html">Dates and date ranges<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
             </ul>
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Content version: 1.5.0</p>
+          <p class="material-version">Content version: 1.6.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             View changelog
             <span class="sr-only"> (opens a window with additional content on this page) </span>
@@ -355,7 +379,23 @@
             </button>
           </div>
           <p id="changelog-description">Content changes, from newest to oldest.</p>
-          <div class="changelog-entries">
+          <div class="changelog-entries" role="region" aria-label="Version history" tabindex="0">
+            <section class="changelog-entry" aria-labelledby="version-1-6-0">
+              <h3 id="version-1-6-0">Version 1.6.0</h3>
+              <ul>
+                <li>Adds File upload, Autocomplete, Dates and ranges, Loading and progress, Cards, and Step indicator, with interaction guides, scenarios, and references.</li>
+                <li>Adds Page regions, with guidance on headers, main content, navigation, complementary content, and footers.</li>
+                <li>Adds Layout and content order, with guidance on reading and focus sequence, column adaptation, zoom, and keyboard scrolling.</li>
+                <li>Revises Gherkin scenarios to cover keyboard navigation and screen readers on desktop and mobile.</li>
+                <li>Revises interaction methods to explain user actions and expected outcomes for each input method.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-5-1">
+              <h3 id="version-1-5-1">Version 1.5.1</h3>
+              <ul>
+                <li>Extends Select, Tables, Menu, and Input search with interaction decisions, quick guides, additional scenarios, and references, preserving IDs and previous guidance.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-5-0">
               <h3 id="version-1-5-0">Version 1.5.0</h3>
               <ul>
@@ -610,7 +650,7 @@
         <div class="figma-instructions-layout">
           <article class="context-card figma-guide" aria-labelledby="figma-guide-title" id="figma-guide">
             <h3 id="figma-guide-title">Instructions for using Magoo with Figma</h3>
-            <p>Review states, discover pending decisions, and prepare behavior annotations using guides for all 29 components. You can start without writing code.</p>
+            <p>Review states, discover pending decisions, and prepare behavior annotations using guides for all 37 components. You can start without writing code.</p>
             <p>A skill is a set of instructions for the assistant. Choose the version for direct use in the Figma agent or the version for Codex connected to Figma.</p>
             <h4>Use directly in the Figma agent</h4>
             <p>Download the Markdown file and, in the Figma Design or Make chat, open Skills → Add skill → Upload a file. Select the file and click Add. Use /magoo-figma-native to start.</p>
@@ -658,7 +698,7 @@
             </ol>
             <h4>How to know you are ready</h4>
             <p>Ask the assistant to confirm it can find the skill, consult Magoo, and read the linked component. If anything is missing, it should explain which connection needs attention. To write annotations in Figma, request that action and identify the destination file.</p>
-            <p class="figma-availability">Guides for all 29 components are part of version 1.5.0. When setting up Magoo, use the version shown on this page and ask the assistant to confirm the version consulted. Older connections need updating and restarting.</p>
+            <p class="figma-availability">Guides for all 37 components are part of version 1.6.0. When setting up Magoo, use the version shown on this page and ask the assistant to confirm the version consulted. Older connections need updating and restarting.</p>
           </article>
           <div class="native-skill-column">
             <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
@@ -704,8 +744,7 @@
           <h3 id="mcp-setup-title">Instructions for using Magoo with your preferred AI</h3>
           <p>
             You can ask your AI to consult Magoo before suggesting how a component should work. To do so, you need to connect the library once. This connection is called
-            <strong>MCP</strong>
-            .
+            <strong>MCP</strong>.
           </p>
           <p>
             <strong>Prefer not to configure anything?</strong>
@@ -747,12 +786,12 @@
             <div>
               <dt>Arguments</dt>
               <dd>
-                <code>-y @acessibilidade/magoo-mcp@1.5.0</code>
+                <code>-y @acessibilidade/magoo-mcp@1.6.0</code>
                 <p>
                   If the application asks for separate arguments, add
                   <code>-y</code>
                   and
-                  <code>@acessibilidade/magoo-mcp@1.5.0</code>
+                  <code>@acessibilidade/magoo-mcp@1.6.0</code>
                   as two items.
                 </p>
               </dd>
@@ -792,9 +831,8 @@
                 <a href="https://pt.wikipedia.org/wiki/Mr._Magoo" target="_blank" rel="noopener noreferrer">
                   Wikipedia article about Mr. Magoo
                   <span class="material-icons notranslate" translate="no" aria-hidden="true"> open_in_new </span>
-                  <span class="sr-only"> (external link, opens in a new tab) </span>
-                </a>
-                .
+                  <span class="sr-only"> (external link, opens in a new tab) </span> </a
+                >.
               </p>
             </dd>
           </div>
@@ -887,7 +925,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.5.0 and does not automatically switch to a future version.</p>
+              <p>Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.6.0 and does not automatically switch to a future version.</p>
             </dd>
           </div>
           <div class="faq-item">

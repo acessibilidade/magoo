@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,9 +211,9 @@
               <h4>O que desenhar</h4>
               <p>Mostre itens, submenus quando existirem, estado aberto ou fechado e foco visível.</p>
               <h4>Como se comporta</h4>
-              <p>Links navegam e botões abrem submenus. Não dependa apenas de passar o mouse; Escape fecha submenus temporários quando aplicável.</p>
+              <p>Na navegação comum, <code data-interaction-label="true">Tab</code> percorre links e botões. Em menus de ações ARIA, <code data-interaction-label="true">setas</code> percorrem itens; <code data-interaction-label="true">Esc</code> fecha e devolve o foco ao acionador. Menu contextual também precisa de acesso por teclado e toque.</p>
               <h4>O que documentar no Figma</h4>
-              <p>Diferencie links de botões e registre a ordem de navegação. Navegação comum de site não deve ser tratada como menu de aplicativo.</p>
+              <p>Diferencie navegação, menu de ações e menu contextual. Registre o padrão de teclado, a abertura, o fechamento, o item ao qual a ação se aplica e o foco após executar comandos.</p>
               <h4>Como revisar</h4>
               <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
             </div>
@@ -258,8 +264,33 @@
               <li>Links possuem nomes claros e únicos dentro do contexto?</li>
               <li>Submenus expõem estado aberto ou fechado quando aplicável?</li>
             </ol>
+
+            <h3>Ampliação editorial — padrões e decisões de interação</h3>
+
+            <p>Adaptação editorial do Magoo: complementa as orientações anteriores com decisões de desenho, documentação e revisão. As referências apoiam a adaptação; estes cenários não representam testes executados nem certificação.</p>
+
+            <h4>Navegação, ações e contexto</h4>
+
+            <p>Na navegação comum de site, links levam a destinos e botões mostram ou ocultam grupos de links. Preserve a navegação por <code data-interaction-label="true">Tab</code> e <code data-interaction-label="true">Shift + Tab</code> e identifique a página atual. A aparência de dropdown não exige role="menu".</p>
+
+            <p>Um menu de ações reúne comandos, como Editar ou Duplicar. Se adotar o padrão ARIA menu, documente abertura, foco inicial, navegação por <code data-interaction-label="true">setas</code>, ativação e saída. Não aplique a esse padrão a regra de percorrer todos os itens com <code data-interaction-label="true">Tab</code> usada na navegação comum.</p>
+
+            <p>Um menu contextual apresenta ações sobre um item identificado. Ofereça um botão acessível, como Ações de Relatório mensal, além de eventual <code data-interaction-label="true">clique secundário</code> ou <code data-interaction-label="true">gesto prolongado</code>. Documente o atalho de teclado quando disponível e mantenha claro sobre qual item a ação será executada.</p>
+
+            <h4>O que desenhar e documentar</h4>
+
+            <p>Mostre acionador, aberto, fechado, foco, itens indisponíveis e submenus quando existirem. Separe o link de destino do botão que expande um grupo quando os dois forem necessários. Não dependa apenas de hover ou de um ícone sem nome.</p>
+
+            <p>No menu de ações ARIA, <code data-interaction-label="true">Enter</code> ou <code data-interaction-label="true">Espaço</code> no botão abrem o menu e levam o foco ao primeiro item; <code data-interaction-label="true">setas</code> percorrem os itens. <code data-interaction-label="true">Esc</code> fecha e devolve o foco ao acionador. <code data-interaction-label="true">Tab</code> sai do menu, em vez de percorrer cada item. Submenus exigem documentar também a entrada, a saída e o retorno ao item pai.</p>
+
+            <p>Após executar uma ação, direcione o foco conforme o resultado: por exemplo, para o diálogo aberto ou para um controle próximo se o item original for removido. Em telas pequenas, mantenha todas as ações disponíveis e o menu dentro da área visível.</p>
+
+            <h4>Revisão do desenho e da implementação</h4>
+
+            <p>No desenho, confira se destino, comando e contexto são reconhecíveis. Na implementação, verifique o padrão escolhido, nomes, estado de expansão, sequência de foco e fechamento por teclado, toque e leitor de telas. Controles ocultos não devem permanecer no percurso do foco.</p>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <p>Escopo: os métodos básicos abaixo descrevem navegação comum de site. Para menus de ações ARIA e menus contextuais, consulte as diferenças de foco e teclado na ampliação editorial da aba Design de interação.</p>
             <h2 class="titulo-mobile">Métodos de Interação</h2>
             <p class="mt-3">
               Possíveis métodos de interação em componentes do tipo
@@ -290,10 +321,10 @@
 
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ul class="lista-detalhe link-padrao">
-              <li>Use <code>nav</code> para menus de navegação.</li>
-              <li>Use listas quando houver agrupamento de links.</li>
-              <li>Use <code>aria-expanded</code> em acionadores de submenu.</li>
-              <li>Evite aplicar <code>role="menu"</code> em navegação comum de site.</li>
+              <li>Usar os comandos de regiões do leitor de telas permite localizar a navegação pelo seu nome.</li>
+              <li>Percorrer os links com leitor de telas permite identificar cada destino e o agrupamento em que ele está.</li>
+              <li>Acionar um botão de submenu abre ou fecha o grupo e permite perceber o novo estado.</li>
+              <li>Na navegação comum de site, <code data-interaction-label="true">Tab</code> percorre links e botões; em menu de ações ARIA, <code data-interaction-label="true">setas</code> percorrem os itens e <code data-interaction-label="true">Esc</code> fecha o menu.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -338,6 +369,32 @@
               <li>ENTÃO, quando interajo com o componente quando aplicável</li>
               <li>OUÇO ou percebo que a informação, estado, conteúdo ou ação correspondente está disponível.</li>
             </ol>
+
+            <h3>Cenários complementares — ampliação editorial</h3>
+
+            <h4 class="mt-4">Navegação comum: abrir um grupo</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma navegação comum com grupo recolhido</li>
+              <li>QUANDO aciono seu botão por teclado</li>
+              <li>ENTÃO o estado expandido é comunicado e os links ficam disponíveis na sequência de <code data-interaction-label="true">Tab</code>.</li>
+            </ol>
+
+            <h4 class="mt-4">Menu de ações: abrir, percorrer e cancelar</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um botão de menu de ações ARIA</li>
+              <li>QUANDO abro com <code data-interaction-label="true">Enter</code> ou <code data-interaction-label="true">Espaço</code>, percorro os itens com <code data-interaction-label="true">setas</code> e pressiono <code data-interaction-label="true">Esc</code></li>
+              <li>ENTÃO o menu fecha sem executar uma ação e o foco retorna ao botão.</li>
+            </ol>
+
+            <h4 class="mt-4">Menu contextual sem clique secundário</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um item com ações contextuais</li>
+              <li>QUANDO uso o botão de ações por teclado ou toque</li>
+              <li>ENTÃO acesso as mesmas ações e consigo identificar o item ao qual se aplicam.</li>
+            </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de Atenção</h2>
@@ -350,6 +407,20 @@
               <li>Menu de navegação de site não deve ser tratado automaticamente como <code>role="menu"</code>; esse padrão é mais adequado para menus de aplicação.</li>
               <li>Submenus acionados apenas por hover deixam pessoas usuárias de teclado e toque de fora.</li>
               <li>Menu mobile deve manter ordem visual e ordem de foco coerentes.</li>
+            </ul>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>Use <code>nav</code> para menus de navegação.</li>
+            </ul>
+            <ul>
+              <li>Use listas quando houver agrupamento de links.</li>
+            </ul>
+            <ul>
+              <li>Use <code>aria-expanded</code> em acionadores de submenu.</li>
+            </ul>
+            <ul>
+              <li>Evite aplicar <code>role="menu"</code> em navegação comum de site.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
@@ -364,40 +435,54 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">W3C APG: Disclosure Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/" target="_blank" rel="noopener noreferrer">W3C APG: Disclosure Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/" target="_blank" rel="noopener noreferrer">W3C APG: Menu Button Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/" target="_blank" rel="noopener noreferrer">W3C APG: Menu Button Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menubar/" target="_blank" rel="noopener noreferrer">W3C APG: Menu and Menubar Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menubar/" target="_blank" rel="noopener noreferrer">W3C APG: Menu and Menubar Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav" target="_blank" rel="noopener noreferrer">MDN Web Docs: nav <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav" target="_blank" rel="noopener noreferrer">MDN Web Docs: nav <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/header/" target="_blank" rel="noopener noreferrer">US.gov - Header <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/header/" target="_blank" rel="noopener noreferrer">US.gov - Header <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/sidenav/" target="_blank" rel="noopener noreferrer">US.gov - Side navigation <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/sidenav/" target="_blank" rel="noopener noreferrer">US.gov - Side navigation <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/ui-shell-header/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - UI shell header <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/ui-shell-header/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - UI shell header <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/menu/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Menu <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/menu/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Menu <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/navbar/" target="_blank" rel="noopener noreferrer">Bootstrap - Navbar <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/navbar/" target="_blank" rel="noopener noreferrer">Bootstrap - Navbar <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/dropdowns/" target="_blank" rel="noopener noreferrer">Bootstrap - Dropdowns <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/dropdowns/" target="_blank" rel="noopener noreferrer">Bootstrap - Dropdowns <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
+
+            <h3>Referências da ampliação editorial</h3>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/examples/disclosure-navigation/" target="_blank" rel="noopener noreferrer">W3C APG — Disclosure navigation<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/" target="_blank" rel="noopener noreferrer">W3C APG — Menu button<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/menubar/" target="_blank" rel="noopener noreferrer">W3C APG — Menu and menubar<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
           </div>
         </div>
       </main>
@@ -407,6 +492,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

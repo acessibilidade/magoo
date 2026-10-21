@@ -4,7 +4,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import vm from "node:vm";
 import { load } from "cheerio";
-import { components } from "../js/lib/catalog.js";
+import { components, flatten, textOf } from "../js/lib/catalog.js";
 import { root } from "../js/lib/paths.js";
 import {
   locales,
@@ -12,6 +12,87 @@ import {
   localizedPath,
   localizedUrl,
 } from "../js/build/i18n.js";
+
+test("Rótulos de teclas e gestos mantêm code e tradução nos dois idiomas", async () => {
+  const dictionary = JSON.parse(
+    await readFile(new URL("content/locales/en.json", root), "utf8"),
+  ).strings;
+  for (const component of components) {
+    for (const locale of locales) {
+      const $ = load(
+        await readFile(
+          new URL(localizedPath(locale.id, component.path).slice(1), root),
+          "utf8",
+        ),
+      );
+      for (const section of component.sections) {
+        const labels = flatten(section.blocks)
+          .filter(
+            (node) =>
+              node.tag === "code" &&
+              node.attributes["data-interaction-label"] === "true",
+          )
+          .map((node) => textOf([node]));
+        assert.deepEqual(
+          $(`#${section.panelId} code[data-interaction-label]`)
+            .map((_, element) => $(element).text())
+            .get(),
+          labels.map((label) =>
+            locale.id === "en" ? dictionary[label] : label,
+          ),
+          `${locale.id}/${component.id}/${section.id}`,
+        );
+      }
+    }
+  }
+});
+
+test("Referências distinguem links externos de navegação interna nos dois idiomas", async () => {
+  for (const locale of locales) {
+    for (const component of components) {
+      const $ = load(
+        await readFile(
+          new URL(localizedPath(locale.id, component.path).slice(1), root),
+          "utf8",
+        ),
+      );
+      $("#aba-ref-conteudo a[href]").each((_, element) => {
+        const link = $(element);
+        const href = link.attr("href");
+        const labels = link
+          .find('.sr-only:not([aria-hidden="true"])')
+          .text()
+          .trim();
+        if (href.startsWith("/")) {
+          assert.ok(href.startsWith(`/${locale.id}/`), href);
+          assert.equal(link.attr("target"), undefined, href);
+          assert.equal(link.find(".material-icons").length, 0, href);
+          assert.equal(labels, "", href);
+        } else {
+          assert.equal(link.attr("target"), "_blank", href);
+          assert.equal(link.find(".material-icons").length, 1, href);
+          assert.equal(
+            link.find(".material-icons").attr("aria-hidden"),
+            "true",
+            href,
+          );
+          assert.equal(
+            link.find(".material-icons").text(),
+            "open_in_new",
+            href,
+          );
+          assert.match(
+            labels,
+            locale.id === "en"
+              ? /external link, opens in a new tab/
+              : /link externo, abre em uma nova aba/,
+            href,
+          );
+        }
+      });
+    }
+  }
+});
 
 test("Todas as páginas têm idiomas, destinos locais válidos e SEO correspondente", async () => {
   for (const locale of locales) {

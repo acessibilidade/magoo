@@ -75,7 +75,11 @@ export function visitMessages($, visit) {
           .length
       )
         return;
-      if ($(node).parents("code").length && !keyNames.has(normalize(node.data)))
+      if (
+        $(node).parents("code").length &&
+        !$(node).closest('code[data-interaction-label="true"]').length &&
+        !keyNames.has(normalize(node.data))
+      )
         return;
       if (normalize(node.data)) node.data = visit(node.data);
     });
@@ -100,6 +104,17 @@ export function visitMessages($, visit) {
 }
 
 function rewriteLocalUrls($, path, locale) {
+  // Same-site content links are navigation within the current language.
+  $("a[href]").each((_, element) => {
+    const value = $(element).attr("href");
+    if (!/^https?:\/\//i.test(value)) return;
+    const url = new URL(value);
+    if (["magoo.cc", "www.magoo.cc"].includes(url.hostname))
+      $(element)
+        .attr("href", url.pathname + url.search + url.hash)
+        .removeAttr("target")
+        .removeAttr("rel");
+  });
   const base = new URL(path || "index.html", "https://magoo.cc/");
   const rewrite = (value) => {
     if (!value || /^(?:#|[a-z][a-z\d+.-]*:|\/\/)/i.test(value)) return value;
@@ -143,7 +158,11 @@ export function localizePage(html, path, locale) {
         throw new Error(
           `Tradução ausente (${locale.id}, ${path || "home"}): ${key}`,
         );
-      return value.replace(/\S[\s\S]*\S|\S/, () => strings[key]);
+      const translated = value.replace(/\S[\s\S]*\S|\S/, () => strings[key]);
+      // A translated inline fragment may contain only punctuation after code.
+      return /^[.,;:!?)]/.test(strings[key])
+        ? translated.trimStart()
+        : translated;
     });
   $("html").attr("lang", locale.lang);
   // Expose language on content containers as well as the document for screen readers.

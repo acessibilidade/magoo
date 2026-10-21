@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "language": "pt-BR",
   "author": "Marcelo Sales",
   "components": [
@@ -177,18 +177,55 @@
       "name": "Tabbar",
       "category": "estrutura",
       "path": "componentes/estrutura/tabbar.html"
-    }
-  ],
-  "planned": [
-    {
-      "category": "Estrutura",
-      "name": "Flexbox & Grid",
-      "status": "in-development"
     },
     {
-      "category": "Estrutura",
-      "name": "Header, Footer e Regiões",
-      "status": "in-development"
+      "id": "upload-arquivos",
+      "name": "Upload de arquivos",
+      "category": "formularios",
+      "path": "componentes/formularios/upload-arquivos.html"
+    },
+    {
+      "id": "autocomplete",
+      "name": "Autocomplete",
+      "category": "formularios",
+      "path": "componentes/formularios/autocomplete.html"
+    },
+    {
+      "id": "datas-intervalos",
+      "name": "Datas e intervalos",
+      "category": "formularios",
+      "path": "componentes/formularios/datas-intervalos.html"
+    },
+    {
+      "id": "carregamento-progresso",
+      "name": "Carregamento e progresso",
+      "category": "mensagens",
+      "path": "componentes/mensagens/carregamento-progresso.html"
+    },
+    {
+      "id": "cards",
+      "name": "Cards",
+      "category": "estrutura",
+      "path": "componentes/estrutura/cards.html"
+    },
+    {
+      "id": "indicador-etapas",
+      "name": "Indicador de etapas",
+      "category": "navegacao",
+      "path": "componentes/navegacao/indicador-etapas.html"
+    },
+    {
+      "id": "regioes-pagina",
+      "name": "Regiões da página",
+      "category": "estrutura",
+      "path": "componentes/estrutura/regioes-pagina.html"
+    },
+    {
+      "id": "layout-ordem-conteudo",
+      "name": "Layout e ordem do conteúdo",
+      "category": "estrutura",
+      "path": "componentes/estrutura/layout-ordem-conteudo.html"
     }
-  ]
+  ],
+  "planned": []
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "detalhes-mais-informacoes",
   "name": "Detalhes e Mais informações",
   "category": "elementos-ocultos",
@@ -580,7 +580,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Ao tocar no acionador, o conteúdo complementar é exibido ou\n                ocultado?\n              "
+                  "value": "Ao "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " no acionador, o conteúdo complementar é exibido ou ocultado?"
                 }
               ]
             },
@@ -1254,29 +1272,13 @@
             },
             {
               "type": "element",
-              "id": "detalhes-mais-informacoes.interaction-methods.26",
+              "id": "detalhes-mais-informacoes.methods-review.2",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando usado, "
-                },
-                {
-                  "type": "element",
-                  "id": "detalhes-mais-informacoes.interaction-methods.27",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "aria-expanded"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " deve refletir o estado\n                aberto ou fechado.\n              "
+                  "value": "Ao acionar o controle com teclado ou leitor de telas, o conteúdo abre ou fecha e o novo estado fica perceptível."
                 }
               ]
             },
@@ -1286,45 +1288,13 @@
             },
             {
               "type": "element",
-              "id": "detalhes-mais-informacoes.interaction-methods.28",
+              "id": "detalhes-mais-informacoes.methods-followup.1",
               "tag": "li",
               "attributes": {},
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                O elemento nativo "
-                },
-                {
-                  "type": "element",
-                  "id": "detalhes-mais-informacoes.interaction-methods.29",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "details"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " com\n                "
-                },
-                {
-                  "type": "element",
-                  "id": "detalhes-mais-informacoes.interaction-methods.30",
-                  "tag": "code",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "summary"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " pode ser usado quando seu comportamento\n                atender ao contexto.\n              "
+                  "value": "Após abrir os detalhes, os comandos de leitura permitem percorrer o conteúdo; acionar novamente o controle o recolhe."
                 }
               ]
             },
@@ -2027,6 +1997,126 @@
         {
           "type": "text",
           "value": "\n          "
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.methods-review.3",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.methods-review.1",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                Quando usado, "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.27",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "aria-expanded"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " deve refletir o estado\n                aberto ou fechado.\n              "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "detalhes-mais-informacoes.methods-followup.notes-0",
+          "tag": "ul",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "detalhes-mais-informacoes.interaction-methods.28",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n                O elemento nativo "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.29",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "details"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " com\n                "
+                },
+                {
+                  "type": "element",
+                  "id": "detalhes-mais-informacoes.interaction-methods.30",
+                  "tag": "code",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "summary"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " pode ser usado quando seu comportamento\n                atender ao contexto.\n              "
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
         }
       ]
     },
@@ -2231,7 +2321,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2250,7 +2341,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2259,14 +2350,10 @@
                       "id": "detalhes-mais-informacoes.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2310,7 +2397,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2329,7 +2417,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2338,14 +2426,10 @@
                       "id": "detalhes-mais-informacoes.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2389,7 +2473,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2408,7 +2493,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2417,14 +2502,10 @@
                       "id": "detalhes-mais-informacoes.references.26",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2504,7 +2585,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2523,7 +2605,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2532,14 +2614,10 @@
                       "id": "detalhes-mais-informacoes.references.33",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2583,7 +2661,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2602,7 +2681,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2611,14 +2690,10 @@
                       "id": "detalhes-mais-informacoes.references.38",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2662,7 +2737,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2681,7 +2757,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2690,14 +2766,10 @@
                       "id": "detalhes-mais-informacoes.references.43",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

@@ -113,8 +113,8 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
@@ -123,6 +123,7 @@
               </li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -130,6 +131,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -203,11 +209,11 @@
               <h4>Quando usar</h4>
               <p>Use para dados que precisam ser comparados por linhas e colunas.</p>
               <h4>O que desenhar</h4>
-              <p>Mostre o título, cabeçalhos, células e ordenação quando existir. Planeje como ler os dados em telas pequenas.</p>
+              <p>Mostre cabeçalhos, ordenação, seleção de linhas, ações em lote e detalhes expansíveis quando existirem. Inclua carregamento, ausência de registros e leitura em telas pequenas.</p>
               <h4>Como se comporta</h4>
               <p>Células estáticas não precisam receber foco. Controles internos seguem seus próprios padrões; a rolagem precisa funcionar pelo teclado quando necessária.</p>
               <h4>O que documentar no Figma</h4>
-              <p>Documente quais cabeçalhos explicam cada dado, a ordem de leitura e os controles de ordenação.</p>
+              <p>Documente relações entre cabeçalhos e dados, alcance da ordenação e seleção, persistência ao filtrar ou paginar e foco após recolher detalhes ou executar ações.</p>
               <h4>Como revisar</h4>
               <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
             </div>
@@ -257,8 +263,33 @@
               <li>Cabeçalhos de coluna e linha são associados aos dados?</li>
               <li>Mudanças de ordenação são anunciadas quando aplicável?</li>
             </ol>
+
+            <h3>Ampliação editorial — padrões e decisões de interação</h3>
+
+            <p>Adaptação editorial do Magoo: complementa as orientações anteriores com decisões de desenho, documentação e revisão. As referências apoiam a adaptação; estes cenários não representam testes executados nem certificação.</p>
+
+            <h4>Ordenação, seleção e ações em lote</h4>
+
+            <p>Use tabela para relações entre linhas e colunas. Botões, links e checkboxes dentro das células não transformam automaticamente a tabela em uma grade interativa. Reserve o padrão grid para uma necessidade de interação que justifique sua navegação própria.</p>
+
+            <p>Na ordenação, diferencie colunas ordenáveis, coluna atualmente ordenada e direção. Documente a ordem inicial, o ciclo entre direções, o tratamento de empates e se a ordenação abrange todo o conjunto ou apenas a página.</p>
+
+            <p>Na seleção de linhas, mostre seleção individual, parcial e total. Defina se Selecionar tudo inclui as linhas visíveis, a página atual ou todos os resultados filtrados. Informe quantidade e alcance antes de uma ação em lote.</p>
+
+            <p>Documente o que acontece com a seleção ao ordenar, filtrar ou paginar. Após uma ação em lote, apresente sucesso, falhas parciais e próximos passos, sem perder a identificação dos registros afetados.</p>
+
+            <h4>Detalhes expansíveis e estados dos dados</h4>
+
+            <p>Use um botão por linha para expandir detalhes, com nome que identifique o registro e indicação de aberto ou fechado. Defina se várias linhas podem permanecer expandidas. Ao recolher detalhes que contêm o foco, devolva-o ao botão antes de ocultar o conteúdo.</p>
+
+            <p>Desenhe carregamento, conjunto sem registros, filtro sem correspondências e falha de atualização como situações diferentes. Em telas pequenas e com ampliação, preserve cabeçalhos, identificação dos registros e acesso às ações, incluindo ações em lote.</p>
+
+            <h4>Revisão do desenho e da implementação</h4>
+
+            <p>No desenho, confira se é possível reconhecer ordenação, seleção e alcance das ações sem depender apenas de cor. Na implementação, verifique cabeçalhos associados, estado de ordenação, nomes dos controles de cada registro e acesso aos detalhes por teclado e leitor de telas.</p>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <p>Escopo: os métodos básicos abaixo descrevem tabelas HTML com controles independentes. Ordenação, seleção, ações em lote e detalhes expansíveis são aprofundados na ampliação editorial da aba Design de interação.</p>
             <h2 class="titulo-mobile">Métodos de Interação</h2>
             <p class="mt-3">
               Possíveis métodos de interação em componentes do tipo
@@ -283,14 +314,14 @@
             <ul class="lista-detalhe link-padrao">
               <li>Tabelas estáticas não devem adicionar foco em células sem necessidade.</li>
               <li>Controles internos devem ser alcançáveis por <code>TAB</code>.</li>
-              <li>Contêiner rolável pode receber <code>tabindex="0"</code> para permitir rolagem por teclado.</li>
+              <li>Quando a tabela tem rolagem horizontal, focar a região rolável e usar as <code data-interaction-label="true">setas</code> permite alcançar os dados fora da área visível, conforme o navegador.</li>
             </ul>
 
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ul class="lista-detalhe link-padrao">
-              <li>Use <code>caption</code> para título ou descrição da tabela.</li>
-              <li>Use <code>th</code> com <code>scope</code> para cabeçalhos simples.</li>
-              <li>Tabelas complexas devem associar cabeçalhos e células de forma programática.</li>
+              <li>Ao chegar à tabela com os comandos do leitor de telas, a pessoa identifica seu título ou descrição.</li>
+              <li>Usar os comandos de navegação por células do leitor de telas permite relacionar cada valor aos seus cabeçalhos.</li>
+              <li>Ao percorrer uma tabela complexa com os comandos de células do leitor de telas, a pessoa identifica os cabeçalhos correspondentes ao dado atual.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -333,6 +364,32 @@
               <li>ENTÃO, quando interajo com o componente quando aplicável</li>
               <li>OUÇO ou percebo que a informação, estado, conteúdo ou ação correspondente está disponível.</li>
             </ol>
+
+            <h3>Cenários complementares — ampliação editorial</h3>
+
+            <h4 class="mt-4">Ordenar sem perder o contexto</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma coluna ordenável</li>
+              <li>QUANDO aciono seu controle por teclado</li>
+              <li>ENTÃO a ordem dos registros muda conforme a direção indicada, o foco permanece no controle e a nova ordenação fica disponível ao leitor de telas.</li>
+            </ol>
+
+            <h4 class="mt-4">Seleção e alcance da ação em lote</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADAS linhas selecionadas</li>
+              <li>QUANDO filtro ou mudo de página</li>
+              <li>ENTÃO a seleção segue a regra documentada e a quantidade e o alcance dos registros afetados ficam claros antes de executar a ação em lote.</li>
+            </ol>
+
+            <h4 class="mt-4">Recolher detalhes com foco interno</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADOS detalhes expandidos com foco em um controle interno</li>
+              <li>QUANDO os detalhes são recolhidos</li>
+              <li>ENTÃO o foco retorna ao botão de expansão da linha e o estado recolhido pode ser percebido com leitor de telas.</li>
+            </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de Atenção</h2>
@@ -345,6 +402,21 @@
               <li>Não use tabela para layout visual.</li>
               <li>Tabelas complexas exigem associação mais cuidadosa entre cabeçalhos e células.</li>
               <li>Versões responsivas não devem remover relações semânticas importantes.</li>
+            </ul>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>Contêiner rolável pode receber <code>tabindex="0"</code> para permitir rolagem por teclado.</li>
+            </ul>
+            <ul>
+              <li>Use <code>caption</code> para título ou descrição da tabela.</li>
+            </ul>
+            <ul>
+              <li>Use <code>th</code> com <code>scope</code> para cabeçalhos simples.</li>
+            </ul>
+
+            <ul>
+              <li>Tabelas complexas devem associar cabeçalhos e células de forma programática.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
@@ -359,31 +431,41 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Table Element <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/tables.html#the-table-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Table Element <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/table/" target="_blank" rel="noopener noreferrer">W3C APG: Table Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/table/" target="_blank" rel="noopener noreferrer">W3C APG: Table Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener noreferrer">W3C WAI: Tables Tutorial <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener noreferrer">W3C WAI: Tables Tutorial <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/table/" target="_blank" rel="noopener noreferrer">US.gov - Table <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/table/" target="_blank" rel="noopener noreferrer">US.gov - Table <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/data-table/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Data table <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/data-table/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Data table <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/table/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Table <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/table/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Table <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/content/tables/" target="_blank" rel="noopener noreferrer">Bootstrap - Tables <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/content/tables/" target="_blank" rel="noopener noreferrer">Bootstrap - Tables <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
+
+            <h3>Referências da ampliação editorial</h3>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/table/" target="_blank" rel="noopener noreferrer">W3C APG — Table<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+
+            <p>
+              <a href="https://carbondesignsystem.com/components/data-table/usage/" target="_blank" rel="noopener noreferrer">Carbon — Data table<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
           </div>
         </div>
       </main>
@@ -393,6 +475,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

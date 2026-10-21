@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               </li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -201,13 +207,13 @@
               <h3 id="select-designer-guide-title">Guia rápido para designers</h3>
               <p>Sempre avalie o contexto da aplicação, mesmo com a orientação tendo um padrão. Design de interação documenta a intenção. O funcionamento deve ser verificado na implementação.</p>
               <h4>Quando usar</h4>
-              <p>Use para escolher entre opções em um campo compacto.</p>
+              <p>Use seleção simples para um valor, combobox editável para buscar opções e seleção múltipla para várias escolhas. Avalie radio buttons ou checkboxes quando as opções precisarem ficar visíveis.</p>
               <h4>O que desenhar</h4>
-              <p>Mostre rótulo, valor selecionado, opções, ajuda e erro quando existirem.</p>
+              <p>Mostre rótulo, escolhas, foco, ajuda e erro. Na busca de opções, inclua carregamento e ausência de correspondências; na seleção múltipla, revisão e remoção das escolhas.</p>
               <h4>Como se comporta</h4>
               <p>Ao abrir, a pessoa escolhe uma opção e o campo atualiza o valor. Os comandos do seletor nativo variam conforme a plataforma.</p>
               <h4>O que documentar no Figma</h4>
-              <p>Defina se o seletor é nativo ou personalizado. Um controle personalizado exige documentar seu próprio padrão de abertura, navegação e confirmação.</p>
+              <p>Defina o padrão adotado, entrada livre ou restrita, confirmação, cancelamento e regras da seleção múltipla. Diferencie opção ativa, valor confirmado e itens selecionados.</p>
               <h4>Como revisar</h4>
               <p>Confira se o objetivo e os estados são claros em telas pequenas e grandes, com ampliação. Verifique os comportamentos documentados na implementação, incluindo teclado e leitor de telas quando aplicáveis.</p>
             </div>
@@ -237,7 +243,7 @@
             <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>O campo possui área de toque confortável?</li>
-              <li>Ao tocar no campo, o seletor ou lista de opções é exibido?</li>
+              <li>Ao <code data-interaction-label="true">tocar</code> no campo, o seletor ou lista de opções é exibido?</li>
               <li>Ao escolher uma opção, o valor selecionado fica claro?</li>
             </ol>
 
@@ -258,8 +264,33 @@
               <li>O estado obrigatório, inválido ou desabilitado é anunciado quando aplicável?</li>
               <li>As opções são navegáveis e selecionáveis com tecnologia assistiva?</li>
             </ol>
+
+            <h3>Ampliação editorial — padrões e decisões de interação</h3>
+
+            <p>Adaptação editorial do Magoo: complementa as orientações anteriores com decisões de desenho, documentação e revisão. As referências apoiam a adaptação; estes cenários não representam testes executados nem certificação.</p>
+
+            <h4>Seleção simples, busca e seleção múltipla</h4>
+
+            <p>Use seleção simples quando apenas um valor puder ser escolhido. Considere radio buttons quando for importante comparar poucas alternativas visíveis. O select nativo mantém os comandos da plataforma.</p>
+
+            <p>Use combobox editável quando digitar ajudar a encontrar opções. Documente se o texto apenas filtra valores permitidos ou se uma entrada livre também pode ser confirmada. Uma sugestão ativa ainda não é necessariamente um valor selecionado.</p>
+
+            <p>Use seleção múltipla quando mais de um valor puder ser escolhido. Desenhe como revisar e remover cada escolha e como limpar todas. Para conjuntos pequenos, considere checkboxes visíveis. Um combobox do APG representa um único valor; não basta adicionar seleção múltipla ao mesmo padrão.</p>
+
+            <h4>O que desenhar e documentar</h4>
+
+            <p>Mostre campo vazio, preenchido, aberto, com foco, desabilitado e com erro. Na busca de opções, inclua carregamento, ausência de correspondências e falha ao carregar, preservando o texto digitado e as escolhas anteriores.</p>
+
+            <p>Defina o que abre a lista, como percorrer opções, confirmar, cancelar e sair. No combobox editável com lista de sugestões, documente <code data-interaction-label="true">setas</code> para percorrer, <code data-interaction-label="true">Enter</code> para confirmar e <code data-interaction-label="true">Esc</code> para fechar sem substituir o valor confirmado por uma sugestão apenas percorrida. Preserve os comandos de edição de texto.</p>
+
+            <p>Na seleção múltipla, diferencie foco e seleção. Documente se escolher mantém a lista aberta, limites de quantidade, nomes dos controles de remoção e o destino do foco após remover um item. Não esconda escolhas apenas porque deixaram de corresponder ao filtro.</p>
+
+            <h4>Revisão do desenho e da implementação</h4>
+
+            <p>No desenho, confira se a quantidade de escolhas e os estados estão claros, inclusive com rótulos longos e em telas pequenas. Na implementação, verifique nomes, valor confirmado, expansão, opção ativa e seleção com teclado e leitores de tela. Uma listbox não comporta botões ou links interativos dentro de suas opções.</p>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <p>Escopo: os métodos básicos abaixo descrevem a seleção simples. Combobox editável e seleção múltipla têm decisões e cenários próprios na ampliação editorial da aba Design de interação.</p>
             <h2 class="titulo-mobile">Métodos de Interação</h2>
             <p class="mt-3">
               Possíveis métodos de interação em componentes do tipo
@@ -289,9 +320,9 @@
 
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ul class="lista-detalhe link-padrao">
-              <li>O campo deve ter rótulo programaticamente associado.</li>
-              <li>Ajuda e erro devem estar associados ao campo quando existirem.</li>
-              <li>Select customizado deve seguir padrão próprio de combobox ou listbox, não apenas imitar visualmente o nativo.</li>
+              <li>Ao focar o seletor com leitor de telas, a pessoa identifica seu nome e o valor escolhido.</li>
+              <li>Ao navegar até o campo, a pessoa identifica as instruções e eventuais erros antes de escolher ou corrigir o valor.</li>
+              <li>No seletor nativo, abrir, percorrer e confirmar seguem a plataforma. Em um combobox personalizado, a pessoa usa os comandos descritos na documentação específica de Autocomplete.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -336,6 +367,24 @@
               <li>ENTÃO, quando eu toco duas vezes ou uso o gesto adequado para ativar o componente</li>
               <li>OUÇO ou percebo que o estado, valor, conteúdo ou ação correspondente foi atualizado.</li>
             </ol>
+
+            <h3>Cenários complementares — ampliação editorial</h3>
+
+            <h4 class="mt-4">Combobox: cancelar uma sugestão</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um combobox editável com um valor confirmado</li>
+              <li>QUANDO percorro sugestões e pressiono <code data-interaction-label="true">Esc</code></li>
+              <li>ENTÃO a lista fecha sem confirmar a sugestão apenas percorrida e posso continuar editando o campo.</li>
+            </ol>
+
+            <h4 class="mt-4">Seleção múltipla: remover uma escolha</h4>
+
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO mais de um item selecionado</li>
+              <li>QUANDO aciono a remoção de um deles por teclado</li>
+              <li>ENTÃO somente essa escolha é removida, o foco permanece em um controle disponível e a atualização pode ser percebida com leitor de telas.</li>
+            </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
             <h2 class="titulo-mobile">Pontos de Atenção</h2>
@@ -348,6 +397,19 @@
               <li>Esta página considera o uso de <code>select</code> nativo ou componente equivalente de seleção de formulário.</li>
               <li>Combobox customizado, listbox e autocomplete possuem comportamentos próprios e precisam de documentação específica.</li>
               <li>Não use placeholder como substituto de rótulo persistente.</li>
+            </ul>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>O campo deve ter rótulo programaticamente associado.</li>
+            </ul>
+
+            <ul>
+              <li>Ajuda e erro devem estar associados ao campo quando existirem.</li>
+            </ul>
+
+            <ul>
+              <li>Select customizado deve seguir padrão próprio de combobox ou listbox, não apenas imitar visualmente o nativo.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
@@ -362,37 +424,47 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Select Element <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: The Select Element <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select" target="_blank" rel="noopener noreferrer">MDN Web Docs: Select <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select" target="_blank" rel="noopener noreferrer">MDN Web Docs: Select <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" rel="noopener noreferrer">W3C APG: Combobox Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" rel="noopener noreferrer">W3C APG: Combobox Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" target="_blank" rel="noopener noreferrer">W3C APG: Listbox Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" target="_blank" rel="noopener noreferrer">W3C APG: Listbox Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/combo-box/" target="_blank" rel="noopener noreferrer">US.gov - Combo box <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/combo-box/" target="_blank" rel="noopener noreferrer">US.gov - Combo box <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://designsystem.digital.gov/components/select/" target="_blank" rel="noopener noreferrer">US.gov - Select <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/select/" target="_blank" rel="noopener noreferrer">US.gov - Select <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/select/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Select <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/select/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Select <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/picker/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Picker <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/picker/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Picker <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/forms/select/" target="_blank" rel="noopener noreferrer">Bootstrap - Select <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/forms/select/" target="_blank" rel="noopener noreferrer">Bootstrap - Select <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
+
+            <h3>Referências da ampliação editorial</h3>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" rel="noopener noreferrer">W3C APG — Combobox<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" target="_blank" rel="noopener noreferrer">W3C APG — Listbox<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
           </div>
         </div>
       </main>
@@ -402,6 +474,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

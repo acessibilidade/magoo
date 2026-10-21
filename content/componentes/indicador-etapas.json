@@ -1,0 +1,1937 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.6.0",
+  "id": "indicador-etapas",
+  "name": "Indicador de etapas",
+  "category": "navegacao",
+  "summary": "Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/navegacao/indicador-etapas.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/navegacao/indicador-etapas.html",
+    "note": "Ampliação editorial do Magoo preparada para revisão, com referências externas identificadas. Não representa conteúdo migrado do curso nem certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "indicador-etapas.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "indicador-etapas-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "indicador-etapas-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.2",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.3",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use para orientar uma sequência de tarefas relacionadas. Para tarefas independentes ou duração de processamento, avalie outro padrão."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.4",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.5",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre nomes das etapas, posição atual, concluídas, pendentes e os controles de avançar e voltar."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.6",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.7",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O indicador informa a posição. Voltar e Continuar controlam o avanço; acesso direto a etapas é uma decisão adicional."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.8",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.9",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Defina pré-requisitos, etapas opcionais, preservação de dados, retorno e condições para considerar uma etapa concluída."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.10",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.designer-guide.11",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Confira sequência e estados no desenho. Na implementação, verifique navegação, validação, preservação de dados e identificação da etapa atual."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.15",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Sequência e estados"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A jornada tem uma ordem compreensível? A pessoa reconhece onde está, o que terminou e o que falta sem depender apenas de cor ou de números isolados?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Uma etapa visitada é diferente de uma etapa concluída? Documente quais dados ou confirmações tornam a etapa completa."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O título da tela explica a etapa atual? O indicador não substitui o cabeçalho nem as instruções da tarefa."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.20",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Avançar, voltar e revisar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Voltar preserva os dados já informados? Ao continuar, erros mantêm a pessoa na etapa e explicam o que corrigir?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se etapas concluídas forem acionáveis, está claro quais podem ser abertas e o que acontece com os dados posteriores após uma alteração?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A confirmação final é distinta de apenas chegar à última etapa? Evite comunicar conclusão da jornada antes de o envio ser confirmado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.25",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Variações e telas pequenas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se respostas alterarem o número de etapas, o total exibido permanece verdadeiro? Considere outro padrão quando a sequência for muito variável ou não linear."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Em telas pequenas, uma versão compacta mantém o nome da etapa, sua posição e os controles disponíveis? Não dependa de rótulos minúsculos ou cortados."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "indicador-etapas.29",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.30",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mouse e toque"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.1",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.1",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em Continuar valida a etapa e, se os dados estiverem válidos, apresenta a próxima. Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.2",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em Voltar retorna à etapa anterior preservando os dados previstos. Segmentos apenas informativos não executam ações."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.32",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.2",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.3",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.4",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shift + Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorrem Continuar, Voltar e links de etapas quando existirem. "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.5",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.6",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Espaço"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ativa o botão focado; "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.7",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " abre um link de etapa. Segmentos informativos não recebem foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Depois de Continuar, a nova etapa é apresentada e o foco chega ao título ou início definido no fluxo. Se houver erro, a pessoa permanece na etapa e encontra a orientação de correção; Voltar permite revisar os dados preservados."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.35",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitores de tela"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.4",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Usar os comandos de leitura do leitor de telas permite identificar o nome, a posição e o estado de cada etapa, como Etapa 2 de 4. Navegar até Continuar ou Voltar e ativar o botão muda a etapa e permite perceber seu novo contexto."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.5",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Com leitor de telas no celular no modo de navegação padrão, "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.10",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "deslizar o dedo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre os controles e "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.11",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar duas vezes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ativa Continuar, Voltar ou um link de etapa focado. O indicador informa a posição; não exige gesto de "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.12",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "arrastar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " nem navegação por "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.13",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " como em abas."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.intro-0",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.intro-1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.38",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página que contém Indicador de etapas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.39",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.13",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "indicador-etapas.interaction-code.8",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para alcançar os controles de avanço e retorno"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO foco visível e não encontro paradas nos segmentos apenas informativos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando continuo com dados válidos, VEJO a próxima etapa e o foco segue para seu início conforme a regra definida; ao voltar, VEJO os dados preservados"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.22",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego pelo indicador com leitor de telas no computador"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo o nome, a posição e o estado da etapa atual, distinguindo etapas concluídas e pendentes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando avanço ou volto, OUÇO ou percebo a nova etapa; se houver erro, permaneço na etapa e recebo orientação para corrigir"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.23",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.27",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO exploro a versão compacta com leitor de telas no celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO ou percebo o nome e a posição da etapa e identifico os controles de navegação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando aciono Continuar ou Voltar com o gesto da plataforma, OUÇO ou percebo a etapa apresentada e os dados seguem a regra de preservação"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.gherkin-standard.28",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários complementares — ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.40",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Avançar com dados válidos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.41",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.1",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma etapa preenchida corretamente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.2",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO aciono Continuar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.3",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO a próxima etapa é apresentada, sua posição é atualizada e o foco segue a regra documentada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.42",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Impedir avanço com erro"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.43",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.4",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma etapa com erro de preenchimento"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO tento continuar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO permaneço na etapa, recebo orientação de correção e os dados informados são preservados."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.44",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Voltar e revisar"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.45",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA uma etapa posterior"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO volto para revisar informações"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO encontro os dados preservados e qualquer impacto da alteração nas etapas seguintes é explicado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.46",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Reconhecer posição no celular"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.47",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADA a versão compacta do indicador"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego com leitor de telas no celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.gherkin-standard.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO identifico nome, posição e estado da etapa atual e consigo acessar os controles de navegação."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "indicador-etapas.48",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.49",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O indicador deste guia acompanha uma sequência. Uma lista de tarefas independentes precisa de outra lógica de acesso e conclusão."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.50",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O USWDS usa indicador sem navegação direta. Tornar segmentos acionáveis é uma adaptação editorial que exige regras explícitas e controles semânticos."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.51",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Não trate quantidade de etapas concluídas como medida de tempo ou esforço restante. O sucesso final depende da confirmação real da operação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.methods-review.6",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.31",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Acionar Continuar valida e avança conforme as regras; Voltar retorna preservando os dados definidos. O segmento informativo não se torna clicável apenas por parecer um botão."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.33",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.interaction-code.9",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre controles de navegação e links de etapas quando existirem. Indicadores apenas informativos não adicionam paradas de foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.34",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Na troca de etapa na mesma página, leve o foco a um título ou início coerente da nova etapa. Em erro, use o padrão de validação definido, sem avançar silenciosamente."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.36",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Represente a sequência com ordem compreensível e identifique a etapa atual programaticamente, por exemplo com aria-current=\"step\". Conclusão e pendência também precisam de texto ou estado perceptível."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.37",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Verifique o nome da etapa e a posição, como Etapa 2 de 4, no desktop e celular. A mudança de etapa deve ser percebida sem reler toda a página."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "indicador-etapas.52",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Indicador de etapas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "indicador-etapas.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.53",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.56",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.55",
+              "tag": "a",
+              "attributes": {
+                "href": "https://designsystem.digital.gov/components/step-indicator/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "USWDS — Step indicator"
+                },
+                {
+                  "type": "element",
+                  "id": "indicador-etapas.54",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "indicador-etapas.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "indicador-etapas.59",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "indicador-etapas.58",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/TR/wai-aria-1.2/#aria-current",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "WAI-ARIA — aria-current"
+                },
+                {
+                  "type": "element",
+                  "id": "indicador-etapas.57",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "indicador-etapas.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

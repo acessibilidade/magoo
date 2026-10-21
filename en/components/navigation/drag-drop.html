@@ -113,14 +113,15 @@
           <nav aria-label="Components">
             <h3>Structure</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
-              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings</a>
               </li>
               <li><a href="/en/components/structure/tables.html">Tables</a></li>
               <li><a href="/en/components/structure/lists.html">Lists</a></li>
               <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
             </ul>
             <h3>Messages</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
               <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
               <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
             </ul>
             <h3>Navigation</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li>
                 <a href="/en/components/navigation/drag-drop.html" aria-current="page">Drag'n'Drop<span class="material-icons active-menu-arrow notranslate" aria-hidden="true" translate="no">arrow_forward</span></a>
               </li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
             </ul>
             <h3>Hidden elements</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
               <li><a href="/en/components/forms/slider.html">Slider</a></li>
               <li><a href="/en/components/forms/switch.html">Switch</a></li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
             </ul>
           </nav>
         </div>
@@ -182,13 +188,13 @@
             <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
@@ -201,13 +207,13 @@
               <h3 id="drag-drop-designer-guide-title">Quick guide for designers</h3>
               <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
               <h4>When to use</h4>
-              <p>Use to move or reorder items, offering alternatives to dragging.</p>
-              <h4>What to draw</h4>
+              <p>Use to move or reorder items, offering alternatives to <code data-interaction-label="true">dragging</code>.</p>
+              <h4>What to design</h4>
               <p>Show the selected item, allowed destinations, and new position, plus a way to cancel.</p>
               <h4>How it behaves</h4>
-              <p>In the described pattern, Enter selects and arrows reposition; Escape cancels. Movement can be canceled without losing data.</p>
+              <p>In the described pattern, <code data-interaction-label="true">Enter</code> selects and <code data-interaction-label="true">arrow navigation</code> reposition; <code data-interaction-label="true">Esc</code> cancels. Movement can be canceled without losing data.</p>
               <h4>What to document in Figma</h4>
-              <p>Annotate commands, non-drag alternatives, and how the new position or a disallowed destination’s reason is communicated.</p>
+              <p>Annotate commands, non- <code data-interaction-label="true">dragging</code> alternatives, and how the new position or a disallowed destination’s reason is communicated.</p>
               <h4>How to review</h4>
               <p>Check whether the purpose and states are clear on small and large screens and with zoom. Verify documented behavior in the implementation, including keyboard and screen reader use where applicable.</p>
             </div>
@@ -220,7 +226,7 @@
             <h3 class="destaque mt-4">Designing for "no interaction"</h3>
             <ol class="lista-detalhe link-padrao">
               <li>Before interacting, can you visually tell that the component is actionable?</li>
-              <li>Before interacting, can you visually tell that the component supports dragging and dropping?</li>
+              <li>Before interacting, can you visually tell that the component supports<code data-interaction-label="true">dragging and dropping</code>?</li>
             </ol>
 
             <h3 class="destaque mt-4">
@@ -230,7 +236,7 @@
             <ol class="lista-detalhe link-padrao">
               <li>Is there visual feedback when hovering over the actionable component?</li>
               <li>Is there visual feedback when clicking the actionable component?</li>
-              <li>When dragging an actionable component, can you identify where it came from and where it is going?</li>
+              <li>When <code data-interaction-label="true">dragging</code> an actionable component, can you identify where it came from and where it is going?</li>
               <li>When dropping the previously selected component, can you visually identify the position change?</li>
             </ol>
 
@@ -239,7 +245,7 @@
               <li>Is there visual feedback when activating the component?</li>
               <li>Is there visual feedback when pressing and holding the component?</li>
               <li>Is there visual feedback when releasing the component?</li>
-              <li>When dragging an actionable component, can you identify where it came from and where it is going?</li>
+              <li>When <code data-interaction-label="true">dragging</code> an actionable component, can you identify where it came from and where it is going?</li>
               <li>When dropping the previously selected component, can you visually identify the position change?</li>
             </ol>
 
@@ -264,7 +270,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
-            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h2 class="titulo-mobile">Interaction Methods</h2>
             <p class="mt-3">
               Possible interaction methods for components of type
               <span class="destaque">Drag'n'Drop</span>.
@@ -299,10 +305,7 @@
                 <code>ESC</code>.
               </li>
               <li>
-                After activation with the <code>ENTER</code>key, it should be possible to use the <code>arrow keys</code> <code><i class="material-icons icons" aria-hidden="true">north</i><span class="a11y">Up Arrow</span></code
-                >and<code><i class="material-icons icons" aria-hidden="true">south</i><span class="a11y">Down Arrow</span></code
-                >and<code><i class="material-icons icons" aria-hidden="true">east</i><span class="a11y">Right Arrow</span></code
-                >and<code><i class="material-icons icons" aria-hidden="true">west</i><span class="a11y">Left Arrow</span></code>
+                After activation with the <code>ENTER</code>key, it should be possible to use the <code>arrow keys</code> <code><i class="material-icons icons" aria-hidden="true">north</i><span class="a11y">Up Arrow</span></code> and <code><i class="material-icons icons" aria-hidden="true">south</i><span class="a11y">Down Arrow</span></code> and <code><i class="material-icons icons" aria-hidden="true">east</i><span class="a11y">Right Arrow</span></code> and <code><i class="material-icons icons" aria-hidden="true">west</i><span class="a11y">Left Arrow</span></code>
                 to reposition the component.
               </li>
               <li>After repositioning, you can navigate again using the <code>TAB</code> or <code>SHIFT</code>+<code>TAB</code>.</li>
@@ -334,7 +337,7 @@
               <li>AND, when I use the <code>Esc</code>key, I SEE selection or movement canceled without data loss</li>
             </ol>
 
-            <h4 class="mt-4">Desktop screen reader</h4>
+            <h4 class="mt-4">Screen reader on desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 When I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and use the <code>Tab</code> key to move focus to a draggable item
@@ -348,7 +351,7 @@
               <li>I HEAR the item's new position or a message stating that the chosen position is not permitted.</li>
             </ol>
 
-            <h4 class="mt-4">Mobile screen reader</h4>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and swipe to focus a draggable item, the following happens:
@@ -385,23 +388,23 @@
             <h3 class="destaque mt-4">Design patterns</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/patterns/drag-and-drop" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - Drag and Drop <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://developer.apple.com/design/human-interface-guidelines/patterns/drag-and-drop" target="_blank" rel="noopener noreferrer">Apple - Human Interface Guidelines - Drag and Drop <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components" target="_blank" rel="noopener noreferrer">Google - Material Design <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://m3.material.io/components" target="_blank" rel="noopener noreferrer">Google - Material Design <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/dnd.html#dnd" target="_blank" rel="noopener noreferrer">HTML standards documentation: Drag and Drop <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/dnd.html#dnd" target="_blank" rel="noopener noreferrer">HTML standards documentation: Drag and Drop <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API" target="_blank" rel="noopener noreferrer">Mozilla Web Docs: HTML Drag and Drop API <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API" target="_blank" rel="noopener noreferrer">Mozilla Web Docs: HTML Drag and Drop API <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.lightningdesignsystem.com/guidelines/builder/drag/#site-main-content" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Drag'n'Drop <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://www.lightningdesignsystem.com/guidelines/builder/drag/#site-main-content" target="_blank" rel="noopener noreferrer">Salesforce Lightning - Drag'n'Drop <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -413,6 +416,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
       >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
     </p>
+
     <footer class="site-footer" lang="en-US">
       <div class="wrap footer-main">
         <div class="footer-about">

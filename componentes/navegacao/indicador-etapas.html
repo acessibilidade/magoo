@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Indicador de etapas | Magoo</title>
+    <meta name="description" content="Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Indicador de etapas | Magoo" />
+    <meta property="og:description" content="Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente." />
+
+    <meta name="twitter:title" content="Indicador de etapas | Magoo" />
+    <meta name="twitter:description" content="Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/navegacao/indicador-etapas.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/navegacao/indicador-etapas.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/navegacao/indicador-etapas.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/navigation/step-indicator.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/navegacao/indicador-etapas.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/navegacao/indicador-etapas.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/navegacao/indicador-etapas.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/navigation/step-indicator.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/navigation/step-indicator.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/navegacao.html">Navegação</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Indicador de etapas</span></li>
+          </ol>
+        </nav>
+        <h1>Indicador de etapas</h1>
+        <p>Mostra a posição em uma jornada com etapas, diferenciando etapa atual, concluída e pendente.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html" aria-current="page">Indicador de etapas</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="indicador-etapas-designer-guide-title">
+              <h3 id="indicador-etapas-designer-guide-title">Guia rápido para designers</h3>
+              <h4>Quando usar</h4>
+              <p>Use para orientar uma sequência de tarefas relacionadas. Para tarefas independentes ou duração de processamento, avalie outro padrão.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre nomes das etapas, posição atual, concluídas, pendentes e os controles de avançar e voltar.</p>
+              <h4>Como se comporta</h4>
+              <p>O indicador informa a posição. Voltar e Continuar controlam o avanço; acesso direto a etapas é uma decisão adicional.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Defina pré-requisitos, etapas opcionais, preservação de dados, retorno e condições para considerar uma etapa concluída.</p>
+              <h4>Como revisar</h4>
+              <p>Confira sequência e estados no desenho. Na implementação, verifique navegação, validação, preservação de dados e identificação da etapa atual.</p>
+            </div>
+
+            <h3 class="destaque mt-4">Sequência e estados</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A jornada tem uma ordem compreensível? A pessoa reconhece onde está, o que terminou e o que falta sem depender apenas de cor ou de números isolados?</li>
+              <li>Uma etapa visitada é diferente de uma etapa concluída? Documente quais dados ou confirmações tornam a etapa completa.</li>
+              <li>O título da tela explica a etapa atual? O indicador não substitui o cabeçalho nem as instruções da tarefa.</li>
+            </ol>
+            <h3 class="destaque mt-4">Avançar, voltar e revisar</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Voltar preserva os dados já informados? Ao continuar, erros mantêm a pessoa na etapa e explicam o que corrigir?</li>
+              <li>Se etapas concluídas forem acionáveis, está claro quais podem ser abertas e o que acontece com os dados posteriores após uma alteração?</li>
+              <li>A confirmação final é distinta de apenas chegar à última etapa? Evite comunicar conclusão da jornada antes de o envio ser confirmado.</li>
+            </ol>
+            <h3 class="destaque mt-4">Variações e telas pequenas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Se respostas alterarem o número de etapas, o total exibido permanece verdadeiro? Considere outro padrão quando a sequência for muito variável ou não linear.</li>
+              <li>Em telas pequenas, uma versão compacta mantém o nome da etapa, sua posição e os controles disponíveis? Não dependa de rótulos minúsculos ou cortados.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Métodos de Interação</h3>
+            <h4>Mouse e toque</h4>
+            <p>Clicar ou <code data-interaction-label="true">tocar</code> em Continuar valida a etapa e, se os dados estiverem válidos, apresenta a próxima. Clicar ou <code data-interaction-label="true">tocar</code> em Voltar retorna à etapa anterior preservando os dados previstos. Segmentos apenas informativos não executam ações.</p>
+            <h4>Teclado</h4>
+            <p><code data-interaction-label="true">Tab</code> e <code data-interaction-label="true">Shift + Tab</code> percorrem Continuar, Voltar e links de etapas quando existirem. <code data-interaction-label="true">Enter</code> ou <code data-interaction-label="true">Espaço</code> ativa o botão focado; <code data-interaction-label="true">Enter</code> abre um link de etapa. Segmentos informativos não recebem foco.</p>
+            <p>Depois de Continuar, a nova etapa é apresentada e o foco chega ao título ou início definido no fluxo. Se houver erro, a pessoa permanece na etapa e encontra a orientação de correção; Voltar permite revisar os dados preservados.</p>
+            <h4>Leitores de tela</h4>
+            <p>Usar os comandos de leitura do leitor de telas permite identificar o nome, a posição e o estado de cada etapa, como Etapa 2 de 4. Navegar até Continuar ou Voltar e ativar o botão muda a etapa e permite perceber seu novo contexto.</p>
+            <p>Com leitor de telas no celular no modo de navegação padrão, <code data-interaction-label="true">deslizar o dedo</code> percorre os controles e <code data-interaction-label="true">tocar duas vezes</code> ativa Continuar, Voltar ou um link de etapa focado. O indicador informa a posição; não exige gesto de <code data-interaction-label="true">arrastar</code> nem navegação por <code data-interaction-label="true">setas</code> como em abas.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página que contém Indicador de etapas</h3>
+            <p>Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados.</p>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso <code data-interaction-label="true">Tab</code> para alcançar os controles de avanço e retorno</li>
+              <li>VEJO foco visível e não encontro paradas nos segmentos apenas informativos</li>
+              <li>ENTÃO, quando continuo com dados válidos, VEJO a próxima etapa e o foco segue para seu início conforme a regra definida; ao voltar, VEJO os dados preservados</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO navego pelo indicador com leitor de telas no computador</li>
+              <li>OUÇO ou percebo o nome, a posição e o estado da etapa atual, distinguindo etapas concluídas e pendentes</li>
+              <li>ENTÃO, quando avanço ou volto, OUÇO ou percebo a nova etapa; se houver erro, permaneço na etapa e recebo orientação para corrigir</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO exploro a versão compacta com leitor de telas no celular</li>
+              <li>OUÇO ou percebo o nome e a posição da etapa e identifico os controles de navegação</li>
+              <li>ENTÃO, quando aciono Continuar ou Voltar com o gesto da plataforma, OUÇO ou percebo a etapa apresentada e os dados seguem a regra de preservação</li>
+            </ol>
+            <h3>Cenários complementares — ampliação editorial</h3>
+            <h4 class="mt-4">Avançar com dados válidos</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma etapa preenchida corretamente</li>
+              <li>QUANDO aciono Continuar</li>
+              <li>ENTÃO a próxima etapa é apresentada, sua posição é atualizada e o foco segue a regra documentada.</li>
+            </ol>
+            <h4 class="mt-4">Impedir avanço com erro</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma etapa com erro de preenchimento</li>
+              <li>QUANDO tento continuar</li>
+              <li>ENTÃO permaneço na etapa, recebo orientação de correção e os dados informados são preservados.</li>
+            </ol>
+            <h4 class="mt-4">Voltar e revisar</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma etapa posterior</li>
+              <li>QUANDO volto para revisar informações</li>
+              <li>ENTÃO encontro os dados preservados e qualquer impacto da alteração nas etapas seguintes é explicado.</li>
+            </ol>
+            <h4 class="mt-4">Reconhecer posição no celular</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA a versão compacta do indicador</li>
+              <li>QUANDO navego com leitor de telas no celular</li>
+              <li>ENTÃO identifico nome, posição e estado da etapa atual e consigo acessar os controles de navegação.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Pontos de atenção</h3>
+            <p>O indicador deste guia acompanha uma sequência. Uma lista de tarefas independentes precisa de outra lógica de acesso e conclusão.</p>
+            <p>O USWDS usa indicador sem navegação direta. Tornar segmentos acionáveis é uma adaptação editorial que exige regras explícitas e controles semânticos.</p>
+            <p>Não trate quantidade de etapas concluídas como medida de tempo ou esforço restante. O sucesso final depende da confirmação real da operação.</p>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <p>Acionar Continuar valida e avança conforme as regras; Voltar retorna preservando os dados definidos. O segmento informativo não se torna clicável apenas por parecer um botão.</p>
+            <p><code data-interaction-label="true">Tab</code> percorre controles de navegação e links de etapas quando existirem. Indicadores apenas informativos não adicionam paradas de foco.</p>
+            <p>Na troca de etapa na mesma página, leve o foco a um título ou início coerente da nova etapa. Em erro, use o padrão de validação definido, sem avançar silenciosamente.</p>
+            <p>Represente a sequência com ordem compreensível e identifique a etapa atual programaticamente, por exemplo com aria-current="step". Conclusão e pendência também precisam de texto ou estado perceptível.</p>
+            <p>Verifique o nome da etapa e a posição, como Etapa 2 de 4, no desktop e celular. A mudança de etapa deve ser percebida sem reler toda a página.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Indicador de etapas</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
+            <p>Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação.</p>
+            <p>
+              <a href="https://designsystem.digital.gov/components/step-indicator/" target="_blank" rel="noopener noreferrer">USWDS — Step indicator<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-current" target="_blank" rel="noopener noreferrer">WAI-ARIA — aria-current<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

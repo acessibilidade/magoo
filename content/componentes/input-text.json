@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "input-text",
   "name": "Input \"text\"",
   "category": "formularios",
@@ -151,7 +151,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Clicar ou tocar no campo ou no rótulo associado permite editar. A navegação pelo teclado segue a ordem da interface e não fica presa no campo. Em caso de erro, preserve o texto digitado e explique como corrigir."
+                  "value": "Clicar ou "
+                },
+                {
+                  "type": "element",
+                  "id": "input-text.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tocar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " no campo ou no rótulo associado permite editar. A navegação pelo teclado segue a ordem da interface e não fica presa no campo. Em caso de erro, preserve o texto digitado e explique como corrigir."
                 }
               ]
             },
@@ -183,7 +201,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Registre rótulo, instruções, obrigatoriedade, limites e mensagens de erro. Defina a ação de Enter no formulário e a ordem de navegação. Documente quais informações devem ser anunciadas pelo leitor de telas."
+                  "value": "Registre rótulo, instruções, obrigatoriedade, limites e mensagens de erro. Defina a ação de "
+                },
+                {
+                  "type": "element",
+                  "id": "input-text.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Enter"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " no formulário e a ordem de navegação. Documente quais informações devem ser anunciadas pelo leitor de telas."
                 }
               ]
             },
@@ -969,8 +1005,22 @@
               "attributes": {},
               "children": [
                 {
+                  "type": "element",
+                  "id": "input-text.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tocar"
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "Tocar no campo ou no rótulo permite editar com o teclado virtual."
+                  "value": " no campo ou no rótulo permite editar com o teclado virtual."
                 }
               ]
             },
@@ -1829,6 +1879,124 @@
         },
         {
           "type": "element",
+          "id": "input-text.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "input-text.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Input \"text\""
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "input-text.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "input-text.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "input-text.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "input-text.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "input-text.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "input-text.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
           "id": "input-text.block.68",
           "tag": "h3",
           "attributes": {
@@ -1884,6 +2052,26 @@
                         {
                           "type": "text",
                           "value": " (link externo, abre em uma nova aba)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "id": "input-text.reference-link.1",
+                      "tag": "span",
+                      "attributes": {
+                        "class": "material-icons icons notranslate",
+                        "aria-hidden": "true",
+                        "translate": "no"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "open_in_new"
                         }
                       ]
                     }

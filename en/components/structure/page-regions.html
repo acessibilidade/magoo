@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Page regions | Magoo</title>
+    <meta name="description" content="Organize the header, main content, navigation, complementary content, and footer to support reading and page access." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Page regions | Magoo" />
+    <meta property="og:description" content="Organize the header, main content, navigation, complementary content, and footer to support reading and page access." />
+
+    <meta name="twitter:title" content="Page regions | Magoo" />
+    <meta name="twitter:description" content="Organize the header, main content, navigation, complementary content, and footer to support reading and page access." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/en.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/en/components/structure/page-regions.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Your pre-design system library" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/en/components/structure/page-regions.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/structure/page-regions.html" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="en-US">
+    <a class="skip-link" href="#conteudo">Skip to content<span class="sr-only"> on this page</span></a>
+    <header lang="en-US">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Main menu" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Select your language</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/estrutura/regioes-pagina.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/estrutura/regioes-pagina.html" aria-pressed="false" lang="pt-BR" data-language="pt-br"><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/structure/page-regions.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/structure/page-regions.html" aria-pressed="true" lang="en-US" data-language="en"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="en" data-other-label="Select other languages">
+            <span id="translation-label" class="sr-only">Select other languages</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Automatic translation</p>
+            <p class="translation-status" role="status">Loading translator…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/en" aria-label="Magoo — home"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">make your components work correctly</span><a class="library-link back-link" href="/en"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Back to homepage</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb navigation">
+          <ol>
+            <li><a href="/en">General index</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/en/categories/structure.html">Structure</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Page regions</span></li>
+          </ol>
+        </nav>
+        <h1>Page regions</h1>
+        <p>Organize the header, main content, navigation, complementary content, and footer to support reading and page access.</p>
+        <p class="reference-shortcut">
+          For working examples and design patterns for this component,
+          <a href="#aba-ref-conteudo">see the references tab<span class="sr-only"> (opens the references on this page)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Component index</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Close index</button>
+          <h2 class="menu-title">Component index</h2>
+          <nav aria-label="Components">
+            <h3>Structure</h3>
+            <ul>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html" aria-current="page">Page regions</a></li>
+              <li>
+                <a href="/en/components/structure/headings.html">Headings</a>
+              </li>
+              <li><a href="/en/components/structure/tables.html">Tables</a></li>
+              <li><a href="/en/components/structure/lists.html">Lists</a></li>
+              <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
+            </ul>
+            <h3>Messages</h3>
+            <ul>
+              <li><a href="/en/components/messages/alerts.html">Alerts</a></li>
+              <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
+              <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
+              <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
+            </ul>
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="/en/components/navigation/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/en/components/navigation/menu.html">Menu</a></li>
+              <li><a href="/en/components/navigation/links.html">Links</a></li>
+              <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
+              <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
+              <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
+            </ul>
+            <h3>Hidden elements</h3>
+            <ul>
+              <li>
+                <a href="/en/components/hidden-elements/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/en/components/hidden-elements/details-more-information.html">Details and more information</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/tabs.html">Tabs</a></li>
+              <li>
+                <a href="/en/components/hidden-elements/tooltip-popover.html">Tooltip and Popover</a>
+              </li>
+              <li><a href="/en/components/hidden-elements/modal.html">Modal</a></li>
+            </ul>
+            <h3>Forms</h3>
+            <ul>
+              <li><a href="/en/components/forms/button.html">Button</a></li>
+              <li><a href="/en/components/forms/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/en/components/forms/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/en/components/forms/input-text.html">Input "text"</a></li>
+              <li><a href="/en/components/forms/input-email.html">Input "email"</a></li>
+              <li><a href="/en/components/forms/input-search.html">Input "search"</a></li>
+              <li><a href="/en/components/forms/input-password.html">Input "password"</a></li>
+              <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
+              <li><a href="/en/components/forms/slider.html">Slider</a></li>
+              <li>
+                <a href="/en/components/forms/switch.html">Switch</a>
+              </li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="en-US">
+        <div class="content-intro">
+          <span class="eyebrow">COMPONENT GUIDE</span>
+          <p>Explore behaviors before defining the interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="regioes-pagina-designer-guide-title">
+              <h3 id="regioes-pagina-designer-guide-title">Quick guide for designers</h3>
+              <h4>When to use</h4>
+              <p>Use to define page structure and distinguish main content from navigation and complementary information.</p>
+              <h4>What to design</h4>
+              <p>Show regions, their order, names when needed, internal controls, and the skip-to-content link.</p>
+              <h4>How it behaves</h4>
+              <p>Regions guide reading and structural navigation. Interaction happens through controls; a region does not receive focus merely because it exists.</p>
+              <h4>What to document in Figma</h4>
+              <p>Define each region’s purpose and boundaries, names for repeated navigation, the skip-link target, and order on small screens.</p>
+              <h4>How to review</h4>
+              <p>In the design, check order, grouping, and content access. In the implementation, verify recognized regions, reading, the skip link, and controls with keyboards and screen readers.</p>
+            </div>
+            <h3 class="destaque mt-4">Page header</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the header help identify the site and access global options? Do identity, search, and navigation have distinguishable purposes?</li>
+              <li>Is an article or card header distinguished from the global page header? Do not assign global landmark purpose to every block that looks like a header.</li>
+            </ol>
+            <h3 class="destaque mt-4">Main content</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Can people recognize where the main information or task starts? Do the page heading and instructions form an understandable sequence?</li>
+              <li>Does Skip to content lead to a useful task starting point without traversing the repeated header? Does its target remain visible with fixed headers?</li>
+            </ol>
+            <h3 class="destaque mt-4">Navigation and repeated regions</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Do primary navigation, local navigation, and the page index have clear purposes? When several different navigation regions exist, do their names distinguish them?</li>
+              <li>Do two navigation regions with identical links and purpose retain a consistent name? Avoid different names solely because one is at the top and another at the bottom.</li>
+            </ol>
+            <h3 class="destaque mt-4">Complementary content and other regions</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does complementary content support the main content and remain understandable on its own? A merely visual sidebar does not define that purpose.</li>
+              <li>Is the grouping important enough to be located as a landmark? Avoid turning every card or visual block into another region.</li>
+            </ol>
+            <h3 class="destaque mt-4">Footer and layout adaptation</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Does the footer group recognizable institutional information and supplementary access? If it includes navigation, is its name consistent with its purpose?</li>
+              <li>When changing to one column, does visual order remain consistent with reading and focus? Do fixed regions avoid obscuring content and controls under magnification?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Interaction Methods</h3>
+            <h4 class="mt-4">Mouse and touch</h4>
+            <p>Reading and traversing the page reveals its groupings. Clicking or <code data-interaction-label="true">tapping</code> links and buttons executes those controls’ actions; the background of a structural region performs no action.</p>
+            <h4 class="mt-4">Keyboard</h4>
+            <p><code>Tab</code> and <code>Shift + Tab</code> traverse links, buttons, and fields in page order; they do not traverse every static region as a focus stop.</p>
+            <p>On reaching Skip to content, <code>Enter</code> moves focus to the main target. The next <code>Tab</code> continues through controls from that point without returning to the repeated header.</p>
+            <p>Navigating internal controls retains each component’s own commands. There is no universal browser keyboard shortcut for jumping between all regions.</p>
+            <h4 class="mt-4">Screen reader on desktop</h4>
+            <p>Using the screen reader’s landmark list or structural navigation commands locates main content, navigation, and other available regions by type and name. Commands depend on the reader and its navigation mode.</p>
+            <p>Choosing a landmark in that list moves reading to the corresponding group. Reading or control navigation commands then traverse its content; focusing the container with <code>Tab</code>.</p>
+            <h4 class="mt-4">Screen reader on mobile</h4>
+            <p>In VoiceOver, choosing landmarks in the rotor, when available, enables navigation between them. In TalkBack, reading controls and structural commands depend on version and settings; use landmark navigation when available.</p>
+            <p>In standard control exploration mode, <code data-interaction-label="true">swiping</code> traverses content and <code data-interaction-label="true">double tapping</code> activates the focused link or button. Activating Skip to content leads to the main target; traversing a landmark does not turn it into a button.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">BDD (Behavior-Driven Development) methodology focusing on three pillars: User Stories, Acceptance Criteria, and Gherkin Syntax (Given, When, Then).</p>
+            <h3>Scenario: Given that I am on a page organized into landmarks</h3>
+            <h4 class="mt-4">Keyboard navigation</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I use <code>Tab</code> from the start of the page</li>
+              <li>I SEE the skip-to-content link with visible focus</li>
+              <li>THEN, when I press <code>Enter</code>, I SEE focus reach the main target and the next <code>Tab</code> continues navigation from that point</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I open the landmark list or use screen reader structural commands</li>
+              <li>I HEAR or perceive main content, navigation, and other landmarks by type and name when needed</li>
+              <li>THEN, when I choose a landmark, I HEAR or perceive its content and can continue reading without an artificial focus stop on every container</li>
+            </ol>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>WHEN I explore the page with a mobile screen reader and use available structural features</li>
+              <li>I HEAR or perceive landmarks in an understandable order and identify main content</li>
+              <li>THEN, when I use <code data-interaction-label="true">double tapping</code> to activate Skip to content in standard mode, I HEAR or perceive the target and continue the task without repeating all navigation</li>
+            </ol>
+            <h4 class="mt-4">Repeated regions</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>GIVEN two navigation regions with different purposes</li>
+              <li>WHEN I consult the screen reader landmark list</li>
+              <li>THEN I identify names distinguishing the purposes; navigation with identical content and purpose retains consistent names</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Points to consider</h3>
+            <p>Prefer HTML elements corresponding to purpose: <code>header</code>, <code>main</code>, <code>nav</code>, <code>aside</code> and <code>footer</code>. A generic grouping needs to be an additional landmark only when it helps locate relevant content.</p>
+            <p>Global headers and footers have a different context from <code>header</code> and <code>footer</code> inside an article or section. Not every internal header or footer is a global page landmark.</p>
+            <p>Keep one active main content area per document. Embedded documents can have their own structure. Do not create several main landmarks merely to separate visual columns.</p>
+            <p>Different navigation regions need distinguishing names. Navigation with identical links and purpose may share a name. Avoid repeating the role in the label, such as Main navigation navigation.</p>
+            <p>A <code>section</code> with an accessible name may be exposed as a landmark. Use <code>aria-labelledby</code> to reference a visible heading when appropriate; do not name every block merely to increase landmark count.</p>
+            <p>A skip link needs an existing target and browser-verified focus management. When needed, <code>tabindex="-1"</code> permits programmatic focus on the target without adding it to the <code>Tab</code>.</p>
+            <p>Landmarks and headings offer complementary navigation. Reading order must not contradict visual order, and collapsed content must not leave hidden controls in the focus sequence.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">References</h2>
+            <p class="mt-3">
+              Additional references for components of type
+              <span class="destaque">Page regions</span>.
+            </p>
+            <p><strong>Important:</strong><br />Most references are on the course platform alongside the lessons cited in this material.</p>
+            <p><strong>Disclaimer:</strong><br />The links listed here are a curated collection of references where you can find implemented components, rather than recommendations. There is no unified implementation format and no guarantee that these links follow every design pattern. Direct questions to the teams responsible for the linked materials. Before copying a model, remember that all materials are constantly updated and that patterns, particularly proprietary ones, may change.</p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/tutorials/page-structure/regions/" target="_blank" rel="noopener noreferrer">W3C WAI — Page Regions<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/" target="_blank" rel="noopener noreferrer">W3C APG — Landmark Regions<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G1" target="_blank" rel="noopener noreferrer">W3C — Technique G1: Skip to main content<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="/en/components/structure/headings.html">Headings<span class="sr-only" aria-hidden="true"></span></a>
+            </p>
+            <p>
+              <a href="/en/components/navigation/menu.html">Menu<span class="sr-only" aria-hidden="true"></span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Original content by Marcelo Sales, initially used in the
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
+      >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
+    </p>
+
+    <footer class="site-footer" lang="en-US">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>The <strong>Magoo</strong> is a pre-design system library. The idea is to bring instructions together in one place to understand component interaction design before building a more robust system (or updating an existing one).</p>
+          <p>Explore behaviors, interaction methods, and acceptance criteria to create more accessible and inclusive experiences.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT license <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (external link, opens in a new tab)</span></a>
+          </p>
+        </div>
+        <a class="initiative initiative-logo-only" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/tudo-acessibilidade-logo.svg" width="185" height="67" alt="Tudo é Acessibilidade" /><span class="sr-only"> (opens in a new tab)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

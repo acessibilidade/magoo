@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "contentVersion": "1.5.0",
+  "contentVersion": "1.6.0",
   "id": "carrossel",
   "name": "Carrossel",
   "category": "navegacao",
@@ -183,7 +183,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Registre a rotação, a pausa, o nome dos controles e como informar o slide atual. Gestos e setas podem complementar os controles."
+                  "value": "Registre a rotação, a pausa, o nome dos controles e como informar o slide atual. Gestos e "
+                },
+                {
+                  "type": "element",
+                  "id": "carrossel.interaction-code.1",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setas"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " podem complementar os controles."
                 }
               ]
             },
@@ -644,7 +662,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                Quando houver gesto de deslizar, ele funciona como complemento\n                aos controles visíveis?\n              "
+                  "value": "Quando houver gesto de "
+                },
+                {
+                  "type": "element",
+                  "id": "carrossel.interaction-code.2",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "deslizar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", ele funciona como complemento aos controles visíveis?"
                 }
               ]
             },
@@ -660,7 +696,25 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\n                O gesto de deslizar atualiza o slide ativo e sua respectiva\n                indicação visual?\n              "
+                  "value": "O gesto de "
+                },
+                {
+                  "type": "element",
+                  "id": "carrossel.interaction-code.3",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "deslizar"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " atualiza o slide ativo e sua respectiva indicação visual?"
                 }
               ]
             },
@@ -2603,7 +2657,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2622,7 +2677,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2631,14 +2686,10 @@
                       "id": "carrossel.references.16",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2682,7 +2733,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2701,7 +2753,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2710,14 +2762,10 @@
                       "id": "carrossel.references.21",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },
@@ -2797,7 +2845,8 @@
                       "tag": "i",
                       "attributes": {
                         "class": "material-icons icons",
-                        "aria-hidden": "true"
+                        "aria-hidden": "true",
+                        "translate": "no"
                       },
                       "children": [
                         {
@@ -2816,7 +2865,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "link externo - abre em uma nova janela"
+                          "value": " (link externo, abre em uma nova aba)"
                         }
                       ]
                     },
@@ -2825,14 +2874,10 @@
                       "id": "carrossel.references.28",
                       "tag": "span",
                       "attributes": {
-                        "class": "sr-only"
+                        "class": "sr-only",
+                        "aria-hidden": "true"
                       },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " (abre em uma nova aba)"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 },

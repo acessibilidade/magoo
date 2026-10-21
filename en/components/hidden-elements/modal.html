@@ -113,14 +113,15 @@
           <nav aria-label="Components">
             <h3>Structure</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
-              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings</a>
               </li>
               <li><a href="/en/components/structure/tables.html">Tables</a></li>
               <li><a href="/en/components/structure/lists.html">Lists</a></li>
               <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
             </ul>
             <h3>Messages</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
               <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
               <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
             </ul>
             <h3>Navigation</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
               <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
               <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
             </ul>
             <h3>Hidden elements</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/en/components/forms/select.html">Select (Combo)</a></li>
               <li><a href="/en/components/forms/slider.html">Slider</a></li>
               <li><a href="/en/components/forms/switch.html">Switch</a></li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
             </ul>
           </nav>
         </div>
@@ -182,13 +188,13 @@
             <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
@@ -202,10 +208,10 @@
               <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
               <h4>When to use</h4>
               <p>Use when a task or information needs to interrupt the flow. First consider whether that interruption is necessary.</p>
-              <h4>What to draw</h4>
+              <h4>What to design</h4>
               <p>Show the opening control, the open dialog above the content, its title, actions, and a visible way to close or cancel.</p>
               <h4>How it behaves</h4>
-              <p>On opening, keyboard navigation starts at an appropriate point inside the dialog and stays within it. On closing, it returns to the opening control or a logical point in the flow. Escape may close it when this does not cause unconfirmed data loss.</p>
+              <p>On opening, keyboard navigation starts at an appropriate point inside the dialog and stays within it. On closing, it returns to the opening control or a logical point in the flow. <code data-interaction-label="true">Esc</code> may close it when this does not cause unconfirmed data loss.</p>
               <h4>What to document in Figma</h4>
               <p>Annotate initial and returning focus, control order, and the name announced by screen readers. Record whether clicking outside closes the dialog and how data loss is prevented. Background content is unavailable while it is open.</p>
               <h4>How to review</h4>
@@ -261,7 +267,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
-            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h2 class="titulo-mobile">Interaction Methods</h2>
             <p class="mt-3">
               Possible interaction methods for components of type
               <span class="destaque">Modal</span>.
@@ -292,7 +298,7 @@
             <ul class="lista-detalhe link-padrao">
               <li>The dialog must have an accessible name.</li>
               <li>Focus must move inside the modal when it opens.</li>
-              <li>The background should be inert or unavailable to assistive technologies.</li>
+              <li>While the modal is open, screen reader navigation stays in the dialog; closing it returns to the original task.</li>
             </ul>
           </div>
           <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
@@ -310,7 +316,7 @@
               <li>I SEE focus return to a predictable point in the flow</li>
             </ol>
 
-            <h4 class="mt-4">Desktop screen reader</h4>
+            <h4 class="mt-4">Screen reader on desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 When I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and move focus to the component
@@ -324,7 +330,7 @@
               <li>I HEAR or perceive that its corresponding state, value, content, or action has been updated.</li>
             </ol>
 
-            <h4 class="mt-4">Mobile screen reader</h4>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and swipe to focus the component, the following happens:
@@ -350,6 +356,10 @@
               <li>Do not hide the close button when the person needs to be able to cancel the action.</li>
               <li>Confirm before closing the modal if the person could lose entered data.</li>
             </ul>
+
+            <ul>
+              <li>The background should be inert or unavailable to assistive technologies.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">References</h2>
@@ -363,32 +373,32 @@
             <h3 class="destaque mt-4">Design patterns</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">W3C APG: Dialog Modal Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" target="_blank" rel="noopener noreferrer">W3C APG: Dialog Modal Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" target="_blank" rel="noopener noreferrer">HTML standards documentation: The Dialog Element <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" target="_blank" rel="noopener noreferrer">HTML standards documentation: The Dialog Element <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/dialogs/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Dialogs <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://m3.material.io/components/dialogs/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Dialogs <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/modal/" target="_blank" rel="noopener noreferrer">US.gov - Modal <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://designsystem.digital.gov/components/modal/" target="_blank" rel="noopener noreferrer">US.gov - Modal <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/modal/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Modal <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://carbondesignsystem.com/components/modal/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Modal <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/dialog/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Dialog <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://spectrum.adobe.com/page/dialog/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Dialog <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://primer.style/product/components/dialog/" target="_blank" rel="noopener noreferrer">Github Primer - Dialog <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://primer.style/product/components/dialog/" target="_blank" rel="noopener noreferrer">Github Primer - Dialog <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/components/modal/" target="_blank" rel="noopener noreferrer">Bootstrap - Modal <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">external link - opens in a new window</span><span class="sr-only"> (opens in a new tab)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/components/modal/" target="_blank" rel="noopener noreferrer">Bootstrap - Modal <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (external link, opens in a new tab)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -400,6 +410,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
       >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
     </p>
+
     <footer class="site-footer" lang="en-US">
       <div class="wrap footer-main">
         <div class="footer-about">

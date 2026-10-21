@@ -115,14 +115,15 @@
           <nav aria-label="Components">
             <h3>Structure</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>In development</small></li>
-              <li class="upcoming">Header, Footer and Regions <small>In development</small></li>
+              <li><a href="/en/components/structure/layout-content-order.html">Layout and content order</a></li>
+              <li><a href="/en/components/structure/page-regions.html">Page regions</a></li>
               <li>
                 <a href="/en/components/structure/headings.html">Headings</a>
               </li>
               <li><a href="/en/components/structure/tables.html">Tables</a></li>
               <li><a href="/en/components/structure/lists.html">Lists</a></li>
               <li><a href="/en/components/structure/tabbar.html">Tabbar</a></li>
+              <li><a href="/en/components/structure/cards.html">Cards</a></li>
             </ul>
             <h3>Messages</h3>
             <ul>
@@ -130,6 +131,7 @@
               <li><a href="/en/components/messages/dialogs.html">Dialogs</a></li>
               <li><a href="/en/components/messages/form-validation.html">Form validation</a></li>
               <li><a href="/en/components/messages/toasts.html">Toasts</a></li>
+              <li><a href="/en/components/messages/loading-progress.html">Loading and progress</a></li>
             </ul>
             <h3>Navigation</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li><a href="/en/components/navigation/pagination.html">Pagination</a></li>
               <li><a href="/en/components/navigation/carousel.html">Carousel</a></li>
               <li><a href="/en/components/navigation/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/en/components/navigation/step-indicator.html">Step indicator</a></li>
             </ul>
             <h3>Hidden elements</h3>
             <ul>
@@ -170,6 +173,9 @@
               <li>
                 <a href="/en/components/forms/switch.html">Switch</a>
               </li>
+              <li><a href="/en/components/forms/file-upload.html">File upload</a></li>
+              <li><a href="/en/components/forms/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/en/components/forms/dates-ranges.html">Dates and date ranges</a></li>
             </ul>
           </nav>
         </div>
@@ -184,13 +190,13 @@
             <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Interaction design</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction methods</button>
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Interaction Methods</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Considerations</button>
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Points to consider</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">References</button>
@@ -204,12 +210,12 @@
               <p>Always consider the context of the application, even when the guidance follows a standard pattern. Interaction design documents intent. Behavior must be verified in the implementation.</p>
               <h4>When to use</h4>
               <p>Use to enter an email address. Format validation does not prove the address exists.</p>
-              <h4>What to draw</h4>
+              <h4>What to design</h4>
               <p>Show a persistent label, format hint, focus, and filled and error states.</p>
               <h4>How it behaves</h4>
               <p>The person edits and pastes text normally. On error, preserve the value and explain the correction.</p>
               <h4>What to document in Figma</h4>
-              <p>Record required status, messages, and Enter behavior. If multiple addresses are accepted, explain how to separate them.</p>
+              <p>Record required status, messages, and <code data-interaction-label="true">Enter</code>behavior. If multiple addresses are accepted, explain how to separate them.</p>
               <h4>How to review</h4>
               <p>Check whether the purpose and states are clear on small and large screens and with zoom. Verify documented behavior in the implementation, including keyboard and screen reader use where applicable.</p>
             </div>
@@ -245,7 +251,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
-            <h2 class="titulo-mobile">Interaction methods</h2>
+            <h2 class="titulo-mobile">Interaction Methods</h2>
             <p class="mt-3">The field uses type="email" and, on compatible devices, offers an appropriate email keyboard.</p>
             <h3 class="destaque mt-4">Mouse interaction</h3>
             <ol class="lista-detalhe link-padrao">
@@ -255,12 +261,12 @@
             <h3 class="destaque mt-4">Keyboard interaction</h3>
             <ol class="lista-detalhe link-padrao">
               <li><code>Tab</code> moves focus to the field; <code>Shift + Tab</code> returns to the previous control.</li>
-              <li>Typing inserts text; <code>arrow keys</code>, <code>Home</code>, <code>End</code> and selection and editing commands follow the platform.</li>
+              <li>Typing inserts text; <code>arrow navigation</code>, <code>Home</code>, <code>End</code> and selection and editing commands follow the platform.</li>
               <li><code>Enter</code> follows the form's defined submission action; the field does not create a new line.</li>
             </ol>
             <h3 class="destaque mt-4">Gesture interaction</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Tapping the field or label allows editing with the virtual keyboard.</li>
+              <li><code data-interaction-label="true">Tapping</code> the field or label allows editing with the virtual keyboard.</li>
               <li>Text selection and editing follow the platform's available gestures.</li>
             </ol>
             <h3 class="destaque mt-4">Keyboard (or gesture) interaction + screen reader</h3>
@@ -281,7 +287,7 @@
               <li>I SEE the field value updated</li>
               <li>AND, when I use <code>Tab</code> or <code>Shift + Tab</code>, I SEE focus follow page order without getting trapped in the field</li>
             </ol>
-            <h4 class="mt-4">Desktop screen reader</h4>
+            <h4 class="mt-4">Screen reader on desktop</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 WHEN I use a screen reader on a computer (NVDA, JAWS, VoiceOver) and use the <code>Tab</code> key to move focus to the field, the following happens:
@@ -294,7 +300,7 @@
               <li>THEN, when I type or edit content using native commands</li>
               <li>I HEAR or perceive that I can edit the field and that its value was updated.</li>
             </ol>
-            <h4 class="mt-4">Mobile screen reader</h4>
+            <h4 class="mt-4">Screen reader on mobile devices</h4>
             <ol class="lista-detalhe link-padrao">
               <li>
                 WHEN I use a screen reader on a phone (TalkBack, VoiceOver) and swipe to focus the field, the following happens:
@@ -322,7 +328,7 @@
             </ol>
           </div>
           <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
-            <h2 class="titulo-mobile">Considerations</h2>
+            <h2 class="titulo-mobile">Points to consider</h2>
             <ol class="lista-detalhe link-padrao">
               <li>Use a persistent label associated with the input. A placeholder is a supplementary hint and does not replace the label.</li>
               <li>Associate instructions and errors with the field, for example using aria-describedby, and set aria-invalid when there is an error.</li>
@@ -333,10 +339,17 @@
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">References</h2>
+            <p class="mt-3">
+              Additional references for components of type
+              <span class="destaque">Input "email"</span>.
+            </p>
+            <p><strong>Important:</strong><br />Most references are on the course platform alongside the lessons cited in this material.</p>
+            <p><strong>Disclaimer:</strong><br />The links listed here are a curated collection of references where you can find implemented components, rather than recommendations. There is no unified implementation format and no guarantee that these links follow every design pattern. Direct questions to the teams responsible for the linked materials. Before copying a model, remember that all materials are constantly updated and that patterns, particularly proprietary ones, may change.</p>
+
             <h3 class="destaque mt-4">Field documentation</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email" target="_blank" rel="noopener noreferrer">MDN — input type="email"<span class="sr-only"> (external link, opens in a new tab)</span></a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/email" target="_blank" rel="noopener noreferrer">MDN — input type="email"<span class="sr-only"> (external link, opens in a new tab)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
               </li>
             </ul>
             <h3 class="destaque mt-4">Design System</h3>
@@ -363,6 +376,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">AccessBoost course <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (external link - opens in a new window)</span></a
       >. These interactions represent standard industry patterns, but may be customized in specific cases, provided there are sufficient instructions for people to understand the behavioral change.
     </p>
+
     <footer class="site-footer" lang="en-US">
       <div class="wrap footer-main">
         <div class="footer-about">

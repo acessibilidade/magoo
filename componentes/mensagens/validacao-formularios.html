@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -130,6 +131,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html" aria-current="page">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -139,6 +141,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
               <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
               <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -262,15 +268,15 @@
             </ol>
             <h3 class="destaque mt-4">Interação com gestos</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Tocar no botão de envio permite validar o formulário.</li>
-              <li>Tocar no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção.</li>
+              <li><code data-interaction-label="true">Tocar</code> no botão de envio permite validar o formulário.</li>
+              <li><code data-interaction-label="true">Tocar</code> no link do resumo leva ao campo; a mensagem continua disponível para consulta e correção.</li>
             </ol>
             <h3 class="destaque mt-4">Interação com teclado (ou gestos) + leitor de telas</h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por <code>aria-describedby</code>, preservando também a associação com as instruções.</li>
-              <li>Usar <code>aria-invalid</code> para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção.</li>
+              <li>Ao navegar até um campo inválido com leitor de telas, a pessoa identifica seu rótulo, erro e orientação de correção.</li>
+              <li>Após corrigir um campo e executar a validação prevista, a pessoa percebe se o erro foi resolvido ou continua presente.</li>
               <li>Se o foco for movido para um resumo, permitir a leitura de seu título, erros e links. Se o foco permanecer onde estava, anunciar erros dinâmicos com uma região de atualização adequada ao contexto.</li>
-              <li>Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões <code>aria-live</code>.</li>
+              <li>Ao receber o retorno da validação com leitor de telas, a pessoa identifica a mensagem sem várias repetições simultâneas do mesmo erro.</li>
             </ol>
             <h3 class="destaque mt-4">Correção e novo envio</h3>
             <ol class="lista-detalhe link-padrao">
@@ -340,9 +346,27 @@
               <li>Se usar ícones complementares, preferir Material Icons e ocultar os decorativos das tecnologias assistivas; a informação deve continuar disponível em texto.</li>
               <li>Bootstrap informa limitações de acessibilidade nos estilos personalizados de validação do cliente e tooltips. Avaliar os exemplos antes de adotá-los; cores e estilos não garantem associação ou anúncio acessível.</li>
             </ol>
+
+            <h3>Notas de implementação e decisões de comportamento</h3>
+            <ul>
+              <li>Ao navegar até um campo inválido, apresentar rótulo, indicação de erro e mensagem associada por <code>aria-describedby</code>, preservando também a associação com as instruções.</li>
+            </ul>
+            <ul>
+              <li>Usar <code>aria-invalid</code> para indicar erro detectado; atualizar o estado quando o erro for corrigido e a nova validação confirmar a correção.</li>
+            </ul>
+            <ul>
+              <li>Evitar anunciar a mesma mensagem simultaneamente pelo foco e por várias regiões <code>aria-live</code>.</li>
+            </ul>
           </div>
           <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
             <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Validação de formulários</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
@@ -373,6 +397,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">

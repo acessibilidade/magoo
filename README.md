@@ -6,22 +6,24 @@
 
 Biblioteca de comportamentos de interação de componentes, de Marcelo Sales.
 
-O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.5.0** reúne 29 componentes, incluindo os quatro tipos de input, Validação de formulários e Tabbar.
+O projeto agora possui uma base estruturada compartilhada pelo site estático e por um servidor MCP local somente de leitura. A versão **1.6.0** reúne 37 componentes, incluindo os quatro tipos de input, Validação de formulários e Tabbar.
 
 A versão **1.4.0** adicionou inglês dos Estados Unidos ao site, com URLs traduzidas, canônicas por idioma e ajustes de acessibilidade e hospedagem. Português brasileiro continua como padrão e como idioma do MCP. As traduções do site não alteram o idioma das respostas do MCP.
 
 ## Instalação pelo npm
 
-A versão **1.5.0** inclui guias rápidos para designers nos 29 componentes, skill para Figma, índices de categorias e ajustes de descoberta para agentes.
+A versão 1.6.0 está preparada localmente. Os exemplos abaixo passam a valer após sua publicação no npm.
 
-O pacote **@acessibilidade/magoo-mcp 1.5.0** permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
+A versão **1.6.0** acrescenta Upload de arquivos, Autocomplete, Datas e intervalos, Carregamento e progresso, Cards e Indicador de etapas, com guias rápidos e documentação em português e inglês.
+
+O pacote **@acessibilidade/magoo-mcp 1.6.0** permite consultar a biblioteca em assistentes compatíveis com MCP local. Requer **Node.js 20.19 ou superior**, que inclui npm e npx.
 
 Nas configurações de servidores MCP do seu assistente, adicione:
 
 - **Nome:** `magoo`
 - **Tipo:** STDIO (local)
 - **Comando:** `npx`
-- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.5.0`
+- **Argumentos:** `-y` e `@acessibilidade/magoo-mcp@1.6.0`
 
 Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o formato `mcpServers`, use:
 
@@ -30,13 +32,13 @@ Salve e, se necessário, reinicie o aplicativo. Para clientes que aceitam o form
   "mcpServers": {
     "magoo": {
       "command": "npx",
-      "args": ["-y", "@acessibilidade/magoo-mcp@1.5.0"]
+      "args": ["-y", "@acessibilidade/magoo-mcp@1.6.0"]
     }
   }
 }
 ```
 
-O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.5.0; atualizar o GitHub não atualiza automaticamente o pacote instalado.
+O cliente baixa e inicia o servidor localmente. Não é preciso clonar este repositório nem criar uma conta no npm. A configuração fixa a versão 1.6.0; atualizar o GitHub não atualiza automaticamente o pacote instalado.
 
 Experimente: **“Use o MCP Magoo para consultar o componente Modal e explicar seus comportamentos por teclado. Informe a versão consultada.”**
 
@@ -59,7 +61,7 @@ O site continua funcionando como arquivos HTML estáticos. Não depende do MCP n
 
 ## Onde editar
 
-- `content/componentes/*.json`: fonte dos nomes, resumos e das cinco seções dos 29 componentes.
+- `content/componentes/*.json`: fonte dos nomes, resumos e das cinco seções dos 37 componentes.
 - `content/catalog.json`: catálogo, versão da biblioteca e dois itens em desenvolvimento. Ao renomear um componente, atualize também seu nome no catálogo; a validação detecta divergências.
 - `content/component.schema.json`: contrato validado automaticamente.
 - `templates/index.html`: layout e textos institucionais da home.
@@ -131,7 +133,7 @@ Para execução manual, `npm run mcp` inicia o processo e aguarda mensagens MCP.
 
 Categorias: `estrutura`, `mensagens`, `navegacao`, `elementos-ocultos`, `formularios`.
 
-Recursos: `magoo://catalog` e `magoo://components/{id}`. Todos os 29 recursos de componentes são listáveis. Ferramentas declaram `readOnlyHint`, e retornam conteúdo estruturado e texto JSON com versão e origem. IDs desconhecidos são rejeitados; IDs não são usados para acessar caminhos fornecidos por clientes.
+Recursos: `magoo://catalog` e `magoo://components/{id}`. Todos os 37 recursos de componentes são listáveis. Ferramentas declaram `readOnlyHint`, e retornam conteúdo estruturado e texto JSON com versão e origem. IDs desconhecidos são rejeitados; IDs não são usados para acessar caminhos fornecidos por clientes.
 
 Exemplos de pedidos a um assistente conectado:
 
@@ -169,7 +171,7 @@ O português brasileiro é o padrão em `/pt-br`; o inglês americano está em `
 A implementação usa **dicionários JSON e geração estática a partir de um único conjunto de templates**, aproveitando o build existente. Não há cópias manuais dos layouts nem dependência de uma biblioteca de idiomas no navegador. Para este projeto, essa estrutura mantém a manutenção simples; uma biblioteca de i18n passa a ser útil se surgirem necessidades como pluralização complexa e mensagens dinâmicas extensas.
 
 - `content/locales/locales.json`: cadastro dos idiomas, rótulos nativos e mensagens das interações em JavaScript.
-- `content/locales/en.json`: tradução inglesa dos textos em português, incluindo home, changelog, metadados, instruções para leitores de tela e documentação dos 29 componentes. As chaves normalizam espaços; uma alteração de redação exige atualizar a tradução. Nomes técnicos e referências que já estão em inglês são mantidos explicitamente.
+- `content/locales/en.json`: tradução inglesa dos textos em português, incluindo home, changelog, metadados, instruções para leitores de tela e documentação dos 37 componentes. As chaves normalizam espaços; uma alteração de redação exige atualizar a tradução. Nomes técnicos e referências que já estão em inglês são mantidos explicitamente.
 - `js/build/i18n.js`: gera páginas, metadados, links, mensagens em `js/locales/` e regras de idioma no `.htaccess`.
 - `js/languages.js`: preserva consulta e âncora na troca e limpa a seleção anterior do Google Tradutor.
 - `pt-br/` e `en/`: saídas geradas; não editar manualmente.
@@ -193,7 +195,7 @@ Cada página publicada aponta `rel="canonical"` para seu próprio endereço no r
 
 ## Guias para designers e Figma
 
-Os 29 componentes abrem a seção Design de interação com um guia rápido em um quadro, derivado das orientações completas. A fonte continua em `content/componentes/`; site e MCP compartilham as mesmas orientações.
+Os 37 componentes abrem a seção Design de interação com um guia rápido em um quadro, derivado das orientações completas. A fonte continua em `content/componentes/`; site e MCP compartilham as mesmas orientações.
 
 Há duas versões para ambientes diferentes, usando a mesma biblioteca:
 
@@ -208,14 +210,14 @@ A partir de 1.5.0, a versão dos componentes identifica o snapshot distribuído,
 
 ### Atualização dos clientes
 
-Atualize a versão configurada para 1.5.0 e reinicie o processo MCP. Atualizar o repositório ou publicar no npm não substitui um pacote instalado em outra pasta, nem reinicia um servidor já carregado. Confirme a versão retornada por `search_components` após reconectar. A skill local e o ZIP devem acompanhar a cópia mantida neste repositório.
+Atualize a versão configurada para 1.6.0 e reinicie o processo MCP. Atualizar o repositório ou publicar no npm não substitui um pacote instalado em outra pasta, nem reinicia um servidor já carregado. Confirme a versão retornada por `search_components` após reconectar. A skill local e o ZIP devem acompanhar a cópia mantida neste repositório.
 
 ### Compatibilidade da auditoria de navegação agêntica
 
-O build gera `/.well-known/ard.json` e `/.well-known/ai-catalog.json` com conteúdo idêntico e `specVersion: "1.0"` na raiz. Esse campo identifica o contrato do catálogo, independente da versão 1.5.0 do Magoo. O caminho e a relação HTTP `ai-catalog` atendem consumidores anteriores; `ard` permanece disponível. Publique ambos os arquivos e o `.htaccess` atualizado na etapa de publicação. A validação local do esquema não substitui uma nova análise do PageSpeed no site publicado.
+O build gera `/.well-known/ard.json` e `/.well-known/ai-catalog.json` com conteúdo idêntico e `specVersion: "1.0"` na raiz. Esse campo identifica o contrato do catálogo, independente da versão 1.6.0 do Magoo. O caminho e a relação HTTP `ai-catalog` atendem consumidores anteriores; `ard` permanece disponível. Publique ambos os arquivos e o `.htaccess` atualizado na etapa de publicação. A validação local do esquema não substitui uma nova análise do PageSpeed no site publicado.
 
 ## Índices de categorias
 
-O build gera cinco índices em `/pt-br/categorias/` e `/en/categories/`, usando os nomes e resumos da mesma base dos componentes. Edite o layout em `templates/category.html` e a geração em `js/build/categories.js`. O breadcrumb segue as orientações de Marcelo Sales no componente `breadcrumb` do snapshot local 1.5.0: lista ordenada, separadores apenas visuais e página atual sem link. As categorias integram o sitemap e preservam metadados de compartilhamento, Analytics e troca de idioma.
+O build gera cinco índices em `/pt-br/categorias/` e `/en/categories/`, usando os nomes e resumos da mesma base dos componentes. Edite o layout em `templates/category.html` e a geração em `js/build/categories.js`. O breadcrumb segue as orientações de Marcelo Sales no componente `breadcrumb` do snapshot local 1.6.0: lista ordenada, separadores apenas visuais e página atual sem link. As categorias integram o sitemap e preservam metadados de compartilhamento, Analytics e troca de idioma.
 
 O destaque Figma na home inclui passos para conectar o plugin Figma no Codex e instalar a skill por uma pasta local, sem exigir edição de código. O download está em `downloads/magoo-figma.zip`; ao modificar a skill, regenere esse arquivo com a pasta `magoo-figma` contendo SKILL.md, agents/openai.yaml e LICENSE. O arquivo deve ser publicado junto com o site. As instruções de conexão referenciam a documentação oficial do Figma.

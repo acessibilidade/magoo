@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Regiões da página | Magoo</title>
+    <meta name="description" content="Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Regiões da página | Magoo" />
+    <meta property="og:description" content="Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página." />
+
+    <meta name="twitter:title" content="Regiões da página | Magoo" />
+    <meta name="twitter:description" content="Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/structure/page-regions.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/estrutura/regioes-pagina.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/estrutura/regioes-pagina.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/estrutura/regioes-pagina.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/structure/page-regions.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/structure/page-regions.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/estrutura.html">Estrutura</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Regiões da página</span></li>
+          </ol>
+        </nav>
+        <h1>Regiões da página</h1>
+        <p>Organizam cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé para orientar a leitura e o acesso à página.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html" aria-current="page">Regiões da página</a></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="regioes-pagina-designer-guide-title">
+              <h3 id="regioes-pagina-designer-guide-title">Guia rápido para designers</h3>
+              <h4>Quando usar</h4>
+              <p>Use para definir a estrutura de uma página e distinguir conteúdo principal de navegação e informações complementares.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre as regiões, sua ordem, nomes quando necessários, os controles internos e o link para pular ao conteúdo.</p>
+              <h4>Como se comporta</h4>
+              <p>Regiões orientam a leitura e a navegação estrutural. A interação acontece nos controles; uma região não recebe foco apenas por existir.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Defina a finalidade e os limites de cada região, nomes de navegações repetidas, destino do link de salto e a ordem em telas pequenas.</p>
+              <h4>Como revisar</h4>
+              <p>No desenho, confira ordem, agrupamentos e acesso ao conteúdo. Na implementação, verifique regiões reconhecidas, leitura, link de salto e controles por teclado e leitor de telas.</p>
+            </div>
+            <h3 class="destaque mt-4">Cabeçalho da página</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>O cabeçalho ajuda a reconhecer o site e acessar as opções globais? Identidade, busca e navegação têm finalidades distinguíveis?</li>
+              <li>Um cabeçalho de artigo ou card é distinguido do cabeçalho global? Não atribua a função de região global a todo bloco que parece um cabeçalho.</li>
+            </ol>
+            <h3 class="destaque mt-4">Conteúdo principal</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>É possível reconhecer onde começa a informação ou tarefa principal? O título da página e as instruções pertencem a uma sequência compreensível?</li>
+              <li>O link Pular para o conteúdo leva ao início útil da tarefa, sem exigir percorrer o cabeçalho repetido? Seu destino permanece visível quando há cabeçalhos fixos?</li>
+            </ol>
+            <h3 class="destaque mt-4">Navegações e regiões repetidas</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Navegação principal, navegação local e índice da página têm propósitos claros? Quando existem várias navegações diferentes, seus nomes permitem distingui-las?</li>
+              <li>Duas navegações com os mesmos links e a mesma finalidade mantêm um nome consistente? Evite criar nomes diferentes apenas por uma estar no início e outra no fim.</li>
+            </ol>
+            <h3 class="destaque mt-4">Conteúdo complementar e outras regiões</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>A área complementar apoia o conteúdo principal e continua compreensível isoladamente? Uma coluna lateral puramente visual não define essa finalidade.</li>
+              <li>O agrupamento tem importância suficiente para ser localizado como região? Evite transformar cada card ou bloco visual em mais uma região.</li>
+            </ol>
+            <h3 class="destaque mt-4">Rodapé e adaptação do layout</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>O rodapé reúne informações institucionais e acessos complementares reconhecíveis? Se incluir navegação, ela mantém um nome coerente com sua finalidade?</li>
+              <li>Ao mudar para uma coluna, a ordem visual continua coerente com leitura e foco? Regiões fixas não encobrem conteúdo nem controles com ampliação?</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Métodos de Interação</h3>
+            <h4 class="mt-4">Mouse e toque</h4>
+            <p>Ler e percorrer a página permite reconhecer os agrupamentos. Clicar ou <code data-interaction-label="true">tocar</code> em links e botões executa as ações desses controles; o fundo de uma região estrutural não executa uma ação.</p>
+            <h4 class="mt-4">Teclado</h4>
+            <p><code>Tab</code> e <code>Shift + Tab</code> percorrem os links, botões e campos na ordem da página; não percorrem cada região estática como uma parada de foco.</p>
+            <p>Ao chegar ao link Pular para o conteúdo, <code>Enter</code> leva o foco ao destino principal. O próximo <code>Tab</code> permite continuar pelos controles a partir desse ponto, sem retornar ao cabeçalho repetido.</p>
+            <p>Navegar por controles internos mantém os comandos próprios de cada componente. Não existe um atalho universal de teclado do navegador para saltar entre todas as regiões.</p>
+            <h4 class="mt-4">Leitor de telas no computador</h4>
+            <p>Usar a lista de regiões ou os comandos de navegação estrutural do leitor de telas permite localizar conteúdo principal, navegações e outras regiões disponíveis pelo tipo e nome. Os comandos dependem do leitor e de seu modo de navegação.</p>
+            <p>Escolher uma região nessa lista leva a leitura ao agrupamento correspondente. Em seguida, os comandos de leitura ou de controles permitem percorrer seu conteúdo; não é necessário focar o contêiner com <code>Tab</code>.</p>
+            <h4 class="mt-4">Leitor de telas no celular</h4>
+            <p>No VoiceOver, selecionar regiões no rotor, quando a opção estiver disponível, permite navegar entre elas. No TalkBack, os controles de leitura e comandos estruturais dependem da versão e configuração; use o recurso de regiões quando disponível.</p>
+            <p>No modo padrão de exploração de controles, <code data-interaction-label="true">deslizar o dedo</code> percorre o conteúdo e <code data-interaction-label="true">tocar duas vezes</code> ativa o link ou botão focado. Ativar Pular para o conteúdo leva ao destino principal; percorrer uma região não a transforma em botão.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando que estou em uma página organizada em regiões</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO uso <code>Tab</code> a partir do início da página</li>
+              <li>VEJO o link para pular ao conteúdo com foco visível</li>
+              <li>ENTÃO, quando pressiono <code>Enter</code>, VEJO que o foco chega ao destino principal e o próximo <code>Tab</code> continua a navegação a partir desse ponto</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO abro a lista de regiões ou uso os comandos estruturais do leitor de telas</li>
+              <li>OUÇO ou percebo conteúdo principal, navegações e outras regiões pelo tipo e nome quando necessário</li>
+              <li>ENTÃO, quando escolho uma região, OUÇO ou percebo seu conteúdo e consigo continuar a leitura sem uma parada de foco artificial em cada contêiner</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>QUANDO exploro a página com leitor de telas no celular e uso os recursos estruturais disponíveis</li>
+              <li>OUÇO ou percebo as regiões em uma ordem compreensível e identifico o conteúdo principal</li>
+              <li>ENTÃO, quando uso <code data-interaction-label="true">tocar duas vezes</code> para ativar o link Pular para o conteúdo no modo padrão, OUÇO ou percebo o destino e continuo a tarefa sem repetir toda a navegação</li>
+            </ol>
+            <h4 class="mt-4">Regiões repetidas</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADAS duas navegações com finalidades diferentes</li>
+              <li>QUANDO consulto a lista de regiões do leitor de telas</li>
+              <li>ENTÃO identifico nomes que distinguem as finalidades; navegações de conteúdo e finalidade idênticos mantêm nomes consistentes</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Pontos de atenção</h3>
+            <p>Prefira elementos HTML correspondentes à finalidade: <code>header</code>, <code>main</code>, <code>nav</code>, <code>aside</code> e <code>footer</code>. Um agrupamento genérico só precisa ser uma região adicional quando isso ajuda a localizar conteúdo relevante.</p>
+            <p>O cabeçalho e o rodapé globais têm contexto diferente de <code>header</code> e <code>footer</code> internos a artigo ou seção. Nem todo cabeçalho ou rodapé interno é um marco global da página.</p>
+            <p>Mantenha um conteúdo principal ativo por documento. Documentos incorporados podem ter sua própria estrutura. Não crie vários marcos principais apenas para separar colunas visuais.</p>
+            <p>Navegações diferentes precisam de nomes que as distingam. Navegações com os mesmos links e finalidade podem compartilhar o nome. Evite repetir o tipo no rótulo, como Navegação principal navegação.</p>
+            <p>Uma <code>section</code> com nome acessível pode ser exposta como região. Use <code>aria-labelledby</code> para aproveitar um título visível quando apropriado; não nomeie cada bloco apenas para aumentar a quantidade de regiões.</p>
+            <p>O link de salto precisa de um destino existente e gerenciamento de foco verificado no navegador. Quando necessário, <code>tabindex="-1"</code> permite foco programático no destino sem adicioná-lo à sequência de <code>Tab</code>.</p>
+            <p>Regiões e cabeçalhos oferecem formas complementares de navegação. A ordem de leitura não deve contradizer a ordem visual, e conteúdo recolhido não deve deixar controles ocultos no percurso do foco.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Regiões da página</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+
+            <p>
+              <a href="https://www.w3.org/WAI/tutorials/page-structure/regions/" target="_blank" rel="noopener noreferrer">W3C WAI — Page Regions<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/" target="_blank" rel="noopener noreferrer">W3C APG — Landmark Regions<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G1" target="_blank" rel="noopener noreferrer">W3C — Technique G1: Skip to main content<span class="sr-only"> (link externo, abre em uma nova aba)</span> <span class="material-icons icons notranslate" aria-hidden="true" translate="no">open_in_new</span></a>
+            </p>
+            <p>
+              <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)<span class="sr-only" aria-hidden="true"></span></a>
+            </p>
+            <p>
+              <a href="/pt-br/componentes/navegacao/menu.html">Menu<span class="sr-only" aria-hidden="true"></span></a>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

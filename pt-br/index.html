@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Magoo | Sua biblioteca pré-design system</title>
-    <meta name="description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta name="description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Magoo" />
     <meta property="og:title" content="Magoo | Sua biblioteca pré-design system" />
-    <meta property="og:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta property="og:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
 
     <meta name="twitter:title" content="Magoo | Sua biblioteca pré-design system" />
-    <meta name="twitter:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta name="twitter:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
     <meta name="theme-color" content="#f7f7f2" />
     <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
@@ -124,7 +124,7 @@
           <span>pré-design system</span>
         </h1>
         <p class="hero-description">
-          Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system.
+          Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído.
           <br />
           Não reinvente a roda, comece do jeito certo!
         </p>
@@ -139,12 +139,16 @@
                   <option value="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</option>
                   <option value="/pt-br/componentes/estrutura/tabelas.html">Tabelas</option>
                   <option value="/pt-br/componentes/estrutura/listas.html">Listas</option>
+                  <option value="/pt-br/componentes/estrutura/cards.html">Cards</option>
+                  <option value="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</option>
+                  <option value="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</option>
                 </optgroup>
                 <optgroup label="Mensagens">
                   <option value="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</option>
                   <option value="/pt-br/componentes/mensagens/alertas.html">Alertas</option>
                   <option value="/pt-br/componentes/mensagens/dialogs.html">Dialogs</option>
                   <option value="/pt-br/componentes/mensagens/toasts.html">Toasts</option>
+                  <option value="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</option>
                 </optgroup>
                 <optgroup label="Navegação">
                   <option value="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</option>
@@ -153,6 +157,7 @@
                   <option value="/pt-br/componentes/navegacao/paginacao.html">Paginação</option>
                   <option value="/pt-br/componentes/navegacao/carrossel.html">Carrossel</option>
                   <option value="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</option>
+                  <option value="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</option>
                 </optgroup>
                 <optgroup label="Elementos ocultos">
                   <option value="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</option>
@@ -172,6 +177,9 @@
                   <option value="/pt-br/componentes/formularios/select.html">Select (Combo)</option>
                   <option value="/pt-br/componentes/formularios/slider.html">Slider</option>
                   <option value="/pt-br/componentes/formularios/switch.html">Switch</option>
+                  <option value="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</option>
+                  <option value="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</option>
+                  <option value="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</option>
                 </optgroup>
               </select>
               <span class="material-icons select-arrow notranslate" aria-hidden="true" translate="no"> expand_more </span>
@@ -181,7 +189,7 @@
               <span class="material-icons notranslate" aria-hidden="true" translate="no"> arrow_forward </span>
             </button>
           </div>
-          <p class="catalog-count">29 componentes · 5 categorias</p>
+          <p class="catalog-count">37 componentes · 5 categorias</p>
         </form>
         <noscript>
           <p>Escolha um componente nos links da biblioteca abaixo.</p>
@@ -206,13 +214,11 @@
               <a href="/pt-br/categorias/estrutura.html">Estrutura<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
             </h3>
             <ul>
-              <li class="upcoming">
-                Flexbox &amp; Grid
-                <small>Em desenvolvimento</small>
+              <li>
+                <a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
-              <li class="upcoming">
-                Header, Footer e Regiões
-                <small>Em desenvolvimento</small>
+              <li>
+                <a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
@@ -225,6 +231,9 @@
               </li>
               <li>
                 <a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/cards.html">Cards<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -245,6 +254,9 @@
               </li>
               <li>
                 <a href="/pt-br/componentes/mensagens/toasts.html">Toasts<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -271,6 +283,9 @@
               </li>
               <li>
                 <a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
               </li>
             </ul>
           </section>
@@ -333,11 +348,20 @@
               <li>
                 <a href="/pt-br/componentes/formularios/switch.html">Switch<span class="material-icons notranslate" aria-hidden="true" translate="no"> north_east </span></a>
               </li>
+              <li>
+                <a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos<span class="material-icons notranslate" aria-hidden="true" translate="no">north_east</span></a>
+              </li>
             </ul>
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Versão do material: 1.5.0</p>
+          <p class="material-version">Versão do material: 1.6.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             Acessar registro de alterações
             <span class="sr-only"> (abre uma janela com conteúdo adicional nesta mesma página) </span>
@@ -355,7 +379,23 @@
             </button>
           </div>
           <p id="changelog-description">Alterações do material, da mais recente para a mais antiga.</p>
-          <div class="changelog-entries">
+          <div class="changelog-entries" role="region" aria-label="Histórico de versões" tabindex="0">
+            <section class="changelog-entry" aria-labelledby="version-1-6-0">
+              <h3 id="version-1-6-0">Versão 1.6.0</h3>
+              <ul>
+                <li>Adiciona Upload de arquivos, Autocomplete, Datas e intervalos, Carregamento e progresso, Cards e Indicador de etapas, com guias de interação, cenários e referências.</li>
+                <li>Adiciona Regiões da página, com orientações sobre cabeçalho, conteúdo principal, navegações, conteúdo complementar e rodapé.</li>
+                <li>Adiciona Layout e ordem do conteúdo, com orientações sobre sequência de leitura e foco, adaptação de colunas, zoom e rolagem por teclado.</li>
+                <li>Revisa os cenários Gherkin para contemplar navegação por teclado e leitores de telas no computador e no celular.</li>
+                <li>Revisa os métodos de interação para explicar as ações da pessoa e os resultados esperados em cada modalidade.</li>
+              </ul>
+            </section>
+            <section class="changelog-entry" aria-labelledby="version-1-5-1">
+              <h3 id="version-1-5-1">Versão 1.5.1</h3>
+              <ul>
+                <li>Amplia Select, Tabelas, Menu e Input search com decisões de interação, guias rápidos, cenários complementares e referências, preservando IDs e orientações anteriores.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-5-0">
               <h3 id="version-1-5-0">Versão 1.5.0</h3>
               <ul>
@@ -610,7 +650,7 @@
         <div class="figma-instructions-layout">
           <article class="context-card figma-guide" aria-labelledby="figma-guide-title" id="figma-guide">
             <h3 id="figma-guide-title">Instruções para usar com o Figma</h3>
-            <p>Revise estados, descubra decisões pendentes e prepare anotações de comportamento usando os guias dos 29 componentes. Você pode começar sem escrever código.</p>
+            <p>Revise estados, descubra decisões pendentes e prepare anotações de comportamento usando os guias dos 37 componentes. Você pode começar sem escrever código.</p>
             <p>A skill é um conjunto de instruções para o assistente. Escolha a versão para usar diretamente no agente do Figma ou a versão para o Codex conectado ao Figma.</p>
             <h4>Uso direto no agente do Figma</h4>
             <p>Baixe o Markdown e, no chat do Figma Design ou Make, abra Skills → Add skill → Upload a file. Selecione o arquivo e clique em Add. Use /magoo-figma-native para iniciar.</p>
@@ -658,7 +698,7 @@
             </ol>
             <h4>Como saber se está pronto</h4>
             <p>Peça ao assistente para confirmar que encontra a skill, consulta o Magoo e consegue ler o componente do link. Se algo faltar, ele deve explicar qual conexão precisa de ajuste. Para escrever anotações no Figma, peça essa ação e indique o arquivo de destino.</p>
-            <p class="figma-availability">Os guias dos 29 componentes fazem parte da versão 1.5.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
+            <p class="figma-availability">Os guias dos 37 componentes fazem parte da versão 1.6.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
           </article>
           <div class="native-skill-column">
             <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
@@ -747,12 +787,12 @@
             <div>
               <dt>Argumentos</dt>
               <dd>
-                <code>-y @acessibilidade/magoo-mcp@1.5.0</code>
+                <code>-y @acessibilidade/magoo-mcp@1.6.0</code>
                 <p>
                   Se o aplicativo pedir argumentos separados, adicione
                   <code>-y</code>
                   e
-                  <code>@acessibilidade/magoo-mcp@1.5.0</code>
+                  <code>@acessibilidade/magoo-mcp@1.6.0</code>
                   como dois itens.
                 </p>
               </dd>
@@ -887,7 +927,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.5.0 e não troca automaticamente para uma versão futura.</p>
+              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.6.0 e não troca automaticamente para uma versão futura.</p>
             </dd>
           </div>
           <div class="faq-item">

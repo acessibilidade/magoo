@@ -1,0 +1,2065 @@
+{
+  "schemaVersion": "1.0.0",
+  "contentVersion": "1.6.0",
+  "id": "datas-intervalos",
+  "name": "Datas e intervalos",
+  "category": "formularios",
+  "summary": "Permite informar uma data ou um intervalo, com entrada manual, calendário e regras de validação compreensíveis.",
+  "author": "Marcelo Sales",
+  "language": "pt-BR",
+  "path": "componentes/formularios/datas-intervalos.html",
+  "source": {
+    "kind": "educational-guidance",
+    "originalUrl": "https://magoo.cc/componentes/formularios/datas-intervalos.html",
+    "note": "Ampliação editorial do Magoo preparada para revisão, com referências externas identificadas. Não representa conteúdo migrado do curso nem certificação de acessibilidade."
+  },
+  "sections": [
+    {
+      "id": "interaction-design",
+      "title": "Design de interação",
+      "panelId": "aba-interacao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "datas-intervalos.designer-guide.frame",
+          "tag": "div",
+          "attributes": {
+            "class": "designer-guide",
+            "role": "region",
+            "aria-labelledby": "datas-intervalos-designer-guide-title"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.1",
+              "tag": "h3",
+              "attributes": {
+                "id": "datas-intervalos-designer-guide-title"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Guia rápido para designers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.2",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Quando usar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.3",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use para informar datas ou períodos. Considere entrada manual para datas conhecidas e calendário para explorar disponibilidade."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.4",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que desenhar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.5",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mostre rótulos, formato, início e fim, data atual, seleção, indisponibilidade, limites e erros."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.6",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como se comporta"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.7",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A digitação e a escolha no calendário atualizam o mesmo valor. Percorrer dias não equivale a confirmar uma data."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.8",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O que documentar no Figma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.9",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Defina formato, limites, inclusão dos extremos, intervalo incompleto, foco, confirmação e cancelamento."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.10",
+              "tag": "h4",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como revisar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.designer-guide.11",
+              "tag": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Confira estados e intervalos no desenho. Na implementação, verifique digitação, calendário e erros em desktop e celular."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.15",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Entrada e contexto"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.19",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "O formato esperado está visível e associado ao campo? Início e fim possuem rótulos próprios, sem depender apenas da posição?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.17",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A entrada manual continua disponível? Datas de nascimento ou de um passado distante podem exigir muitos deslocamentos se o calendário for a única opção."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.18",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "As regras distinguem data sem horário de instante com fuso? Registre limites, dias indisponíveis e se o último dia faz parte do período."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.20",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Calendário e intervalo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.24",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Hoje, dia com foco, data selecionada e dia indisponível são distinguíveis sem depender apenas de cor? Mês e ano permanecem claros?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.22",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Como a pessoa escolhe o início e depois o fim? Desenhe o intervalo incompleto e a regra para uma segunda data anterior à primeira, sem trocar silenciosamente o sentido dos campos."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.23",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "É possível alcançar meses e anos distantes sem percorrer cada dia? Em telas pequenas, o calendário cabe e os controles continuam disponíveis com teclado virtual e ampliação?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.25",
+          "tag": "h3",
+          "attributes": {
+            "class": "destaque mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Validação e preservação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.28",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Data inexistente, formato incorreto, fim anterior ao início e indisponibilidade recebem orientações específicas? Os valores são preservados para correção?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.27",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Se a disponibilidade mudar após a escolha, a interface explica o problema e permite revisar o período sem perder os demais dados?"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "interaction-methods",
+      "title": "Métodos de Interação",
+      "panelId": "aba-metodo-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "datas-intervalos.29",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Métodos de Interação"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.30",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Mouse e toque"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.31",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "É possível digitar nos campos ou abrir o calendário pelo botão correspondente. Clicar ou "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.1",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " em um dia segue a regra de seleção e confirmação definida."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.32",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.methods-review.1",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Nos campos nativos, os comandos seguem a plataforma. No calendário personalizado em grade, "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.2",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas para a direita e para a esquerda"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " mudam um dia; "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.3",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas para cima e para baixo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " mudam uma semana; "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.4",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Home"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.5",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "End"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " vão ao início e fim da semana; "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.6",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Page Up"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.7",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Page Down"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " mudam o mês."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.34",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.8",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tab"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " percorre os controles e uma posição na grade, em vez de cada dia. "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.9",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Enter"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ou "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.10",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Espaço"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " confirmam o dia conforme o modelo adotado."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.35",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Se o calendário abrir como diálogo modal, mantenha o foco no diálogo enquanto aberto; "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.11",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Esc"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " fecha e devolve o foco ao acionador sem confirmar a data apenas percorrida. Um calendário embutido não deve prender o foco."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.36",
+          "tag": "h4",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitores de tela"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.methods-review.2",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ao navegar pelos campos com leitor de telas, a pessoa identifica rótulo, formato, valor e erro. No calendário, percorrer os dias permite identificar a data completa e confirmar a seleção."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.methods-review.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Ao mudar o mês, a pessoa identifica o novo mês e ano. Com leitor de telas no celular, os gestos de navegação percorrem os campos e controles; "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.12",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tocar duas vezes"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " ativa o controle focado conforme a plataforma."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "acceptance-criteria",
+      "title": "Gherkin",
+      "panelId": "aba-gherkin-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.intro-0",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Gherkin"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.intro-1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Metodologia BDD (Behavior-Driven Development ou Desenvolvimento\n              Orientado ao Comportamento) com foco em 3 pilares: Histórias de\n              Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given),\n              Quando (When), Então (Then)).\n              "
+            },
+            {
+              "type": "text",
+              "value": "\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.39",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenário: Considerando que estou em uma página que contém Datas e intervalos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.40",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários educacionais para orientar a revisão do comportamento. Devem ser adaptados ao contexto e executados na implementação; a presença deste texto não significa que os testes foram realizados."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.13",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Navegação por teclado"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.17",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.14",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO uso "
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.interaction-code.13",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tab"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " para alcançar os campos de início e fim e o botão do calendário"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.15",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "VEJO foco visível e consigo digitar as datas ou abrir e percorrer o calendário conforme o padrão documentado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.16",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando confirmo uma data, VEJO o valor atualizado; ao cancelar um calendário modal com "
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.interaction-code.14",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", VEJO o foco retornar ao acionador sem confirmar o dia apenas percorrido"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.18",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para desktop"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.22",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.19",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego pelos campos e calendário com leitor de telas no computador"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.20",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO rótulos, formato e valores; no calendário, identifico a data completa, seleção e disponibilidade"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.21",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando mudo o mês ou confirmo a seleção, OUÇO ou percebo o novo contexto ou valor; erros ficam associados ao campo correspondente"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.23",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Leitor de telas para dispositivos móveis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.27",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.24",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego pelos campos com leitor de telas no celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.25",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "OUÇO qual campo representa o início e qual representa o fim e consigo editar pelos gestos da plataforma"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.26",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO, quando confirmo um período inválido, OUÇO ou percebo a orientação de correção e os valores permanecem disponíveis para editar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.gherkin-standard.28",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Cenários complementares — ampliação editorial"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.41",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Digitar e corrigir"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.42",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.1",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO o formato informado"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.2",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO digito uma data inexistente e tento confirmar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.3",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO recebo uma orientação associada ao campo e posso corrigir sem perder o valor digitado."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.43",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Cancelar o calendário"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.44",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.4",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO um calendário modal aberto"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.5",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO percorro dias e pressiono "
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.interaction-code.15",
+                  "tag": "code",
+                  "attributes": {
+                    "data-interaction-label": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Esc"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.6",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO ele fecha, o foco retorna ao acionador e o valor confirmado não é substituído pelo dia apenas percorrido."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.45",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Intervalo inválido"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.46",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.7",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADOS início e fim"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.8",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO informo um fim anterior ao início"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.9",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO a interface explica a relação inválida e preserva os campos para correção conforme a regra documentada."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.47",
+          "tag": "h4",
+          "attributes": {
+            "class": "mt-4"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Calendário com leitor de telas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.48",
+          "tag": "ol",
+          "attributes": {
+            "class": "lista-detalhe link-padrao"
+          },
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.10",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "DADO o calendário"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.11",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "QUANDO navego com leitor de telas no desktop ou celular"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.gherkin-standard.12",
+              "tag": "li",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ENTÃO identifico data completa, seleção e disponibilidade e consigo confirmar ou cancelar pelo método da plataforma."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "considerations",
+      "title": "Pontos de atenção",
+      "panelId": "aba-atencao-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "datas-intervalos.49",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Pontos de atenção"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.50",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Não exija "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.16",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "arrastar"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " para selecionar o período. Ofereça escolha de início e fim sem esse gesto."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.51",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Uma data sem horário não deve mudar de dia por uma conversão involuntária de fuso. Essa regra precisa ser verificada no armazenamento e na apresentação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.52",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "O exemplo de calendário do APG ilustra um modelo, não uma implementação pronta para produção. A composição de intervalo exige decisões adicionais."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.methods-review.4",
+          "tag": "h3",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Notas de implementação e decisões de comportamento"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.33",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Campos nativos seguem a plataforma. Em calendário personalizado com grade, documente "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.17",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "setas"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " para dias e semanas, "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.18",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Home"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.19",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "End"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " para a semana e "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.20",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Page Up"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " e "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.interaction-code.21",
+              "tag": "code",
+              "attributes": {
+                "data-interaction-label": "true"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Page Down"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " para meses."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.37",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Verifique rótulo, formato, valor e erro de cada campo. No calendário, o nome do dia precisa permitir identificar a data completa, com mês e ano."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.38",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Comunique mês e ano ao mudar a visualização e diferencie foco, seleção e indisponibilidade. Teste os seletores nativos nas plataformas efetivamente usadas."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "Referências",
+      "panelId": "aba-ref-conteudo",
+      "blocks": [
+        {
+          "type": "element",
+          "id": "datas-intervalos.53",
+          "tag": "h2",
+          "attributes": {
+            "class": "titulo-mobile"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.references-standard.1",
+          "tag": "p",
+          "attributes": {
+            "class": "mt-3"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              Referências adicionais sobre componentes do tipo\n              "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.references-standard.2",
+              "tag": "span",
+              "attributes": {
+                "class": "destaque"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Datas e intervalos"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ".\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.references-standard.3",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.references-standard.4",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Importante:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.references-standard.5",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "A maior parte das referências\n              estão na plataforma do curso junto com as aulas citadas neste\n              material.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.references-standard.6",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "\n              "
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.references-standard.7",
+              "tag": "strong",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Isenção de responsabilidade:"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "id": "datas-intervalos.references-standard.8",
+              "tag": "br",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "text",
+              "value": "Os links\n              indicados aqui não são recomendações, mas apenas uma curadoria de\n              referências onde você pode encontrar componentes construídos. É\n              importante ressaltar que não há uma unificação nos formatos de\n              construção e não há garantias de que os links mencionados aqui\n              cumpram todos os padrões de design. Dúvidas devem ser direcionadas\n              para as respectivas equipes envolvidas nas construções dos\n              materiais indicados. Antes de \"copiar\" algum modelo apresentado,\n              leve em consideração que todos os materiais são atualizados\n              constantemente e que os padrões (principalmente proprietários)\n              podem sofrer alterações.\n            "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.54",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "text",
+              "value": "Referências técnicas e exemplos consultados para esta adaptação editorial. Cada fonte conserva seu escopo; consultar um exemplo não comprova a acessibilidade de outra implementação."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.57",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.56",
+              "tag": "a",
+              "attributes": {
+                "href": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/datepicker-dialog/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "W3C APG — Date picker dialog"
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.55",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.reference-link.1",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "element",
+          "id": "datas-intervalos.60",
+          "tag": "p",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "id": "datas-intervalos.59",
+              "tag": "a",
+              "attributes": {
+                "href": "https://designsystem.digital.gov/components/date-range-picker/",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "USWDS — Date range picker"
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.58",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "sr-only"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " (link externo, abre em uma nova aba)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "id": "datas-intervalos.reference-link.2",
+                  "tag": "span",
+                  "attributes": {
+                    "class": "material-icons icons notranslate",
+                    "aria-hidden": "true",
+                    "translate": "no"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "open_in_new"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    }
+  ]
+}

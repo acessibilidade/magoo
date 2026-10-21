@@ -91,12 +91,63 @@ function updateLinks($, prefix) {
     });
   }
 }
+// Complete navigation from the catalog so new entries appear in every shell.
+function completeCatalogNavigation($, sidebarPrefix = "../") {
+  for (const [category, name] of Object.entries(categoryNames)) {
+    const entries = components.filter(
+      (component) => component.category === category,
+    );
+    $(".sidebar nav h3").each((_, heading) => {
+      if ($(heading).text().trim() !== name) return;
+      const list = $(heading).next("ul");
+      for (const component of entries) {
+        const href = `${sidebarPrefix}${category}/${component.id}.html`;
+        if (!list.find(`a[href="${href}"]`).length)
+          list.append(
+            $("<li>").append($("<a>").attr("href", href).text(component.name)),
+          );
+      }
+    });
+    $(".category > h3").each((_, heading) => {
+      if ($(heading).text().trim() !== name) return;
+      const list = $(heading).siblings("ul");
+      for (const component of entries) {
+        if (!list.find(`a[href="${component.path}"]`).length)
+          list.append(
+            $("<li>").append(
+              $("<a>").attr("href", component.path).text(component.name),
+            ),
+          );
+      }
+    });
+    const group = $(".component-picker optgroup").filter(
+      (_, element) => $(element).attr("label") === name,
+    );
+    for (const component of entries) {
+      if (!group.find(`option[value="${component.path}"]`).length)
+        group.append(
+          $("<option>").attr("value", component.path).text(component.name),
+        );
+    }
+  }
+}
+const standardSourceNote = await readFile(
+  new URL("templates/component-source-note.html", root),
+  "utf8",
+);
 for (const c of components) {
   let html = await readFile(new URL(`templates/${c.path}`, root), "utf8");
   c.sections.forEach((s, i) => {
     html = html.replace(`MAGOO_SECTION_${i}`, () => htmlOf(s.blocks));
   });
   const $ = load(html);
+  $(".page-source-note").replaceWith(standardSourceNote);
+  completeCatalogNavigation($);
+  $(".sidebar a[aria-current]").removeAttr("aria-current");
+  $(`.sidebar a[href="../${c.category}/${c.id}.html"]`).attr(
+    "aria-current",
+    "page",
+  );
   updateSharingMetadata($, c.path);
   $(".component-heading .eyebrow").replaceWith(breadcrumb(c.category, c));
   $(".component-heading h1").text(c.name);
@@ -134,6 +185,7 @@ for (const [category, name] of Object.entries(categoryNames)) {
   const $ = load(
     await readFile(new URL("templates/category.html", root), "utf8"),
   );
+  completeCatalogNavigation($, "/componentes/");
   $(".component-heading .eyebrow").replaceWith(breadcrumb(category));
   $(".component-heading h1").text(name);
   $(".component-heading > p").text(
@@ -157,6 +209,7 @@ for (const [category, name] of Object.entries(categoryNames)) {
   await writeLocalizedPages($.html(), path);
 }
 const $ = load(await readFile(new URL("templates/index.html", root), "utf8"));
+completeCatalogNavigation($);
 const changelog = JSON.parse(
   await readFile(new URL("content/changelog.json", root), "utf8"),
 );

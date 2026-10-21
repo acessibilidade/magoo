@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Layout e ordem do conteúdo | Magoo</title>
+    <meta name="description" content="Organiza agrupamentos, leitura e navegação em diferentes tamanhos de tela, preservando relações, contexto e acesso aos controles." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Magoo" />
+    <meta property="og:title" content="Layout e ordem do conteúdo | Magoo" />
+    <meta property="og:description" content="Organiza agrupamentos, leitura e navegação em diferentes tamanhos de tela, preservando relações, contexto e acesso aos controles." />
+
+    <meta name="twitter:title" content="Layout e ordem do conteúdo | Magoo" />
+    <meta name="twitter:description" content="Organiza agrupamentos, leitura e navegação em diferentes tamanhos de tela, preservando relações, contexto e acesso aos controles." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <link rel="icon" href="/img/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="/js/locales/pt-br.js" defer=""></script>
+    <script src="/js/main.js" defer=""></script>
+    <script src="/js/analytics.js" defer=""></script>
+    <script src="/js/translate.js" defer=""></script>
+    <meta property="og:url" content="https://magoo.cc/pt-br/componentes/estrutura/layout-ordem-conteudo.html" />
+    <meta property="og:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:secure_url" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://magoo.cc/img/magoo-share.jpg" />
+    <meta name="twitter:image:alt" content="Magoo — Sua biblioteca pré-design system" />
+    <meta name="author" content="Marcelo Sales" />
+    <link rel="canonical" href="https://magoo.cc/pt-br/componentes/estrutura/layout-ordem-conteudo.html" />
+    <link rel="alternate" hreflang="pt-BR" href="https://magoo.cc/pt-br/componentes/estrutura/layout-ordem-conteudo.html" />
+    <link rel="alternate" hreflang="en-US" href="https://magoo.cc/en/components/structure/layout-content-order.html" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <link rel="alternate" hreflang="x-default" href="https://magoo.cc/pt-br/componentes/estrutura/layout-ordem-conteudo.html" />
+    <script src="/js/languages.js" defer=""></script>
+  </head>
+  <body class="component-page" lang="pt-BR">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo<span class="sr-only"> na mesma página</span></a>
+    <header lang="pt-BR">
+      <div class="header-actions wrap utility-bar">
+        <nav>
+          <ul class="main-menu" aria-label="Menu principal" role="list">
+            <li>
+              <a href="https://github.com/acessibilidade/magoo" target="_blank" rel="noopener noreferrer">GitHub <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+            <li>
+              <a href="https://www.npmjs.com/package/@acessibilidade/magoo-mcp" target="_blank" rel="noopener noreferrer">npm <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-controls">
+          <div class="language-selector notranslate" translate="no">
+            <span id="language-label" class="language-label">Seleciona o idioma</span>
+            <ul class="language-options" aria-labelledby="language-label" role="list">
+              <li>
+                <form action="/pt-br/componentes/estrutura/layout-ordem-conteudo.html" method="get">
+                  <button class="language-option" type="submit" data-url="/pt-br/componentes/estrutura/layout-ordem-conteudo.html" aria-pressed="true" lang="pt-BR" data-language="pt-br"><span class="material-icons" aria-hidden="true">check</span><span class="language-option-label">Português (BR)</span></button>
+                </form>
+              </li>
+              <li>
+                <form action="/en/components/structure/layout-content-order.html" method="get">
+                  <button class="language-option" type="submit" data-url="/en/components/structure/layout-content-order.html" aria-pressed="false" lang="en-US" data-language="en"><span class="language-option-label">English (US)</span></button>
+                </form>
+              </li>
+            </ul>
+          </div>
+          <div class="translation-control" data-page-language="pt" data-other-label="Selecionar outros idiomas">
+            <span id="translation-label" class="sr-only">Selecionar outros idiomas</span>
+            <div id="google_translate_element"></div>
+            <p id="translation-note" class="sr-only">Tradução automática</p>
+            <p class="translation-status" role="status">Carregando tradutor…</p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar wrap">
+        <a class="brand" href="/pt-br" aria-label="Magoo — início"><img src="/img/logo-magoo.svg" alt="Magoo" width="142" height="55" /></a><span class="brand-note">faça seus componentes funcionarem corretamente</span><a class="library-link back-link" href="/pt-br"><span class="material-icons notranslate" aria-hidden="true" translate="no">arrow_back</span>Voltar para página principal</a>
+      </div>
+      <div class="component-heading wrap">
+        <nav class="page-breadcrumb" aria-label="Trilha de navegação">
+          <ol>
+            <li><a href="/pt-br">Índice geral</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><a href="/pt-br/categorias/estrutura.html">Estrutura</a></li>
+            <li><span class="breadcrumb-separator" aria-hidden="true" translate="no">/</span><span aria-current="page">Layout e ordem do conteúdo</span></li>
+          </ol>
+        </nav>
+        <h1>Layout e ordem do conteúdo</h1>
+        <p>Organiza agrupamentos, leitura e navegação em diferentes tamanhos de tela, preservando relações, contexto e acesso aos controles.</p>
+        <p class="reference-shortcut">
+          Para ver exemplos funcionais e padrões de design deste componente,
+          <a href="#aba-ref-conteudo">consulte a aba de referências<span class="sr-only"> (abre as referências na mesma página)</span></a
+          >.
+        </p>
+      </div>
+    </header>
+    <div class="documentation wrap">
+      <aside class="sidebar">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="component-menu" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">menu</span>Índice de componentes</button>
+        <div class="menu-panel" id="component-menu">
+          <button class="menu-close" type="button" hidden=""><span class="material-icons notranslate" aria-hidden="true" translate="no">close</span>Fechar índice</button>
+          <h2 class="menu-title">Índice de componentes</h2>
+          <nav aria-label="Componentes">
+            <h3>Estrutura</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html" aria-current="page">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
+              <li>
+                <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
+              </li>
+              <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
+              <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
+            </ul>
+            <h3>Mensagens</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/mensagens/alertas.html">Alertas</a></li>
+              <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
+              <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
+              <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
+            </ul>
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/navegacao/breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="/pt-br/componentes/navegacao/menu.html">Menu</a></li>
+              <li><a href="/pt-br/componentes/navegacao/links.html">Links</a></li>
+              <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
+              <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
+              <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
+            </ul>
+            <h3>Elementos ocultos</h3>
+            <ul>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/accordion.html">Accordion</a>
+              </li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/detalhes-mais-informacoes.html">Detalhes e Mais informações</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/abas.html">Abas</a></li>
+              <li>
+                <a href="/pt-br/componentes/elementos-ocultos/tooltip-popover.html">Tooltip e Popover</a>
+              </li>
+              <li><a href="/pt-br/componentes/elementos-ocultos/modal.html">Modal</a></li>
+            </ul>
+            <h3>Formulários</h3>
+            <ul>
+              <li><a href="/pt-br/componentes/formularios/botao.html">Botão</a></li>
+              <li><a href="/pt-br/componentes/formularios/checkbox.html">Checkbox</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/radio-button.html">Radio Button</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/input-text.html">Input "text"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-email.html">Input "email"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-search.html">Input "search"</a></li>
+              <li><a href="/pt-br/componentes/formularios/input-password.html">Input "password"</a></li>
+              <li><a href="/pt-br/componentes/formularios/select.html">Select (Combo)</a></li>
+              <li><a href="/pt-br/componentes/formularios/slider.html">Slider</a></li>
+              <li>
+                <a href="/pt-br/componentes/formularios/switch.html">Switch</a>
+              </li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main id="conteudo" class="component-content" lang="pt-BR">
+        <div class="content-intro">
+          <span class="eyebrow">GUIA DO COMPONENTE</span>
+          <p>Explore os comportamentos antes de definir a interface.</p>
+        </div>
+        <ul class="nav nav-tabs dir-mobile mt-4" id="instrucoes" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="aba-interacao" data-bs-toggle="tab" data-bs-target="#aba-interacao-conteudo" type="button" role="tab" aria-controls="aba-interacao-conteudo" aria-selected="true">Design de interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-metodo" data-bs-toggle="tab" data-bs-target="#aba-metodo-conteudo" type="button" role="tab" aria-controls="aba-metodo-conteudo" aria-selected="false">Métodos de Interação</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-gherkin" data-bs-toggle="tab" data-bs-target="#aba-gherkin-conteudo" type="button" role="tab" aria-controls="aba-gherkin-conteudo" aria-selected="false">Gherkin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-atencao" data-bs-toggle="tab" data-bs-target="#aba-atencao-conteudo" type="button" role="tab" aria-controls="aba-atencao-conteudo" aria-selected="false">Pontos de atenção</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aba-ref" data-bs-toggle="tab" data-bs-target="#aba-ref-conteudo" type="button" role="tab" aria-controls="aba-ref-conteudo" aria-selected="false">Referências</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="instrucoes-conteudo">
+          <div class="tab-pane fade show active" id="aba-interacao-conteudo" role="tabpanel" aria-labelledby="aba-interacao" tabindex="0">
+            <div class="designer-guide" role="region" aria-labelledby="layout-ordem-conteudo-designer-guide-title">
+              <h3 id="layout-ordem-conteudo-designer-guide-title">Guia rápido para designers</h3>
+              <h4>Quando usar</h4>
+              <p>Use ao organizar uma página em colunas ou agrupamentos e ao definir como ela se adapta a telas pequenas, texto ampliado e zoom.</p>
+              <h4>O que desenhar</h4>
+              <p>Mostre a sequência do conteúdo e dos controles em telas grandes e pequenas. Inclua textos longos, mensagens de erro, conteúdo expandido e elementos fixos.</p>
+              <h4>Como se comporta</h4>
+              <p>Colunas podem se empilhar e espaços podem mudar sem romper relações ou perder conteúdo. Ler e percorrer os controles continua fazendo sentido em cada apresentação.</p>
+              <h4>O que documentar no Figma</h4>
+              <p>Anote a ordem de leitura e de foco, os agrupamentos, as mudanças de layout e o tratamento de conteúdo longo. Diferencie o que aparece no desenho do que precisa ser verificado no navegador.</p>
+              <h4>Como revisar</h4>
+              <p>No desenho, acompanhe a sequência e as relações entre instruções, campos e ações. Na implementação, confira leitura, teclado, zoom, ampliação de texto e ausência de sobreposições.</p>
+            </div>
+            <h3>Sequência e agrupamentos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>As informações aparecem em uma sequência que permite compreender a tarefa? Instruções precedem os campos ou ações a que se referem?</li>
+              <li>Proximidade, títulos e espaçamento deixam claros os agrupamentos? A relação continua compreensível quando as colunas se empilham?</li>
+              <li>A ordem visual sugere uma sequência diferente da leitura ou do foco? Evite saltos que dificultem associar um controle ao seu contexto. Mais de uma ordem pode fazer sentido quando os grupos são independentes.</li>
+            </ol>
+            <h3>Adaptação e conteúdo variável</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Defina como colunas se reorganizam sem esconder informação ou exigir uma orientação específica do dispositivo, salvo quando essencial.</li>
+              <li>Preveja textos traduzidos, nomes extensos e mensagens de erro. Os blocos podem crescer sem cortar texto, sobrepor ações ou alterar a sequência?</li>
+              <li>Em uma área de leitura vertical com largura equivalente a 320 pixels CSS, o conteúdo comum deve se reorganizar sem perda de informação ou função e sem rolagem em duas direções. Tabelas e mapas podem exigir um tratamento próprio quando duas dimensões forem essenciais.</li>
+            </ol>
+            <h3>Contexto e elementos fixos</h3>
+            <ol class="lista-detalhe link-padrao">
+              <li>Cabeçalhos fixos, barras de ações e avisos deixam o conteúdo e o controle em foco visíveis e utilizáveis? Considere o espaço ocupado também com zoom.</li>
+              <li>Ao abrir detalhes, inserir mensagens ou mudar o layout, a pessoa consegue continuar de onde estava? Uma reorganização visual não deve deslocar o foco sem motivo.</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-metodo-conteudo" role="tabpanel" aria-labelledby="aba-metodo" tabindex="0">
+            <h3>Métodos de Interação</h3>
+            <h4>Mouse e toque</h4>
+            <p>Percorrer a página com rolagem permite acompanhar o conteúdo na sequência apresentada. <code data-interaction-label="true">Clicar</code> ou <code data-interaction-label="true">tocar</code> em um link, botão ou campo usa o comportamento desse controle; uma coluna ou área vazia não é um controle.</p>
+            <p>Usar o zoom do navegador ou ampliar a visualização pelos recursos disponíveis permite ler o conteúdo em tamanho maior. Quando o layout se reorganiza, os agrupamentos e as ações continuam acessíveis.</p>
+            <h4>Teclado</h4>
+            <p><code data-interaction-label="true">Tab</code> avança entre controles e <code data-interaction-label="true">Shift + Tab</code> retorna. A sequência preserva o sentido da tarefa; textos, colunas e agrupamentos estáticos não entram no percurso apenas por existirem.</p>
+            <p><code data-interaction-label="true">Enter</code> ativa links e os comandos próprios de cada controle permitem usá-lo. Ao sair de um grupo, a navegação continua pelo próximo controle da sequência, sem saltar para uma área sem relação.</p>
+            <p>Com a página ou uma área rolável ativa, os comandos de rolagem permitem acompanhar o conteúdo sem mudar de controle:</p>
+            <ul class="lista-detalhe link-padrao">
+              <li><code data-interaction-label="true">Setas direcionais</code> rolam o conteúdo em pequenos incrementos na direção correspondente, quando há conteúdo fora da área visível.</li>
+              <li><code data-interaction-label="true">Barra de espaço</code> ou <code data-interaction-label="true">Page Down</code> rolam aproximadamente o equivalente a uma tela para baixo.</li>
+              <li><code data-interaction-label="true">Shift + Barra de espaço</code> ou <code data-interaction-label="true">Page Up</code> rolam aproximadamente o equivalente a uma tela para cima.</li>
+            </ul>
+            <p>Quando o foco está em um campo ou componente que utiliza essas teclas, elas podem editar o conteúdo ou operar esse controle em vez de rolar a página. Leitores de tela também podem interceptar os comandos conforme o modo de navegação.</p>
+            <h4>Leitor de telas no computador</h4>
+            <p>Os comandos de leitura percorrem textos, títulos e controles na ordem disponibilizada pela página. Navegar por títulos ou regiões permite localizar um agrupamento e continuar a leitura dentro dele.</p>
+            <p>Ao percorrer um formulário ou uma lista de ações, a pessoa encontra as instruções e os controles em uma sequência compreensível. A quantidade visual de colunas não cria comandos próprios de navegação.</p>
+            <h4>Leitor de telas no celular</h4>
+            <p>No modo padrão de navegação sequencial, <code data-interaction-label="true">deslizar o dedo para a direita</code> avança e <code data-interaction-label="true">deslizar o dedo para a esquerda</code> retorna pelo conteúdo. <code data-interaction-label="true">Tocar duas vezes</code> ativa o controle selecionado. Os gestos podem variar conforme o leitor e sua configuração.</p>
+            <p>Explorar pelo toque localiza o conteúdo na posição tocada. Mesmo quando as colunas se empilham, a leitura sequencial mantém instruções, conteúdo e ações relacionados.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-gherkin-conteudo" role="tabpanel" aria-labelledby="aba-gherkin" tabindex="0">
+            <h2 class="titulo-mobile">Gherkin</h2>
+            <p class="mt-3">Metodologia BDD (Behavior-Driven Development ou Desenvolvimento Orientado ao Comportamento) com foco em 3 pilares: Histórias de Usuário, Critérios de Aceite e Sintaxes Gherkin (Dado (Given), Quando (When), Então (Then)).</p>
+            <h3>Cenário: Considerando uma página com conteúdo e controles organizados em colunas</h3>
+            <h4 class="mt-4">Navegação por teclado</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma página com controles em mais de um agrupamento</li>
+              <li>QUANDO uso <code data-interaction-label="true">Tab</code> e <code data-interaction-label="true">Shift + Tab</code> para percorrer os controles</li>
+              <li>ENTÃO VEJO o foco em uma sequência que preserva o sentido da tarefa e consigo reconhecer o contexto de cada controle</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para desktop</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma página com instruções, campos e ações relacionados</li>
+              <li>QUANDO percorro o conteúdo com os comandos de leitura do leitor de telas</li>
+              <li>ENTÃO OUÇO as informações em uma sequência compreensível, sem intercalar trechos de grupos independentes</li>
+            </ol>
+            <h4 class="mt-4">Leitor de telas para dispositivos móveis</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO o layout reorganizado em uma coluna no celular</li>
+              <li>QUANDO percorro o conteúdo com leitor de telas e ativo os controles necessários</li>
+              <li>ENTÃO OUÇO instruções, conteúdo e ações relacionados em ordem compreensível e consigo concluir a tarefa</li>
+            </ol>
+            <h4 class="mt-4">Reorganização com zoom</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADA uma área de leitura vertical com conteúdo que não exige duas dimensões</li>
+              <li>QUANDO aumento o zoom até uma largura equivalente a 320 pixels CSS</li>
+              <li>ENTÃO VEJO o conteúdo reorganizado sem cortes ou sobreposições, uso todas as ações e não preciso rolar em duas direções para ler</li>
+            </ol>
+            <h4 class="mt-4">Crescimento do conteúdo e preservação de contexto</h4>
+            <ol class="lista-detalhe link-padrao">
+              <li>DADO um campo com foco em uma página com barra de ações fixa</li>
+              <li>QUANDO uma mensagem de erro aparece ou o texto passa a ocupar mais linhas</li>
+              <li>ENTÃO VEJO o campo e sua mensagem sem sobreposição e o foco permanece no controle esperado</li>
+            </ol>
+          </div>
+          <div class="tab-pane fade" id="aba-atencao-conteudo" role="tabpanel" aria-labelledby="aba-atencao" tabindex="0">
+            <h3>Pontos de atenção</h3>
+            <p>Comece pela sequência sem estilos. Flexbox e Grid são recursos para distribuir elementos; sua escolha não determina, por si só, a ordem de leitura ou uma experiência acessível.</p>
+            <p>Na implementação, a ordem do DOM deve preservar o sentido da leitura. Recursos visuais como order, posicionamento de áreas e inversão de linhas podem alterar a apresentação sem alterar a sequência oferecida às tecnologias assistivas.</p>
+            <p>Evite tabindex positivo para tentar corrigir uma sequência visual incoerente. Resolva a estrutura e o layout e verifique a navegação real por teclado e leitor de telas.</p>
+            <p>Não é obrigatório impor uma única ordem a grupos independentes. A sequência deve preservar significado e operação; dentro de um processo, instruções, etapas e ações relacionadas precisam manter sua relação.</p>
+            <p>Verifique o conteúdo comum a 320 pixels CSS de largura e o texto ampliado a 200%. O ensaio de refluxo também pode ser feito em uma janela de 1280 pixels CSS com zoom de 400%. São verificações distintas; o desenho sozinho não comprova o resultado.</p>
+            <p>Mapas e tabelas podem exigir duas dimensões por seu significado. A exceção não se estende automaticamente à página inteira nem a todo o texto dentro dessas áreas.</p>
+            <p>Confirme que elementos fixos não ocultem controles em foco. Ao inserir ou remover conteúdo, preserve o foco e o contexto; só mova o foco quando a interação justificar esse comportamento.</p>
+          </div>
+          <div class="tab-pane fade" id="aba-ref-conteudo" role="tabpanel" aria-labelledby="aba-ref" tabindex="0">
+            <h2 class="titulo-mobile">Referências</h2>
+            <p class="mt-3">
+              Referências adicionais sobre componentes do tipo
+              <span class="destaque">Layout e ordem do conteúdo</span>.
+            </p>
+            <p><strong>Importante:</strong><br />A maior parte das referências estão na plataforma do curso junto com as aulas citadas neste material.</p>
+            <p><strong>Isenção de responsabilidade:</strong><br />Os links indicados aqui não são recomendações, mas apenas uma curadoria de referências onde você pode encontrar componentes construídos. É importante ressaltar que não há uma unificação nos formatos de construção e não há garantias de que os links mencionados aqui cumpram todos os padrões de design. Dúvidas devem ser direcionadas para as respectivas equipes envolvidas nas construções dos materiais indicados. Antes de "copiar" algum modelo apresentado, leve em consideração que todos os materiais são atualizados constantemente e que os padrões (principalmente proprietários) podem sofrer alterações.</p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html" target="_blank" rel="noopener noreferrer">W3C — Understanding Meaningful Sequence<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html" target="_blank" rel="noopener noreferrer">W3C — Understanding Focus Order<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html" target="_blank" rel="noopener noreferrer">W3C — Understanding Reflow<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </p>
+            <p>
+              <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html" target="_blank" rel="noopener noreferrer">W3C — Understanding Resize Text<span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+            </p>
+            <p><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></p>
+            <p><a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a></p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <p class="source-note page-source-note wrap">
+      Conteúdo autoral de Marcelo Sales, originalmente utilizado nas aulas do
+      <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
+      >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
+    </p>
+
+    <footer class="site-footer" lang="pt-BR">
+      <div class="wrap footer-main">
+        <div class="footer-about">
+          <p>O <strong>Magoo</strong> é uma biblioteca pré-design system. A ideia é reunir instruções em um mesmo local para entender o design de interação de componentes antes de construir um sistema mais robusto (ou então atualizar um sistema já construído).</p>
+          <p>Explore comportamentos, métodos de interação e critérios de aceite para criar experiências mais acessíveis e inclusivas.</p>
+          <p class="footer-license">
+            <a href="https://github.com/acessibilidade/magoo/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">Licença MIT <span class="material-icons notranslate" translate="no" aria-hidden="true">open_in_new</span><span class="sr-only"> (link externo, abre em uma nova aba)</span></a>
+          </p>
+        </div>
+        <a class="initiative" href="https://www.tudoeacessibilidade.com.br/" target="_blank" rel="noopener noreferrer"><img src="/img/iniciativa-tudo-off.svg" width="350" height="67" alt="Uma iniciativa Tudo é Acessibilidade" /><span class="sr-only"> (abre em uma nova aba)</span></a>
+      </div>
+    </footer>
+  </body>
+</html>

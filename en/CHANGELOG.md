@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.6.0
+
+- Adds File upload, Autocomplete, Dates and ranges, Loading and progress, Cards, and Step indicator, with interaction guides, scenarios, and references.
+- Adds Page regions, with guidance on headers, main content, navigation, complementary content, and footers.
+- Adds Layout and content order, with guidance on reading and focus sequence, column adaptation, zoom, and keyboard scrolling.
+- Revises Gherkin scenarios to cover keyboard navigation and screen readers on desktop and mobile.
+- Revises interaction methods to explain user actions and expected outcomes for each input method.
+
+## 1.5.1
+
+- Extends Select, Tables, Menu, and Input search with interaction decisions, quick guides, additional scenarios, and references, preserving IDs and previous guidance.
+
 ## 1.5.0
 
 - Adds plain-language quick guides for Modal, Button, and Input text while preserving the full guidance.

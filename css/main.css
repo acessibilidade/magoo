@@ -463,6 +463,11 @@ a:hover {
   background-color: #333;
   border-radius: 6px;
 }
+
+.tab-pane code[data-interaction-label] {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .tab-pane a {
   overflow-wrap: anywhere;
 }
@@ -1579,24 +1584,30 @@ small,
   border-radius: 16px;
   background: var(--paper);
   color: var(--ink);
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow: hidden;
+}
+.changelog-dialog[open] {
+  display: flex;
+  flex-direction: column;
 }
 .changelog-dialog::backdrop {
   background: rgb(0 0 0 / 60%);
 }
 .changelog-header {
   display: flex;
+  flex-shrink: 0;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
 }
 .changelog-header h2 {
+  min-width: 0;
   margin: 0;
   font-size: 1.5rem;
 }
 .changelog-close {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 6px;
   min-height: 44px;
@@ -1605,6 +1616,16 @@ small,
   border-radius: 8px;
   background: var(--paper);
   color: var(--green);
+}
+.changelog-dialog > p {
+  flex-shrink: 0;
+}
+.changelog-entries {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding-right: 12px;
 }
 .changelog-entry {
   padding-block: 18px;

@@ -4,15 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Magoo | Sua biblioteca pré-design system</title>
-    <meta name="description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta name="description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="Magoo" />
     <meta property="og:title" content="Magoo | Sua biblioteca pré-design system" />
-    <meta property="og:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta property="og:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
 
     <meta name="twitter:title" content="Magoo | Sua biblioteca pré-design system" />
-    <meta name="twitter:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Não reinvente a roda, comece do jeito certo!" />
+    <meta name="twitter:description" content="Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído. Não reinvente a roda, comece do jeito certo!" />
     <meta name="theme-color" content="#f7f7f2" />
     <link rel="icon" href="img/favicon/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
@@ -88,7 +88,7 @@
           <span>pré-design system</span>
         </h1>
         <p class="hero-description">
-          Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system.
+          Tudo o que você precisa saber sobre design de interação de componentes ANTES de construir o seu design system. Ou pra validar o seu sistema ou ambiente DEPOIS de construído.
           <br />
           Não reinvente a roda, comece do jeito certo!
         </p>
@@ -145,7 +145,7 @@
               <span class="material-icons notranslate" aria-hidden="true" translate="no"> arrow_forward </span>
             </button>
           </div>
-          <p class="catalog-count">29 componentes · 5 categorias</p>
+          <p class="catalog-count">37 componentes · 5 categorias</p>
         </form>
         <noscript>
           <p>Escolha um componente nos links da biblioteca abaixo.</p>
@@ -168,14 +168,8 @@
             <span class="material-icons category-icon notranslate" aria-hidden="true" translate="no"> view_quilt </span>
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">
-                Flexbox &amp; Grid
-                <small>Em desenvolvimento</small>
-              </li>
-              <li class="upcoming">
-                Header, Footer e Regiões
-                <small>Em desenvolvimento</small>
-              </li>
+              <li><a href="componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="componentes/estrutura/titulos.html">
                   Títulos (Cabeçalhos)
@@ -396,7 +390,7 @@
             </button>
           </div>
           <p id="changelog-description">Alterações do material, da mais recente para a mais antiga.</p>
-          <div class="changelog-entries">
+          <div class="changelog-entries" role="region" aria-label="Histórico de versões" tabindex="0">
             <section class="changelog-entry" aria-labelledby="version-1-3-4">
               <h3 id="version-1-3-4">Versão 1.3.4</h3>
               <ul>
@@ -624,7 +618,7 @@
         <div class="figma-instructions-layout">
           <article class="context-card figma-guide" aria-labelledby="figma-guide-title" id="figma-guide">
             <h3 id="figma-guide-title">Instruções para usar com o Figma</h3>
-            <p>Revise estados, descubra decisões pendentes e prepare anotações de comportamento usando os guias dos 29 componentes. Você pode começar sem escrever código.</p>
+            <p>Revise estados, descubra decisões pendentes e prepare anotações de comportamento usando os guias dos 37 componentes. Você pode começar sem escrever código.</p>
             <p>A skill é um conjunto de instruções para o assistente. Escolha a versão para usar diretamente no agente do Figma ou a versão para o Codex conectado ao Figma.</p>
             <h4>Uso direto no agente do Figma</h4>
             <p>Baixe o Markdown e, no chat do Figma Design ou Make, abra Skills → Add skill → Upload a file. Selecione o arquivo e clique em Add. Use /magoo-figma-native para iniciar.</p>
@@ -672,7 +666,7 @@
             </ol>
             <h4>Como saber se está pronto</h4>
             <p>Peça ao assistente para confirmar que encontra a skill, consulta o Magoo e consegue ler o componente do link. Se algo faltar, ele deve explicar qual conexão precisa de ajuste. Para escrever anotações no Figma, peça essa ação e indique o arquivo de destino.</p>
-            <p class="figma-availability">Os guias dos 29 componentes fazem parte da versão 1.5.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
+            <p class="figma-availability">Os guias dos 37 componentes fazem parte da versão 1.6.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
           </article>
           <div class="native-skill-column">
             <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
@@ -759,12 +753,12 @@
             <div>
               <dt>Argumentos</dt>
               <dd>
-                <code>-y @acessibilidade/magoo-mcp@1.5.0</code>
+                <code>-y @acessibilidade/magoo-mcp@1.6.0</code>
                 <p>
                   Se o aplicativo pedir argumentos separados, adicione
                   <code>-y</code>
                   e
-                  <code>@acessibilidade/magoo-mcp@1.5.0</code>
+                  <code>@acessibilidade/magoo-mcp@1.6.0</code>
                   como dois itens.
                 </p>
               </dd>
@@ -899,7 +893,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.5.0 e não troca automaticamente para uma versão futura.</p>
+              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.6.0 e não troca automaticamente para uma versão futura.</p>
             </dd>
           </div>
           <div class="faq-item">

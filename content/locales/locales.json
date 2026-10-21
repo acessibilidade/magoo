@@ -48,7 +48,15 @@
         "validacao-formularios": "form-validation",
         "paginacao": "pagination",
         "carrossel": "carousel",
-        "categorias": "categories"
+        "categorias": "categories",
+        "upload-arquivos": "file-upload",
+        "autocomplete": "autocomplete",
+        "datas-intervalos": "dates-ranges",
+        "carregamento-progresso": "loading-progress",
+        "cards": "cards",
+        "indicador-etapas": "step-indicator",
+        "regioes-pagina": "page-regions",
+        "layout-ordem-conteudo": "layout-content-order"
       },
       "initiativeImage": {
         "src": "/img/tudo-acessibilidade-logo.svg",

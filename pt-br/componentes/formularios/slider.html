@@ -113,14 +113,15 @@
           <nav aria-label="Componentes">
             <h3>Estrutura</h3>
             <ul>
-              <li class="upcoming">Flexbox &amp; Grid <small>Em desenvolvimento</small></li>
-              <li class="upcoming">Header, Footer e Regiões <small>Em desenvolvimento</small></li>
+              <li><a href="/pt-br/componentes/estrutura/layout-ordem-conteudo.html">Layout e ordem do conteúdo</a></li>
+              <li><a href="/pt-br/componentes/estrutura/regioes-pagina.html">Regiões da página</a></li>
               <li>
                 <a href="/pt-br/componentes/estrutura/titulos.html">Títulos (Cabeçalhos)</a>
               </li>
               <li><a href="/pt-br/componentes/estrutura/tabelas.html">Tabelas</a></li>
               <li><a href="/pt-br/componentes/estrutura/listas.html">Listas</a></li>
               <li><a href="/pt-br/componentes/estrutura/tabbar.html">Tabbar</a></li>
+              <li><a href="/pt-br/componentes/estrutura/cards.html">Cards</a></li>
             </ul>
             <h3>Mensagens</h3>
             <ul>
@@ -128,6 +129,7 @@
               <li><a href="/pt-br/componentes/mensagens/dialogs.html">Dialogs</a></li>
               <li><a href="/pt-br/componentes/mensagens/validacao-formularios.html">Validação de formulários</a></li>
               <li><a href="/pt-br/componentes/mensagens/toasts.html">Toasts</a></li>
+              <li><a href="/pt-br/componentes/mensagens/carregamento-progresso.html">Carregamento e progresso</a></li>
             </ul>
             <h3>Navegação</h3>
             <ul>
@@ -137,6 +139,7 @@
               <li><a href="/pt-br/componentes/navegacao/paginacao.html">Paginação</a></li>
               <li><a href="/pt-br/componentes/navegacao/carrossel.html">Carrossel</a></li>
               <li><a href="/pt-br/componentes/navegacao/drag-drop.html">Drag'n'Drop</a></li>
+              <li><a href="/pt-br/componentes/navegacao/indicador-etapas.html">Indicador de etapas</a></li>
             </ul>
             <h3>Elementos ocultos</h3>
             <ul>
@@ -168,6 +171,9 @@
                 <a href="/pt-br/componentes/formularios/slider.html" aria-current="page">Slider<span class="material-icons active-menu-arrow notranslate" aria-hidden="true" translate="no">arrow_forward</span></a>
               </li>
               <li><a href="/pt-br/componentes/formularios/switch.html">Switch</a></li>
+              <li><a href="/pt-br/componentes/formularios/upload-arquivos.html">Upload de arquivos</a></li>
+              <li><a href="/pt-br/componentes/formularios/autocomplete.html">Autocomplete</a></li>
+              <li><a href="/pt-br/componentes/formularios/datas-intervalos.html">Datas e intervalos</a></li>
             </ul>
           </nav>
         </div>
@@ -205,7 +211,7 @@
               <h4>O que desenhar</h4>
               <p>Mostre trilha, marcador, limites, valor atual e foco. Com dois marcadores, identifique cada um.</p>
               <h4>Como se comporta</h4>
-              <p>Arrastar altera o valor; as setas ajustam em passos menores e Home e End alcançam os limites.</p>
+              <p><code data-interaction-label="true">Arrastar</code> altera o valor; as <code data-interaction-label="true">setas</code> ajustam em passos menores e <code data-interaction-label="true">Home</code> e <code data-interaction-label="true">End</code> alcançam os limites.</p>
               <h4>O que documentar no Figma</h4>
               <p>Defina mínimo, máximo, tamanho dos passos e se clicar na trilha altera o valor. Passos maiores pelo teclado são opcionais.</p>
               <h4>Como revisar</h4>
@@ -229,15 +235,15 @@
               <small>(qualquer dispositivo de apontamento)</small>
             </h3>
             <ol class="lista-detalhe link-padrao">
-              <li>Há feedback visual ao passar o mouse ou arrastar o controle?</li>
-              <li>Ao arrastar o marcador, o valor é atualizado de forma perceptível?</li>
+              <li>Há feedback visual ao passar o mouse ou <code data-interaction-label="true">arrastar</code> o controle?</li>
+              <li>Ao <code data-interaction-label="true">arrastar</code> o marcador, o valor é atualizado de forma perceptível?</li>
               <li>É possível selecionar valores com precisão suficiente para a tarefa?</li>
             </ol>
 
             <h3 class="destaque mt-4">Projetando para uso com gestos</h3>
             <ol class="lista-detalhe link-padrao">
               <li>O marcador possui área de toque confortável?</li>
-              <li>Ao arrastar, o valor atual fica visível e compreensível?</li>
+              <li>Ao <code data-interaction-label="true">arrastar</code>, o valor atual fica visível e compreensível?</li>
               <li>A interação funciona sem exigir precisão excessiva?</li>
             </ol>
 
@@ -273,7 +279,7 @@
               <small>(qualquer dispositivo de apontamento)</small>
             </h3>
             <ul class="lista-detalhe link-padrao">
-              <li>Arrastar o marcador altera o valor.</li>
+              <li><code data-interaction-label="true">Arrastar</code> o marcador altera o valor.</li>
               <li>Clicar na trilha pode mover o marcador quando esse comportamento for previsto.</li>
               <li>O valor visível deve acompanhar a mudança.</li>
             </ul>
@@ -363,32 +369,32 @@
             <h3 class="destaque mt-4">Padrões de Design</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider/" target="_blank" rel="noopener noreferrer">W3C APG: Slider Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider/" target="_blank" rel="noopener noreferrer">W3C APG: Slider Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/" target="_blank" rel="noopener noreferrer">W3C APG: Multi-Thumb Slider Pattern <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://www.w3.org/WAI/ARIA/apg/patterns/slider-multithumb/" target="_blank" rel="noopener noreferrer">W3C APG: Multi-Thumb Slider Pattern <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: Range state <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)" target="_blank" rel="noopener noreferrer">Documentação de padrões HTML: Range state <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://m3.material.io/components/sliders/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Sliders <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://m3.material.io/components/sliders/overview" target="_blank" rel="noopener noreferrer">Google - Material Design - Sliders <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
 
             <h3 class="destaque mt-4">Design System</h3>
             <ul class="lista-detalhe link-padrao">
               <li>
-                <a href="https://designsystem.digital.gov/components/range-slider/" target="_blank" rel="noopener noreferrer">US.gov - Range slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://designsystem.digital.gov/components/range-slider/" target="_blank" rel="noopener noreferrer">US.gov - Range slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://carbondesignsystem.com/components/slider/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://carbondesignsystem.com/components/slider/usage/" target="_blank" rel="noopener noreferrer">IBM Carbon - Slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://spectrum.adobe.com/page/slider/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Slider <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://spectrum.adobe.com/page/slider/" target="_blank" rel="noopener noreferrer">Adobe Spectrum - Slider <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
               <li>
-                <a href="https://getbootstrap.com/docs/5.2/forms/range/" target="_blank" rel="noopener noreferrer">Bootstrap - Range <i class="material-icons icons" aria-hidden="true">open_in_new</i><span class="sr-only">link externo - abre em uma nova janela</span><span class="sr-only"> (abre em uma nova aba)</span></a>
+                <a href="https://getbootstrap.com/docs/5.2/forms/range/" target="_blank" rel="noopener noreferrer">Bootstrap - Range <i class="material-icons icons" aria-hidden="true" translate="no">open_in_new</i><span class="sr-only"> (link externo, abre em uma nova aba)</span><span class="sr-only" aria-hidden="true"></span></a>
               </li>
             </ul>
           </div>
@@ -400,6 +406,7 @@
       <a href="https://www.accessboost.com.br" target="_blank" rel="noopener noreferrer">curso AccessBoost <span class="material-icons notranslate" aria-hidden="true" translate="no">open_in_new</span><span class="sr-only"> (link externo - abre em uma nova janela)</span></a
       >. As interações representam o formato padrão da indústria, mas em casos específicos podem ser customizadas (desde que haja instruções suficientes para que as pessoas compreendam a mudança de comportamento).
     </p>
+
     <footer class="site-footer" lang="pt-BR">
       <div class="wrap footer-main">
         <div class="footer-about">
