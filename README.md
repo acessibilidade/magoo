@@ -221,3 +221,13 @@ O build gera `/.well-known/ard.json` e `/.well-known/ai-catalog.json` com conte�
 O build gera cinco índices em `/pt-br/categorias/` e `/en/categories/`, usando os nomes e resumos da mesma base dos componentes. Edite o layout em `templates/category.html` e a geração em `js/build/categories.js`. O breadcrumb segue as orientações de Marcelo Sales no componente `breadcrumb` do snapshot local 1.6.0: lista ordenada, separadores apenas visuais e página atual sem link. As categorias integram o sitemap e preservam metadados de compartilhamento, Analytics e troca de idioma.
 
 O destaque Figma na home inclui passos para conectar o plugin Figma no Codex e instalar a skill por uma pasta local, sem exigir edição de código. O download está em `downloads/magoo-figma.zip`; ao modificar a skill, regenere esse arquivo com a pasta `magoo-figma` contendo SKILL.md, agents/openai.yaml e LICENSE. O arquivo deve ser publicado junto com o site. As instruções de conexão referenciam a documentação oficial do Figma.
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=acessibilidade%2Fmagoo&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=acessibilidade/magoo&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=acessibilidade/magoo&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=acessibilidade/magoo&type=date&legend=top-left" />
+ </picture>
+</a>
