@@ -1,5 +1,11 @@
 [
   {
+    "version": "1.6.1",
+    "changes": [
+      "Mantém as orientações dos 37 componentes da versão 1.6.0, sem alterações de conteúdo."
+    ]
+  },
+  {
     "version": "1.6.0",
     "changes": [
       "Adiciona Upload de arquivos, Autocomplete, Datas e intervalos, Carregamento e progresso, Cards e Indicador de etapas, com guias de interação, cenários e referências.",

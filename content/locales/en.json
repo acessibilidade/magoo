@@ -3056,6 +3056,11 @@
     "Adiciona Layout e ordem do conteúdo, com orientações sobre sequência de leitura e foco, adaptação de colunas, zoom e rolagem por teclado.": "Adds Layout and content order, with guidance on reading and focus sequence, column adaptation, zoom, and keyboard scrolling.",
     "Revisa os cenários Gherkin para contemplar navegação por teclado e leitores de telas no computador e no celular.": "Revises Gherkin scenarios to cover keyboard navigation and screen readers on desktop and mobile.",
     "Revisa os métodos de interação para explicar as ações da pessoa e os resultados esperados em cada modalidade.": "Revises interaction methods to explain user actions and expected outcomes for each input method.",
-    "Histórico de versões": "Version history"
+    "Histórico de versões": "Version history",
+    "Versão 1.6.1": "Version 1.6.1",
+    "Versão do material: 1.6.1": "Content version: 1.6.1",
+    "Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.6.1 e não troca automaticamente para uma versão futura.": "Record the component, URL, version used, and date. When adopting a new version, review the differences and your system's tests. The MCP setup shown pins version 1.6.1 and does not automatically switch to a future version.",
+    "Os guias dos 37 componentes fazem parte da versão 1.6.1. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.": "Guides for all 37 components are part of version 1.6.1. When setting up Magoo, use the version shown on this page and ask the assistant to confirm the version consulted. Older connections need updating and restarting.",
+    "Mantém as orientações dos 37 componentes da versão 1.6.0, sem alterações de conteúdo.": "Keeps the guidance for the 37 components from version 1.6.0, with no content changes."
   }
 }

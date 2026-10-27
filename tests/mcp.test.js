@@ -74,6 +74,22 @@ test("MCP real via stdio: descoberta, busca, leitura, referências e erros", asy
       arguments: { id: 12 },
     });
     assert.equal(wrong.isError, true);
+    const oversized = await client.callTool({
+      name: "search_components",
+      arguments: {
+        query: "modal",
+        extra: Array.from({ length: 100 }, () => "item"),
+      },
+    });
+    assert.equal(oversized.isError, true);
+    assert.match(oversized.content[0].text, /maximum of 100 elements/);
+    const afterRejection = await client.callTool({
+      name: "search_components",
+      arguments: { query: "modal" },
+    });
+    assert.ok(
+      afterRejection.structuredContent.components.some((c) => c.id === "modal"),
+    );
   } finally {
     await client.close();
   }

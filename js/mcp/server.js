@@ -20,6 +20,8 @@ export function createServer() {
   const server = new McpServer(
     { name: "magoo", version: packageVersion },
     {
+      // As ferramentas recebem no máximo duas propriedades escalares.
+      maxToolInputElements: 100,
       instructions:
         "Biblioteca educacional de comportamentos de interação, somente leitura. Cite autor, versão, identificadores e referências. Não trate orientações como certificação nem afirme ter testado uma implementação. Diferencie conteúdo original de adaptações propostas.",
     },

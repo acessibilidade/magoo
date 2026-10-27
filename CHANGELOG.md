@@ -1,5 +1,9 @@
 # Histórico de versões
 
+## 1.6.1
+
+- Mantém as orientações dos 37 componentes da versão 1.6.0, sem alterações de conteúdo.
+
 ## 1.6.0
 
 - Adiciona Upload de arquivos, Autocomplete, Datas e intervalos, Carregamento e progresso, Cards e Indicador de etapas, com guias de interação, cenários e referências.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.1
+
+- Keeps the guidance for the 37 components from version 1.6.0, with no content changes.
+
 ## 1.6.0
 
 - Adds File upload, Autocomplete, Dates and ranges, Loading and progress, Cards, and Step indicator, with interaction guides, scenarios, and references.
