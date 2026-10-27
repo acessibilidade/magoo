@@ -73,3 +73,12 @@ Nenhuma. CSS, JS do navegador e imagens não mudaram.
 ## Verificação
 
 Validação, build e 24 testes aprovados. Auditoria das dependências sem vulnerabilidades conhecidas. A publicação npm e o envio ao GitHub são confirmados separadamente no chat. O envio FTP permanece a cargo do usuário.
+
+## Publicação confirmada
+
+- GitHub: correções enviadas à master no commit 4d44ec30574d7ad3d4fae5bb6093f4d19c0a4221. Os quatro alertas Dependabot foram confirmados como fixed pela API.
+- npm: @acessibilidade/magoo-mcp@1.6.1 publicado e confirmado como latest no registro público.
+- Integridade publicada: SHA-1 c32ef0f2eb8e9244769dba5c5fd425d88bbe7596, correspondente ao pacote revisado.
+- Instalação limpa pelo registro público confirmada: MCP 1.6.1, 37 componentes, cinco seções por componente e rejeição de entradas acima do limite configurado.
+- O MCP conectado ao chat ainda retorna conteúdo 1.5.0; precisa de atualização da configuração e reinício/reconexão para carregar a versão 1.6.1.
+- Nenhum arquivo foi enviado à hospedagem por FTP nesta operação.
