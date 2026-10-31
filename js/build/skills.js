@@ -1,5 +1,6 @@
 import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
+import { crc32, deflateRawSync, inflateRawSync } from "node:zlib";
 import { catalog, components, textOf } from "../lib/catalog.js";
 import { root } from "../lib/paths.js";
 import { validateContent } from "./validate.js";
@@ -182,6 +183,109 @@ export function catalogMarkdown(entries = components, contentCatalog = catalog) 
   ].join("\n");
 }
 
+export function createZipArchive(files) {
+  const dosTime = 0;
+  const dosDate = (46 << 9) | (1 << 5) | 1;
+  const localParts = [];
+  const centralParts = [];
+  let offset = 0;
+
+  for (const { name, content } of files) {
+    const nameBuf = Buffer.from(name, "utf8");
+    const uncompressed = Buffer.isBuffer(content)
+      ? content
+      : Buffer.from(content, "utf8");
+    const compressed = deflateRawSync(uncompressed);
+    const crc = crc32(uncompressed);
+
+    const localHeader = Buffer.alloc(30);
+    localHeader.writeUInt32LE(0x04034b50, 0);
+    localHeader.writeUInt16LE(20, 4);
+    localHeader.writeUInt16LE(0x0800, 6);
+    localHeader.writeUInt16LE(8, 8);
+    localHeader.writeUInt16LE(dosTime, 10);
+    localHeader.writeUInt16LE(dosDate, 12);
+    localHeader.writeUInt32LE(crc, 14);
+    localHeader.writeUInt32LE(compressed.length, 18);
+    localHeader.writeUInt32LE(uncompressed.length, 22);
+    localHeader.writeUInt16LE(nameBuf.length, 26);
+    localHeader.writeUInt16LE(0, 28);
+
+    const centralHeader = Buffer.alloc(46);
+    centralHeader.writeUInt32LE(0x02014b50, 0);
+    centralHeader.writeUInt16LE((3 << 8) | 20, 4);
+    centralHeader.writeUInt16LE(20, 6);
+    centralHeader.writeUInt16LE(0x0800, 8);
+    centralHeader.writeUInt16LE(8, 10);
+    centralHeader.writeUInt16LE(dosTime, 12);
+    centralHeader.writeUInt16LE(dosDate, 14);
+    centralHeader.writeUInt32LE(crc, 16);
+    centralHeader.writeUInt32LE(compressed.length, 20);
+    centralHeader.writeUInt32LE(uncompressed.length, 24);
+    centralHeader.writeUInt16LE(nameBuf.length, 28);
+    centralHeader.writeUInt16LE(0, 30);
+    centralHeader.writeUInt16LE(0, 32);
+    centralHeader.writeUInt16LE(0, 34);
+    centralHeader.writeUInt16LE(0, 36);
+    centralHeader.writeUInt32LE((0o100644 << 16) >>> 0, 38);
+    centralHeader.writeUInt32LE(offset, 42);
+
+    localParts.push(localHeader, nameBuf, compressed);
+    centralParts.push(centralHeader, nameBuf);
+    offset += localHeader.length + nameBuf.length + compressed.length;
+  }
+
+  const centralDir = Buffer.concat(centralParts);
+  const eocd = Buffer.alloc(22);
+  eocd.writeUInt32LE(0x06054b50, 0);
+  eocd.writeUInt16LE(0, 4);
+  eocd.writeUInt16LE(0, 6);
+  eocd.writeUInt16LE(files.length, 8);
+  eocd.writeUInt16LE(files.length, 10);
+  eocd.writeUInt32LE(centralDir.length, 12);
+  eocd.writeUInt32LE(offset, 16);
+  eocd.writeUInt16LE(0, 20);
+
+  return Buffer.concat([...localParts, centralDir, eocd]);
+}
+
+export function readZipEntries(buffer) {
+  const entries = new Map();
+  let eocdOffset = buffer.length - 22;
+  while (eocdOffset >= 0 && buffer.readUInt32LE(eocdOffset) !== 0x06054b50) {
+    eocdOffset--;
+  }
+  if (eocdOffset < 0) throw new Error("Arquivo ZIP inválido.");
+  const totalEntries = buffer.readUInt16LE(eocdOffset + 10);
+  let centralOffset = buffer.readUInt32LE(eocdOffset + 16);
+
+  for (let i = 0; i < totalEntries; i++) {
+    if (buffer.readUInt32LE(centralOffset) !== 0x02014b50)
+      throw new Error("Cabeçalho central ZIP inválido.");
+    const method = buffer.readUInt16LE(centralOffset + 10);
+    const compressedSize = buffer.readUInt32LE(centralOffset + 20);
+    const nameLen = buffer.readUInt16LE(centralOffset + 28);
+    const extraLen = buffer.readUInt16LE(centralOffset + 30);
+    const commentLen = buffer.readUInt16LE(centralOffset + 32);
+    const localOffset = buffer.readUInt32LE(centralOffset + 42);
+    const name = buffer
+      .subarray(centralOffset + 46, centralOffset + 46 + nameLen)
+      .toString("utf8");
+
+    const localNameLen = buffer.readUInt16LE(localOffset + 26);
+    const localExtraLen = buffer.readUInt16LE(localOffset + 28);
+    const dataStart = localOffset + 30 + localNameLen + localExtraLen;
+    const raw = buffer.subarray(dataStart, dataStart + compressedSize);
+    const content =
+      method === 8
+        ? inflateRawSync(raw).toString("utf8")
+        : raw.toString("utf8");
+    entries.set(name, content);
+    centralOffset += 46 + nameLen + extraLen + commentLen;
+  }
+  return entries;
+}
+
 export async function writeSkillReferences({
   outputRoot = root,
   entries = components,
@@ -197,32 +301,55 @@ export async function writeSkillReferences({
     if (file.endsWith(".md") && !validFiles.has(file))
       await rm(new URL(file, componentsDir), { force: true });
   }
-  await writeFile(
-    new URL("catalogo.md", refsDir),
-    catalogMarkdown(entries, contentCatalog),
-  );
+  const catalogMd = catalogMarkdown(entries, contentCatalog);
+  await writeFile(new URL("catalogo.md", refsDir), catalogMd);
+  const componentFiles = [];
   for (const component of entries) {
-    await writeFile(
-      new URL(`${component.id}.md`, componentsDir),
-      componentMarkdown(component),
-    );
+    const md = componentMarkdown(component);
+    await writeFile(new URL(`${component.id}.md`, componentsDir), md);
+    componentFiles.push({
+      name: `magoo-interacao/references/componentes/${component.id}.md`,
+      content: md,
+    });
   }
   const skillPath = new URL("SKILL.md", skillDir);
+  let skillText;
+  let hasLocalSkillFile = true;
   try {
-    const skillText = await readFile(skillPath, "utf8");
-    const updated = skillText
-      .replace(
-        /versão do conteúdo \([0-9]+\.[0-9]+\.[0-9]+\)/,
-        `versão do conteúdo (${contentCatalog.contentVersion})`,
-      )
-      .replace(
-        /A versão deste conteúdo é [0-9]+\.[0-9]+\.[0-9]+\./,
-        `A versão deste conteúdo é ${contentCatalog.contentVersion}.`,
-      );
-    if (updated !== skillText) await writeFile(skillPath, updated);
+    skillText = await readFile(skillPath, "utf8");
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
+    hasLocalSkillFile = false;
+    skillText = await readFile(
+      new URL("skills/magoo-interacao/SKILL.md", root),
+      "utf8",
+    );
   }
+  const updatedSkillText = skillText
+    .replace(
+      /versão do conteúdo \([0-9]+\.[0-9]+\.[0-9]+\)/,
+      `versão do conteúdo (${contentCatalog.contentVersion})`,
+    )
+    .replace(
+      /A versão deste conteúdo é [0-9]+\.[0-9]+\.[0-9]+\./,
+      `A versão deste conteúdo é ${contentCatalog.contentVersion}.`,
+    );
+  if (hasLocalSkillFile && updatedSkillText !== skillText) {
+    await writeFile(skillPath, updatedSkillText);
+  }
+  const licenseText = await readFile(new URL("LICENSE", root), "utf8");
+  const downloadsDir = new URL("downloads/", outputRoot);
+  await mkdir(downloadsDir, { recursive: true });
+  const zipBuffer = createZipArchive([
+    { name: "magoo-interacao/SKILL.md", content: updatedSkillText },
+    {
+      name: "magoo-interacao/references/catalogo.md",
+      content: catalogMd,
+    },
+    ...componentFiles,
+    { name: "magoo-interacao/LICENSE", content: licenseText },
+  ]);
+  await writeFile(new URL("magoo-interacao.zip", downloadsDir), zipBuffer);
 }
 
 if (
