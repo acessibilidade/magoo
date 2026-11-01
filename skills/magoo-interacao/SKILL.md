@@ -11,7 +11,7 @@ Use esta skill para responder com base na biblioteca, e não no conhecimento ger
 
 ## Fontes
 
-O conteúdo da biblioteca está guardado nesta skill, na pasta `references/`:
+O conteúdo da biblioteca está guardado nesta skill, na pasta `references/`. Essa cópia existe para que a skill funcione em ambientes onde o MCP local não é possível, como o Claude Web e o Copilot. Não é preciso instalar nenhum servidor para usá-la:
 - `references/catalogo.md`: lista de componentes, categorias e IDs, com a versão do conteúdo (1.6.1).
 - `references/componentes/<id>.md`: o conteúdo completo de cada componente, com design de interação, métodos de interação, critérios Gherkin, pontos de atenção e referências.
 
@@ -70,8 +70,8 @@ Evite tabelas com uma única linha, com texto longo nas células ou para informa
 
 ## Exemplos de pedidos
 
-- "Como deve funcionar um modal por teclado?" Leia `elementos-ocultos/modal`, responda por teclado e inclua a regra de fechamento com `Esc`.
-- "Quais critérios de aceite eu uso para um accordion?" Leia `acceptance-criteria` do componente e resuma os cenários por grupo.
-- "Preciso decidir entre tooltip e popover para um botão de ajuda." Leia `tooltip-popover` e diga quando cada um se aplica, sem decidir pelo time.
-- "Revise esta tela de formulário com a biblioteca Magoo." Use `formularios` e classifique cada achado conforme a seção de revisão.
-- "Quais componentes da biblioteca tratam de tabelas?" Use a busca e cite o componente de Tabelas da categoria Estrutura.
+- "Como deve funcionar um modal por teclado?" Leia `references/componentes/modal.md`, responda por teclado e inclua a regra de fechamento com `Esc`.
+- "Quais critérios de aceite eu uso para um accordion?" Leia `references/componentes/accordion.md`, na seção de critérios de aceite, e resuma os cenários por grupo.
+- "Preciso decidir entre tooltip e popover para um botão de ajuda." Leia `references/componentes/tooltip-popover.md` e diga quando cada um se aplica, sem decidir pelo time.
+- "Revise esta tela de formulário com a biblioteca Magoo." Leia os componentes da categoria `formularios` no catálogo, use só os que aparecem na tela e classifique cada achado conforme a seção de revisão.
+- "Quais componentes da biblioteca tratam de tabelas?" Consulte `references/catalogo.md` e cite o componente Tabelas, da categoria Estrutura.
