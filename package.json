@@ -1,6 +1,6 @@
 {
   "name": "@acessibilidade/magoo-mcp",
-  "version": "1.6.1",
+  "version": "1.7.0",
   "type": "module",
   "engines": {
     "node": ">=20.19"
@@ -37,7 +37,8 @@
     "README.md",
     "CHANGELOG.md",
     "LICENSE*",
-    "skills/magoo-figma/"
+    "skills/magoo-figma/",
+    "skills/magoo-interacao/"
   ],
   "publishConfig": {
     "access": "public"

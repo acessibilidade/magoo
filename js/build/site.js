@@ -10,6 +10,7 @@ import { format } from "prettier";
 import { catalog, components } from "../lib/catalog.js";
 import { root } from "../lib/paths.js";
 import { validateContent } from "./validate.js";
+import { writeSkillReferences } from "./skills.js";
 import { canonicalUrl, writeDiscovery } from "./discovery.js";
 import {
   writeLocalizedPages,
@@ -285,6 +286,7 @@ await writeFile(
 await writeLocalizedChangelog(changelog);
 await writeLocaleRouting();
 await writeDiscovery();
+await writeSkillReferences();
 console.log(
   `Site gerado: ${components.length} componentes; conteúdo ${catalog.contentVersion}.`,
 );

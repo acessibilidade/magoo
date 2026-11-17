@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.7.0
+
+- Adds the Magoo Interaction skill with references for all 37 components, for assistants without an MCP server.
+
 ## 1.6.1
 
 - Keeps the guidance for the 37 components from version 1.6.0, with no content changes.

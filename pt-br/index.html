@@ -361,7 +361,7 @@
           </section>
         </div>
         <div class="version-history">
-          <p class="material-version">Versão do material: 1.6.1</p>
+          <p class="material-version">Versão do material: 1.7.0</p>
           <button class="changelog-trigger" type="button" aria-haspopup="dialog" aria-controls="changelog" hidden="">
             Acessar registro de alterações
             <span class="sr-only"> (abre uma janela com conteúdo adicional nesta mesma página) </span>
@@ -380,6 +380,12 @@
           </div>
           <p id="changelog-description">Alterações do material, da mais recente para a mais antiga.</p>
           <div class="changelog-entries" role="region" aria-label="Histórico de versões" tabindex="0">
+            <section class="changelog-entry" aria-labelledby="version-1-7-0">
+              <h3 id="version-1-7-0">Versão 1.7.0</h3>
+              <ul>
+                <li>Adiciona a skill Magoo Interação com referências dos 37 componentes para consulta em assistentes sem servidor MCP.</li>
+              </ul>
+            </section>
             <section class="changelog-entry" aria-labelledby="version-1-6-1">
               <h3 id="version-1-6-1">Versão 1.6.1</h3>
               <ul>
@@ -546,7 +552,10 @@
               <a href="#figma-guide-title">Instruções para usar com o Figma<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
             </li>
             <li>
-              <a href="#mcp-setup-title">Instruções para usar com sua IA preferida<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+              <a href="#offline-skill-title">Consultar sem servidor MCP<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
+            </li>
+            <li>
+              <a href="#mcp-setup-title">Configurar o servidor MCP<span class="sr-only"> (abre a seção nesta mesma página)</span></a>
             </li>
           </ul>
         </nav>
@@ -704,7 +713,7 @@
             </ol>
             <h4>Como saber se está pronto</h4>
             <p>Peça ao assistente para confirmar que encontra a skill, consulta o Magoo e consegue ler o componente do link. Se algo faltar, ele deve explicar qual conexão precisa de ajuste. Para escrever anotações no Figma, peça essa ação e indique o arquivo de destino.</p>
-            <p class="figma-availability">Os guias dos 37 componentes fazem parte da versão 1.6.1. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
+            <p class="figma-availability">Os guias dos 37 componentes fazem parte da versão 1.7.0. Ao configurar o Magoo, use a versão indicada nesta página e peça ao assistente para confirmar a versão consultada. Conexões antigas precisam ser atualizadas e reiniciadas.</p>
           </article>
           <div class="native-skill-column">
             <aside class="context-card native-skill-guide" aria-labelledby="native-skill-title">
@@ -746,8 +755,20 @@
             </aside>
           </div>
         </div>
+        <article class="context-card mcp-guide" aria-labelledby="offline-skill-title">
+          <h3 id="offline-skill-title">Consultar sem servidor MCP</h3>
+          <p>Magoo Interação reúne instruções e uma cópia das referências dos 37 componentes. Use em um assistente que consiga ler arquivos de referência, sem conectar um servidor MCP.</p>
+          <p><a href="/downloads/magoo-interacao.zip" download="magoo-interacao.zip" hreflang="pt-BR">Baixar Magoo Interação (ZIP, conteúdo em português)</a></p>
+          <ol>
+            <li>Baixe o ZIP e extraia a pasta magoo-interacao. Mantenha SKILL.md e a pasta references juntos.</li>
+            <li>Se o assistente aceitar skills com arquivos de referência, importe a pasta ou o ZIP conforme as instruções da plataforma. Se aceitar apenas anexos, forneça SKILL.md, references/catalogo.md e o arquivo do componente desejado.</li>
+            <li>Peça ao assistente para confirmar que leu o componente e informar autoria, versão, IDs e fonte. Se não conseguir ler os arquivos, forneça o conteúdo antes de continuar.</li>
+          </ol>
+          <blockquote>Leia as referências de Modal no Magoo Interação. Explique abertura, navegação pelo teclado e fechamento. Preserve as condições, cite os IDs e diferencie orientações originais de sugestões para meu produto.</blockquote>
+          <p>O ZIP é uma cópia da biblioteca: não se atualiza sozinho. Ao adotar uma nova versão, substitua a pasta completa e confirme a versão consultada. O suporte a skills e anexos depende da plataforma; esta opção não cria uma conexão com o Figma nem certifica acessibilidade.</p>
+        </article>
         <article class="context-card mcp-guide" aria-labelledby="mcp-setup-title">
-          <h3 id="mcp-setup-title">Instruções para usar com sua IA preferida</h3>
+          <h3 id="mcp-setup-title">Configurar o servidor MCP</h3>
           <p>
             Você pode pedir à sua IA que consulte o Magoo antes de sugerir como um componente deve funcionar. Para isso, é preciso conectar a biblioteca uma única vez. Essa conexão é chamada de
             <strong>MCP</strong>
@@ -793,12 +814,12 @@
             <div>
               <dt>Argumentos</dt>
               <dd>
-                <code>-y @acessibilidade/magoo-mcp@1.6.1</code>
+                <code>-y @acessibilidade/magoo-mcp@1.7.0</code>
                 <p>
                   Se o aplicativo pedir argumentos separados, adicione
                   <code>-y</code>
                   e
-                  <code>@acessibilidade/magoo-mcp@1.6.1</code>
+                  <code>@acessibilidade/magoo-mcp@1.7.0</code>
                   como dois itens.
                 </p>
               </dd>
@@ -933,7 +954,7 @@
               </h3>
             </dt>
             <dd id="faq-answer-7" aria-labelledby="faq-trigger-7">
-              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.6.1 e não troca automaticamente para uma versão futura.</p>
+              <p>Registre o componente, a URL, a versão consultada e a data. Ao adotar uma nova versão, revise as diferenças e os testes do seu sistema. A configuração MCP apresentada fixa a versão 1.7.0 e não troca automaticamente para uma versão futura.</p>
             </dd>
           </div>
           <div class="faq-item">

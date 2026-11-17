@@ -1,5 +1,9 @@
 # Histórico de versões
 
+## 1.7.0
+
+- Adiciona a skill Magoo Interação com referências dos 37 componentes para consulta em assistentes sem servidor MCP.
+
 ## 1.6.1
 
 - Mantém as orientações dos 37 componentes da versão 1.6.0, sem alterações de conteúdo.
