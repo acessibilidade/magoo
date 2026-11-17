@@ -1,6 +1,6 @@
 # Publicação do Magoo 1.7.0
 
-Preparação local. Nenhum envio ou publicação foi realizado. Publique e confirme o pacote npm 1.7.0 antes de enviar as páginas e manifestos que indicam essa versão. O npm e o MCP conectado ainda estavam em 1.6.1 na verificação. Atualize e reinicie instalações MCP separadamente.
+GitHub e arquivos do site enviados pelo mantenedor; catálogo, manifesto e ZIP públicos conferidos. O pacote npm 1.7.0 foi publicado e confirmado no registro em 17/11/2026, com a tag latest e SHA-1 901fe0f6ad81413df6ca90263b567f54cb62c802, idêntico ao pacote revisado. Atualize e reinicie instalações MCP separadamente.
 
 ## Arquivos para FTP
 

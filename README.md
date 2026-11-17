@@ -234,7 +234,7 @@ O destaque Figma na home inclui passos para conectar o plugin Figma no Codex e i
 
 ## Magoo Interação sem MCP
 
-A versão 1.7.0 está preparada localmente; publique o pacote npm antes de divulgar os comandos de instalação desta versão. O npm consultado durante a preparação ainda fornece 1.6.1.
+A versão 1.7.0 inclui a skill Magoo Interação para consulta da biblioteca sem servidor MCP. A instalação do pacote e a importação da skill são opções independentes.
 
 A skill `skills/magoo-interacao/SKILL.md` consulta referências Markdown geradas dos JSONs originais, preservando autoria, versão, condições, fontes e IDs de seções e blocos citáveis. O build regenera as referências e `downloads/magoo-interacao.zip` juntos. Não edite as referências geradas.
 
